@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/domain/colony_actions/models/colony_action.dart';
+import 'package:ants_companion/domain/notifications/local_notifications.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
 
@@ -136,7 +137,20 @@ class _ColonyActionSchedulerScreenState
                   trailing: Checkbox(
                     value: item.notificationEnabled,
                     onChanged: (v) async {
-                      // ToDo: actually get notifications working
+                      if (v == true) {
+                        await LocalNotifications
+                            .scheduleColonyActionNotification(
+                          id: item.order,
+                          title: 'Colony Action',
+                          body: caName,
+                          payload: '/ca-scheduler/${item.key}',
+                          date: item.date,
+                        );
+                      } else {
+                        await LocalNotifications.cancelNotificationChannel(
+                          item.order,
+                        );
+                      }
                       _colonyActions.updateColonyAction(item.copyWith(
                         notificationEnabled: v,
                       ));
