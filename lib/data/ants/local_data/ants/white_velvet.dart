@@ -4,6 +4,7 @@ const whiteVelvet = Ant(
   id: 'white_velvet',
   name: 'White Velvet',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.support,
   tierTags: [

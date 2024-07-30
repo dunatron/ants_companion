@@ -4,6 +4,7 @@ const goldenSugar = Ant(
   id: 'golden_sugar',
   name: 'Golden Sugar',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

@@ -4,6 +4,7 @@ const nimbleTreeAnt = Ant(
   id: 'nimble_tree_ant',
   name: 'Nimble Tree Ant',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [
@@ -13,12 +14,6 @@ const nimbleTreeAnt = Ant(
 );
 
 const nimbleTreeAntPveTags = [
-  AntPveTierTag(
-    rating: TierRating.f2pMeta,
-    antType: AntType.shooter,
-    rowPosition: RowPosition.front,
-    reason: 'Needs wise berserker',
-  ),
   AntPveTierTag(
     rating: TierRating.a,
     antType: AntType.shooter,

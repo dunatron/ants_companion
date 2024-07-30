@@ -4,6 +4,7 @@ const jetBlack = Ant(
   id: 'jet_black',
   name: 'Jet Black',
   description: '',
+  scientificName: '',
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [

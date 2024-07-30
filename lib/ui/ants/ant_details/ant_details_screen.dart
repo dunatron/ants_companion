@@ -22,14 +22,14 @@ class AntDetailsScreen extends StatelessWidget {
         SliverToBoxAdapter(
           child: AntDetails(ant: ant),
         ),
-        SliverList.builder(
-          itemCount: 100,
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Text('Index: $index'),
-            );
-          },
-        )
+        // SliverList.builder(
+        //   itemCount: 100,
+        //   itemBuilder: (context, index) {
+        //     return ListTile(
+        //       title: Text('Index: $index'),
+        //     );
+        //   },
+        // )
       ],
     );
   }

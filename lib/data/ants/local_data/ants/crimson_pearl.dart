@@ -3,6 +3,7 @@ part of '../local_ants_list.dart';
 const crimsonPearl = Ant(
   id: 'crimson_pearl',
   name: 'Crimson Pearl',
+  scientificName: '',
   description: 'A really great PVE ant',
   type: AntType.universal,
   role: AntRole.ranged,
@@ -20,21 +21,9 @@ const crimsonPearlPveTags = [
     reason: 'Its just Super strong',
   ),
   AntPveTierTag(
-    rating: TierRating.meta,
-    antType: AntType.shooter,
-    rowPosition: RowPosition.middle,
-    reason: 'Its just Super strong',
-  ),
-  AntPveTierTag(
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: 'Its just Super strong',
-  ),
-  AntPveTierTag(
-    rating: TierRating.meta,
-    antType: AntType.carrier,
-    rowPosition: RowPosition.front,
     reason: 'Its just Super strong',
   ),
   AntPveTierTag(

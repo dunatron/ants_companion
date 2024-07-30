@@ -4,6 +4,7 @@ const pheidoleNietneri = Ant(
   id: 'pheidole_nietneri',
   name: 'Pheidole Nietneri',
   description: '',
+  scientificName: '',
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [

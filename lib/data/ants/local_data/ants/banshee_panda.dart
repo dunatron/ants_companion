@@ -4,6 +4,7 @@ const bansheePanda = Ant(
   id: 'banshee_panda',
   name: 'Banshee Panda',
   description: '',
+  scientificName: '',
   type: AntType.shooter,
   role: AntRole.support,
   tierTags: [

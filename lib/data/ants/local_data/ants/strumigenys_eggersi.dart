@@ -4,6 +4,7 @@ const strumigenysEggersi = Ant(
   id: 'strumigenys_eggersi',
   name: 'Strumigenys Eggersi',
   description: '',
+  scientificName: '',
   type: AntType.carrier,
   role: AntRole.melee,
   tierTags: [

@@ -4,6 +4,7 @@ const bulletAnt = Ant(
   id: 'bullet_ant',
   name: 'Bullet Ant',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

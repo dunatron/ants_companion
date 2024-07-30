@@ -4,6 +4,7 @@ const slimArched = Ant(
   id: 'slim_arched',
   name: 'Slim Arched',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [

@@ -13,6 +13,11 @@ class AntTiersScreen extends StatelessWidget {
       title: 'Ant Tiers',
       slivers: [
         SliverToBoxAdapter(
+          child: Column(
+            children: [...Ants.metaTroops().map((it) => Text(it.backRowAntId))],
+          ),
+        ),
+        SliverToBoxAdapter(
           child: AntTiersDisplay(ants: Ants.antsList()),
         )
       ],

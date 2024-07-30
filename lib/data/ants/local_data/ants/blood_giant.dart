@@ -4,6 +4,7 @@ const bloodGiant = Ant(
   id: 'blood_giant',
   name: 'Blood Giant',
   description: '',
+  scientificName: '',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

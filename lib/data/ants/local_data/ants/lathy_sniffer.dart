@@ -4,6 +4,7 @@ const lathySniffer = Ant(
   id: 'lathy_sniffer',
   name: 'Lathy Sniffer',
   description: '',
+  scientificName: '',
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [
@@ -13,12 +14,6 @@ const lathySniffer = Ant(
 );
 
 const lathySnifferPveTags = [
-  AntPveTierTag(
-    rating: TierRating.meta,
-    antType: AntType.shooter,
-    rowPosition: RowPosition.back,
-    reason: 'Best shooter option for PVE',
-  ),
   AntPveTierTag(
     rating: TierRating.s,
     antType: AntType.shooter,

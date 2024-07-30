@@ -9,6 +9,7 @@ class Ant extends Equatable {
   const Ant({
     required this.id,
     required this.name,
+    required this.scientificName,
     required this.description,
     required this.type,
     required this.role,
@@ -18,6 +19,7 @@ class Ant extends Equatable {
 
   final String id;
   final String name;
+  final String scientificName;
   final String description;
 
   String get profilePath => 'assets/ant_profile_images/$id.jpg';
@@ -52,8 +54,6 @@ class Ant extends Equatable {
 
   factory Ant.empty() => emptyAnt;
 
-  factory Ant.fakeSkeletonizer() => fakeSkeletonizerAnt;
-
   @override
   List<Object?> get props => [name, description];
 }
@@ -61,24 +61,11 @@ class Ant extends Equatable {
 const emptyAnt = Ant(
   id: '',
   name: '',
+  scientificName: '',
   description: '',
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [],
-);
-
-final fakeSkeletonizerAnt = Ant(
-  id: '',
-  name: 'Fake Skeletonizer',
-  description: 'Fake skeletonizer description text',
-  type: AntType.universal,
-  role: AntRole.melee,
-  tierTags: [
-    AntPvpTierTag.fakeSkeletonizer(),
-    AntPvpTierTag.fakeSkeletonizer(rating: TierRating.meta),
-    AntPveTierTag.fakeSkeletonizer(),
-    AntPveTierTag.fakeSkeletonizer(rating: TierRating.meta)
-  ],
 );
 
 extension on List<AntTierTag> {

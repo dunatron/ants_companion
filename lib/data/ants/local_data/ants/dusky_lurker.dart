@@ -4,6 +4,7 @@ const duskyLurker = Ant(
   id: 'dusky_lurker',
   name: 'Dusky Lurker',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.support,
   tierTags: [

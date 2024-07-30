@@ -4,6 +4,7 @@ const crimsonFragger = Ant(
   id: 'crimson_fragger',
   name: 'Crimson Fragger',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

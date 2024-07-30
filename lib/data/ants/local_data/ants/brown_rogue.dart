@@ -4,6 +4,7 @@ const brownRogue = Ant(
   id: 'brown_rogue',
   name: 'Brown Rogue',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

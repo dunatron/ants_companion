@@ -3,14 +3,6 @@
 import 'package:flutter/material.dart';
 
 enum TierRating {
-  meta(
-    order: 0,
-    color: Colors.red,
-  ),
-  f2pMeta(
-    order: 1,
-    color: Colors.orange,
-  ),
   s(
     order: 2,
     color: Colors.yellow,
@@ -38,8 +30,6 @@ enum TierRating {
   });
 
   String get displayText => switch (this) {
-        TierRating.meta => 'Meta',
-        TierRating.f2pMeta => 'f2p Meta',
         TierRating.s => 'S',
         TierRating.a => 'A',
         TierRating.b => 'B',

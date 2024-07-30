@@ -3,6 +3,7 @@ part of '../local_ants_list.dart';
 const graveDigger = Ant(
   id: 'grave_digger',
   name: 'Grave Digger',
+  scientificName: '',
   description: 'A support ant with crowd control abilities, '
       'pairs really nicely with golden crystal',
   type: AntType.carrier,

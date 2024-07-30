@@ -4,6 +4,7 @@ const reapMaster = Ant(
   id: 'reap_master',
   name: 'Reap Master',
   description: '',
+  scientificName: '',
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [
@@ -13,12 +14,6 @@ const reapMaster = Ant(
 );
 
 const reapMasterPveTags = [
-  AntPveTierTag(
-    rating: TierRating.f2pMeta,
-    antType: AntType.shooter,
-    rowPosition: RowPosition.back,
-    reason: 'Can deal a good amount of high damage when its not sleeping',
-  ),
   AntPveTierTag(
     rating: TierRating.a,
     antType: AntType.shooter,

@@ -3,6 +3,7 @@ part of '../local_ants_list.dart';
 const goldenCrystal = Ant(
   id: 'golden_crystal',
   name: 'Golden Crystal',
+  scientificName: '',
   description: 'An OP carrier Ant',
   type: AntType.carrier,
   role: AntRole.ranged,
@@ -26,18 +27,6 @@ const goldenCrystal = Ant(
 );
 
 const goldenCrystalPveTags = [
-  AntPveTierTag(
-    rating: TierRating.meta,
-    antType: AntType.carrier,
-    rowPosition: RowPosition.back,
-    reason: 'The best option to run for the damage it provides',
-  ),
-  AntPveTierTag(
-    rating: TierRating.f2pMeta,
-    antType: AntType.carrier,
-    rowPosition: RowPosition.back,
-    reason: 'The best option to run for the damage it provides',
-  ),
   AntPveTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,

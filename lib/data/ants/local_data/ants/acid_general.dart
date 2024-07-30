@@ -3,7 +3,12 @@ part of '../local_ants_list.dart';
 const acidGeneral = Ant(
   id: 'acid_general',
   name: 'Acid General',
-  description: '',
+  scientificName: 'Mystrium oberthueri',
+  description: 'A unique species of ants in Madagascar, Africa.\n'
+      'They are extremely powerful carnivorous ants that feed on large local '
+      'centipedes, they are large in size and can reach 10-11 mm.\nThe colony '
+      'is very small with only dozens of ants, but its hunting soldier ants '
+      'can account for more than half of the colony.',
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [

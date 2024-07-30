@@ -4,6 +4,7 @@ const blackKnight = Ant(
   id: 'black_knight',
   name: 'Black Knight',
   description: '',
+  scientificName: '',
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [

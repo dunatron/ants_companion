@@ -4,6 +4,7 @@ const emeraldJewelAnt = Ant(
   id: 'emerald_jewel_ant',
   name: 'Emerald Jewel Ant',
   description: '',
+  scientificName: '',
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [

@@ -4,6 +4,7 @@ const darkGiant = Ant(
   id: 'dark_giant',
   name: 'Dark Giant',
   description: '',
+  scientificName: '',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

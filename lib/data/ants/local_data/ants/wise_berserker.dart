@@ -4,6 +4,7 @@ const wiseBerserker = Ant(
   id: 'wise_berserker',
   name: 'Wise Berserker',
   description: '',
+  scientificName: '',
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [
@@ -13,12 +14,6 @@ const wiseBerserker = Ant(
 );
 
 const wiseBerserkerPveTags = [
-  AntPveTierTag(
-    rating: TierRating.f2pMeta,
-    antType: AntType.shooter,
-    rowPosition: RowPosition.middle,
-    reason: 'this is the meta and for f2p in the middle row for PVE',
-  ),
   AntPveTierTag(
     rating: TierRating.a,
     antType: AntType.shooter,

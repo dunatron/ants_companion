@@ -4,6 +4,7 @@ const shikareeMaster = Ant(
   id: 'shikaree_master',
   name: 'Shikaree Master',
   description: '',
+  scientificName: '',
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [
@@ -13,12 +14,6 @@ const shikareeMaster = Ant(
 );
 
 const shikareeMasterPveTags = [
-  AntPveTierTag(
-    rating: TierRating.f2pMeta,
-    antType: AntType.carrier,
-    rowPosition: RowPosition.middle,
-    reason: 'The second best f2p damage dealer in the game for carrier',
-  ),
   AntPveTierTag(
     rating: TierRating.a,
     antType: AntType.carrier,

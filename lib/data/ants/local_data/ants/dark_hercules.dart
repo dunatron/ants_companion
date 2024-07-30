@@ -4,6 +4,7 @@ const darkHercules = Ant(
   id: 'dark_hercules',
   name: 'Dark Hercules',
   description: '',
+  scientificName: '',
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [

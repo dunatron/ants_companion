@@ -14,14 +14,19 @@ class AppDrawer extends StatelessWidget {
           DrawerHeader(
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
-            ),
-            child: Text(
-              'Navigator',
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.onPrimary,
-                fontSize: 24,
+              image: DecorationImage(
+                image: AssetImage('assets/banners/ant_reading_menu_2.png'),
+                fit: BoxFit.cover,
               ),
             ),
+            child: Container(),
+            // child: Text(
+            //   'Navigator',
+            //   style: TextStyle(
+            //     color: Theme.of(context).colorScheme.onPrimary,
+            //     fontSize: 24,
+            //   ),
+            // ),
           ),
           ListTile(
             leading: const Icon(Icons.message),

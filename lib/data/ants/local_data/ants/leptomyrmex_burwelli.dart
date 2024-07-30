@@ -4,6 +4,7 @@ const leptomyrmexBurwelli = Ant(
   id: 'leptomyrmex_burwelli',
   name: 'Leptomyrmex Burwelli',
   description: '',
+  scientificName: '',
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [
@@ -13,13 +14,6 @@ const leptomyrmexBurwelli = Ant(
 );
 
 const leptomyrmexBurwelliPveTags = [
-  AntPveTierTag(
-    rating: TierRating.meta,
-    antType: AntType.carrier,
-    rowPosition: RowPosition.middle,
-    reason: 'Provides a damage buff for other ants and '
-        'deals extremely high damage',
-  ),
   AntPveTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,

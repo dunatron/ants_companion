@@ -4,6 +4,7 @@ const proatta = Ant(
   id: 'proatta',
   name: 'Proatta',
   description: '',
+  scientificName: '',
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [
@@ -13,12 +14,6 @@ const proatta = Ant(
 );
 
 const proattaPveTags = [
-  AntPveTierTag(
-    rating: TierRating.meta,
-    antType: AntType.guardian,
-    rowPosition: RowPosition.front,
-    reason: 'The meta ant for the guardian front row PVE',
-  ),
   AntPveTierTag(
     rating: TierRating.s,
     antType: AntType.guardian,

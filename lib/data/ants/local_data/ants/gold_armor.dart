@@ -3,6 +3,7 @@ part of '../local_ants_list.dart';
 const goldArmor = Ant(
   id: 'gold_armor',
   name: 'Gold Armor',
+  scientificName: '',
   description: 'A really nice PVE ant',
   type: AntType.universal,
   role: AntRole.melee,
@@ -13,14 +14,6 @@ const goldArmor = Ant(
 );
 
 const goldArmorPveTags = [
-  AntPveTierTag(
-    rating: TierRating.f2pMeta,
-    rowPosition: RowPosition.front,
-    antType: AntType.carrier,
-    reason:
-        'It can boost the damage of other ants vs pangolin and groundhog with '
-        'its awakening while also doing a decent amount of damage itself',
-  ),
   AntPveTierTag(
     rating: TierRating.a,
     rowPosition: RowPosition.front,

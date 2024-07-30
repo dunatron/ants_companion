@@ -4,6 +4,7 @@ const mimicryMaster = Ant(
   id: 'mimicry_master',
   name: 'Mimicry Master',
   description: '',
+  scientificName: '',
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [

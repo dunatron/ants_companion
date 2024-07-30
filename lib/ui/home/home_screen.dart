@@ -12,6 +12,7 @@ import 'package:ants_companion/ui/ant_tiers/ant_tiers_display.dart';
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -46,6 +47,32 @@ class HomeScreen extends StatelessWidget {
       child: PageLayout(
         title: 'Ants Companion',
         slivers: [
+          SliverPadding(
+            padding: EdgeInsets.symmetric(
+              horizontal: Spacing.l,
+            ),
+            sliver: SliverToBoxAdapter(
+              child: Card(
+                child: ClipRRect(
+                  borderRadius:
+                      BorderRadius.circular(12), // Adjust the radius as needed
+                  child: Container(
+                    height: 220,
+                    // width: 200,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primary,
+                      image: DecorationImage(
+                        image: AssetImage(
+                            'assets/banners/ants_eager_to_teach_1.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
           const SliverPadding(
             padding: EdgeInsets.symmetric(
               horizontal: Spacing.l,
@@ -55,6 +82,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
+
           SliverToBoxAdapter(
             child: AntsCarousel(
               id: 'all-ants-carousel',

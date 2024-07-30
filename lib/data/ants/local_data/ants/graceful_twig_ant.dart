@@ -4,6 +4,7 @@ const gracefulTwigAnt = Ant(
   id: 'graceful_twig_ant',
   name: 'Graceful Twig Ant',
   description: '',
+  scientificName: '',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

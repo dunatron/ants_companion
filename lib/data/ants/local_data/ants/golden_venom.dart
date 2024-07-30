@@ -4,6 +4,7 @@ const goldenVenom = Ant(
   id: 'golden_venom',
   name: 'Golden Venom',
   description: '',
+  scientificName: '',
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [

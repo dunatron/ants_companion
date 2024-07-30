@@ -4,6 +4,7 @@ const weaverAnt = Ant(
   id: 'weaver_ant',
   name: 'Weaver Ant',
   description: '',
+  scientificName: '',
   type: AntType.shooter,
   role: AntRole.support,
   tierTags: [

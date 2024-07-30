@@ -4,6 +4,7 @@ const myrmecotypusRettenmeyeri = Ant(
   id: 'myrmecotypus_rettenmeyeri',
   name: 'Myrmecotypus Rettenmeyeri',
   description: '',
+  scientificName: '',
   type: AntType.shooter,
   role: AntRole.melee,
   tierTags: [

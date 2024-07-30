@@ -4,6 +4,7 @@ const leafDevourer = Ant(
   id: 'leaf_devourer',
   name: 'Leaf Devourer',
   description: '',
+  scientificName: '',
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [
@@ -13,12 +14,6 @@ const leafDevourer = Ant(
 );
 
 const leafDevourerPveTags = [
-  AntPveTierTag(
-    rating: TierRating.f2pMeta,
-    antType: AntType.guardian,
-    rowPosition: RowPosition.middle,
-    reason: 'One of the best guardian damage dealers',
-  ),
   AntPveTierTag(
     rating: TierRating.s,
     antType: AntType.guardian,

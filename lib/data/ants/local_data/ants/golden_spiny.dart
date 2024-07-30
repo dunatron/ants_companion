@@ -4,6 +4,7 @@ const goldenSpiny = Ant(
   id: 'golden_spiny',
   name: 'Golden Spiny',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

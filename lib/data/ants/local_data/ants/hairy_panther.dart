@@ -4,6 +4,7 @@ const hairyPanther = Ant(
   id: 'hairy_panther',
   name: 'Hairy Panther',
   description: '',
+  scientificName: '',
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [
@@ -13,18 +14,6 @@ const hairyPanther = Ant(
 );
 
 const hairyPantherPveTags = [
-  AntPveTierTag(
-    rating: TierRating.meta,
-    antType: AntType.guardian,
-    rowPosition: RowPosition.back,
-    reason: terribleForPveF,
-  ),
-  AntPveTierTag(
-    rating: TierRating.f2pMeta,
-    antType: AntType.guardian,
-    rowPosition: RowPosition.back,
-    reason: terribleForPveF,
-  ),
   AntPveTierTag(
     rating: TierRating.s,
     antType: AntType.guardian,

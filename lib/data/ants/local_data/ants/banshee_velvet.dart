@@ -4,6 +4,7 @@ const bansheeVelvet = Ant(
   id: 'banshee_velvet',
   name: 'Banshee Velvet',
   description: '',
+  scientificName: '',
   type: AntType.shooter,
   role: AntRole.melee,
   tierTags: [

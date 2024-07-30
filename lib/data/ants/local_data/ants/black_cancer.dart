@@ -4,6 +4,7 @@ const blackCancer = Ant(
   id: 'black_cancer',
   name: 'Black Cancer',
   description: '',
+  scientificName: '',
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [

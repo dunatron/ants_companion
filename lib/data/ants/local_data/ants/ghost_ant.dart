@@ -4,6 +4,7 @@ const ghostAnt = Ant(
   id: 'ghost_ant',
   name: 'Ghost Ant',
   description: '',
+  scientificName: '',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

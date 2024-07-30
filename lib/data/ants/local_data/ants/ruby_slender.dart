@@ -4,6 +4,7 @@ const rubySlender = Ant(
   id: 'ruby_slender',
   name: 'Ruby Slender',
   description: '',
+  scientificName: '',
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [
