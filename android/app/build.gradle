@@ -65,6 +65,9 @@ flutter {
     source = "../.."
 }
 
+// Notifications: added this entire block...
+// It probably gets added some other way now
+// dependencies was not here before
 dependencies {
     // Add desugaring dependencies
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
@@ -73,15 +76,3 @@ dependencies {
     implementation 'androidx.window:window-java:1.0.0'
     // Other dependencies
 }
-
-// Notifications: added this entire block...
-// It probably gets added some other way now so come back and sort this out
-
-// dependencies {
-//     // Notifications
-//     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
-//     implementation 'androidx.core:core-ktx:1.10.1'
-//     implementation 'androidx.appcompat:appcompat:1.6.1'
-//     implementation 'com.google.android.material:material:1.9.0'
-//     implementation 'androidx.window:window:1.2.0'
-// }
