@@ -20,7 +20,8 @@ class Ant extends Equatable {
   final String name;
   final String description;
 
-  String get profilePath => 'assets/ants/profile_images/$id.jpg';
+  // String get profilePath => 'assets/ants/profile_images/$id.jpg';
+  String get profilePath => 'assets/ants/tiny/profile_images/$id.jpg';
 
   final AntType type;
   final AntRole role;
