@@ -1,4 +1,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- this is required so the plugin can known when the device is rebooted.
+        This is required so that the plugin can reschedule notifications upon a reboot -->
+    <!-- Added permission for receiving boot completed event -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- Notifications: required requestExactAlarmsPermission() to be granted -->
+    <!-- <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32" /> -->
+    
+    <!-- Notifications: Would not require addiotional permissions.
+     But must be an alarm, timer, or calendar app.
+     It also just works for development
+      -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <!-- ToDo: below 2 are probably not needed -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+
     <application
         android:label="ants_companion"
         android:name="${applicationName}"
@@ -30,6 +47,17 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!-- Notifications: added for notifications: ToDo put detail about what this does -->
+        <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
+        <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and

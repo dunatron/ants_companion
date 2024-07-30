@@ -1,3 +1,4 @@
+import 'package:ants_companion/ui/colony_action/details/colony_action_details_screen.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/colony_action_scheduler_screen.dart';
 import 'package:ants_companion/ui/home/home_screen.dart';
 import 'package:ants_companion/ui/route_not_found/route_not_found_screen.dart';
@@ -27,6 +28,16 @@ final routes = <RouteBase>[
         path: 'ca-scheduler',
         builder: (BuildContext context, GoRouterState state) =>
             const ColonyActionSchedulerScreen(),
+        routes: [
+          GoRoute(
+              path: ':caKey',
+              builder: (BuildContext context, GoRouterState state) {
+                final caKey = state.pathParameters['caKey']!;
+                return ColonyActionDetailsScreen(
+                  caKey: caKey,
+                );
+              }),
+        ],
       ),
     ],
   ),
