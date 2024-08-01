@@ -161,19 +161,20 @@ class _AntsCarouselState extends State<AntsCarousel>
           slides: widget.ants.map((ant) => _slide(ant)).toList(),
         ),
         Padding(
-          padding:
-              const EdgeInsets.fromLTRB(Spacing.l, 0, Spacing.l, Spacing.vl),
+          padding: const EdgeInsets.fromLTRB(
+              Spacing.l, Spacing.l, Spacing.l, Spacing.vl),
           child: DraggableScrollConfiguration(
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
                   ...sortedLetters.map(
-                    (letter) => GestureDetector(
-                      onTap: () => goToIndex(
-                        widget.ants.indexOfFirstLetterFoundOnName(letter),
-                      ),
-                      child: Chip(label: Text(letter)),
+                    (letter) => Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: ElevatedButton(
+                          onPressed: () => goToIndex(widget.ants
+                              .indexOfFirstLetterFoundOnName(letter)),
+                          child: Text(letter)),
                     ),
                   )
                 ],
