@@ -1,18 +1,18 @@
 import 'package:ants_companion/common/spacing.dart';
+import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/ants.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/notifications/local_notifications.dart';
+import 'package:ants_companion/ui/ads/ads_carousel.dart';
 import 'package:ants_companion/ui/ants/ant_details/ant_details_screen.dart';
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
 import 'package:ants_companion/ui/home/ants_tier_feaure_info.dart';
 import 'package:ants_companion/ui/home/notifications_feature_info.dart';
 import 'package:ants_companion/ui/home/welcome_info.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tiers_display.dart';
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
         showDragHandle: true,
         builder: (BuildContext _) {
           return DraggableScrollableSheet(
-            maxChildSize: 0.8,
+            maxChildSize: 1,
             initialChildSize: kIsWeb ? 0.8 : 0.5,
             expand: false,
             builder: (
@@ -43,14 +43,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final antsList = Ants.antsList();
+
     return NotificationTappedProvider(
       child: PageLayout(
         title: 'Ants Companion',
         slivers: [
           SliverPadding(
-            padding: EdgeInsets.symmetric(
-              horizontal: Spacing.l,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
             sliver: SliverToBoxAdapter(
               child: Card(
                 child: ClipRRect(
@@ -58,10 +57,9 @@ class HomeScreen extends StatelessWidget {
                       BorderRadius.circular(12), // Adjust the radius as needed
                   child: Container(
                     height: 220,
-                    // width: 200,
                     decoration: BoxDecoration(
                       color: Theme.of(context).colorScheme.primary,
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage(
                             'assets/banners/ants_eager_to_teach_1.png'),
                         fit: BoxFit.cover,
@@ -82,7 +80,6 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
-
           SliverToBoxAdapter(
             child: AntsCarousel(
               id: 'all-ants-carousel',
@@ -92,7 +89,7 @@ class HomeScreen extends StatelessWidget {
               ants: antsList,
             ),
           ),
-          // const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
+          const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
           const SliverPadding(
             padding: EdgeInsets.symmetric(
               horizontal: Spacing.l,
@@ -102,6 +99,16 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
+          if (AdsService.enabled) ...[
+            SliverToBoxAdapter(
+              child: AdsCarousel(
+                id: 'home-ads-carousel',
+                adIds: AdsService.carouselOneIds,
+                ads: AdsService(),
+              ),
+            ),
+            const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
+          ],
           const SliverPadding(
             padding: EdgeInsets.symmetric(
               horizontal: Spacing.l,
@@ -110,9 +117,6 @@ class HomeScreen extends StatelessWidget {
               child: NotificationsFeatureInfo(),
             ),
           ),
-          // SliverToBoxAdapter(
-          //   child: AntTiersDisplay(ants: antsList),
-          // )
           const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
           SliverToBoxAdapter(
             child: Card(
