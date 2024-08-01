@@ -1,9 +1,11 @@
+import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AntDetails extends StatelessWidget {
   AntDetails({super.key, required this.ant});
@@ -15,8 +17,10 @@ class AntDetails extends StatelessWidget {
     final profilePictureUrl = ant.profilePath;
 
     final tags = ant.tierTags;
-    return Padding(
-      padding: EdgeInsets.fromLTRB(16, 0, 16, 24),
+
+    final AdsService adsService = AdsService();
+    adsService.loadBannerAd(AdsService.antDetailsAdUnitId, AdSize.largeBanner);
+    return SelectionArea(
       child: Column(
         children: [
           Text(
@@ -28,29 +32,54 @@ class AntDetails extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 24),
               child: AntProfileImage(imagePath: ant.profilePath, radius: 120),
             ),
-          Text(
-            '${ant.role.name} - ${ant.type.name}',
-            style: Theme.of(context).textTheme.titleLarge,
+          _Section(
+            child: Text(
+              '${ant.role.name} - ${ant.type.name}',
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
           ),
-          const SizedBox(height: 24),
-          Text(
-            ant.description,
-            textAlign: TextAlign.left,
-            style: Theme.of(context).textTheme.bodyLarge,
+          _Section(
+            child: Text(
+              ant.description,
+              textAlign: TextAlign.left,
+              style: Theme.of(context).textTheme.bodyLarge,
+            ),
           ),
-          const SizedBox(height: 24),
-          Divider(
+          if (AdsService.enabled)
+            _Section(
+              child:
+                  adsService.getBannerAdWidget(AdsService.antDetailsAdUnitId) ??
+                      Container(),
+            ),
+          _Section(
+              child: Divider(
             color: Theme.of(context).colorScheme.primary,
-          ),
-          const SizedBox(height: 24),
-          Text(
+          )),
+          _Section(
+              child: Text(
             'Tier Ratings',
             style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const SizedBox(height: 24),
-          ...tags.map((tag) => _TagDetails(tag: tag))
+          )),
+          _Section(
+              child: Column(
+            children: [...tags.map((tag) => _TagDetails(tag: tag))],
+          ))
         ],
       ),
+    );
+  }
+}
+
+class _Section extends StatelessWidget {
+  const _Section({super.key, required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+      child: child,
     );
   }
 }

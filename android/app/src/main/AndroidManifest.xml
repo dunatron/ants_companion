@@ -48,6 +48,12 @@
             android:name="flutterEmbedding"
             android:value="2" />
 
+        <!-- AdMob app ID -->
+        <meta-data 
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8577724747514488~2362066077"
+        />
+
         <!-- Notifications: added for notifications: ToDo put detail about what this does -->
         <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
         <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
