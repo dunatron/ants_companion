@@ -20,6 +20,8 @@ class AntDetails extends StatelessWidget {
 
     final AdsService adsService = AdsService();
     adsService.loadBannerAd(AdsService.antDetailsAdUnitId, AdSize.largeBanner);
+
+    final species = ant.species;
     return SelectionArea(
       child: Column(
         children: [
@@ -38,6 +40,13 @@ class AntDetails extends StatelessWidget {
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
+          if (species != null)
+            _Section(
+              child: Text(
+                species.name,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+            ),
           _Section(
             child: Text(
               ant.description,
