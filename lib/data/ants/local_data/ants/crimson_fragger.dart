@@ -3,8 +3,10 @@ part of '../local_ants_list.dart';
 const crimsonFragger = Ant(
   id: 'crimson_fragger',
   name: 'Crimson Fragger',
-  description: '',
-  scientificName: '',
+  scientificName: 'Camponotus chromaiodes',
+  description: 'Lives in forested areas at lower elevations and builds nests '
+      'in decaying wood(both logs and stumps) that extend all the way to '
+      'the ground.',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

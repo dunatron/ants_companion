@@ -1,0 +1,1 @@
+enum ScientificClassification { arachnida, insecta }

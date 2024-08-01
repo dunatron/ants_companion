@@ -1,4 +1,6 @@
 import 'package:ants_companion/common/models/tier_rating.dart';
+import 'package:ants_companion/domain/ants/models/ant_external_link.dart';
+import 'package:ants_companion/domain/ants/models/ant_scientific_classification.dart';
 import 'package:ants_companion/domain/ants/models/ant_skill.dart';
 import 'package:ants_companion/domain/ants/models/ant_role.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
@@ -12,6 +14,8 @@ class Ant extends Equatable {
     required this.name,
     required this.scientificName,
     this.species,
+    this.scientificClassification,
+    this.externalLinks = const [],
     required this.description,
     required this.type,
     required this.role,
@@ -23,6 +27,8 @@ class Ant extends Equatable {
   final String name;
   final String scientificName;
   final Species? species;
+  final AntScientificClassification? scientificClassification;
+  final List<AntExternalLink> externalLinks;
   final String description;
 
   String get profilePath => 'assets/ant_profile_images/$id.jpg';

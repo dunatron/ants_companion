@@ -1,0 +1,1 @@
+enum ScientificOrder { araneae, hymenoptera }

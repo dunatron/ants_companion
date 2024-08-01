@@ -1,10 +1,23 @@
 import 'package:ants_companion/common/models/row_position.dart';
 import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
+import 'package:ants_companion/domain/ants/models/ant_external_link.dart';
 import 'package:ants_companion/domain/ants/models/ant_role.dart';
+import 'package:ants_companion/domain/ants/models/ant_scientific_classification.dart';
 import 'package:ants_companion/domain/ants/models/ant_skill.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_classification.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_domain.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_family.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_genus.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_infraorder.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_kingdom.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_order.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_phylum.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_subfamily.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_subphylum.dart';
+import 'package:ants_companion/domain/ants/models/scientific_classification/scientific_tribe.dart';
 import 'package:ants_companion/domain/ants/models/species.dart';
 
 part 'ants/acid_general.dart';
