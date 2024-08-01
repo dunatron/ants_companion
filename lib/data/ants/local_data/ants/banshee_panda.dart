@@ -13,6 +13,24 @@ const bansheePanda = Ant(
     ...bansheePandaPveTags,
     ...bansheePandaPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Euspinolia militaris',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null,
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.mutillidae,
+    subfamily: null,
+    tribe: null,
+    genus: ScientificGenus.euspinolia,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Euspinolia_militaris',
+    ),
+  ],
 );
 
 const bansheePandaPveTags = [

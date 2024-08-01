@@ -1,0 +1,1 @@
+enum ScientificTribe { amblyoponini, attini }

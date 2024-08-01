@@ -12,6 +12,28 @@ const attaSexdens = Ant(
       'ants, they have strong territorial awareness and garrison habits',
   type: AntType.guardian,
   role: AntRole.ranged,
+  scientificClassification: AntScientificClassification(
+    species: 'Atta Sexdens',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.attini,
+    genus: ScientificGenus.atta,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Atta_sexdens',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Atta_sexdens',
+    ),
+  ],
   tierTags: [
     ...attaSexdensPveTags,
     ...attaSexdensPvpTags,

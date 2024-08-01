@@ -3,8 +3,25 @@ part of '../local_ants_list.dart';
 const crimsonPearl = Ant(
   id: 'crimson_pearl',
   name: 'Crimson Pearl',
-  scientificName: '',
-  description: 'A really great PVE ant',
+  scientificName: 'Myrmarachne sp',
+  description: 'Is a genus of ant-mimicking jumping spiders '
+      'Myrmarachne(The same as brown rogue) of the salticidae family and can '
+      'be found in south Asia and Southeast Asia. '
+      'Mimic is their natural skill.\n'
+      'They are commonly called ant-mimicking spiders, but they are not '
+      'the only spiders that have this attribute.',
+  scientificClassification: AntScientificClassification(
+    species: 'Myrmarachne sp',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: ScientificSubphylum.chelicerata,
+    classification: ScientificClassification.arachnida,
+    order: ScientificOrder.araneae,
+    infraorder: ScientificInfraorder.araneomorphae,
+    family: ScientificFamily.salticidae,
+    subfamily: ScientificSubfamily.salticinae,
+    tribe: null,
+    genus: ScientificGenus.myrmarachne,
+  ),
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

@@ -1,0 +1,1 @@
+enum ScientificKingdom { animalia }

@@ -9,6 +9,24 @@ const acidGeneral = Ant(
       'centipedes, they are large in size and can reach 10-11 mm.\nThe colony '
       'is very small with only dozens of ants, but its hunting soldier ants '
       'can account for more than half of the colony.',
+  scientificClassification: AntScientificClassification(
+    species: 'Mystrium oberthueri',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: ScientificInfraorder.araneomorphae,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.amblyoponinae,
+    tribe: ScientificTribe.amblyoponini,
+    genus: ScientificGenus.mystrium,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Mystrium_oberthueri',
+    ),
+  ],
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [
