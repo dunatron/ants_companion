@@ -5,6 +5,7 @@ import 'package:ants_companion/domain/ants/models/ant_role.dart';
 import 'package:ants_companion/domain/ants/models/ant_skill.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
+import 'package:ants_companion/domain/ants/models/species.dart';
 
 part 'ants/acid_general.dart';
 part 'ants/atta_sexdens.dart';

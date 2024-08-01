@@ -3,8 +3,12 @@ part of '../local_ants_list.dart';
 const bloodGiant = Ant(
   id: 'blood_giant',
   name: 'Blood Giant',
-  description: '',
-  scientificName: '',
+  scientificName: 'Nomamyrmex esenbeckii',
+  species: Species.ant,
+  description: 'Distributed in the American continent, from the southern '
+      'United States to the Amazon rainforest.\n'
+      'They are one of the most widely distributed army ants in the world.\n'
+      'They are fierce and powerful and often attack other ant nests.',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

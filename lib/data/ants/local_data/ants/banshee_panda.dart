@@ -3,8 +3,10 @@ part of '../local_ants_list.dart';
 const bansheePanda = Ant(
   id: 'banshee_panda',
   name: 'Banshee Panda',
-  description: '',
-  scientificName: '',
+  description: "It is a species of wasp in the family Mutillidae, also known "
+      "as 'Panda Ant'. It has a unique color and cute appearance",
+  scientificName: 'Euspinolia militaris',
+  species: Species.wasp,
   type: AntType.shooter,
   role: AntRole.support,
   tierTags: [

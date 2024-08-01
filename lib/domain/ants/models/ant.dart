@@ -3,6 +3,7 @@ import 'package:ants_companion/domain/ants/models/ant_skill.dart';
 import 'package:ants_companion/domain/ants/models/ant_role.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
+import 'package:ants_companion/domain/ants/models/species.dart';
 import 'package:equatable/equatable.dart';
 
 class Ant extends Equatable {
@@ -10,6 +11,7 @@ class Ant extends Equatable {
     required this.id,
     required this.name,
     required this.scientificName,
+    this.species,
     required this.description,
     required this.type,
     required this.role,
@@ -20,6 +22,7 @@ class Ant extends Equatable {
   final String id;
   final String name;
   final String scientificName;
+  final Species? species;
   final String description;
 
   String get profilePath => 'assets/ant_profile_images/$id.jpg';
