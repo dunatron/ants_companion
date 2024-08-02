@@ -20,15 +20,7 @@ class AppDrawer extends StatelessWidget {
               ),
             ),
             child: Container(),
-            // child: Text(
-            //   'Navigator',
-            //   style: TextStyle(
-            //     color: Theme.of(context).colorScheme.onPrimary,
-            //     fontSize: 24,
-            //   ),
-            // ),
           ),
-
           ListTile(
             leading: const Icon(Icons.message),
             title: const Text('Ant Tier Rankings'),
@@ -37,16 +29,6 @@ class AppDrawer extends StatelessWidget {
               context.go('/ant-tiers');
             },
           ),
-
-          // ListTile(
-          //   leading: const Icon(Icons.message),
-          //   title: const Text('Hatch Recorder'),
-          //   onTap: () {
-          //     context.go('/hatch-recorder');
-          //     Navigator.pop(context);
-          //   },
-          // ),
-
           ListTile(
             leading: const Icon(Icons.message),
             title: const Text('Colony Action Scheduler'),
@@ -55,14 +37,6 @@ class AppDrawer extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
-          // ListTile(
-          //   leading: const Icon(Icons.message),
-          //   title: const Text('Pending Notifications'),
-          //   onTap: () {
-          //     context.go('/pending-notifications');
-          //     Navigator.pop(context);
-          //   },
-          // ),
           ListTile(
             leading: const Icon(Icons.message),
             title: const Text('Scientific Classifications'),
