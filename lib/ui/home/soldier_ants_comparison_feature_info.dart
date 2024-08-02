@@ -26,7 +26,7 @@ class SoldierAntsComparisonFeatureInfo extends StatelessWidget {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                context.go('//soldier-ants-comparison');
+                context.go('/soldier-ants-comparison');
               },
               child: const Text('Soldier Stats'),
             )
