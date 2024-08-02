@@ -28,75 +28,46 @@ class AppDrawer extends StatelessWidget {
             //   ),
             // ),
           ),
+
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Admin'),
+            title: const Text('Ant Tier Rankings'),
             onTap: () {
               Navigator.pop(context);
-              context.go('/admin');
+              context.go('/ant-tiers');
             },
           ),
+
+          // ListTile(
+          //   leading: const Icon(Icons.message),
+          //   title: const Text('Hatch Recorder'),
+          //   onTap: () {
+          //     context.go('/hatch-recorder');
+          //     Navigator.pop(context);
+          //   },
+          // ),
+
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Onboarding'),
-            onTap: () {
-              Navigator.pop(context);
-              context.go('/onboarding');
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.message),
-            title: const Text('Tier Ratings'),
-            onTap: () {
-              Navigator.pop(context);
-              context.go('/tier-ratings');
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.message),
-            title: const Text('Ants tier list'),
-            onTap: () {
-              context.go('/pve-tier-list');
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.message),
-            title: const Text('Battle Simulator'),
-            onTap: () {
-              context.go('/battle-simulator');
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.message),
-            title: const Text('Hatch Recorder'),
-            onTap: () {
-              context.go('/hatch-recorder');
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.message),
-            title: const Text('CSV Manager'),
-            onTap: () {
-              context.go('/csv-manager');
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.message),
-            title: const Text('CA Reminders'),
+            title: const Text('Colony Action Scheduler'),
             onTap: () {
               context.go('/ca-scheduler');
               Navigator.pop(context);
             },
           ),
+          // ListTile(
+          //   leading: const Icon(Icons.message),
+          //   title: const Text('Pending Notifications'),
+          //   onTap: () {
+          //     context.go('/pending-notifications');
+          //     Navigator.pop(context);
+          //   },
+          // ),
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Pending Notifications'),
+            title: const Text('Scientific Classifications'),
             onTap: () {
-              context.go('/pending-notifications');
+              context.go('/scientific-classifications');
               Navigator.pop(context);
             },
           ),
@@ -104,23 +75,7 @@ class AppDrawer extends StatelessWidget {
             leading: const Icon(Icons.message),
             title: const Text('Soldier Comparison'),
             onTap: () {
-              context.go('/soldier-details-comparison');
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.message),
-            title: const Text('Ant Tiers'),
-            onTap: () {
-              context.go('/ant-tiers');
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.message),
-            title: const Text('Scientific Classifications'),
-            onTap: () {
-              context.go('/scientific-classifications');
+              context.go('/soldier-ants-comparison');
               Navigator.pop(context);
             },
           ),

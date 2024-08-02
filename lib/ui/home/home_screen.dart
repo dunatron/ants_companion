@@ -4,41 +4,23 @@ import 'package:ants_companion/domain/ants/ants.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/notifications/local_notifications.dart';
 import 'package:ants_companion/ui/ads/ads_carousel.dart';
-import 'package:ants_companion/ui/ants/ant_details/ant_details_screen.dart';
+import 'package:ants_companion/ui/ants/ant_details/ant_details.dart';
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
+import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/home/ants_tier_feaure_info.dart';
 import 'package:ants_companion/ui/home/notifications_feature_info.dart';
+import 'package:ants_companion/ui/home/scientific_classifications_feature_info.dart';
+import 'package:ants_companion/ui/home/soldier_ants_comparison_feature_info.dart';
 import 'package:ants_companion/ui/home/welcome_info.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   _launchAntDetails(final Ant ant, BuildContext context) =>
-      showModalBottomSheet(
-        context: context,
-        isScrollControlled: true,
-        enableDrag: true,
-        showDragHandle: true,
-        builder: (BuildContext _) {
-          return DraggableScrollableSheet(
-            maxChildSize: 1,
-            initialChildSize: kIsWeb ? 0.8 : 0.5,
-            expand: false,
-            builder: (
-              BuildContext context,
-              ScrollController scrollController,
-            ) =>
-                AntDetailsScreen(
-              scrollController: scrollController,
-              ant: ant,
-            ),
-          );
-        },
-      );
+      buildBottomSheetModal(context, AntDetails(ant: ant));
 
   @override
   Widget build(BuildContext context) {
@@ -72,11 +54,19 @@ class HomeScreen extends StatelessWidget {
           ),
           const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
           const SliverPadding(
-            padding: EdgeInsets.symmetric(
-              horizontal: Spacing.l,
-            ),
+            padding: EdgeInsets.symmetric(horizontal: Spacing.l),
+            sliver: SliverToBoxAdapter(child: WelcomeInfo()),
+          ),
+          const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: Spacing.l),
             sliver: SliverToBoxAdapter(
-              child: WelcomeInfo(),
+              child: Center(
+                child: Text(
+                  'Special Ants',
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+              ),
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
@@ -89,7 +79,7 @@ class HomeScreen extends StatelessWidget {
               ants: antsList,
             ),
           ),
-          const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
+          // const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
           const SliverPadding(
             padding: EdgeInsets.symmetric(
               horizontal: Spacing.l,
@@ -118,8 +108,25 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
-          SliverToBoxAdapter(
-            child: Card(
+          const SliverPadding(
+            padding: EdgeInsets.symmetric(
+              horizontal: Spacing.l,
+            ),
+            sliver: SliverToBoxAdapter(
+              child: ScientificClassificationsFeatureInfo(),
+            ),
+          ),
+          const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
+          const SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: Spacing.l),
+            sliver: SliverToBoxAdapter(
+              child: SoldierAntsComparisonFeatureInfo(),
+            ),
+          ),
+          const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
+            sliver: SliverToBoxAdapter(
               child: ElevatedButton(
                 onPressed: () {
                   LocalNotifications.showSimpleNotification(
@@ -128,12 +135,11 @@ class HomeScreen extends StatelessWidget {
                     payload: '/ca-scheduler/1-12',
                   );
                 },
-                child: Text(
-                  'Simple Notification',
-                ),
+                child: const Text('Test Notification'),
               ),
             ),
           ),
+          const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
         ],
       ),
     );

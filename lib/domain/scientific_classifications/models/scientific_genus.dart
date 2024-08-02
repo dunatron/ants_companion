@@ -1,1 +1,13 @@
-enum ScientificGenus { myrmarachne, mystrium, atta, euspinolia }
+enum ScientificGenus {
+  aphantochilus,
+  atta,
+  camponotus,
+  cephalotes,
+  dasymutilla,
+  euspinolia,
+  myrmaplata,
+  myrmarachne,
+  mystrium,
+  nomamyrmex,
+  paraponera,
+}

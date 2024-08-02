@@ -18,6 +18,24 @@ const brownRogue = Ant(
     ...brownRoguePveTags,
     ...brownRoguePvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Myrmarachne plataleoides',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null,
+    classification: ScientificClassification.arachnida,
+    order: ScientificOrder.araneae,
+    infraorder: null,
+    family: ScientificFamily.salticidae,
+    subfamily: ScientificSubfamily.salticinae,
+    tribe: null,
+    genus: ScientificGenus.myrmaplata,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Myrmaplata_plataleoides',
+    ),
+  ],
 );
 
 const brownRoguePveTags = [

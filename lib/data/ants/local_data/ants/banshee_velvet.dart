@@ -17,6 +17,24 @@ const bansheeVelvet = Ant(
     ...bansheeVelvetPveTags,
     ...bansheeVelvetPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Dasymutilla occidentalis',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null,
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.mutillidae,
+    subfamily: null,
+    tribe: null,
+    genus: ScientificGenus.dasymutilla,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Dasymutilla_occidentalis',
+    ),
+  ],
 );
 
 const bansheeVelvetPveTags = [

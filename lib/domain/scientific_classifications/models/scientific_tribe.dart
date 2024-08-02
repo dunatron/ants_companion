@@ -1,1 +1,1 @@
-enum ScientificTribe { amblyoponini, attini }
+enum ScientificTribe { amblyoponini, attini, camponotini }

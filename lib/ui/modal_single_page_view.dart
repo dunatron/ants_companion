@@ -1,4 +1,3 @@
-import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:flutter/material.dart';
 
 class ModalSinglePageView extends StatelessWidget {
@@ -17,9 +16,7 @@ class ModalSinglePageView extends StatelessWidget {
     return CustomScrollView(
       controller: controller,
       slivers: [
-        SliverToBoxAdapter(
-          child: child,
-        ),
+        SliverToBoxAdapter(child: child),
       ],
     );
   }

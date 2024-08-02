@@ -16,6 +16,24 @@ const blackCancer = Ant(
     ...blackCancerPveTags,
     ...blackCancerPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Aphantochilus rogersi',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: ScientificSubphylum.chelicerata,
+    classification: ScientificClassification.arachnida,
+    order: ScientificOrder.araneae,
+    infraorder: ScientificInfraorder.araneomorphae,
+    family: ScientificFamily.thomisidae,
+    subfamily: null,
+    tribe: null,
+    genus: ScientificGenus.aphantochilus,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Aphantochilus',
+    ),
+  ],
 );
 
 const blackCancerPveTags = [

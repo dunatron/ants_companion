@@ -1,16 +1,47 @@
 import 'package:flutter/material.dart';
 
-// final lightColorScheme = ColorScheme.fromSeed(
-//   seedColor: Colors.indigo,
-//   brightness: Brightness.light,
-// );
+final lightColorScheme = LightThemes.brownTonalSpot();
 
-final lightColorScheme = ColorScheme.fromSeed(
-  seedColor: Color(0xFF96416A),
-  brightness: Brightness.light,
-  primary: Color(0xFF96416A),
-  onPrimary: Color(0xFFFFFFFF),
-  primaryContainer: Color(0xFFFFD8E6),
-  onPrimaryContainer: Color(0xFF3D0024),
-  secondary: Color(0xFF735761),
-);
+// Top theme contenders
+// 1. greyScale
+// 2. brownTonalSpot
+// 3. maroonFidelity
+
+class LightThemes {
+  static ColorScheme greyScale() => ColorScheme.fromSeed(
+        seedColor: Colors.grey,
+        // seedColor wont actually matter with monochrome
+        dynamicSchemeVariant: DynamicSchemeVariant.monochrome,
+        brightness: Brightness.light,
+      );
+
+  static ColorScheme maroonFidelity() => ColorScheme.fromSeed(
+        seedColor: const Color(0xFF96416A),
+        dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
+        brightness: Brightness.light,
+      );
+
+  static ColorScheme indigoTonalSpot() => ColorScheme.fromSeed(
+        seedColor: Colors.indigo,
+        dynamicSchemeVariant: DynamicSchemeVariant.tonalSpot,
+        brightness: Brightness.light,
+      );
+
+  static ColorScheme brownVibrant() => ColorScheme.fromSeed(
+        seedColor: Colors.brown,
+        dynamicSchemeVariant: DynamicSchemeVariant.vibrant,
+        brightness: Brightness.light,
+      );
+
+  static ColorScheme brownNeutral() => ColorScheme.fromSeed(
+        seedColor: Colors.brown,
+        dynamicSchemeVariant: DynamicSchemeVariant.neutral,
+        brightness: Brightness.light,
+      );
+
+  static ColorScheme brownTonalSpot() => ColorScheme.fromSeed(
+        seedColor: Colors.brown,
+        dynamicSchemeVariant: DynamicSchemeVariant.tonalSpot,
+        brightness: Brightness.light,
+      );
+}

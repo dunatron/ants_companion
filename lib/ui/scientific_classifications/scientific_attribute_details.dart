@@ -1,3 +1,4 @@
+import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
 import 'package:ants_companion/ui/section.dart';
@@ -18,10 +19,11 @@ class ScientificAttributeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Column(
       children: [
         Section(
-          child: Text(title, style: Theme.of(context).textTheme.headlineMedium),
+          child: Text(title, style: textTheme.headlineMedium),
         ),
         Section(
           child: Text(description),
@@ -30,10 +32,17 @@ class ScientificAttributeDetails extends StatelessWidget {
           children: [
             ...ants.map(
               (it) => Container(
+                padding: EdgeInsets.all(Spacing.n),
                 child: Column(
                   children: [
                     AntProfileImage(imagePath: it.profilePath),
-                    Text(it.role.name),
+                    SizedBox(
+                      height: Spacing.n,
+                    ),
+                    Text(
+                      it.name,
+                      style: textTheme.bodySmall,
+                    ),
                   ],
                 ),
               ),

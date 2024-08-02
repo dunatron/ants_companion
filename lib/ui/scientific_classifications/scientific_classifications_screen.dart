@@ -2,14 +2,13 @@ import 'package:ants_companion/domain/ants/ants.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_family.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_genus.dart';
-import 'package:ants_companion/domain/scientific_classifications/models/scientific_kingdom.dart';
+import 'package:ants_companion/domain/scientific_classifications/models/scientific_subfamily.dart';
 import 'package:ants_companion/domain/scientific_classifications/scientific_classifications.dart';
+import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
-import 'package:ants_companion/ui/modal_single_page_view.dart';
 import 'package:ants_companion/ui/scientific_classifications/sliver_attribute_area.dart';
 
 import 'package:ants_companion/ui/scientific_classifications/scientific_attribute_details.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ScientificClassificationsScreen extends StatelessWidget {
@@ -21,37 +20,13 @@ class ScientificClassificationsScreen extends StatelessWidget {
     required String title,
     required String description,
   }) =>
-      showModalBottomSheet(
-        context: context,
-        isScrollControlled: true,
-        enableDrag: true,
-        showDragHandle: true,
-        builder: (BuildContext _) {
-          return DraggableScrollableSheet(
-            maxChildSize: 1,
-            initialChildSize: kIsWeb ? 0.8 : 0.5,
-            expand: false,
-            builder: (
-              BuildContext context,
-              ScrollController scrollController,
-            ) =>
-                ScientificAttributeDetails(
-              title: title,
-              description: description,
-              ants: ants,
-            ),
-            // =>
-            //     ModalSinglePageView(
-            //   controller: scrollController,
-            //   child: ScientificAttributeDetails(
-            //     title: title,
-            //     description: description,
-            //     ants: ants,
-            //   ),
-            // ),
-          );
-        },
-      );
+      buildBottomSheetModal(
+          context,
+          ScientificAttributeDetails(
+            title: title,
+            description: description,
+            ants: ants,
+          ));
 
   @override
   Widget build(BuildContext context) {
@@ -61,14 +36,14 @@ class ScientificClassificationsScreen extends StatelessWidget {
     final descriptions = AttributeDescriptions();
 
     return PageLayout(
-      title: 'Scientific classifications',
+      title: 'Classifications',
       slivers: [
         SliverAttributeArea(
-          title: 'Genus',
-          description: descriptions.genus,
-          items: ScientificGenus.values,
+          title: 'Family',
+          description: descriptions.family,
+          items: ScientificFamily.values,
           onPressed: (v) => _launchScientificAttributeDetails(
-            scientificClassifications.antsForGenus(v),
+            scientificClassifications.antsForFamily(v),
             context,
             title: v.name,
             description: 'Genus description',
@@ -76,11 +51,23 @@ class ScientificClassificationsScreen extends StatelessWidget {
           nameItemBuilder: (item, index) => item.name,
         ),
         SliverAttributeArea(
-          title: 'Family',
-          description: descriptions.family,
-          items: ScientificFamily.values,
+          title: 'Sub Family',
+          description: descriptions.subfamily,
+          items: ScientificSubfamily.values,
           onPressed: (v) => _launchScientificAttributeDetails(
-            scientificClassifications.antsForFamily(v),
+            scientificClassifications.antsForSubfamily(v),
+            context,
+            title: v.name,
+            description: 'Genus description',
+          ),
+          nameItemBuilder: (item, index) => item.name,
+        ),
+        SliverAttributeArea(
+          title: 'Genus',
+          description: descriptions.genus,
+          items: ScientificGenus.values,
+          onPressed: (v) => _launchScientificAttributeDetails(
+            scientificClassifications.antsForGenus(v),
             context,
             title: v.name,
             description: 'Genus description',

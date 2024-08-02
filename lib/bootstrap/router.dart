@@ -4,6 +4,7 @@ import 'package:ants_companion/ui/home/home_screen.dart';
 import 'package:ants_companion/ui/route_not_found/route_not_found_screen.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tiers_screen.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_classifications_screen.dart';
+import 'package:ants_companion/ui/soldier_ants/soldier_ants_comparison_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -44,6 +45,11 @@ final routes = <RouteBase>[
         path: 'scientific-classifications',
         builder: (BuildContext context, GoRouterState state) =>
             const ScientificClassificationsScreen(),
+      ),
+      GoRoute(
+        path: 'soldier-ants-comparison',
+        builder: (BuildContext context, GoRouterState state) =>
+            const SoldierAntsComparisonScreen(),
       ),
     ],
   ),

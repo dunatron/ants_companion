@@ -48,4 +48,7 @@ class AntScientificClassification {
   final ScientificTribe? tribe;
 
   final ScientificGenus genus;
+
+  /// Camponotus_chromaiodes || crimson fragger
+  /// has a subGenus.. https://www.antwiki.org/wiki/Camponotus_chromaiodes
 }
