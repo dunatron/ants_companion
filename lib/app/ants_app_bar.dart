@@ -13,6 +13,7 @@ class AntsAppBar extends StatelessWidget {
     return SliverAppBar(
       // title: Text(title),
       floating: true,
+      pinned: false,
       snap: true,
       title: _TitleWithBackButton(title: title),
 

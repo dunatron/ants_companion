@@ -125,16 +125,18 @@ class _AntTiersDisplayState extends State<AntTiersDisplay> {
         ),
         const SizedBox(height: 24),
         Section(
-          children: [
-            ...TierRating.values.map(
-              (tierRating) => TierSection(
-                antType: _antType,
-                tierRating: tierRating,
-                ants: widget.ants,
-                isPvp: _isPvp,
+          child: Column(
+            children: [
+              ...TierRating.values.map(
+                (tierRating) => TierSection(
+                  antType: _antType,
+                  tierRating: tierRating,
+                  ants: widget.ants,
+                  isPvp: _isPvp,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         )
       ],
     );

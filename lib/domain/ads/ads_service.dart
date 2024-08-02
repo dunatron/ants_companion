@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:rxdart/rxdart.dart';
@@ -44,12 +45,14 @@ class AdsService {
 
   AdsService._internal();
 
-  static bool get platformSupportsAds => Platform.isAndroid || Platform.isIOS;
+  static bool get platformSupportsAds =>
+      defaultTargetPlatform == TargetPlatform.android ||
+      defaultTargetPlatform == TargetPlatform.iOS;
 
   static bool get enabled => platformSupportsAds && _enableAds;
 
   Future<void> initialize() async {
-    if (!platformSupportsAds) return;
+    if (!enabled) return;
     await MobileAds.instance.initialize();
     // Ad our device as a test device for ads
     MobileAds.instance.updateRequestConfiguration(

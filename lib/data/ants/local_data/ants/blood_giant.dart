@@ -15,6 +15,24 @@ const bloodGiant = Ant(
     ...bloodGiantPveTags,
     ...bloodGiantPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Nomamyrmex esenbeckii',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null,
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.dorylinae,
+    tribe: null,
+    genus: ScientificGenus.nomamyrmex,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Nomamyrmex_esenbeckii',
+    ),
+  ],
 );
 
 const bloodGiantPveTags = [

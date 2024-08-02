@@ -19,6 +19,28 @@ const bulletAnt = Ant(
     ...bulletAntPveTags,
     ...bulletAntPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Paraponera clavata',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null,
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.paraponerinae,
+    tribe: null,
+    genus: ScientificGenus.paraponera,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Paraponera_clavata',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Paraponera_clavata',
+    ),
+  ],
 );
 
 const bulletAntPveTags = [

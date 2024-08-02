@@ -22,7 +22,7 @@ class PageLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const AppDrawer(),
+      drawer: const SafeArea(child: AppDrawer()),
       body: CustomScrollView(
         controller: controller,
         slivers: [

@@ -17,6 +17,28 @@ const blackKnight = Ant(
     ...blackKnightPveTags,
     ...blackKnightPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Cephalotes alfaroi',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: ScientificSubphylum.chelicerata,
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: ScientificInfraorder.araneomorphae,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.attini,
+    genus: ScientificGenus.cephalotes,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Cephalotes_alfaroi',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Cephalotes_alfaroi',
+    ),
+  ],
 );
 
 const blackKnightPveTags = [];

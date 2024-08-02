@@ -13,6 +13,28 @@ const crimsonFragger = Ant(
     ...crimsonFraggerPveTags,
     ...crimsonFraggerPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Camponotus chromaiodes',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null,
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.formicinae,
+    tribe: ScientificTribe.camponotini,
+    genus: ScientificGenus.camponotus,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Camponotus_chromaiodes',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Camponotus_chromaiodes',
+    ),
+  ],
 );
 
 const crimsonFraggerPveTags = [
