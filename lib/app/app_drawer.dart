@@ -118,9 +118,9 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Ads Test'),
+            title: const Text('Scientific Classifications'),
             onTap: () {
-              context.go('/ads-test');
+              context.go('/scientific-classifications');
               Navigator.pop(context);
             },
           ),
