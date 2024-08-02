@@ -18,17 +18,17 @@ class SoldierAntsComparisonFeatureInfo extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             const Text(
-              'Interested in the base stats for soldier ants? \n'
-              'This feature is for you.\n'
+              'Interested in the base stats for soldier ants? '
+              'This feature is for you.'
               'A side by side comparison of the base soldier stats',
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                context.go('/scientific-classifications');
+                context.go('//soldier-ants-comparison');
               },
-              child: const Text('View Classifications'),
+              child: const Text('Soldier Stats'),
             )
           ],
         ),
