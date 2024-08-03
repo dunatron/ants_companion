@@ -6,6 +6,7 @@ import 'package:ants_companion/domain/scientific_classifications/models/scientif
 import 'package:ants_companion/domain/scientific_classifications/scientific_classifications.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
+import 'package:ants_companion/ui/scientific_classifications/scientific_family_extension.dart';
 import 'package:ants_companion/ui/scientific_classifications/sliver_attribute_area.dart';
 
 import 'package:ants_companion/ui/scientific_classifications/scientific_attribute_details.dart';
@@ -46,7 +47,7 @@ class ScientificClassificationsScreen extends StatelessWidget {
             scientificClassifications.antsForFamily(v),
             context,
             title: v.name,
-            description: 'Genus description',
+            description: v.description,
           ),
           nameItemBuilder: (item, index) => item.name,
         ),
