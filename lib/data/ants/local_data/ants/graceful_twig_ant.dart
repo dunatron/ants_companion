@@ -11,6 +11,32 @@ const gracefulTwigAnt = Ant(
     ...gracefulTwigAntPveTags,
     ...gracefulTwigAntPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Pseudomyrmex gracilis',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.pseudomyrmecinae,
+    tribe: null,
+    genus: ScientificGenus.pseudomyrmex,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Pseudomyrmex_gracilis',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Pseudomyrmex_gracilis',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Pseudomyrmex_gracilis',
+    ),
+  ],
 );
 
 const gracefulTwigAntPveTags = [

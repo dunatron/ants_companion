@@ -11,6 +11,7 @@ enum ScientificGenus {
   eciton,
   euspinolia,
   formica,
+  harpegnathos,
   leptogenys,
   myrmaplata,
   myrmarachne,
@@ -18,6 +19,10 @@ enum ScientificGenus {
   nomamyrmex,
   odontomachus,
   paraponera,
+  polyrhachis,
+  prionopelta,
+  pseudomyrmex,
   tapinoma,
+  telamonia,
   tetramorium,
 }

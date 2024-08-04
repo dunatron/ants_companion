@@ -11,6 +11,28 @@ const guardGeneral = Ant(
     ...guardGeneralPveTags,
     ...guardGeneralPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Harpegnathos venator',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.ponerinae,
+    tribe: ScientificTribe.ponerini,
+    genus: ScientificGenus.harpegnathos,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Harpegnathos_venator',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Harpegnathos_venator',
+    ),
+  ],
 );
 
 const guardGeneralPveTags = [

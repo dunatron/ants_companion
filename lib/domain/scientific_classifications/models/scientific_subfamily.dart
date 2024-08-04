@@ -7,4 +7,5 @@ enum ScientificSubfamily {
   formicinae,
   dolichoderinae,
   ponerinae,
+  pseudomyrmecinae,
 }

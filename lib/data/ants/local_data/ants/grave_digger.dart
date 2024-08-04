@@ -12,6 +12,24 @@ const graveDigger = Ant(
     ...graveDiggerPveTags,
     ...graveDiggerPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Prionopelta humicola',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.amblyoponinae,
+    tribe: ScientificTribe.amblyoponini,
+    genus: ScientificGenus.prionopelta,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Prionopelta_humicola',
+    ),
+  ],
 );
 
 const graveDiggerPveTags = [

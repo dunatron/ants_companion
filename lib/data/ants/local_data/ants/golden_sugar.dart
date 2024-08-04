@@ -11,6 +11,28 @@ const goldenSugar = Ant(
     ...goldenSugarPveTags,
     ...goldenSugarPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Camponotus sericeiventris',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.formicinae,
+    tribe: ScientificTribe.camponotini,
+    genus: ScientificGenus.camponotus,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Camponotus_sericeiventris',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Camponotus_sericeiventris',
+    ),
+  ],
 );
 
 const goldenSugarPveTags = [
