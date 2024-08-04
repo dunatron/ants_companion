@@ -6,6 +6,25 @@
     "warzoneSpecialAnts",
     "warzoneHatchSoldierAnts",
     "warzoneFreeChoice",
-    "warzoneInsectHatching"
+    "warzoneInsectHatching",
+    "familyAmpulicidaeTitle",
+    "familyAmpulicidaeDescription",
+    "familyCoreidaeTitle",
+    "familyCoreidaeDescription",
+    "familyCorinnidaeTitle",
+    "familyCorinnidaeDescription",
+    "familyReduviidaeTitle",
+    "familyReduviidaeDescription"
+  ],
+
+  "tl": [
+    "familyAmpulicidaeTitle",
+    "familyAmpulicidaeDescription",
+    "familyCoreidaeTitle",
+    "familyCoreidaeDescription",
+    "familyCorinnidaeTitle",
+    "familyCorinnidaeDescription",
+    "familyReduviidaeTitle",
+    "familyReduviidaeDescription"
   ]
 }

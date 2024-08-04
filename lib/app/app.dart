@@ -26,7 +26,7 @@ class App extends StatelessWidget {
       ),
       // themeMode: ThemeMode.dark,
       routerConfig: routerConfig(),
-      locale: Locale('tl'),
+      // locale: Locale('tl'),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
     );
