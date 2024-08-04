@@ -11,6 +11,28 @@ const pheidoleNietneri = Ant(
     ...pheidoleNietneriPveTags,
     ...pheidoleNietneriPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Pheidole nietneri',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.attini,
+    genus: ScientificGenus.pheidole,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Pheidole_nietneri',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Pheidole_nietneri',
+    ),
+  ],
 );
 
 const pheidoleNietneriPveTags = [

@@ -10,7 +10,6 @@ enum ScientificGenus {
   dorylus,
   eciton,
   euspinolia,
-
   formica,
   harpegnathos,
   leptogenys,
@@ -25,6 +24,7 @@ enum ScientificGenus {
   nomamyrmex,
   odontomachus,
   paraponera,
+  pheidole,
   plectroctena,
   polyrhachis,
   prionopelta,

@@ -11,6 +11,28 @@ const newWorldGeneral = Ant(
     ...newWorldGeneralPveTags,
     ...newWorldGeneralPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Echiton burchellii',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.dorylinae,
+    tribe: null,
+    genus: ScientificGenus.eciton,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Eciton_burchellii',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Eciton_burchellii',
+    ),
+  ],
 );
 
 const newWorldGeneralPveTags = [

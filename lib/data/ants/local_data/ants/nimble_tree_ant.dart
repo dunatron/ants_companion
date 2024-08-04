@@ -11,6 +11,24 @@ const nimbleTreeAnt = Ant(
     ...nimbleTreeAntPveTags,
     ...nimbleTreeAntPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Pseudomyrmex boopis',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.pseudomyrmecinae,
+    tribe: null,
+    genus: ScientificGenus.pseudomyrmex,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Pseudomyrmex_boopis',
+    ),
+  ],
 );
 
 const nimbleTreeAntPveTags = [
