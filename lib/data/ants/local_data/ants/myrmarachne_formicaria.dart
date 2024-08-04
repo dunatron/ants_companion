@@ -7,9 +7,28 @@ const myrmarachneFormicaria = Ant(
   description: 'An OP carrier Ant',
   type: AntType.carrier,
   role: AntRole.melee,
+  species: Species.spider,
   tierTags: [
     ...myrmarachneFormicariaPveTags,
     ...myrmarachneFormicariaPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Myrmarachne Formicaria',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.arachnida,
+    order: ScientificOrder.araneae,
+    infraorder: ScientificInfraorder.araneomorphae,
+    family: ScientificFamily.salticidae,
+    subfamily: ScientificSubfamily.salticinae,
+    tribe: null,
+    genus: ScientificGenus.myrmarachne,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Myrmarachne_formicaria',
+    ),
   ],
 );
 

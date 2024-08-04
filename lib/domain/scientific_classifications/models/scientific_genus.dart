@@ -10,6 +10,7 @@ enum ScientificGenus {
   dorylus,
   eciton,
   euspinolia,
+
   formica,
   harpegnathos,
   leptogenys,
@@ -18,6 +19,7 @@ enum ScientificGenus {
   myrmaplata,
   myrmarachne,
   myrmecia,
+  myrmecotypus,
   mystrium,
   neoponera,
   nomamyrmex,

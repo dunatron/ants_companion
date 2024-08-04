@@ -7,9 +7,31 @@ const myrmecotypusRettenmeyeri = Ant(
   scientificName: 'Myrmecotypus Rettenmeyeri',
   type: AntType.shooter,
   role: AntRole.melee,
+  species: Species.spider,
   tierTags: [
     ...myrmecotypusRettenmeyeriPveTags,
     ...myrmecotypusRettenmeyeriPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Myrmecotypus Rettenmeyeri',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: ScientificSubphylum.chelicerata, // missing
+    classification: ScientificClassification.arachnida,
+    order: ScientificOrder.araneae,
+    infraorder: ScientificInfraorder.araneomorphae,
+    family: ScientificFamily.corinnidae,
+    subfamily: null,
+    tribe: null,
+    genus: ScientificGenus.myrmecotypus,
+  ),
+  externalLinks: [
+    // No Specific link
+    // But its species is found listed on the genus below
+    // Myrmecotypus
+    // AntExternalLink(
+    //   type: AntExternalLinkType.wikipedia,
+    //   subUrl: '',
+    // ),
   ],
 );
 

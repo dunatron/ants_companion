@@ -14,6 +14,8 @@ const mimicryMaster = Ant(
     ...mimicryMasterPveTags,
     ...mimicryMasterPvpTags,
   ],
+  // We dont know what this ant actually is.
+  // ToDo: mimicry master Scientific classification
 );
 
 const mimicryMasterPveTags = [
