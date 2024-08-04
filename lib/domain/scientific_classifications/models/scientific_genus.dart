@@ -10,4 +10,5 @@ enum ScientificGenus {
   mystrium,
   nomamyrmex,
   paraponera,
+  eciton,
 }

@@ -4,5 +4,5 @@ enum ScientificSubfamily {
   myrmicinae,
   dorylinae,
   paraponerinae,
-  formicinae
+  formicinae,
 }
