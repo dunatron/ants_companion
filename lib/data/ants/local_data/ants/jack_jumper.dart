@@ -16,6 +16,28 @@ const jackJumper = Ant(
       rowPosition: RowPosition.back,
     ),
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Myrmecia pilosula',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmeciinae,
+    tribe: ScientificTribe.myrmeciini,
+    genus: ScientificGenus.myrmecia,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Jack_jumper_ant',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Myrmecia_pilosula',
+    ),
+  ],
 );
 
 const jackJumperPveTags = [
