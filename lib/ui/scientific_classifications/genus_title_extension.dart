@@ -1,25 +1,51 @@
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_genus.dart';
 
 extension ScientificGenusExtension on ScientificGenus {
-  /// will take in intl
+  // ToDo: internationalize genus titles
   String title() => switch (this) {
         ScientificGenus.myrmarachne => 'myrmarachne',
         ScientificGenus.mystrium => 'mystrium',
         ScientificGenus.atta => 'atta',
         ScientificGenus.euspinolia => 'euspinolia',
-        // TODO: Handle this case.
-        ScientificGenus.aphantochilus => throw UnimplementedError(),
-        // TODO: Handle this case.
-        ScientificGenus.camponotus => throw UnimplementedError(),
-        // TODO: Handle this case.
-        ScientificGenus.cephalotes => throw UnimplementedError(),
-        // TODO: Handle this case.
-        ScientificGenus.dasymutilla => throw UnimplementedError(),
-        // TODO: Handle this case.
-        ScientificGenus.myrmaplata => throw UnimplementedError(),
-        // TODO: Handle this case.
-        ScientificGenus.nomamyrmex => throw UnimplementedError(),
-        // TODO: Handle this case.
-        ScientificGenus.paraponera => throw UnimplementedError(),
+        ScientificGenus.aphantochilus => 'aphantochilus',
+        ScientificGenus.camponotus => 'camponotus',
+        ScientificGenus.cephalotes => 'cephalotes',
+        ScientificGenus.dasymutilla => 'dasymutilla',
+        ScientificGenus.myrmaplata => 'myrmaplata',
+        ScientificGenus.nomamyrmex => 'nomamyrmex',
+        ScientificGenus.paraponera => 'paraponera',
+        ScientificGenus.ampulex => 'ampulex',
+        ScientificGenus.arilus => 'arilus',
+        ScientificGenus.cataulacus => 'cataulacus',
+        ScientificGenus.cyphomyrmex => 'cyphomyrmex',
+        ScientificGenus.daceton => 'daceton',
+        ScientificGenus.dolichoderus => 'dolichoderus',
+        ScientificGenus.dorylus => 'dorylus',
+        ScientificGenus.eciton => 'eciton',
+        ScientificGenus.formica => 'formica',
+        ScientificGenus.gnamptogenys => 'gnamptogenys',
+        ScientificGenus.harpegnathos => 'harpegnathos',
+        ScientificGenus.leptogenys => 'leptogenys',
+        ScientificGenus.leptoglossus => 'leptoglossus',
+        ScientificGenus.leptomyrmex => 'leptomyrmex',
+        ScientificGenus.myrmecia => 'myrmecia',
+        ScientificGenus.myrmecotypus => 'myrmecotypus',
+        ScientificGenus.neoponera => 'neoponera',
+        ScientificGenus.oecophylla => 'oecophylla',
+        ScientificGenus.odontomachus => 'odontomachus',
+        ScientificGenus.pheidole => 'pheidole',
+        ScientificGenus.plectroctena => 'plectroctena',
+        ScientificGenus.polyrhachis => 'polyrhachis',
+        ScientificGenus.prionopelta => 'prionopelta',
+        ScientificGenus.proatta => 'proatta',
+        ScientificGenus.procryptocerus => 'procryptocerus',
+        ScientificGenus.psalidomyrmex => 'psalidomyrmex',
+        ScientificGenus.pseudomyrmex => 'pseudomyrmex',
+        ScientificGenus.strumigenys => 'strumigenys',
+        ScientificGenus.tapinoma => 'tapinoma',
+        ScientificGenus.telamonia => 'telamonia',
+        ScientificGenus.tetramorium => 'tetramorium',
+        ScientificGenus.tetraponera => 'tetraponera',
+        ScientificGenus.thaumatomyrmex => 'thaumatomyrmex',
       };
 }

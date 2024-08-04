@@ -2,6 +2,7 @@ import 'package:ants_companion/domain/scientific_classifications/models/scientif
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 extension ScientificFamilyTranslationExtensions on ScientificFamily {
+  // ToDo: internationalize scientific family description
   String description(final AppLocalizations l10n) => switch (this) {
         //https://en.wikipedia.org/wiki/Mutillidae
         ScientificFamily.mutillidae => l10n.familyMutillidaeDescription,
@@ -11,5 +12,9 @@ extension ScientificFamilyTranslationExtensions on ScientificFamily {
         ScientificFamily.formicidae => l10n.familyFormicidaeDescription,
         // https://en.wikipedia.org/wiki/Thomisidae
         ScientificFamily.thomisidae => l10n.familyThomisidaeDescription,
+        ScientificFamily.ampulicidae => 'ampulicidae',
+        ScientificFamily.coreidae => 'coreidae',
+        ScientificFamily.corinnidae => 'corinnidae',
+        ScientificFamily.reduviidae => 'reduviidae',
       };
 }
