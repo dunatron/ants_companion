@@ -4,7 +4,7 @@ const guardGeneral = Ant(
   id: 'guard_general',
   name: 'Guard General',
   description: '',
-  scientificName: '',
+  scientificName: 'Harpegnathos venator',
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [

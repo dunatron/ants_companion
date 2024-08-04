@@ -4,7 +4,7 @@ const proatta = Ant(
   id: 'proatta',
   name: 'Proatta',
   description: '',
-  scientificName: '',
+  scientificName: 'Proatta butteli',
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [

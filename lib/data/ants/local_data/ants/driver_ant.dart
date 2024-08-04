@@ -4,7 +4,7 @@ const driverAnt = Ant(
   id: 'driver_ant',
   name: 'Driver Ant',
   description: '',
-  scientificName: '',
+  scientificName: 'Dorylus driver',
   type: AntType.universal,
   role: AntRole.support,
   tierTags: [

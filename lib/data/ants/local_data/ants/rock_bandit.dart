@@ -4,7 +4,7 @@ const rockBandit = Ant(
   id: 'rock_bandit',
   name: 'Rock Bandit',
   description: '',
-  scientificName: '',
+  scientificName: 'Cyphomyrmex flavidus',
   type: AntType.guardian,
   role: AntRole.support,
   tierTags: [

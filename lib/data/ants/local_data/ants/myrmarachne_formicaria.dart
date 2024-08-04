@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const myrmarachneFormicaria = Ant(
   id: 'myrmarachne_formicaria',
   name: 'Myrmarachne Formicaria',
-  scientificName: '',
+  scientificName: 'Myrmarachne Formicaria',
   description: 'An OP carrier Ant',
   type: AntType.carrier,
   role: AntRole.melee,

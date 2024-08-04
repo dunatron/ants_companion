@@ -4,7 +4,7 @@ const goldenSugar = Ant(
   id: 'golden_sugar',
   name: 'Golden Sugar',
   description: '',
-  scientificName: '',
+  scientificName: 'Camponotus sericeiventris',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

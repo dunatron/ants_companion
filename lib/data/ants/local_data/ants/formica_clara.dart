@@ -4,7 +4,7 @@ const formicaClara = Ant(
   id: 'formica_clara',
   name: 'Formica Clara',
   description: '',
-  scientificName: '',
+  scientificName: 'Formica Clara',
   type: AntType.shooter,
   role: AntRole.support,
   tierTags: [

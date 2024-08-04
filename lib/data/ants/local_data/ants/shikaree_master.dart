@@ -4,7 +4,7 @@ const shikareeMaster = Ant(
   id: 'shikaree_master',
   name: 'Shikaree Master',
   description: '',
-  scientificName: '',
+  scientificName: 'Arilus cristatus',
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [

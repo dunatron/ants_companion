@@ -4,7 +4,7 @@ const hairyPanther = Ant(
   id: 'hairy_panther',
   name: 'Hairy Panther',
   description: '',
-  scientificName: '',
+  scientificName: 'Neoponera villosa',
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [

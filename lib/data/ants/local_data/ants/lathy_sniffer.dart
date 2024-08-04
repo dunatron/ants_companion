@@ -4,7 +4,7 @@ const lathySniffer = Ant(
   id: 'lathy_sniffer',
   name: 'Lathy Sniffer',
   description: '',
-  scientificName: '',
+  scientificName: 'Tetraponera rufonigra',
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [

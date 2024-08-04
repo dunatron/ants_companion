@@ -4,7 +4,7 @@ const newWorldGeneral = Ant(
   id: 'new_world_general',
   name: 'New World General',
   description: '',
-  scientificName: '',
+  scientificName: 'Echiton burchellii',
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [

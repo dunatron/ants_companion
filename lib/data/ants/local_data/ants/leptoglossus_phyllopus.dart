@@ -4,7 +4,7 @@ const leptoglossusPhyllopus = Ant(
   id: 'leptoglossus_phyllopus',
   name: 'Leptoglossus Phyllopus',
   description: '',
-  scientificName: '',
+  scientificName: 'Leptoglossus Phyllopus',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

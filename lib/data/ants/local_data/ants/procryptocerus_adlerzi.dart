@@ -4,7 +4,7 @@ const procryptocerusAdlerzi = Ant(
   id: 'procryptocerus_adlerzi',
   name: 'Procryptocerus Adlerzi',
   description: '',
-  scientificName: '',
+  scientificName: 'Procryptocerus Adlerzi',
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [

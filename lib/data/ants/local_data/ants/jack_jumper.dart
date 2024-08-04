@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const jackJumper = Ant(
   id: 'jack_jumper',
   name: 'Jack Jumper',
-  scientificName: '',
+  scientificName: 'Myrmecia pilosula',
   description: 'Reliable damage ant, good for pve',
   type: AntType.universal,
   role: AntRole.ranged,

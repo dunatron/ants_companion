@@ -4,7 +4,7 @@ const nimbleTreeAnt = Ant(
   id: 'nimble_tree_ant',
   name: 'Nimble Tree Ant',
   description: '',
-  scientificName: '',
+  scientificName: 'Pseudomyrmex boopis',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

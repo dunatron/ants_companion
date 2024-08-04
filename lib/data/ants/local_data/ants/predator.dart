@@ -4,7 +4,7 @@ const predator = Ant(
   id: 'predator',
   name: 'Predator',
   description: '',
-  scientificName: '',
+  scientificName: 'Psalidomyrmex reicenspergeri',
   type: AntType.shooter,
   role: AntRole.melee,
   tierTags: [

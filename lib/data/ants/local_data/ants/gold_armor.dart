@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const goldArmor = Ant(
   id: 'gold_armor',
   name: 'Gold Armor',
-  scientificName: '',
+  scientificName: 'Daceton armigerum',
   description: 'A really nice PVE ant',
   type: AntType.universal,
   role: AntRole.melee,

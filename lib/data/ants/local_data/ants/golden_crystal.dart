@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const goldenCrystal = Ant(
   id: 'golden_crystal',
   name: 'Golden Crystal',
-  scientificName: '',
+  scientificName: 'Leptogenys elongata',
   description: 'An OP carrier Ant',
   type: AntType.carrier,
   role: AntRole.ranged,

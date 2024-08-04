@@ -4,7 +4,7 @@ const leptomyrmexBurwelli = Ant(
   id: 'leptomyrmex_burwelli',
   name: 'Leptomyrmex Burwelli',
   description: '',
-  scientificName: '',
+  scientificName: 'Leptomyrmex Burwelli',
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [

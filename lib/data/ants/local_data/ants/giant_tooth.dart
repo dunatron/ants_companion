@@ -4,7 +4,7 @@ const giantTooth = Ant(
   id: 'giant_tooth',
   name: 'Giant Tooth',
   description: '',
-  scientificName: '',
+  scientificName: 'Odontomachus coquereli',
   type: AntType.universal,
   role: AntRole.support,
   tierTags: [

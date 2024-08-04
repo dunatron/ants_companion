@@ -4,7 +4,7 @@ const reapMaster = Ant(
   id: 'reap_master',
   name: 'Reap Master',
   description: '',
-  scientificName: '',
+  scientificName: 'Thaumatomyrmex Atrox',
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [

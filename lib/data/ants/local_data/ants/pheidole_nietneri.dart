@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const pheidoleNietneri = Ant(
   id: 'pheidole_nietneri',
   name: 'Pheidole Nietneri',
-  description: '',
+  description: 'Pheidole nietneri',
   scientificName: '',
   type: AntType.guardian,
   role: AntRole.melee,

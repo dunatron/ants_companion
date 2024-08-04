@@ -4,7 +4,7 @@ const weaverAnt = Ant(
   id: 'weaver_ant',
   name: 'Weaver Ant',
   description: '',
-  scientificName: '',
+  scientificName: 'Oecophylla longinoda',
   type: AntType.shooter,
   role: AntRole.support,
   tierTags: [

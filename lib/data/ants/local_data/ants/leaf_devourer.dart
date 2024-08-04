@@ -4,7 +4,7 @@ const leafDevourer = Ant(
   id: 'leaf_devourer',
   name: 'Leaf Devourer',
   description: '',
-  scientificName: '',
+  scientificName: 'Atta laevigata',
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [

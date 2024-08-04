@@ -4,7 +4,7 @@ const goldenSpiny = Ant(
   id: 'golden_spiny',
   name: 'Golden Spiny',
   description: '',
-  scientificName: '',
+  scientificName: 'Polyrhachis trapezoidea',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

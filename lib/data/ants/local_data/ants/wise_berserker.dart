@@ -4,7 +4,7 @@ const wiseBerserker = Ant(
   id: 'wise_berserker',
   name: 'Wise Berserker',
   description: '',
-  scientificName: '',
+  scientificName: 'Mystrium camillae',
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [

@@ -4,7 +4,7 @@ const rubySlender = Ant(
   id: 'ruby_slender',
   name: 'Ruby Slender',
   description: '',
-  scientificName: '',
+  scientificName: 'Gnamptogenys mordax',
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [

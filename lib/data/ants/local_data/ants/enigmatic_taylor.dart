@@ -4,7 +4,7 @@ const enigmaticTaylor = Ant(
   id: 'enigmatic_taylor',
   name: 'Enigmatic Taylor',
   description: '',
-  scientificName: '',
+  scientificName: 'Tetramorium pulcherrimum',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

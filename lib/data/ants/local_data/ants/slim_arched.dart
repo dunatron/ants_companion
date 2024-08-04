@@ -4,7 +4,7 @@ const slimArched = Ant(
   id: 'slim_arched',
   name: 'Slim Arched',
   description: '',
-  scientificName: '',
+  scientificName: 'Camponotus mirabilis',
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [

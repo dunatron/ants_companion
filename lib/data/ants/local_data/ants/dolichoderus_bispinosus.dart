@@ -4,7 +4,7 @@ const dolichoderusBispinosus = Ant(
   id: 'dolichoderus_bispinosus',
   name: 'Dolichoderus bispinosus',
   description: '',
-  scientificName: '',
+  scientificName: 'Dolichoderus bispinosus',
   type: AntType.shooter,
   role: AntRole.melee,
   tierTags: [

@@ -4,7 +4,7 @@ const gracefulTwigAnt = Ant(
   id: 'graceful_twig_ant',
   name: 'Graceful Twig Ant',
   description: '',
-  scientificName: '',
+  scientificName: 'Pseudomyrmex gracilis',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

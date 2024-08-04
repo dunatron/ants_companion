@@ -4,7 +4,7 @@ const shieldWarden = Ant(
   id: 'shield_warden',
   name: 'Shield Warden',
   description: '',
-  scientificName: '',
+  scientificName: 'Cataulacus huberi',
   type: AntType.guardian,
   role: AntRole.support,
   tierTags: [
