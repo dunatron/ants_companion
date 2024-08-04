@@ -5,6 +5,7 @@ enum ScientificSubfamily {
   myrmicinae,
   myrmeciinae,
   dorylinae,
+  harpactorinae,
   paraponerinae,
   formicinae,
   dolichoderinae,

@@ -5,5 +5,6 @@ enum ScientificFamily {
   formicidae,
   mutillidae,
   salticidae,
-  thomisidae
+  thomisidae,
+  reduviidae
 }

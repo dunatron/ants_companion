@@ -6,6 +6,8 @@ enum ScientificTribe {
   dolichoderini,
   leptomyrmecini,
   myrmeciini,
+  oecophyllini,
   ponerini,
   ectatommini,
+  harpactorini,
 }

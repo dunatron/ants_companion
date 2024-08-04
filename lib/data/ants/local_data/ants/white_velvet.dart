@@ -11,6 +11,24 @@ const whiteVelvet = Ant(
     ...whiteVelvetPveTags,
     ...whiteVelvetPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Dasymutilla gloriosa',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.mutillidae,
+    subfamily: null,
+    tribe: null,
+    genus: ScientificGenus.dasymutilla,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Dasymutilla_gloriosa',
+    ),
+  ],
 );
 
 const whiteVelvetPveTags = [
