@@ -11,6 +11,28 @@ const dolichoderusBispinosus = Ant(
     ...dolichoderusBispinosusPveTags,
     ...dolichoderusBispinosusPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Dolichoderus bispinosus',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.dolichoderinae,
+    tribe: ScientificTribe.dolichoderini,
+    genus: ScientificGenus.dolichoderus,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Dolichoderus_bispinosus',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Dolichoderus_bispinosus',
+    ),
+  ],
 );
 
 const dolichoderusBispinosusPveTags = [

@@ -11,6 +11,28 @@ const goldenCrystal = Ant(
     ...goldenCrystalPveTags,
     ...goldenCrystalPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Leptogenys elongata',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.ponerinae,
+    tribe: ScientificTribe.ponerini,
+    genus: ScientificGenus.leptogenys,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Leptogenys_elongata',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Leptogenys_elongata',
+    ),
+  ],
   skills: [
     CombatSkill(
       name: 'Battle Fever',

@@ -5,4 +5,6 @@ enum ScientificSubfamily {
   dorylinae,
   paraponerinae,
   formicinae,
+  dolichoderinae,
+  ponerinae,
 }

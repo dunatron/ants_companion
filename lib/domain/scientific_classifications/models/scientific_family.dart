@@ -1,1 +1,7 @@
-enum ScientificFamily { formicidae, mutillidae, salticidae, thomisidae }
+enum ScientificFamily {
+  ampulicidae,
+  formicidae,
+  mutillidae,
+  salticidae,
+  thomisidae
+}

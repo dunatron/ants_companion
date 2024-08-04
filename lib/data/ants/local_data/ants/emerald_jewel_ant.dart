@@ -11,6 +11,24 @@ const emeraldJewelAnt = Ant(
     ...emeraldJewelAntPveTags,
     ...emeraldJewelAntPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: '',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.ampulicidae,
+    subfamily: null,
+    tribe: null,
+    genus: ScientificGenus.ampulex,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Emerald_cockroach_wasp',
+    ),
+  ],
 );
 
 const emeraldJewelAntPveTags = [];
