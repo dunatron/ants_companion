@@ -11,6 +11,28 @@ const leafDevourer = Ant(
     ...leafDevourerPveTags,
     ...leafDevourerPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Atta laevigata',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.attini,
+    genus: ScientificGenus.atta,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Atta_laevigata',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Atta_laevigata',
+    ),
+  ],
 );
 
 const leafDevourerPveTags = [

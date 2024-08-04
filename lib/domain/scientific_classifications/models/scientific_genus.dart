@@ -13,6 +13,8 @@ enum ScientificGenus {
   formica,
   harpegnathos,
   leptogenys,
+  leptoglossus,
+  leptomyrmex,
   myrmaplata,
   myrmarachne,
   myrmecia,
@@ -21,10 +23,12 @@ enum ScientificGenus {
   nomamyrmex,
   odontomachus,
   paraponera,
+  plectroctena,
   polyrhachis,
   prionopelta,
   pseudomyrmex,
   tapinoma,
   telamonia,
   tetramorium,
+  tetraponera
 }

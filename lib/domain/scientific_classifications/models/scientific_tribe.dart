@@ -3,6 +3,7 @@ enum ScientificTribe {
   attini,
   camponotini,
   dolichoderini,
+  leptomyrmecini,
   myrmeciini,
   ponerini
 }

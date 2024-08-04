@@ -11,6 +11,28 @@ const leptomyrmexBurwelli = Ant(
     ...leptomyrmexBurwelliPveTags,
     ...leptomyrmexBurwelliPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Leptomyrmex Burwelli',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.dolichoderinae,
+    tribe: ScientificTribe.leptomyrmecini,
+    genus: ScientificGenus.leptomyrmex,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Leptomyrmex_burwelli',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Leptomyrmex_burwelli',
+    ),
+  ],
 );
 
 const leptomyrmexBurwelliPveTags = [
