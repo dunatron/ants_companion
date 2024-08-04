@@ -1,4 +1,5 @@
 enum ScientificSubfamily {
+  ectatomminae,
   salticinae,
   amblyoponinae,
   myrmicinae,

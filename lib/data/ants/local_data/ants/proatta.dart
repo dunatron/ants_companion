@@ -11,6 +11,24 @@ const proatta = Ant(
     ...proattaPveTags,
     ...proattaPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Proatta butteli',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.crematogastrini,
+    genus: ScientificGenus.proatta,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Proatta_butteli',
+    ),
+  ],
 );
 
 const proattaPveTags = [

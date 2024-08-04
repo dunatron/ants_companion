@@ -2,8 +2,10 @@ enum ScientificTribe {
   amblyoponini,
   attini,
   camponotini,
+  crematogastrini,
   dolichoderini,
   leptomyrmecini,
   myrmeciini,
-  ponerini
+  ponerini,
+  ectatommini,
 }

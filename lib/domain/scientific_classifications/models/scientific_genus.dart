@@ -3,7 +3,9 @@ enum ScientificGenus {
   aphantochilus,
   atta,
   camponotus,
+  cataulacus,
   cephalotes,
+  cyphomyrmex,
   daceton,
   dasymutilla,
   dolichoderus,
@@ -11,6 +13,7 @@ enum ScientificGenus {
   eciton,
   euspinolia,
   formica,
+  gnamptogenys,
   harpegnathos,
   leptogenys,
   leptoglossus,
@@ -28,9 +31,13 @@ enum ScientificGenus {
   plectroctena,
   polyrhachis,
   prionopelta,
+  proatta,
+  procryptocerus,
+  psalidomyrmex,
   pseudomyrmex,
   tapinoma,
   telamonia,
   tetramorium,
-  tetraponera
+  tetraponera,
+  thaumatomyrmex
 }

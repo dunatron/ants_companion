@@ -11,6 +11,24 @@ const reapMaster = Ant(
     ...reapMasterPveTags,
     ...reapMasterPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Thaumatomyrmex Atrox',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.ponerinae,
+    tribe: ScientificTribe.ponerini,
+    genus: ScientificGenus.thaumatomyrmex,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Thaumatomyrmex_atrox',
+    ),
+  ],
 );
 
 const reapMasterPveTags = [

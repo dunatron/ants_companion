@@ -11,6 +11,24 @@ const predator = Ant(
     ...predatorPveTags,
     ...predatorPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Psalidomyrmex reicenspergeri',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.ponerinae,
+    tribe: ScientificTribe.ponerini,
+    genus: ScientificGenus.psalidomyrmex,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Psalidomyrmex_reichenspergeri',
+    ),
+  ],
 );
 
 const predatorPveTags = [

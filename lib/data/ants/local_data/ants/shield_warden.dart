@@ -11,6 +11,24 @@ const shieldWarden = Ant(
     ...shieldWardenPveTags,
     ...shieldWardenPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: 'Cataulacus huberi',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.crematogastrini,
+    genus: ScientificGenus.cataulacus,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Cataulacus_huberi',
+    ),
+  ],
 );
 
 const shieldWardenPveTags = [

@@ -11,6 +11,24 @@ const procryptocerusAdlerzi = Ant(
     ...procryptocerusAdlerziPveTags,
     ...procryptocerusAdlerziPvpTags,
   ],
+  scientificClassification: AntScientificClassification(
+    species: '',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.attini,
+    genus: ScientificGenus.procryptocerus,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Procryptocerus_adlerzi',
+    ),
+  ],
 );
 
 const procryptocerusAdlerziPveTags = [

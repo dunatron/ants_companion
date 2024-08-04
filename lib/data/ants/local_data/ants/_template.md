@@ -1,7 +1,7 @@
 ```dart
 scientificClassification: AntScientificClassification(
       species: '',
-      phylum: null,
+      phylum: ScientificPhylum.arthropoda,
       subphylum: null, // missing
       classification: null,
       order: null,
