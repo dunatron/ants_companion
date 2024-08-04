@@ -1,36 +1,35 @@
 import 'package:ants_companion/common/models/tier_rating.dart';
+import 'package:ants_companion/common/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:haptic_feedback/haptic_feedback.dart';
 
 class AntsTierFeatureInfo extends StatelessWidget {
   const AntsTierFeatureInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var filteredTiers = [...TierRating.values];
-    filteredTiers.removeAt(0);
-    filteredTiers.removeAt(0);
+    final l10n = AppLocalizations.of(context);
     return Card(
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(Spacing.l),
         child: Column(
           children: [
             Text(
-              'Tier Rankings',
+              l10n.antsTierFeatureInfoTitle,
               style: Theme.of(context).textTheme.headlineSmall,
             ),
-            SizedBox(
-              height: 16,
-            ),
+            const SizedBox(height: 16),
             Text(
-              'Get insights into the strongest Ants',
+              l10n.antsTierFeatureInfoDescription,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ...filteredTiers.map(
+                ...TierRating.values.map(
                   (tierRating) => Container(
                     child: Text(
                       tierRating.displayText,
@@ -45,10 +44,28 @@ class AntsTierFeatureInfo extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () {
+              // onPressed: () => context.go('/ant-tiers'),
+              onPressed: () async {
+                // Check if device is capable of haptic feedback
+                final can = await Haptics.canVibrate();
+                if (!context.mounted) return;
+                final snackbarMessage = can
+                    ? 'Can do haptic feedback'
+                    : 'This device is not capable of haptic feedback.';
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(snackbarMessage, textAlign: TextAlign.center),
+                    duration: const Duration(seconds: 1),
+                  ),
+                );
+
+                // Vibrate only if device is capable of haptic feedback
+                if (!can) return;
+                await Haptics.vibrate(HapticsType.heavy);
                 context.go('/ant-tiers');
               },
-              child: Text('View Ant Tiers'),
+              child: Text(l10n.antsTierFeatureInfoButton),
             )
           ],
         ),

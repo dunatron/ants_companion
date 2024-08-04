@@ -15,6 +15,7 @@ import 'package:ants_companion/ui/home/welcome_info.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -26,9 +27,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final antsList = Ants.antsList();
 
+    final l10n = AppLocalizations.of(context);
+
     return NotificationTappedProvider(
       child: PageLayout(
-        title: 'Ants Companion',
+        title: l10n.language,
         slivers: [
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
@@ -59,11 +62,11 @@ class HomeScreen extends StatelessWidget {
           ),
           const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
           SliverPadding(
-            padding: EdgeInsets.symmetric(horizontal: Spacing.l),
+            padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
             sliver: SliverToBoxAdapter(
               child: Center(
                 child: Text(
-                  'Special Ants',
+                  l10n.specialAnts,
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),

@@ -1,34 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SoldierAntsComparisonFeatureInfo extends StatelessWidget {
   const SoldierAntsComparisonFeatureInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
             Text(
-              'Soldier Ants Comparison',
+              l10n.soldierAntsComparisonFeatureInfoTitle,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 16),
-            const Text(
-              'Interested in the base stats for soldier ants? '
-              'This feature is for you.'
-              'A side by side comparison of the base soldier stats',
+            Text(
+              l10n.soldierAntsComparisonFeatureInfoDescription,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () {
-                context.go('/soldier-ants-comparison');
-              },
-              child: const Text('Soldier Stats'),
+              onPressed: () => context.go('/soldier-ants-comparison'),
+              child: Text(l10n.soldierAntsComparisonFeatureInfoButton),
             )
           ],
         ),

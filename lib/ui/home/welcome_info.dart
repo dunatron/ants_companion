@@ -1,29 +1,28 @@
-import 'package:ants_companion/common/models/tier_rating.dart';
+import 'package:ants_companion/common/spacing.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WelcomeInfo extends StatelessWidget {
   const WelcomeInfo({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Card(
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(Spacing.l),
         child: Column(
           children: [
             Text(
-              'Greetings',
+              l10n.welcomeInfoTitle,
               style: Theme.of(context).textTheme.headlineSmall,
             ),
-            SizedBox(
-              height: 16,
-            ),
+            const SizedBox(height: Spacing.l),
             Text(
-              'Welcome to the ants companion. This app aims to be your one stop place for the ants underground kingdom',
+              l10n.welcomeInfoDescription,
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: Spacing.vl),
           ],
         ),
       ),

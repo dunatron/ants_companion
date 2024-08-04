@@ -11,6 +11,7 @@ import 'package:ants_companion/ui/scientific_classifications/sliver_attribute_ar
 
 import 'package:ants_companion/ui/scientific_classifications/scientific_attribute_details.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ScientificClassificationsScreen extends StatelessWidget {
   const ScientificClassificationsScreen({super.key});
@@ -35,7 +36,7 @@ class ScientificClassificationsScreen extends StatelessWidget {
         ScientificClassifications(ants: Ants.antsList());
 
     final descriptions = AttributeDescriptions();
-
+    final l10n = AppLocalizations.of(context)!;
     return PageLayout(
       title: 'Classifications',
       slivers: [
@@ -47,7 +48,7 @@ class ScientificClassificationsScreen extends StatelessWidget {
             scientificClassifications.antsForFamily(v),
             context,
             title: v.name,
-            description: v.description,
+            description: v.description(l10n),
           ),
           nameItemBuilder: (item, index) => item.name,
         ),

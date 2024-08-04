@@ -10,6 +10,9 @@ import 'package:flutter/material.dart';
 
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
+import 'package:haptic_feedback/haptic_feedback.dart';
+
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ColonyActionSchedulerScreen extends StatefulWidget {
   const ColonyActionSchedulerScreen({super.key});
@@ -88,6 +91,7 @@ class _ColonyActionSchedulerScreenState
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Notification Scheduler'),
@@ -95,7 +99,7 @@ class _ColonyActionSchedulerScreenState
       body: ListView.builder(
         itemCount: 7,
         itemBuilder: (context, dayIndex) {
-          final warzoneName = dayIndex.warzoneDayName();
+          final warzoneName = dayIndex.warzoneDayName(l10n);
           return ExpansionTile(
             title: Text(warzoneName),
             children: List.generate(
@@ -137,6 +141,11 @@ class _ColonyActionSchedulerScreenState
                   trailing: Checkbox(
                     value: item.notificationEnabled,
                     onChanged: (v) async {
+                      final can = await Haptics.canVibrate();
+                      // Vibrate only if device is capable of haptic feedback
+                      if (can) {
+                        await Haptics.vibrate(HapticsType.success);
+                      }
                       if (v == true) {
                         await LocalNotifications
                             .scheduleColonyActionNotification(
@@ -167,15 +176,15 @@ class _ColonyActionSchedulerScreenState
 }
 
 extension on int {
-  String warzoneDayName() {
+  String warzoneDayName(AppLocalizations l10n) {
     final val = switch (this) {
-      0 => 'Anthill development',
-      1 => 'Gather Resources',
-      2 => 'Evolution',
-      3 => 'Strengthen Special Ants',
-      4 => 'Hatch Soldier Ants',
-      5 => 'Free choice',
-      6 => 'Insect Hatching',
+      0 => l10n.warzoneAnthillDevelopment,
+      1 => l10n.warzoneGatherResources,
+      2 => l10n.warzoneEvolution,
+      3 => l10n.warzoneSpecialAnts,
+      4 => l10n.warzoneHatchSoldierAnts,
+      5 => l10n.warzoneFreeChoice,
+      6 => l10n.warzoneInsectHatching,
       int() => throw UnimplementedError(),
     };
     return val;

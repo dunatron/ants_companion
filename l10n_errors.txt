@@ -1,0 +1,11 @@
+{
+  "es": [
+    "warzoneAnthillDevelopment",
+    "warzoneGatherResources",
+    "warzoneEvolution",
+    "warzoneSpecialAnts",
+    "warzoneHatchSoldierAnts",
+    "warzoneFreeChoice",
+    "warzoneInsectHatching"
+  ]
+}

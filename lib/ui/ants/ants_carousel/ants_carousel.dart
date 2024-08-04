@@ -6,6 +6,7 @@ import 'package:ants_companion/ui/carousel.dart';
 import 'package:ants_companion/ui/draggable_scroll_configuration.dart';
 
 import 'package:flutter/material.dart';
+import 'package:haptic_feedback/haptic_feedback.dart';
 
 class AntsCarousel extends StatefulWidget {
   const AntsCarousel({
@@ -172,8 +173,19 @@ class _AntsCarouselState extends State<AntsCarousel>
                     (letter) => Padding(
                       padding: const EdgeInsets.only(right: 8),
                       child: ElevatedButton(
-                          onPressed: () => goToIndex(widget.ants
-                              .indexOfFirstLetterFoundOnName(letter)),
+                          // onPressed: () => goToIndex(widget.ants
+                          //     .indexOfFirstLetterFoundOnName(letter)),
+                          onPressed: () async {
+                            final can = await Haptics.canVibrate();
+
+                            // Vibrate only if device is capable of haptic feedback
+                            if (can) {
+                              await Haptics.vibrate(HapticsType.success);
+                            }
+
+                            goToIndex(widget.ants
+                                .indexOfFirstLetterFoundOnName(letter));
+                          },
                           child: Text(letter)),
                     ),
                   )
