@@ -3,10 +3,12 @@ import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_family.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_genus.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_subfamily.dart';
+import 'package:ants_companion/domain/scientific_classifications/models/scientific_tribe.dart';
 import 'package:ants_companion/domain/scientific_classifications/scientific_classifications.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_family_extension.dart';
+import 'package:ants_companion/ui/scientific_classifications/scientific_subfamily_extension.dart';
 import 'package:ants_companion/ui/scientific_classifications/sliver_attribute_area.dart';
 
 import 'package:ants_companion/ui/scientific_classifications/scientific_attribute_details.dart';
@@ -32,17 +34,23 @@ class ScientificClassificationsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scientificClassifications =
-        ScientificClassifications(ants: Ants.antsList());
+    final antsList = Ants.antsList();
+    final totalAnts = antsList.length;
+
+    final scientificClassifications = ScientificClassifications(ants: antsList);
 
     final descriptions = AttributeDescriptions();
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
+
+    // ScientificSubfamilyTranslationExtensions
     return PageLayout(
       title: 'Classifications',
       slivers: [
         SliverAttributeArea(
           title: 'Family',
           description: descriptions.family,
+          antsWithAttribute: scientificClassifications.countAntsWithFamily(),
+          totalAnts: totalAnts,
           items: ScientificFamily.values,
           onPressed: (v) => _launchScientificAttributeDetails(
             scientificClassifications.antsForFamily(v),
@@ -55,12 +63,28 @@ class ScientificClassificationsScreen extends StatelessWidget {
         SliverAttributeArea(
           title: 'Sub Family',
           description: descriptions.subfamily,
+          antsWithAttribute: scientificClassifications.countAntsWithSubfamily(),
+          totalAnts: totalAnts,
           items: ScientificSubfamily.values,
           onPressed: (v) => _launchScientificAttributeDetails(
             scientificClassifications.antsForSubfamily(v),
             context,
             title: v.name,
-            description: 'Genus description',
+            description: v.description(l10n),
+          ),
+          nameItemBuilder: (item, index) => item.name,
+        ),
+        SliverAttributeArea(
+          title: 'Tribe',
+          description: descriptions.tribe,
+          items: ScientificTribe.values,
+          antsWithAttribute: scientificClassifications.countAntsWithTribe(),
+          totalAnts: totalAnts,
+          onPressed: (v) => _launchScientificAttributeDetails(
+            scientificClassifications.antsForTribe(v),
+            context,
+            title: v.name,
+            description: 'Tribe description',
           ),
           nameItemBuilder: (item, index) => item.name,
         ),
@@ -68,6 +92,8 @@ class ScientificClassificationsScreen extends StatelessWidget {
           title: 'Genus',
           description: descriptions.genus,
           items: ScientificGenus.values,
+          antsWithAttribute: scientificClassifications.countAntsWithGenus(),
+          totalAnts: totalAnts,
           onPressed: (v) => _launchScientificAttributeDetails(
             scientificClassifications.antsForGenus(v),
             context,

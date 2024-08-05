@@ -6,6 +6,8 @@ class SliverAttributeArea<T> extends StatelessWidget {
     super.key,
     required this.title,
     required this.description,
+    required this.antsWithAttribute,
+    required this.totalAnts,
     required this.items,
     required this.nameItemBuilder,
     required this.onPressed,
@@ -15,6 +17,10 @@ class SliverAttributeArea<T> extends StatelessWidget {
   final String title;
 
   final String description;
+
+  final int antsWithAttribute;
+
+  final int totalAnts;
 
   final String Function(T item, int index) nameItemBuilder;
 
@@ -36,6 +42,9 @@ class SliverAttributeArea<T> extends StatelessWidget {
             Text(title, style: textTheme.headlineMedium),
             const SizedBox(height: Spacing.l),
             Text(description, style: textTheme.bodyLarge),
+            const SizedBox(height: Spacing.l),
+            Text('$antsWithAttribute / $totalAnts have a $title',
+                style: textTheme.bodyLarge),
             const SizedBox(height: Spacing.l),
             Wrap(
               spacing: 8.0,

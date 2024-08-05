@@ -1,6 +1,7 @@
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
+import 'package:ants_companion/ui/ants/ant_details/ant_scientific_details.dart';
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
 import 'package:ants_companion/ui/section.dart';
 
@@ -23,6 +24,8 @@ class AntDetails extends StatelessWidget {
     adsService.loadBannerAd(AdsService.antDetailsAdUnitId, AdSize.largeBanner);
 
     final species = ant.species;
+
+    final scientificClassification = ant.scientificClassification;
     return SelectionArea(
       child: Column(
         children: [
@@ -71,9 +74,16 @@ class AntDetails extends StatelessWidget {
             style: Theme.of(context).textTheme.titleLarge,
           )),
           Section(
-              child: Column(
-            children: [...tags.map((tag) => _TagDetails(tag: tag))],
-          ))
+            child: Column(
+              children: [...tags.map((tag) => _TagDetails(tag: tag))],
+            ),
+          ),
+          if (scientificClassification != null)
+            Section(
+              child: AntScientificDetails(
+                details: scientificClassification,
+              ),
+            )
         ],
       ),
     );
