@@ -9,7 +9,7 @@ import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_family_extension.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_subfamily_extension.dart';
-import 'package:ants_companion/ui/scientific_classifications/sliver_attribute_area.dart';
+import 'package:ants_companion/ui/scientific_classifications/attribute_area.dart';
 
 import 'package:ants_companion/ui/scientific_classifications/scientific_attribute_details.dart';
 import 'package:flutter/material.dart';
@@ -45,8 +45,10 @@ class ScientificClassificationsScreen extends StatelessWidget {
     // ScientificSubfamilyTranslationExtensions
     return PageLayout(
       title: 'Classifications',
-      slivers: [
-        SliverAttributeArea(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      constraints: BoxConstraints(maxWidth: 800),
+      widgets: [
+        AttributeArea(
           title: 'Family',
           description: descriptions.family,
           antsWithAttribute: scientificClassifications.countAntsWithFamily(),
@@ -60,7 +62,7 @@ class ScientificClassificationsScreen extends StatelessWidget {
           ),
           nameItemBuilder: (item, index) => item.name,
         ),
-        SliverAttributeArea(
+        AttributeArea(
           title: 'Sub Family',
           description: descriptions.subfamily,
           antsWithAttribute: scientificClassifications.countAntsWithSubfamily(),
@@ -74,7 +76,7 @@ class ScientificClassificationsScreen extends StatelessWidget {
           ),
           nameItemBuilder: (item, index) => item.name,
         ),
-        SliverAttributeArea(
+        AttributeArea(
           title: 'Tribe',
           description: descriptions.tribe,
           items: ScientificTribe.values,
@@ -88,7 +90,7 @@ class ScientificClassificationsScreen extends StatelessWidget {
           ),
           nameItemBuilder: (item, index) => item.name,
         ),
-        SliverAttributeArea(
+        AttributeArea(
           title: 'Genus',
           description: descriptions.genus,
           items: ScientificGenus.values,

@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/domain/soldier_ants/models/soldier_ant.dart';
+import 'package:ants_companion/ui/draggable_scroll_configuration.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
 import 'package:ants_companion/ui/soldier_ants/soldier_card_details.dart';
 import 'package:intl/intl.dart';
@@ -41,10 +42,10 @@ class _SoldierAntsComparisonScreenState
 
     return PageLayout(
       title: 'Soldier Stats',
-      slivers: [
-        SliverToBoxAdapter(
-          child: Container(
-            height: 50,
+      widgets: [
+        SizedBox(
+          height: 50,
+          child: DraggableScrollConfiguration(
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: tiers.length,
@@ -52,7 +53,7 @@ class _SoldierAntsComparisonScreenState
                 final tier = tiers[index];
                 final isSelected = _selectedTier == tier;
                 return Padding(
-                  padding: EdgeInsets.all(Spacing.s),
+                  padding: const EdgeInsets.all(Spacing.s),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(() {
@@ -78,47 +79,41 @@ class _SoldierAntsComparisonScreenState
             ),
           ),
         ),
-        SliverToBoxAdapter(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SoldierCardDetails(soldier: guard),
-              SoldierCardDetails(soldier: shooter),
-              SoldierCardDetails(soldier: carrier),
-            ],
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SoldierCardDetails(soldier: guard),
+            SoldierCardDetails(soldier: shooter),
+            SoldierCardDetails(soldier: carrier),
+          ],
         ),
-        SliverToBoxAdapter(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(numberFormat.format(
-                  SoldierAnt.calculateDamage(5, guard.attack, guard.defense))),
-              Text(
-                  'guard on guard: ${SoldierAnt.lostPerNormalAttack(guard, guard).toStringAsFixed(2)}'),
-              Text(
-                  'guard on shooter: ${SoldierAnt.lostPerNormalAttack(guard, shooter).toStringAsFixed(2)}'),
-              Text(
-                  'guard on carrier: ${SoldierAnt.lostPerNormalAttack(guard, carrier).toStringAsFixed(2)}'),
-              Text(
-                  'shooter on guard: ${SoldierAnt.lostPerNormalAttack(shooter, guard).toStringAsFixed(2)}'),
-              Text(
-                  'shooter on shooter: ${SoldierAnt.lostPerNormalAttack(shooter, shooter).toStringAsFixed(2)}'),
-              Text(
-                  'shooter on carrier: ${SoldierAnt.lostPerNormalAttack(shooter, carrier).toStringAsFixed(2)}'),
-              Text(
-                  'carrier on guard: ${SoldierAnt.lostPerNormalAttack(carrier, guard).toStringAsFixed(2)}'),
-              Text(
-                  'carrier on shooter: ${SoldierAnt.lostPerNormalAttack(carrier, shooter).toStringAsFixed(2)}'),
-              Text(
-                  'carrier on carrier: ${SoldierAnt.lostPerNormalAttack(carrier, carrier).toStringAsFixed(2)}'),
-              SizedBox(
-                height: 60,
-              ),
-              Text('Damage from a squad'),
-              Text(numberFormat.format(attackPower)),
-            ],
-          ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(numberFormat.format(
+                SoldierAnt.calculateDamage(5, guard.attack, guard.defense))),
+            Text(
+                'guard on guard: ${SoldierAnt.lostPerNormalAttack(guard, guard).toStringAsFixed(2)}'),
+            Text(
+                'guard on shooter: ${SoldierAnt.lostPerNormalAttack(guard, shooter).toStringAsFixed(2)}'),
+            Text(
+                'guard on carrier: ${SoldierAnt.lostPerNormalAttack(guard, carrier).toStringAsFixed(2)}'),
+            Text(
+                'shooter on guard: ${SoldierAnt.lostPerNormalAttack(shooter, guard).toStringAsFixed(2)}'),
+            Text(
+                'shooter on shooter: ${SoldierAnt.lostPerNormalAttack(shooter, shooter).toStringAsFixed(2)}'),
+            Text(
+                'shooter on carrier: ${SoldierAnt.lostPerNormalAttack(shooter, carrier).toStringAsFixed(2)}'),
+            Text(
+                'carrier on guard: ${SoldierAnt.lostPerNormalAttack(carrier, guard).toStringAsFixed(2)}'),
+            Text(
+                'carrier on shooter: ${SoldierAnt.lostPerNormalAttack(carrier, shooter).toStringAsFixed(2)}'),
+            Text(
+                'carrier on carrier: ${SoldierAnt.lostPerNormalAttack(carrier, carrier).toStringAsFixed(2)}'),
+            const SizedBox(height: 60),
+            const Text('Damage from a squad'),
+            Text(numberFormat.format(attackPower)),
+          ],
         ),
       ],
     );

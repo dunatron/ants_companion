@@ -7,28 +7,45 @@ class PageLayout extends StatelessWidget {
   const PageLayout({
     super.key,
     required this.title,
-    required this.slivers,
+    this.crossAxisAlignment = CrossAxisAlignment.center,
+    this.constraints,
+    required this.widgets,
     this.controller,
     this.floatingActionButton,
   });
 
   final String title;
-  final List<Widget> slivers;
+  final List<Widget> widgets;
 
   final ScrollController? controller;
 
   final Widget? floatingActionButton;
 
+  final CrossAxisAlignment crossAxisAlignment;
+
+  final BoxConstraints? constraints;
+
   @override
   Widget build(BuildContext context) {
+    final column = Column(
+      crossAxisAlignment: crossAxisAlignment,
+      children: widgets,
+    );
+
+    final childWidget = constraints != null
+        ? Center(
+            child: Container(
+              alignment: Alignment.center,
+              constraints: constraints,
+              child: column,
+            ),
+          )
+        : column;
     return Scaffold(
+      appBar: AntsAppBar(title: title),
       drawer: const SafeArea(child: AppDrawer()),
-      body: CustomScrollView(
-        controller: controller,
-        slivers: [
-          AntsAppBar(title: title),
-          ...slivers,
-        ],
+      body: SingleChildScrollView(
+        child: childWidget,
       ),
       floatingActionButton: floatingActionButton,
     );

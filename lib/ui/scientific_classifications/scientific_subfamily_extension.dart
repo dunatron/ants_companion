@@ -2,6 +2,22 @@ import 'package:ants_companion/domain/scientific_classifications/models/scientif
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 extension ScientificSubfamilyTranslationExtensions on ScientificSubfamily {
+  String title(final AppLocalizations l10n) => switch (this) {
+        ScientificSubfamily.amblyoponinae => l10n.subFamilyAmblyoponinaeTitle,
+        ScientificSubfamily.dolichoderinae => l10n.subFamilyDolichoderinaeTitle,
+        ScientificSubfamily.dorylinae => l10n.subFamilyDorylinaeTitle,
+        ScientificSubfamily.ectatomminae => l10n.subFamilyEctatomminaeTitle,
+        ScientificSubfamily.formicinae => l10n.subFamilyFormicinaeTitle,
+        ScientificSubfamily.harpactorinae => l10n.subFamilyHarpactorinaeTitle,
+        ScientificSubfamily.myrmeciinae => l10n.subFamilyMyrmeciinaeTitle,
+        ScientificSubfamily.myrmicinae => l10n.subFamilyMyrmicinaeTitle,
+        ScientificSubfamily.paraponerinae => l10n.subFamilyParaponerinaeTitle,
+        ScientificSubfamily.ponerinae => l10n.subFamilyPonerinaeTitle,
+        ScientificSubfamily.pseudomyrmecinae =>
+          l10n.subFamilyPseudomyrmecinaeTitle,
+        ScientificSubfamily.salticinae => l10n.subFamilySalticinaeTitle,
+      };
+
   String description(final AppLocalizations l10n) => switch (this) {
         ScientificSubfamily.amblyoponinae =>
           l10n.subFamilyAmblyoponinaeDescription,

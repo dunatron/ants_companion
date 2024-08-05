@@ -27,6 +27,7 @@ class AdsCarousel extends StatelessWidget {
         AdSize.mediumRectangle, // 300x250
       );
     }
+
     return LayoutBuilder(
       builder: (context, constraints) {
         const double sidePadding = 8;
