@@ -4,12 +4,34 @@ const driverAnt = Ant(
   id: 'driver_ant',
   name: 'Driver Ant',
   description: '',
-  scientificName: '',
+  scientificName: 'Dorylus driver',
   type: AntType.universal,
   role: AntRole.support,
   tierTags: [
     ...driverAntPveTags,
     ...driverAntPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Dorylus driver',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.dorylinae,
+    tribe: null,
+    genus: ScientificGenus.dorylus,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Dorylus#Species',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Dorylus',
+    ),
   ],
 );
 

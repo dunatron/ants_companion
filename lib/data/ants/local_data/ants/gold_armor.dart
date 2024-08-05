@@ -3,13 +3,31 @@ part of '../local_ants_list.dart';
 const goldArmor = Ant(
   id: 'gold_armor',
   name: 'Gold Armor',
-  scientificName: '',
+  scientificName: 'Daceton armigerum',
   description: 'A really nice PVE ant',
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [
     ...goldArmorPveTags,
     ...goldArmorPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: '',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.attini,
+    genus: ScientificGenus.daceton,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Daceton_armigerum',
+    ),
   ],
 );
 

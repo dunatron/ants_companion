@@ -4,12 +4,30 @@ const formicaClara = Ant(
   id: 'formica_clara',
   name: 'Formica Clara',
   description: '',
-  scientificName: '',
+  scientificName: 'Formica Clara',
   type: AntType.shooter,
   role: AntRole.support,
   tierTags: [
     ...formicaClaraPveTags,
     ...formicaClaraPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: '',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.formicinae,
+    tribe: null,
+    genus: ScientificGenus.formica,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Formica_clara',
+    ),
   ],
 );
 

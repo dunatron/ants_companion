@@ -4,12 +4,31 @@ const goldenSpiny = Ant(
   id: 'golden_spiny',
   name: 'Golden Spiny',
   description: '',
-  scientificName: '',
+  scientificName: 'Polyrhachis trapezoidea',
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [
     ...goldenSpinyPveTags,
     ...goldenSpinyPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Polyrhachis trapezoidea',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.formicinae,
+    tribe: ScientificTribe.camponotini,
+    genus: ScientificGenus.polyrhachis,
+    // subGenus: Hagiomyrma
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Polyrhachis_trapezoidea',
+    ),
   ],
 );
 

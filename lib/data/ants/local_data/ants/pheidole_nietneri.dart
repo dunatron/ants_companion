@@ -3,13 +3,35 @@ part of '../local_ants_list.dart';
 const pheidoleNietneri = Ant(
   id: 'pheidole_nietneri',
   name: 'Pheidole Nietneri',
-  description: '',
+  description: 'Pheidole nietneri',
   scientificName: '',
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [
     ...pheidoleNietneriPveTags,
     ...pheidoleNietneriPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Pheidole nietneri',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.attini,
+    genus: ScientificGenus.pheidole,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Pheidole_nietneri',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Pheidole_nietneri',
+    ),
   ],
 );
 

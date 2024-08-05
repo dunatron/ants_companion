@@ -3,13 +3,35 @@ part of '../local_ants_list.dart';
 const goldenCrystal = Ant(
   id: 'golden_crystal',
   name: 'Golden Crystal',
-  scientificName: '',
+  scientificName: 'Leptogenys elongata',
   description: 'An OP carrier Ant',
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [
     ...goldenCrystalPveTags,
     ...goldenCrystalPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Leptogenys elongata',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.ponerinae,
+    tribe: ScientificTribe.ponerini,
+    genus: ScientificGenus.leptogenys,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Leptogenys_elongata',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Leptogenys_elongata',
+    ),
   ],
   skills: [
     CombatSkill(

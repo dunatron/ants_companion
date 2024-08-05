@@ -4,12 +4,34 @@ const weaverAnt = Ant(
   id: 'weaver_ant',
   name: 'Weaver Ant',
   description: '',
-  scientificName: '',
+  scientificName: 'Oecophylla longinoda',
   type: AntType.shooter,
   role: AntRole.support,
   tierTags: [
     ...weaverAntPveTags,
     ...weaverAntPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Oecophylla longinoda',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.formicinae,
+    tribe: ScientificTribe.oecophyllini,
+    genus: ScientificGenus.oecophylla,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Oecophylla_longinoda',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Oecophylla_longinoda',
+    ),
   ],
 );
 

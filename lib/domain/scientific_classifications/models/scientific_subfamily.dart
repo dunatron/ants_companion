@@ -1,8 +1,14 @@
 enum ScientificSubfamily {
-  salticinae,
   amblyoponinae,
-  myrmicinae,
+  dolichoderinae,
   dorylinae,
+  ectatomminae,
+  formicinae,
+  harpactorinae,
+  myrmeciinae,
+  myrmicinae,
   paraponerinae,
-  formicinae
+  ponerinae,
+  pseudomyrmecinae,
+  salticinae,
 }

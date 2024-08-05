@@ -4,12 +4,30 @@ const ghostAnt = Ant(
   id: 'ghost_ant',
   name: 'Ghost Ant',
   description: '',
-  scientificName: '',
+  scientificName: 'Tapinoma melanocephalum',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [
     ...ghostAntPveTags,
     ...ghostAntPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Tapinoma melanocephalum',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.dolichoderinae,
+    tribe: null,
+    genus: ScientificGenus.tapinoma,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Tapinoma_melanocephalum',
+    ),
   ],
 );
 

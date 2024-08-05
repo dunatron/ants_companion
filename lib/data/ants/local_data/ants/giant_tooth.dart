@@ -1,17 +1,34 @@
 part of '../local_ants_list.dart';
 
 const giantTooth = Ant(
-  id: 'giant_tooth',
-  name: 'Giant Tooth',
-  description: '',
-  scientificName: '',
-  type: AntType.universal,
-  role: AntRole.support,
-  tierTags: [
-    ...giantToothPveTags,
-    ...giantToothPvpTags,
-  ],
-);
+    id: 'giant_tooth',
+    name: 'Giant Tooth',
+    description: '',
+    scientificName: 'Odontomachus coquereli',
+    type: AntType.universal,
+    role: AntRole.support,
+    tierTags: [
+      ...giantToothPveTags,
+      ...giantToothPvpTags,
+    ],
+    scientificClassification: AntScientificClassification(
+      species: '',
+      phylum: ScientificPhylum.arthropoda,
+      subphylum: null, // missing
+      classification: ScientificClassification.insecta,
+      order: ScientificOrder.hymenoptera,
+      infraorder: null,
+      family: ScientificFamily.formicidae,
+      subfamily: ScientificSubfamily.ponerinae,
+      tribe: ScientificTribe.ponerini,
+      genus: ScientificGenus.odontomachus,
+    ),
+    externalLinks: [
+      AntExternalLink(
+        type: AntExternalLinkType.antWiki,
+        subUrl: 'Odontomachus_coquereli',
+      ),
+    ]);
 
 const giantToothPveTags = [
   AntPveTierTag(

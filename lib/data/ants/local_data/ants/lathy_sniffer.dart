@@ -4,12 +4,34 @@ const lathySniffer = Ant(
   id: 'lathy_sniffer',
   name: 'Lathy Sniffer',
   description: '',
-  scientificName: '',
+  scientificName: 'Tetraponera rufonigra',
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [
     ...lathySnifferPveTags,
     ...lathySnifferPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Tetraponera rufonigra',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.pseudomyrmecinae,
+    tribe: null,
+    genus: ScientificGenus.tetraponera,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Tetraponera_rufonigra',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Tetraponera_rufonigra',
+    ),
   ],
 );
 

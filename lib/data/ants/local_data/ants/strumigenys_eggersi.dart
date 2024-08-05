@@ -4,12 +4,30 @@ const strumigenysEggersi = Ant(
   id: 'strumigenys_eggersi',
   name: 'Strumigenys Eggersi',
   description: '',
-  scientificName: '',
+  scientificName: 'Strumigenys Eggersi',
   type: AntType.carrier,
   role: AntRole.melee,
   tierTags: [
     ...strumigenysEggersiPveTags,
     ...strumigenysEggersiPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Strumigenys Eggersi',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: ScientificTribe.attini,
+    genus: ScientificGenus.strumigenys,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Strumigenys_eggersi',
+    ),
   ],
 );
 

@@ -4,12 +4,30 @@ const enigmaticTaylor = Ant(
   id: 'enigmatic_taylor',
   name: 'Enigmatic Taylor',
   description: '',
-  scientificName: '',
+  scientificName: 'Tetramorium pulcherrimum',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [
     ...enigmaticTaylorPveTags,
     ...enigmaticTaylorPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: '',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmicinae,
+    tribe: null,
+    genus: ScientificGenus.tetramorium,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Tetramorium_pulcherrimum',
+    ),
   ],
 );
 

@@ -11,7 +11,13 @@ const String heathAndroidPhoneId = '16D265166C7DAF515FA40F177BD4D2C3';
 
 const String heathIOSPhoneId = 'e08566bd9021336bb01d63a464319352';
 
-const List<String> testDeviceIds = [heathAndroidPhoneId, heathIOSPhoneId];
+const String heathIPadId = 'dd5dab74893a8c2d47fb54bb7dfa0b7b';
+
+const List<String> testDeviceIds = [
+  heathAndroidPhoneId,
+  heathIOSPhoneId,
+  heathIPadId
+];
 
 const _enableAds = true;
 
@@ -113,7 +119,9 @@ class AdsService {
         if (snapshot.connectionState == ConnectionState.waiting ||
             !snapshot.hasData ||
             !snapshot.data!) {
-          return const SizedBox.shrink();
+          // return const SizedBox.shrink();
+
+          return CircularProgressIndicator();
         }
         return SizedBox(
           width: ad!.size.width.toDouble(),

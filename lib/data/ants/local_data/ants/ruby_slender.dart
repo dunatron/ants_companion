@@ -4,12 +4,30 @@ const rubySlender = Ant(
   id: 'ruby_slender',
   name: 'Ruby Slender',
   description: '',
-  scientificName: '',
+  scientificName: 'Gnamptogenys mordax',
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [
     ...rubySlenderPveTags,
     ...rubySlenderPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Gnamptogenys mordax',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.ectatomminae,
+    tribe: ScientificTribe.ectatommini,
+    genus: ScientificGenus.gnamptogenys,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Gnamptogenys_mordax',
+    ),
   ],
 );
 

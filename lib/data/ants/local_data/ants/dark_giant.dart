@@ -4,12 +4,30 @@ const darkGiant = Ant(
   id: 'dark_giant',
   name: 'Dark Giant',
   description: '',
-  scientificName: '',
+  scientificName: 'Eciton rapax',
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [
     ...darkGiantPveTags,
     ...darkGiantPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Eciton rapax',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.dorylinae,
+    tribe: null,
+    genus: ScientificGenus.eciton,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Eciton_rapax',
+    ),
   ],
 );
 

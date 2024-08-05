@@ -1,7 +1,9 @@
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
+import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
+import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -15,22 +17,25 @@ class ColonyActionDetailsScreen extends StatelessWidget {
     final caName = caKey.colonyActionName();
     final tasks = CATask.colonyActionTaskList(caKey);
 
-    return PageLayout(
+    return SliverPageLayout(
       title: caName,
       slivers: [
         SliverToBoxAdapter(
           child: ColonyActionNotificationDetails(caKey: caKey),
         ),
-        SliverList.builder(
-          itemCount: tasks.length,
-          itemBuilder: (context, index) {
-            final task = tasks[index];
+        ConstrainedSliverWidth(
+          maxWidth: 560,
+          child: SliverList.builder(
+            itemCount: tasks.length,
+            itemBuilder: (context, index) {
+              final task = tasks[index];
 
-            return ListTile(
-              title: Text(task.title),
-              subtitle: Text(task.points.toString()),
-            );
-          },
+              return ListTile(
+                title: Text(task.title),
+                subtitle: Text(task.points.toString()),
+              );
+            },
+          ),
         )
       ],
     );

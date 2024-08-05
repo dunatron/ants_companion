@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const graveDigger = Ant(
   id: 'grave_digger',
   name: 'Grave Digger',
-  scientificName: '',
+  scientificName: 'Prionopelta humicola',
   description: 'A support ant with crowd control abilities, '
       'pairs really nicely with golden crystal',
   type: AntType.carrier,
@@ -11,6 +11,24 @@ const graveDigger = Ant(
   tierTags: [
     ...graveDiggerPveTags,
     ...graveDiggerPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Prionopelta humicola',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.amblyoponinae,
+    tribe: ScientificTribe.amblyoponini,
+    genus: ScientificGenus.prionopelta,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Prionopelta_humicola',
+    ),
   ],
 );
 

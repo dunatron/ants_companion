@@ -1,0 +1,31 @@
+{
+  "@@locale": "es",
+  "language": "Español",
+  "@language": {
+    "description": "El idioma actual"
+  },
+  "appTitle": "Compañero de Hormigas",
+  "welcomeInfoTitle": "Saludos",
+  "welcomeInfoDescription": "Bienvenido al compañero de hormigas. Esta aplicación tiene como objetivo ser tu lugar único para el reino subterráneo de las hormigas.",
+  "specialAnts": "Hormigas Especiales",
+  "antsTierFeatureInfoTitle": "Clasificaciones por Nivel",
+  "antsTierFeatureInfoDescription": "Obtén información sobre las hormigas más fuertes",
+  "antsTierFeatureInfoButton": "Ver Niveles de Hormigas",
+  "notificationsFeatureInfoTitle": "Programador de Acciones de la Colonia",
+  "notificationsFeatureInfoDescription": "Nunca te pierdas las acciones más importantes de la colonia programando notificaciones locales",
+  "notificationsFeatureInfoButton": "Programar Notificaciones",
+  "scientificClassificationsFeatureInfoTitle": "Clasificaciones Científicas",
+  "scientificClassificationsFeatureInfoDescription": "Información científica sobre las hormigas especiales en El Reino Subterráneo de las Hormigas",
+  "scientificClassificationsFeatureInfoButton": "Ver Clasificaciones",
+  "soldierAntsComparisonFeatureInfoTitle": "Comparación de Hormigas Soldado",
+  "soldierAntsComparisonFeatureInfoDescription": "¿Interesado en las estadísticas base para hormigas soldado? Esta función es para ti. Una comparación lado a lado de las estadísticas base de los soldados",
+  "soldierAntsComparisonFeatureInfoButton": "Estadísticas de Soldados",
+  "familyFormicidaeTitle": "Formicidae",
+  "familyFormicidaeDescription": "Las hormigas son insectos eusociales de la familia Formicidae y, junto con las avispas y abejas relacionadas, pertenecen al orden Hymenoptera. Las hormigas evolucionaron a partir de ancestros avispas vespoides en el período Cretácico. Se han clasificado más de 13,800 de un total estimado de 22,000 especies. Se identifican fácilmente por sus antenas geniculadas (en codo) y la estructura distintiva en forma de nodo que forma sus cinturas delgadas.",
+  "familyMutillidaeTitle": "Mutillidae",
+  "familyMutillidaeDescription": "Las Mutillidae son una familia de más de 7,000 especies de avispas cuyas hembras sin alas se parecen a grandes hormigas peludas. Su nombre común, hormiga de terciopelo, se refiere a su semejanza con una hormiga y su denso pelaje, que a menudo es de color escarlata brillante o naranja, pero también puede ser negro, blanco, plateado o dorado. Sus colores brillantes sirven como señales aposemáticas. Son conocidas por sus picaduras extremadamente dolorosas (la picadura de la especie Dasymutilla klugii está clasificada como 3 en el índice de dolor Schmidt y dura hasta 30 minutos), y ha dado lugar al nombre común de \"asesina de vacas\" o \"hormiga de vaca\" para la especie Dasymutilla occidentalis. Sin embargo, los mutílidos no son agresivos y solo pican en defensa. Además, la toxicidad real de su veneno es mucho menor que la de las abejas melíferas o las hormigas recolectoras. A diferencia de las verdaderas hormigas, son solitarios y carecen de sistemas sociales complejos.",
+  "familySalticidaeTitle": "Salticidae",
+  "familySalticidaeDescription": "Las arañas saltadoras son un grupo de arañas que constituyen la familia Salticidae. A partir de 2019, esta familia contenía más de 600 géneros descritos y más de 6,000 especies descritas, lo que la convierte en la familia más grande de arañas con el 13% de todas las especies. Las arañas saltadoras tienen algunas de las mejores visiones entre los artrópodos y las utilizan en el cortejo, la caza y la navegación. Aunque normalmente se mueven de manera discreta y bastante lenta, la mayoría de las especies son capaces de saltos muy ágiles, especialmente al cazar, pero a veces en respuesta a amenazas repentinas o al cruzar espacios largos. Tanto sus pulmones libros como su sistema traqueal están bien desarrollados, y utilizan ambos sistemas (respiración bimodal). Las arañas saltadoras se reconocen generalmente por su patrón ocular. Todas las arañas saltadoras tienen cuatro pares de ojos, siendo el par anterior mediano particularmente grande.",
+  "familyThomisidaeTitle": "Thomisidae",
+  "familyThomisidaeDescription": "Los Thomisidae son una familia de arañas, que incluye alrededor de 170 géneros y más de 2,100 especies. El nombre común araña cangrejo a menudo se vincula a las especies de esta familia, pero también se aplica de manera general a muchas otras familias de arañas. Muchos miembros de esta familia también se conocen como arañas de flores o arañas cangrejo de flores."
+}

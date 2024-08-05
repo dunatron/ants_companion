@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const jackJumper = Ant(
   id: 'jack_jumper',
   name: 'Jack Jumper',
-  scientificName: '',
+  scientificName: 'Myrmecia pilosula',
   description: 'Reliable damage ant, good for pve',
   type: AntType.universal,
   role: AntRole.ranged,
@@ -14,6 +14,28 @@ const jackJumper = Ant(
       antType: AntType.universal,
       reason: 'It does an ok amount of damage in the back row',
       rowPosition: RowPosition.back,
+    ),
+  ],
+  scientificClassification: AntScientificClassification(
+    species: 'Myrmecia pilosula',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hymenoptera,
+    infraorder: null,
+    family: ScientificFamily.formicidae,
+    subfamily: ScientificSubfamily.myrmeciinae,
+    tribe: ScientificTribe.myrmeciini,
+    genus: ScientificGenus.myrmecia,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Jack_jumper_ant',
+    ),
+    AntExternalLink(
+      type: AntExternalLinkType.antWiki,
+      subUrl: 'Myrmecia_pilosula',
     ),
   ],
 );

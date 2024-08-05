@@ -4,12 +4,31 @@ const shikareeMaster = Ant(
   id: 'shikaree_master',
   name: 'Shikaree Master',
   description: '',
-  scientificName: '',
+  scientificName: 'Arilus cristatus',
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [
     ...shikareeMasterPveTags,
     ...shikareeMasterPvpTags,
+  ],
+  scientificClassification: AntScientificClassification(
+    species: '',
+    phylum: ScientificPhylum.arthropoda,
+    subphylum: null, // missing
+    classification: ScientificClassification.insecta,
+    order: ScientificOrder.hemiptera,
+    // subOrder: Heteroptera
+    infraorder: null,
+    family: ScientificFamily.reduviidae,
+    subfamily: ScientificSubfamily.harpactorinae,
+    tribe: ScientificTribe.harpactorini,
+    genus: ScientificGenus.arilus,
+  ),
+  externalLinks: [
+    AntExternalLink(
+      type: AntExternalLinkType.wikipedia,
+      subUrl: 'Arilus_cristatus',
+    ),
   ],
 );
 

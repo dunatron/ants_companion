@@ -1,57 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class AntsAppBar extends StatelessWidget {
+class AntsAppBar extends StatelessWidget implements PreferredSizeWidget {
   const AntsAppBar({
     super.key,
     required this.title,
+    this.actions = const [],
   });
 
   final String title;
 
-  @override
-  Widget build(BuildContext context) {
-    return SliverAppBar(
-      // title: Text(title),
-      floating: true,
-      pinned: false,
-      snap: true,
-      title: _TitleWithBackButton(title: title),
-
-      leading: IconButton(
-        onPressed: () {
-          Scaffold.of(context).openDrawer();
-        },
-        icon: const Icon(Icons.cabin),
-      ),
-    );
-  }
-}
-
-class _TitleWithBackButton extends StatelessWidget {
-  const _TitleWithBackButton({
-    super.key,
-    required this.title,
-  });
-
-  final String title;
+  final List<Widget> actions;
 
   @override
   Widget build(BuildContext context) {
-    final canPop = Navigator.canPop(context);
-    return Row(
-      children: [
-        if (canPop)
-          IconButton(
-            onPressed: () {
-              // Scaffold.of(context).openDrawer();
-              if (Navigator.canPop(context)) {
-                Navigator.pop(context);
-              }
-            },
-            icon: const Icon(Icons.arrow_back),
-          ),
-        Text(title),
-      ],
+    final theme = Theme.of(context);
+    final canPop = Navigator.of(context).canPop();
+    return AppBar(
+      leading: canPop
+          ? IconButton(
+              onPressed: () => context.pop(),
+              icon: const Icon(Icons.arrow_back),
+            )
+          : null,
+      actions: actions,
+      title: Text(title, style: theme.textTheme.headlineMedium),
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(60);
 }
