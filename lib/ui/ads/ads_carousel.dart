@@ -1,4 +1,5 @@
 import 'package:ants_companion/domain/ads/ads_service.dart';
+import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -40,16 +41,21 @@ class AdsCarousel extends StatelessWidget {
         return SizedBox(
           height: _adHeight,
           width: double.infinity,
-          child: PageView.builder(
-            controller: PageController(viewportFraction: viewportFraction),
-            itemCount: adIds.length,
-            itemBuilder: (context, index) {
-              final widget = ads.getBannerAdWidget(adIds[index]);
-              return Container(
-                margin: const EdgeInsets.symmetric(horizontal: sidePadding),
-                child: Center(child: widget),
-              );
-            },
+          child: Container(
+            color: Colors.pink,
+            child: PageView.builder(
+              controller: PageController(viewportFraction: viewportFraction),
+              itemCount: adIds.length,
+              itemBuilder: (context, index) {
+                final adId = adIds[index];
+                return AdCard(adId: adId);
+                // final widget = ads.getBannerAdWidget(adIds[index]);
+                // return Container(
+                //   margin: const EdgeInsets.symmetric(horizontal: sidePadding),
+                //   child: Center(child: widget),
+                // );
+              },
+            ),
           ),
         );
       },

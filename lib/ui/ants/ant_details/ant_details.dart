@@ -1,6 +1,7 @@
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
+import 'package:ants_companion/ui/ads/test_add_card.dart';
 import 'package:ants_companion/ui/ants/ant_details/ant_scientific_details.dart';
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
 import 'package:ants_companion/ui/section.dart';
@@ -20,8 +21,9 @@ class AntDetails extends StatelessWidget {
 
     final tags = ant.tierTags;
 
-    final AdsService adsService = AdsService();
-    adsService.loadBannerAd(AdsService.antDetailsAdUnitId, AdSize.largeBanner);
+    // final AdsService adsService = AdsService();
+    // // adsService.loadBannerAd(AdsService.antDetailsAdUnitId, AdSize.largeBanner);
+    // adsService.loadBannerAd(AdsService.antDetailsAdUnitId, AdSize.largeBanner);
 
     final species = ant.species;
 
@@ -60,10 +62,13 @@ class AntDetails extends StatelessWidget {
           ),
           if (AdsService.enabled)
             Section(
-              child:
-                  adsService.getBannerAdWidget(AdsService.antDetailsAdUnitId) ??
-                      Container(),
+              child: TestAdCard(),
             ),
+          // Section(
+          //   child:
+          //       adsService.getBannerAdWidget(AdsService.antDetailsAdUnitId) ??
+          //           Container(),
+          // ),
           Section(
               child: Divider(
             color: Theme.of(context).colorScheme.primary,
