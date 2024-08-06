@@ -11,12 +11,14 @@ const String heathAndroidPhoneId = '16D265166C7DAF515FA40F177BD4D2C3';
 
 const String heathIOSPhoneId = 'e08566bd9021336bb01d63a464319352';
 
-const String heathIPadId = 'dd5dab74893a8c2d47fb54bb7dfa0b7b';
+const String heathIPadId = '294b3bfcad8d794c558e08d5eabd1337';
+const String heathIPadId2 = 'd8a5df37edce96ec9b116c8b6218934b';
 
 const List<String> testDeviceIds = [
   heathAndroidPhoneId,
   heathIOSPhoneId,
-  heathIPadId
+  heathIPadId,
+  heathIPadId2
 ];
 
 const _enableAds = true;

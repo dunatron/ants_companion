@@ -31,31 +31,47 @@ class AdsCarousel extends StatelessWidget {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        const double sidePadding = 8;
+        // final double sidePadding = constraints.maxWidth > 400 ? 16 : 0;
+        const double gap = 64;
+        // Width of each item with side padding
+        final double itemWidth = _adWidth;
 
-        final widthNeeded = _adWidth + (sidePadding * 2);
-        final cardsThatFit = constraints.maxWidth / widthNeeded;
+        // Calculate width needed for each item including the gap
+        final double widthNeeded = itemWidth + gap;
 
-        final viewportFraction = 1 / cardsThatFit;
+        // Calculate viewport fraction based on the number of cards that fit
+        final double viewportFraction = widthNeeded / constraints.maxWidth;
 
         return SizedBox(
           height: _adHeight,
           width: double.infinity,
-          child: Container(
-            color: Colors.pink,
-            child: PageView.builder(
-              controller: PageController(viewportFraction: viewportFraction),
-              itemCount: adIds.length,
-              itemBuilder: (context, index) {
-                final adId = adIds[index];
-                return AdCard(adId: adId);
-                // final widget = ads.getBannerAdWidget(adIds[index]);
-                // return Container(
-                //   margin: const EdgeInsets.symmetric(horizontal: sidePadding),
-                //   child: Center(child: widget),
-                // );
-              },
-            ),
+          child: PageView.builder(
+            controller: PageController(viewportFraction: viewportFraction),
+            itemCount: adIds.length,
+            padEnds: false,
+            reverse: false,
+            pageSnapping: true,
+            itemBuilder: (context, index) {
+              final adId = adIds[index];
+              final isFirst = index == 0;
+              final isLast = index == adIds.length - 1;
+
+              // Define margin to adjust for gaps
+              final EdgeInsetsGeometry margin = EdgeInsets.only(
+                // left: isFirst ? gap : gap / 2,
+                // right: isLast ? gap : gap / 2,
+                // left: 16,
+                // right: 16,
+                left: gap / 2,
+                right: gap / 2,
+              );
+
+              return Container(
+                margin: margin,
+                color: Colors.yellow,
+                child: AdCard(adId: adId),
+              );
+            },
           ),
         );
       },
