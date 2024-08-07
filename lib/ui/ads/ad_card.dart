@@ -32,6 +32,7 @@ class AdCard extends StatelessWidget {
     }
 
     return StreamBuilder<BannerAd?>(
+      key: GlobalKey(),
       stream: adService.adsStream(adId),
       builder: (context, snapshot) {
         final ad = snapshot.data;

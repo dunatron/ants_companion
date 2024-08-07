@@ -1,4 +1,5 @@
 import 'package:ants_companion/app/app.dart';
+import 'package:ants_companion/app/app_locale_provider.dart';
 import 'package:ants_companion/bootstrap/bootstrap.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/notifications/local_notifications.dart';
@@ -13,5 +14,7 @@ void main() async {
 
   await LocalNotifications.init();
 
-  runApp(const App());
+  runApp(const AppLocaleProvider());
+
+  // runApp(AppLocaleProvider((locale) => App(currentLocale: locale)));
 }

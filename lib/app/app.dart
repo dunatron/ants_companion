@@ -6,24 +6,33 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:flutter/material.dart';
 
+final lightTheme = ThemeData(
+  useMaterial3: true,
+  colorScheme: lightColorScheme,
+);
+
+final darkTheme = ThemeData(
+  colorScheme: darkColorScheme,
+);
+
 class App extends StatelessWidget {
-  const App({super.key});
+  const App({
+    super.key,
+    required this.currentLocale,
+  });
+
+  final Locale currentLocale;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      key: const ValueKey('antsApp'),
       debugShowCheckedModeBanner: false,
       scaffoldMessengerKey: SnackbarService().scaffoldMessengerKey,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: lightColorScheme,
-      ),
-      darkTheme: ThemeData(
-        colorScheme: darkColorScheme,
-      ),
-      // themeMode: ThemeMode.dark,
+      theme: lightTheme,
+      darkTheme: darkTheme,
       routerConfig: routerConfig(),
-      // locale: Locale('fil'),
+      locale: currentLocale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
     );
