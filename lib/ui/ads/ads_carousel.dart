@@ -32,12 +32,14 @@ class AdsCarousel extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         // final double sidePadding = constraints.maxWidth > 400 ? 16 : 0;
-        const double gap = 64;
+        const double gap = 8;
         // Width of each item with side padding
         final double itemWidth = _adWidth;
 
         // Calculate width needed for each item including the gap
-        final double widthNeeded = itemWidth + gap;
+        final double widthNeeded = itemWidth + (gap * 2);
+
+        final int cardsThatFit = (constraints.maxWidth / widthNeeded).floor();
 
         // Calculate viewport fraction based on the number of cards that fit
         final double viewportFraction = widthNeeded / constraints.maxWidth;
@@ -48,7 +50,7 @@ class AdsCarousel extends StatelessWidget {
           child: PageView.builder(
             controller: PageController(viewportFraction: viewportFraction),
             itemCount: adIds.length,
-            padEnds: false,
+            padEnds: true,
             reverse: false,
             pageSnapping: true,
             itemBuilder: (context, index) {
@@ -56,19 +58,14 @@ class AdsCarousel extends StatelessWidget {
               final isFirst = index == 0;
               final isLast = index == adIds.length - 1;
 
-              // Define margin to adjust for gaps
-              final EdgeInsetsGeometry margin = EdgeInsets.only(
-                // left: isFirst ? gap : gap / 2,
-                // right: isLast ? gap : gap / 2,
-                // left: 16,
-                // right: 16,
-                left: gap / 2,
-                right: gap / 2,
+              const EdgeInsetsGeometry margin = EdgeInsets.only(
+                left: gap,
+                right: gap,
               );
 
               return Container(
                 margin: margin,
-                color: Colors.yellow,
+                color: Colors.transparent,
                 child: AdCard(adId: adId),
               );
             },

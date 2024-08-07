@@ -11,10 +11,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // L10n
-    // final AppLic
     return MaterialApp.router(
-      title: 'Ants Companion',
       debugShowCheckedModeBanner: false,
       scaffoldMessengerKey: SnackbarService().scaffoldMessengerKey,
       theme: ThemeData(
@@ -26,7 +23,7 @@ class App extends StatelessWidget {
       ),
       // themeMode: ThemeMode.dark,
       routerConfig: routerConfig(),
-      // locale: Locale('tl'),
+      // locale: Locale('fil'),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
     );
