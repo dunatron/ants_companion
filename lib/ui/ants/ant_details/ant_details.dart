@@ -1,17 +1,17 @@
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
-import 'package:ants_companion/ui/ads/test_add_card.dart';
+import 'package:ants_companion/ui/ads/ad_card.dart';
+
 import 'package:ants_companion/ui/ants/ant_details/ant_scientific_details.dart';
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
 import 'package:ants_companion/ui/section.dart';
 
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class AntDetails extends StatelessWidget {
-  AntDetails({super.key, required this.ant});
+  const AntDetails({super.key, required this.ant});
 
   final Ant ant;
 
@@ -20,10 +20,6 @@ class AntDetails extends StatelessWidget {
     final profilePictureUrl = ant.profilePath;
 
     final tags = ant.tierTags;
-
-    // final AdsService adsService = AdsService();
-    // // adsService.loadBannerAd(AdsService.antDetailsAdUnitId, AdSize.largeBanner);
-    // adsService.loadBannerAd(AdsService.antDetailsAdUnitId, AdSize.largeBanner);
 
     final species = ant.species;
 
@@ -35,7 +31,7 @@ class AntDetails extends StatelessWidget {
             ant.name,
             style: Theme.of(context).textTheme.titleLarge,
           ),
-          if (profilePictureUrl != null)
+          if (profilePictureUrl.isNotEmpty)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 24),
               child: AntProfileImage(imagePath: ant.profilePath, radius: 120),
@@ -62,13 +58,11 @@ class AntDetails extends StatelessWidget {
           ),
           if (AdsService.enabled)
             Section(
-              child: TestAdCard(),
+              child: AdCard(
+                adId: AdsService.antDetailsAdUnitId,
+                selfLoad: AdCardSelfLoad(size: AdSize.banner),
+              ),
             ),
-          // Section(
-          //   child:
-          //       adsService.getBannerAdWidget(AdsService.antDetailsAdUnitId) ??
-          //           Container(),
-          // ),
           Section(
               child: Divider(
             color: Theme.of(context).colorScheme.primary,
@@ -103,7 +97,7 @@ class _TagDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isPvpTag = tag is AntPvpTierTag;
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
