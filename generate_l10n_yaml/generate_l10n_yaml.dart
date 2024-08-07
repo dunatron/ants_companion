@@ -1,23 +1,20 @@
 import 'dart:io';
 
 void main() {
-  print('Hello, World!');
-  zzzz();
+  generateL10nYaml();
 }
 
-void zzzz() {
-  // Define the path to the .env file and l10n.yaml file
-  final envFilePath = 'generate_l10n_yaml/l10n.env';
-  final l10nYamlFilePath = './l10n.yaml';
+void generateL10nYaml() {
+  const envFilePath = 'generate_l10n_yaml/l10n.env';
+  const l10nYamlFilePath = './l10n.yaml';
 
-  // Check if the .env file exists
   final envFile = File(envFilePath);
   if (!envFile.existsSync()) {
-    print('Error: .env file not found');
+    print('Error: l10n.env file not found');
     exit(1);
   }
 
-  // Read the environment variables from the .env file
+  // create a map from env variables
   final env = envFile.readAsLinesSync().fold<Map<String, String>>(
     {},
     (map, line) {
@@ -29,31 +26,15 @@ void zzzz() {
     },
   );
 
-  print(env['ARB_TRANSLATE_OPENAI_KEY']);
+  for (var key in env.keys) {
+    print('$key: ${env[key]}');
+  }
 
   // Define the default values if environment variables are not set
-  final arbTemplate = env['ARB_TEMPLATE'] ?? 'app_en.arb';
-  final outputFile = env['OUTPUT_FILE'] ?? 'app_localizations.dart';
-  final outputClass = env['OUTPUT_CLASS'] ?? 'S';
-  final outputName = env['OUTPUT_NAME'] ?? 'app_localizations';
-  final translateApiKey = env['ARB_TRANSLATE_OPENAI_KEY'] ?? 'NOT_VALID_KEY';
-  final arbGeminiKey = env['ARB_GEMINI_KEY'];
+  final arbGeminiKey = env['ARB_GEMINI_KEY'] ?? 'ARB_GEMINI_KEY_UNDEFINED';
 
-  // final useGemini
-
-  // Write the l10n.yaml file
-//   final l10nFile = File(l10nYamlFilePath);
-//   l10nFile.writeAsStringSync('''
-// arb-dir: lib/l10n
-// output-dir: lib/generated
-// template-arb-file: $arbTemplate
-// output-localization-file: $outputFile
-// output-class: $outputClass
-// output-name: $outputName
-// ''');
-
-// use this line too if using Open ai model
-// arb-translate-model-provider: open-ai
+  // add this line too if using Open ai model
+  // arb-translate-model-provider: open-ai
 
   final l10nFile = File(l10nYamlFilePath);
   l10nFile.writeAsStringSync('''
