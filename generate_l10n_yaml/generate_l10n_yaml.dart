@@ -37,6 +37,9 @@ void zzzz() {
   final outputClass = env['OUTPUT_CLASS'] ?? 'S';
   final outputName = env['OUTPUT_NAME'] ?? 'app_localizations';
   final translateApiKey = env['ARB_TRANSLATE_OPENAI_KEY'] ?? 'NOT_VALID_KEY';
+  final arbGeminiKey = env['ARB_GEMINI_KEY'];
+
+  // final useGemini
 
   // Write the l10n.yaml file
 //   final l10nFile = File(l10nYamlFilePath);
@@ -49,6 +52,9 @@ void zzzz() {
 // output-name: $outputName
 // ''');
 
+// use this line too if using Open ai model
+// arb-translate-model-provider: open-ai
+
   final l10nFile = File(l10nYamlFilePath);
   l10nFile.writeAsStringSync('''
 arb-dir: lib/l10n/arb
@@ -56,8 +62,7 @@ template-arb-file: app_en.arb
 output-localization-file: app_localizations.dart
 nullable-getter: false
 untranslated-messages-file: l10n_errors.txt
-arb-translate-model-provider: open-ai
-arb-translate-api-key: $translateApiKey
+arb-translate-api-key: $arbGeminiKey
 ''');
 
   print('l10n.yaml file generated successfully');
