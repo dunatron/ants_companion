@@ -1,22 +1,23 @@
-import 'dart:io';
-
+import 'package:ants_companion/core/log/loggers.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:rxdart/rxdart.dart';
 
 // You can also test with your own ad unit IDs by registering your device as a
-// test device. Check the logs for your device's ID value.
+// test device. Check the lRgs for your device's ID value.
 const String heathAndroidPhoneId = '16D265166C7DAF515FA40F177BD4D2C3';
 
-const String heathIOSPhoneId = 'e08566bd9021336bb01d63a464319352';
+const String heathIOSPhoneId = '4e13be65b27b1aac710235ad76129477';
 
-const String heathIPadId = 'dd5dab74893a8c2d47fb54bb7dfa0b7b';
+const String heathIPadId = '294b3bfcad8d794c558e08d5eabd1337';
+const String heathIPadId2 = 'd8a5df37edce96ec9b116c8b6218934b';
 
 const List<String> testDeviceIds = [
   heathAndroidPhoneId,
   heathIOSPhoneId,
-  heathIPadId
+  heathIPadId,
+  heathIPadId2
 ];
 
 const _enableAds = true;
@@ -42,14 +43,19 @@ class AdsService {
     carousel1Item6
   ];
 
-  final Map<String, BannerAd> _bannerAds = {};
-  final Map<String, BehaviorSubject<bool>> _adLoadStatus = {};
-
   // Singleton pattern
   static final AdsService _instance = AdsService._internal();
   factory AdsService() => _instance;
 
   AdsService._internal();
+
+  final logger = appLogger(AdsService);
+
+  final BehaviorSubject<Map<String, BannerAd>> _bannerSubject =
+      BehaviorSubject.seeded({});
+
+  Stream<BannerAd?> adsStream(String addId) =>
+      _bannerSubject.stream.map((it) => it[addId]);
 
   static bool get platformSupportsAds =>
       defaultTargetPlatform == TargetPlatform.android ||
@@ -57,89 +63,77 @@ class AdsService {
 
   static bool get enabled => platformSupportsAds && _enableAds;
 
+  bool _initialized = false;
+
+  final int maxRetryAttempts = 3;
+  final Duration retryDelay = const Duration(seconds: 20);
+
   Future<void> initialize() async {
-    if (!enabled) return;
+    logger.d('Initializing Ad service');
+    if (_initialized) {
+      logger.d('Ads have already been initialized');
+    }
+    if (!enabled) {
+      logger.d('Ads will not initialize as they are not enabled');
+    }
     await MobileAds.instance.initialize();
+    logger.d('Ads service has been initialized');
     // Ad our device as a test device for ads
     MobileAds.instance.updateRequestConfiguration(
       RequestConfiguration(testDeviceIds: testDeviceIds),
     );
-  }
-
-  Future<void> loadCarouselOne() async {
-    for (var adId in carouselOneIds) {
-      loadBannerAd(adId, AdSize.mediumRectangle);
-    }
-  }
-
-  List<Widget> carouselOneWidgets() {
-    return carouselOneIds.map((it) => getBannerAdWidget(it)).toList();
+    logger.d('Ads request config has been configured');
+    _initialized = true;
   }
 
   Future<void> loadBannerAd(String adUnitId, AdSize size) async {
+    await loadBannerAdWithRetry(adUnitId, size);
+  }
+
+  Future<void> loadBannerAdWithRetry(
+    String adUnitId,
+    AdSize size, {
+    int attempt = 0,
+  }) async {
     if (!enabled) return;
-    if (_bannerAds.containsKey(adUnitId)) {
+
+    // check if ad is already loaded
+    if (_bannerSubject.value.containsKey(adUnitId)) {
+      logger.d('Ad is already loaded: $adUnitId');
       return;
     }
 
-    final adLoadSubject = BehaviorSubject<bool>.seeded(false);
-    _adLoadStatus[adUnitId] = adLoadSubject;
-
-    BannerAd bannerAd = BannerAd(
+    final bannerAd = BannerAd(
       adUnitId: adUnitId,
       request: const AdRequest(),
       size: size,
       listener: BannerAdListener(
-        onAdLoaded: (_) {
-          adLoadSubject.add(true);
+        onAdLoaded: (ad) {
+          logger.d('Loaded Banner Ad: $ad');
+          _bannerSubject.add({
+            ..._bannerSubject.value,
+            adUnitId: ad as BannerAd,
+          });
         },
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
-          adLoadSubject.add(false);
+          logger.d('Failed to load Banner Ad: ${ad.adUnitId}\n error: $error');
           ad.dispose();
+          if (attempt < maxRetryAttempts) {
+            Future.delayed(retryDelay, () {
+              loadBannerAdWithRetry(adUnitId, size, attempt: attempt + 1);
+            });
+          } else {
+            logger.e('Max retry attempts reached for ad unit: $adUnitId');
+          }
         },
       ),
     );
 
-    _bannerAds[adUnitId] = bannerAd;
     bannerAd.load();
   }
 
-  Stream<bool> getAdLoadStatus(String adUnitId) {
-    return _adLoadStatus[adUnitId]?.stream ?? Stream.value(false);
-  }
-
-  Widget getBannerAdWidget(String adUnitId) {
-    if (!enabled) return const SizedBox.shrink();
-    final ad = _bannerAds[adUnitId];
-    final adLoadStatusStream = getAdLoadStatus(adUnitId);
-
-    return StreamBuilder<bool>(
-      stream: adLoadStatusStream,
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting ||
-            !snapshot.hasData ||
-            !snapshot.data!) {
-          // return const SizedBox.shrink();
-
-          return CircularProgressIndicator();
-        }
-        return SizedBox(
-          width: ad!.size.width.toDouble(),
-          height: ad.size.height.toDouble(),
-          child: AdWidget(ad: ad),
-        );
-      },
-    );
-  }
-
   void dispose() {
-    for (var ad in _bannerAds.values) {
-      ad.dispose();
-    }
-    _bannerAds.clear();
-    for (var subject in _adLoadStatus.values) {
-      subject.close();
-    }
-    _adLoadStatus.clear();
+    _bannerSubject.value.forEach((_, ad) => ad.dispose());
+    _bannerSubject.close();
   }
 }

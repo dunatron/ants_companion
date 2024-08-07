@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
 
     return NotificationTappedProvider(
       child: SliverPageLayout(
-        title: l10n.language,
+        title: l10n.appTitle,
         slivers: [
           _buildBanner(context),
           _buildSpace(),
