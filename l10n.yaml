@@ -1,6 +1,0 @@
-# https://www.science.co.il/language/Locale-codes.php
-arb-dir: lib/l10n/arb
-template-arb-file: app_en.arb
-output-localization-file: app_localizations.dart
-nullable-getter: false
-untranslated-messages-file: l10n_errors.txt
