@@ -7,12 +7,14 @@ class SliverPageLayout extends StatelessWidget {
   const SliverPageLayout({
     super.key,
     required this.title,
+    this.actions = const [],
     required this.slivers,
     this.controller,
     this.floatingActionButton,
   });
 
   final String title;
+  final List<Widget> actions;
   final List<Widget> slivers;
 
   final ScrollController? controller;
@@ -22,7 +24,10 @@ class SliverPageLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AntsAppBar(title: title),
+      appBar: AntsAppBar(
+        title: title,
+        actions: actions,
+      ),
       drawer: const SafeArea(child: AppDrawer()),
       body: CustomScrollView(
         controller: controller,

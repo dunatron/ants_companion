@@ -2,7 +2,6 @@ import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/ants.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
-import 'package:ants_companion/domain/notifications/local_notifications.dart';
 import 'package:ants_companion/ui/ads/ads_carousel.dart';
 import 'package:ants_companion/ui/ants/ant_details/ant_details.dart';
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
@@ -15,6 +14,8 @@ import 'package:ants_companion/ui/home/soldier_ants_comparison_feature_info.dart
 import 'package:ants_companion/ui/home/welcome_info.dart';
 import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
 import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
+import 'package:ants_companion/ui/locale/locale_selector.dart';
+
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

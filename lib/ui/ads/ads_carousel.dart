@@ -22,11 +22,10 @@ class AdsCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (!AdsService.enabled) return const SizedBox();
+    // ToDo: maybe handle this in a less blasty approach
+    ads.disposeAllAds();
     for (var adId in adIds) {
-      ads.loadBannerAd(
-        adId,
-        AdSize.mediumRectangle, // 300x250
-      );
+      ads.loadBannerAd(adId, AdSize.mediumRectangle);
     }
 
     return LayoutBuilder(

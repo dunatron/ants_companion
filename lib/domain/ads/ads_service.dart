@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:ants_companion/core/log/loggers.dart';
 import 'package:flutter/foundation.dart';
 
@@ -51,7 +53,7 @@ class AdsService {
 
   final logger = appLogger(AdsService);
 
-  final BehaviorSubject<Map<String, BannerAd>> _bannerSubject =
+  final BehaviorSubject<Map<String, BannerAd?>> _bannerSubject =
       BehaviorSubject.seeded({});
 
   Stream<BannerAd?> adsStream(String addId) =>
@@ -86,8 +88,13 @@ class AdsService {
     _initialized = true;
   }
 
+  static updateRequestConfiguration() =>
+      MobileAds.instance.updateRequestConfiguration(
+        RequestConfiguration(testDeviceIds: testDeviceIds),
+      );
+
   Future<void> loadBannerAd(String adUnitId, AdSize size) async {
-    await loadBannerAdWithRetry(adUnitId, size);
+    unawaited(loadBannerAdWithRetry(adUnitId, size));
   }
 
   Future<void> loadBannerAdWithRetry(
@@ -132,8 +139,29 @@ class AdsService {
     bannerAd.load();
   }
 
+  // disposeAllAds() => _bannerSubject.value.forEach((_, ad) => ad.dispose());
+
+  disposeAllAds() {
+    _bannerSubject.value.forEach((_, ad) => ad?.dispose());
+    _bannerSubject.add({});
+  }
+
+  refreshAllAds() {
+    Map<String, BannerAd> ads = {};
+    _bannerSubject.value.forEach((_, ad) {
+      if (ad != null) {
+        ads[ad.adUnitId] = ad;
+        ad.dispose();
+      }
+    });
+    _bannerSubject.add({});
+    ads.forEach((_, ad) {
+      loadBannerAd(ad.adUnitId, ad.size);
+    });
+  }
+
   void dispose() {
-    _bannerSubject.value.forEach((_, ad) => ad.dispose());
+    _bannerSubject.value.forEach((_, ad) => ad?.dispose());
     _bannerSubject.close();
   }
 }
