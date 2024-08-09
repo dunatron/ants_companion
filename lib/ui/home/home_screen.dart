@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
           _buildSpace(),
           _buildCarousel(context, antsList),
           _buildAdsCarousel(),
-          _buildAppFeatureTitle(context),
+          _buildAppFeatureTitle(context, l10n),
           _buildSpace(),
           _buildFeaturesMasonryGrid(),
           _buildSpace(),
@@ -173,7 +173,8 @@ class HomeScreen extends StatelessWidget {
     return const SliverToBoxAdapter(child: SizedBox());
   }
 
-  SliverPadding _buildAppFeatureTitle(BuildContext context) {
+  SliverPadding _buildAppFeatureTitle(
+      BuildContext context, AppLocalizations l10n) {
     return SliverPadding(
       padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
       sliver: SliverToBoxAdapter(
