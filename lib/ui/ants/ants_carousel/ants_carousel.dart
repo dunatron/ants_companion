@@ -1,12 +1,12 @@
 import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
-import 'package:ants_companion/ui/ants/ant_card/ant_card.dart';
-import 'package:ants_companion/ui/carousel.dart';
 
+import 'package:ants_companion/ui/ants/ant_card/ant_card_2.dart';
 import 'package:ants_companion/ui/draggable_scroll_configuration.dart';
 
 import 'package:flutter/material.dart';
-import 'package:haptic_feedback/haptic_feedback.dart';
+
+final GlobalKey antsCarouselKey = GlobalKey();
 
 class AntsCarousel extends StatefulWidget {
   const AntsCarousel({
@@ -14,14 +14,10 @@ class AntsCarousel extends StatefulWidget {
     required this.id,
     required this.ants,
     this.onCardImageTap,
-    this.loading = false,
-    this.error,
   });
 
   final String id;
   final List<Ant> ants;
-  final bool loading;
-  final Object? error;
 
   final Function(Ant ant)? onCardImageTap;
 
@@ -31,11 +27,12 @@ class AntsCarousel extends StatefulWidget {
 
 class _AntsCarouselState extends State<AntsCarousel>
     with WidgetsBindingObserver {
-  late PageController _pageController;
-  late double _viewportFraction;
+  late CarouselController _carouselController;
 
-  void goToIndex(final int pageIndex) => _pageController.animateToPage(
-        pageIndex,
+  double availableItemWidth = 400;
+
+  void goToIndex(final int pageIndex) => _carouselController.animateTo(
+        pageIndex * 400,
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeIn,
       );
@@ -43,64 +40,29 @@ class _AntsCarouselState extends State<AntsCarousel>
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
-    _viewportFraction = 0.8;
+
     _initializePageController();
-    WidgetsBinding.instance
-        .addPostFrameCallback((_) => afterFirstLayout(context));
+
     super.initState();
-  }
-
-  // @override
-  // void didChangeMetrics() {
-  //   // setState(() {
-  //   //   // This will force a rebuild when a window size change is detected
-  //   // });
-  //   final size = View.of(context).physicalSize;
-  //   afterFirstLayout(context);
-  //   print('didChangeDependencies size width: ${size.width}');
-  // }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    // [View.of] exposes the view from `WidgetsBinding.instance.platformDispatcher.views`
-    // into which this widget is drawn.
-    // final size = View.of(context).physicalSize;
-    afterFirstLayout(context);
-    // print('didChangeDependencies size width: ${size.width}');
-    // _lastSize = size
-  }
-
-  void afterFirstLayout(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final cardsThatFit = screenWidth / 300;
-    final viewportFraction = 1 / cardsThatFit;
-
-    final newViewportFraction = viewportFraction;
-
-    if (_viewportFraction != newViewportFraction) {
-      // update new viewportFraction
-      _viewportFraction = newViewportFraction;
-      // Dispose the old controller
-      _pageController.dispose();
-      // Create a new controller with updated viewport fraction
-      _initializePageController();
-    }
   }
 
   /// Get size screen
   Size get screenSize => MediaQuery.of(context).size;
 
   void _initializePageController() {
-    _pageController = PageController(
-      viewportFraction: _viewportFraction,
-      initialPage: 0,
-    );
+    _carouselController = CarouselController(initialItem: 0);
+    _carouselController.addListener(() {
+      Scrollable.ensureVisible(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+        antsCarouselKey.currentContext!,
+      );
+    });
   }
 
   @override
   void dispose() {
-    _pageController.dispose();
+    _carouselController.dispose();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
@@ -109,42 +71,6 @@ class _AntsCarouselState extends State<AntsCarousel>
   Widget build(BuildContext context) {
     const double height = 300;
 
-    if (widget.loading) {
-      return const Card(
-        child: SizedBox(
-          width: double.infinity,
-          height: height,
-          child: Center(
-            child: CircularProgressIndicator(),
-          ),
-        ),
-      );
-    }
-
-    if (widget.error != null) {
-      return Card(
-        child: SizedBox(
-          width: double.infinity,
-          height: height,
-          child: Center(
-            child: Text(
-              "Error loading ants carousel: \n ${widget.error.toString()}",
-            ),
-          ),
-        ),
-      );
-    }
-
-    if (widget.ants.isEmpty) {
-      return const SizedBox(
-        width: double.infinity,
-        height: height,
-        child: Center(
-          child: Text("No Ants to display"),
-        ),
-      );
-    }
-
     // Convert the set to a list
     List<String> sortedLetters = widget.ants.getFirstLetters().toList();
 
@@ -152,14 +78,36 @@ class _AntsCarouselState extends State<AntsCarousel>
     sortedLetters.sort();
 
     return Column(
+      key: antsCarouselKey,
       children: [
-        CarouselWidget(
-          pageController: _pageController,
-          key: Key(_viewportFraction.toString()),
-          id: widget.id,
-          height: height,
-          viewportFraction: _viewportFraction,
-          slides: widget.ants.map((ant) => _slide(ant)).toList(),
+        Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxHeight: height),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                if (constraints.maxWidth < 400) {
+                  availableItemWidth = constraints.maxWidth;
+                }
+
+                return CarouselView(
+                  controller: _carouselController,
+                  itemSnapping: true,
+                  itemExtent: 400,
+                  shrinkExtent: 240,
+                  shape: Border.all(width: 2, color: Colors.transparent),
+                  padding: const EdgeInsets.all(8),
+                  onTap: (index) {
+                    final ant = widget.ants[index];
+                    widget.onCardImageTap!(ant);
+                  },
+                  children: List<Widget>.generate(
+                    widget.ants.length,
+                    (int index) => AntCard2(ant: widget.ants[index]),
+                  ),
+                );
+              },
+            ),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(
@@ -186,16 +134,6 @@ class _AntsCarouselState extends State<AntsCarousel>
       ],
     );
   }
-
-  CarouselSlide _slide(Ant ant) => CarouselSlide(
-        heroTag: ant.name,
-        child: AntCard(
-          ant: ant,
-          onImageTap: widget.onCardImageTap != null
-              ? () => widget.onCardImageTap!(ant)
-              : null,
-        ),
-      );
 }
 
 extension on List<Ant> {

@@ -1,5 +1,6 @@
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
+import 'package:ants_companion/ui/custom_carousel_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -16,8 +17,17 @@ class AdsCarousel extends StatelessWidget {
 
   final AdsService ads;
 
-  final double _adHeight = 250;
-  final double _adWidth = 300;
+  static const double _adHeight = 250;
+  static const double _adWidth = 300;
+
+  static const double _borderThickness = 2;
+  static const double _itemPadding = 8;
+
+  static const double _carouselItemWidth =
+      _adWidth + (_borderThickness * 2) + (_itemPadding * 2);
+
+  static const double _carouselContainerHeight =
+      _adHeight + (_borderThickness * 2) + (_itemPadding * 2);
 
   @override
   Widget build(BuildContext context) {
@@ -28,49 +38,29 @@ class AdsCarousel extends StatelessWidget {
       ads.loadBannerAd(adId, AdSize.mediumRectangle);
     }
 
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        // final double sidePadding = constraints.maxWidth > 400 ? 16 : 0;
-        const double gap = 8;
-        // Width of each item with side padding
-        final double itemWidth = _adWidth;
-
-        // Calculate width needed for each item including the gap
-        final double widthNeeded = itemWidth + (gap * 2);
-
-        final int cardsThatFit = (constraints.maxWidth / widthNeeded).floor();
-
-        // Calculate viewport fraction based on the number of cards that fit
-        final double viewportFraction = widthNeeded / constraints.maxWidth;
-
-        return SizedBox(
-          height: _adHeight,
-          width: double.infinity,
-          child: PageView.builder(
-            controller: PageController(viewportFraction: viewportFraction),
-            itemCount: adIds.length,
-            padEnds: true,
-            reverse: false,
-            pageSnapping: true,
-            itemBuilder: (context, index) {
-              final adId = adIds[index];
-              final isFirst = index == 0;
-              final isLast = index == adIds.length - 1;
-
-              const EdgeInsetsGeometry margin = EdgeInsets.only(
-                left: gap,
-                right: gap,
-              );
-
+    return Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxHeight: _carouselContainerHeight),
+        child: CustomCarouselView(
+          itemSnapping: true,
+          itemExtent: _carouselItemWidth,
+          shrinkExtent: _carouselItemWidth,
+          shape: Border.all(width: _borderThickness, color: Colors.transparent),
+          // onTap: null,
+          padding: const EdgeInsets.all(_itemPadding),
+          children: List<Widget>.generate(
+            adIds.length,
+            (int index) {
               return Container(
-                margin: margin,
-                color: Colors.transparent,
-                child: AdCard(adId: adId),
+                color: Theme.of(context).colorScheme.surfaceContainerHigh,
+                child: Center(
+                  child: AdCard(adId: adIds[index]),
+                ),
               );
             },
           ),
-        );
-      },
+        ),
+      ),
     );
   }
 }
