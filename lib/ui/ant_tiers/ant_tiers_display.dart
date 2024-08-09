@@ -7,6 +7,8 @@ import 'package:ants_companion/ui/ant_tiers/tier_section.dart';
 
 import 'package:flutter/material.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class AntTiersDisplay extends StatefulWidget {
   const AntTiersDisplay({super.key, required this.ants});
 
@@ -23,6 +25,7 @@ class _AntTiersDisplayState extends State<AntTiersDisplay> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Column(
       children: [
         Padding(
@@ -47,7 +50,7 @@ class _AntTiersDisplayState extends State<AntTiersDisplay> {
                     _isPvp = false;
                   });
                 },
-                child: Text('PVE'),
+                child: Text(l10n.pveAbbreviation),
               ),
               SizedBox(
                 width: 16,
@@ -69,7 +72,7 @@ class _AntTiersDisplayState extends State<AntTiersDisplay> {
                     _isPvp = true;
                   });
                 },
-                child: Text('PVP'),
+                child: Text(l10n.pvpAbbreviation),
               ),
             ],
           ),
@@ -107,7 +110,7 @@ class _AntTiersDisplayState extends State<AntTiersDisplay> {
                                 });
                               },
                               child: Text(
-                                antType.name.toUpperCase(),
+                                antType.displayText(l10n).toUpperCase(),
                                 style: TextStyle(
                                   fontSize: Theme.of(context)
                                       .textTheme
@@ -124,18 +127,26 @@ class _AntTiersDisplayState extends State<AntTiersDisplay> {
           ),
         ),
         const SizedBox(height: 24),
-        Section(
-          child: Column(
-            children: [
-              ...TierRating.values.map(
-                (tierRating) => TierSection(
-                  antType: _antType,
-                  tierRating: tierRating,
-                  ants: widget.ants,
-                  isPvp: _isPvp,
-                ),
-              ),
-            ],
+        Container(
+          constraints: const BoxConstraints(maxWidth: 800),
+          child: Section(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return Column(
+                  children: [
+                    ...TierRating.values.map(
+                      (tierRating) => TierSection(
+                        antType: _antType,
+                        tierRating: tierRating,
+                        ants: widget.ants,
+                        isPvp: _isPvp,
+                        availableWidth: constraints.maxWidth,
+                      ),
+                    ),
+                  ],
+                );
+              },
+            ),
           ),
         )
       ],

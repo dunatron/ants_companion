@@ -17,7 +17,7 @@ sealed class AntTierTag extends Equatable {
   final RowPosition rowPosition;
 
   @override
-  List<Object?> get props => [rating, reason];
+  List<Object?> get props => [rating, antType, reason, rowPosition];
 }
 
 class AntPveTierTag extends AntTierTag {
@@ -28,15 +28,8 @@ class AntPveTierTag extends AntTierTag {
     required super.rowPosition,
   });
 
-  factory AntPveTierTag.fakeSkeletonizer({TierRating? rating}) => AntPveTierTag(
-        rating: rating ?? TierRating.f,
-        antType: AntType.carrier,
-        reason: 'This is fake data used for Skeletonizer',
-        rowPosition: RowPosition.front,
-      );
-
   @override
-  List<Object?> get props => [rating, reason];
+  List<Object?> get props => [...super.props];
 }
 
 class AntPvpTierTag extends AntTierTag {
@@ -47,13 +40,6 @@ class AntPvpTierTag extends AntTierTag {
     required super.rowPosition,
   });
 
-  factory AntPvpTierTag.fakeSkeletonizer({TierRating? rating}) => AntPvpTierTag(
-        antType: AntType.carrier,
-        rating: rating ?? TierRating.f,
-        reason: 'This is fake data used for Skeletonizer',
-        rowPosition: RowPosition.front,
-      );
-
   @override
-  List<Object?> get props => [rating, reason, rowPosition];
+  List<Object?> get props => [...super.props];
 }

@@ -3,9 +3,12 @@ import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
+import 'package:ants_companion/ui/ant_tiers/ant_tier_details.dart';
 import 'package:ants_companion/ui/ants/ant_details/ant_details_screen.dart';
 
 import 'package:ants_companion/ui/ant_tiers/ant_tier_indicator.dart';
+import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
+import 'package:ants_companion/ui/modal_single_page_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +19,7 @@ class TierSection extends StatelessWidget {
     required this.antType,
     required this.tierRating,
     required this.isPvp,
+    required this.availableWidth,
   });
 
   final TierRating tierRating;
@@ -25,34 +29,59 @@ class TierSection extends StatelessWidget {
 
   final bool isPvp;
 
-  _launchAntDetails(final Ant ant, BuildContext context) =>
-      showModalBottomSheet(
-        context: context,
-        isScrollControlled: true,
-        enableDrag: true,
-        showDragHandle: true,
-        builder: (BuildContext _) {
-          return DraggableScrollableSheet(
-            maxChildSize: 0.8,
-            initialChildSize: kIsWeb ? 0.8 : 0.5,
-            expand: false,
-            builder: (
-              BuildContext context,
-              ScrollController scrollController,
-            ) =>
-                AntDetailsScreen(
-              scrollController: scrollController,
-              ant: ant,
-            ),
-          );
-        },
-      );
+  final double availableWidth;
+
+  _launchAntDetails(
+    final Ant ant,
+    AntTierTag tierTag,
+    BuildContext context,
+  ) =>
+      buildBottomSheetModal(
+          context,
+          AntTierDetails(
+            ant: ant,
+            tierTag: tierTag,
+          ));
+
+  // _launchAntDetails(
+  //   final Ant ant,
+  //   AntTierTag tierTag,
+  //   BuildContext context,
+  // ) =>
+  //     showModalBottomSheet(
+  //       context: context,
+  //       isScrollControlled: true,
+  //       enableDrag: true,
+  //       showDragHandle: true,
+  //       builder: (BuildContext _) {
+  //         return DraggableScrollableSheet(
+  //           maxChildSize: 1,
+  //           initialChildSize: kIsWeb ? 0.8 : 0.5,
+  //           expand: false,
+  //           builder: (
+  //             BuildContext context,
+  //             ScrollController scrollController,
+  //           ) =>
+  //               ModalSinglePageView(
+  //             controller: scrollController,
+  //             child: AntTierDetails(
+  //               ant: ant,
+  //               tierTag: tierTag,
+  //             ),
+  //           ),
+  //         );
+  //       },
+  //     );
 
   @override
   Widget build(BuildContext context) {
-    List<Ant> frontRow = [];
-    List<Ant> middleRow = [];
-    List<Ant> backRow = [];
+    // List<Ant> frontRow = [];
+    // List<Ant> middleRow = [];
+    // List<Ant> backRow = [];
+
+    List<Map<AntTierTag, Ant>> frontRow = [];
+    List<Map<AntTierTag, Ant>> middleRow = [];
+    List<Map<AntTierTag, Ant>> backRow = [];
 
     for (var ant in ants) {
       for (var tag in ant.tierTags) {
@@ -67,11 +96,11 @@ class TierSection extends StatelessWidget {
         //     (tag.antType == antType || tag.antType == AntType.universal) &&
         //     isCorrectTagType;
         if (tag.rowPosition == RowPosition.front && valid) {
-          frontRow.add(ant);
+          frontRow.add({tag: ant});
         } else if (tag.rowPosition == RowPosition.middle && valid) {
-          middleRow.add(ant);
+          middleRow.add({tag: ant});
         } else if (tag.rowPosition == RowPosition.back && valid) {
-          backRow.add(ant);
+          backRow.add({tag: ant});
         }
       }
     }
@@ -105,11 +134,18 @@ class TierSection extends StatelessWidget {
                     const Text('Front'),
                     const SizedBox(height: 16),
                     // ...frontRow.map((ant) => Chip(label: Text(ant.name)))
-                    ...frontRow.map((ant) => AntTierIndicator(
-                          ant: ant,
-                          onTap: () => _launchAntDetails(ant, context),
-                          tierRating: tierRating,
-                        ))
+                    ...frontRow.map(
+                      (antTagMap) => AntTierIndicator(
+                        availableWidth: availableWidth / 3,
+                        ant: antTagMap.values.toList()[0],
+                        onTap: () => _launchAntDetails(
+                          antTagMap.values.toList()[0],
+                          antTagMap.keys.toList()[0],
+                          context,
+                        ),
+                        tierRating: tierRating,
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -119,9 +155,14 @@ class TierSection extends StatelessWidget {
                   children: [
                     const Text('Middle'),
                     const SizedBox(height: 16),
-                    ...middleRow.map((ant) => AntTierIndicator(
-                          ant: ant,
-                          onTap: () => _launchAntDetails(ant, context),
+                    ...middleRow.map((antTagMap) => AntTierIndicator(
+                          availableWidth: availableWidth / 3,
+                          ant: antTagMap.values.toList()[0],
+                          onTap: () => _launchAntDetails(
+                            antTagMap.values.toList()[0],
+                            antTagMap.keys.toList()[0],
+                            context,
+                          ),
                           tierRating: tierRating,
                         ))
                   ],
@@ -133,9 +174,14 @@ class TierSection extends StatelessWidget {
                   children: [
                     const Text('Back'),
                     const SizedBox(height: 16),
-                    ...backRow.map((ant) => AntTierIndicator(
-                          ant: ant,
-                          onTap: () => _launchAntDetails(ant, context),
+                    ...backRow.map((antTagMap) => AntTierIndicator(
+                          availableWidth: availableWidth / 3,
+                          ant: antTagMap.values.toList()[0],
+                          onTap: () => _launchAntDetails(
+                            antTagMap.values.toList()[0],
+                            antTagMap.keys.toList()[0],
+                            context,
+                          ),
                           tierRating: tierRating,
                         ))
                   ],

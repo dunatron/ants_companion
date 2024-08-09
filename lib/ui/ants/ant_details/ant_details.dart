@@ -1,3 +1,4 @@
+import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
@@ -64,23 +65,30 @@ class AntDetails extends StatelessWidget {
               ),
             ),
           Section(
-              child: Divider(
-            color: Theme.of(context).colorScheme.primary,
-          )),
-          Section(
-              child: Text(
-            'Tier Ratings',
-            style: Theme.of(context).textTheme.titleLarge,
-          )),
+            child: Divider(color: Theme.of(context).colorScheme.primary),
+          ),
+          // Section(
+          //     child: Text(
+          //   'Tier Ratings',
+          //   style: Theme.of(context).textTheme.titleLarge,
+          // )),
           Section(
             child: Column(
               children: [...tags.map((tag) => _TagDetails(tag: tag))],
             ),
           ),
+          Section(
+            child: Divider(color: Theme.of(context).colorScheme.primary),
+          ),
           if (scientificClassification != null)
             Section(
-              child: AntScientificDetails(
-                details: scientificClassification,
+              child: Center(
+                child: Container(
+                  constraints: BoxConstraints(maxWidth: 200),
+                  child: AntScientificDetails(
+                    details: scientificClassification,
+                  ),
+                ),
               ),
             )
         ],
@@ -100,14 +108,36 @@ class _TagDetails extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            '${isPvpTag ? 'PVP' : 'PVE'} - '
-            '${tag.rating.name} - ${tag.rowPosition.name}',
-            style: Theme.of(context).textTheme.headlineSmall,
+          Center(
+            child: Container(
+              constraints: BoxConstraints(maxWidth: 200),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    tag.rating.displayText,
+                    style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                          color: tag.rating.color,
+                          fontWeight: FontWeight.bold,
+                        ),
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    '${isPvpTag ? 'PVP' : 'PVE'}',
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    '${tag.rowPosition.name}',
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                ],
+              ),
+            ),
           ),
-          Text(tag.reason),
+          // Text(tag.reason),
           const SizedBox(height: 16)
         ],
       ),

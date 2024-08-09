@@ -102,18 +102,17 @@ class HomeScreen extends StatelessWidget {
   SliverPadding _buildSpecialAntsTitle(
     AppLocalizations l10n,
     BuildContext context,
-  ) =>
-      SliverPadding(
-        padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
-        sliver: SliverToBoxAdapter(
-          child: Center(
-            child: Text(
-              l10n.specialAnts,
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ),
+  ) {
+    final theme = Theme.of(context);
+    return SliverPadding(
+      padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
+      sliver: SliverToBoxAdapter(
+        child: Center(
+          child: Text(l10n.specialAnts, style: theme.textTheme.headlineMedium),
         ),
-      );
+      ),
+    );
+  }
 
   Widget _buildCarousel(BuildContext context, List<Ant> ants) =>
       SliverToBoxAdapter(
@@ -159,14 +158,17 @@ class HomeScreen extends StatelessWidget {
   }
 
   SliverPadding _buildAppFeatureTitle(
-      BuildContext context, AppLocalizations l10n) {
+    BuildContext context,
+    AppLocalizations l10n,
+  ) {
+    final theme = Theme.of(context);
     return SliverPadding(
       padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
       sliver: SliverToBoxAdapter(
         child: Center(
           child: Text(
-            'App Features',
-            style: Theme.of(context).textTheme.headlineMedium,
+            l10n.appFeaturesLabel,
+            style: theme.textTheme.headlineMedium,
           ),
         ),
       ),

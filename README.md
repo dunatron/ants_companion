@@ -27,12 +27,16 @@ arb_translate
 ## l10n
 
 The different languages we will support
-[useful lang table](https://www.science.co.il/language/Locale-codes.php)
+[useful lang table](https://www.science.co.il/language/Locale-codes.php)  
+[Android localiztion list](https://community.appinventor.mit.edu/t/android-localization-code-the-complete-list/7055)
 
-- English(en)
-- Tagalog(tl)
+- [x] English(en)
+- Filipino(fil)
 - Ukrainian(uk)
+- Russian(ru)
 - Italian - Italy(it)
+- Spanish(es)
+- Bulgarian(bg)
 - Hungarian(hu)
 - Dutch(nl) - Netherlands(nl-nl)
 - Polish(pl)
@@ -42,3 +46,7 @@ The different languages we will support
 - Turkish(tr)
 - German(de)
   - German - Germany(de-de)
+- Vietnamese(vi)
+- Macedonian(mk)
+- Japanese(ja)
+- Chinese(zh)
