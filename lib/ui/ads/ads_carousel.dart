@@ -1,5 +1,6 @@
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
+import 'package:ants_companion/ui/custom_carousel_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -40,18 +41,24 @@ class AdsCarousel extends StatelessWidget {
     return Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxHeight: _carouselContainerHeight),
-        child: CarouselView(
+        child: CustomCarouselView(
           itemSnapping: true,
           itemExtent: _carouselItemWidth,
           shrinkExtent: _carouselItemWidth,
           shape: Border.all(width: _borderThickness, color: Colors.transparent),
+          // onTap: null,
           padding: const EdgeInsets.all(_itemPadding),
-          children: List<Widget>.generate(adIds.length, (int index) {
-            return Container(
-              color: Theme.of(context).colorScheme.surfaceContainerHigh,
-              child: AdCard(adId: adIds[index]),
-            );
-          }),
+          children: List<Widget>.generate(
+            adIds.length,
+            (int index) {
+              return Container(
+                color: Theme.of(context).colorScheme.surfaceContainerHigh,
+                child: Center(
+                  child: AdCard(adId: adIds[index]),
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

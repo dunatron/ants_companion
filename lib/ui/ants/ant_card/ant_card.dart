@@ -2,7 +2,6 @@ import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
 
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 class AntCard extends StatelessWidget {
   const AntCard({

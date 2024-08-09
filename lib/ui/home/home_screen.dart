@@ -14,7 +14,6 @@ import 'package:ants_companion/ui/home/soldier_ants_comparison_feature_info.dart
 import 'package:ants_companion/ui/home/welcome_info.dart';
 import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
 import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
-import 'package:ants_companion/ui/locale/locale_selector.dart';
 
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
 import 'package:flutter/material.dart';
@@ -28,12 +27,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scrollController = ScrollController();
     final antsList = Ants.antsList();
 
     final l10n = AppLocalizations.of(context);
 
     return NotificationTappedProvider(
       child: SliverPageLayout(
+        controller: scrollController,
         title: l10n.appTitle,
         slivers: [
           _buildBanner(context),
@@ -116,6 +117,7 @@ class HomeScreen extends StatelessWidget {
 
   Widget _buildCarousel(BuildContext context, List<Ant> ants) =>
       SliverToBoxAdapter(
+        // key: antsCarouselKey,
         child: AntsCarousel(
           id: 'all-ants-carousel',
           onCardImageTap: (ant) {
@@ -139,27 +141,10 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // List<Widget> _buildAdsCarousel() {
-  //   if (AdsService.enabled) {
-  //     return [
-  //       SliverToBoxAdapter(
-  //         child: AdsCarousel(
-  //           id: 'home-ads-carousel',
-  //           adIds: AdsService.carouselOneIds,
-  //           ads: AdsService(),
-  //         ),
-  //       ),
-  //       const SliverToBoxAdapter(child: SizedBox(height: Spacing.vl)),
-  //     ];
-  //   }
-
-  //   return [];
-  // }
-
   Widget _buildAdsCarousel() {
     if (AdsService.enabled) {
       return SliverPadding(
-        padding: EdgeInsets.only(bottom: Spacing.vl),
+        padding: const EdgeInsets.only(bottom: Spacing.vl),
         sliver: SliverToBoxAdapter(
           child: AdsCarousel(
             id: 'home-ads-carousel',
