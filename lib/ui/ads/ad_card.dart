@@ -38,9 +38,7 @@ class AdCard extends StatelessWidget {
         final ad = snapshot.data;
 
         if (ad == null) {
-          return const Card(
-            child: Center(child: CircularProgressIndicator()),
-          );
+          return const Center(child: CircularProgressIndicator());
         }
 
         return SizedBox(
