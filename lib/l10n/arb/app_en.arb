@@ -13,24 +13,157 @@
   "arabic": "Arabic",
   "turkish": "Arabic",
   "german": "German",
-  "appTitle": "Ants Companion",
+  "appTitle": "Ants companion",
   "welcomeInfoTitle": "Greetings",
   "welcomeInfoDescription": "Welcome to the ants companion. This app aims to be your one stop place for the ants underground kingdom",
-  "specialAnts": "Special Ants",
-  "appFeaturesLabel": "App Features",
-  "antsTierFeatureInfoTitle": "Tier Rankings",
-  "antsTierFeatureInfoDescription": "Get insights into the strongest Ants",
-  "antsTierFeatureInfoButton": "View Ant Tiers",
-  "notificationsFeatureInfoTitle": "Colony Action Scheduler",
+  "specialAnts": "Special ants",
+  "appFeaturesLabel": "App features",
+  "antsTierFeatureInfoTitle": "Tier rankings",
+  "antsTierFeatureInfoDescription": "Get insights into the strongest ants",
+  "antsTierFeatureInfoButton": "View ant tiers",
+  "notificationsFeatureInfoTitle": "Colony action scheduler",
   "notificationsFeatureInfoDescription": "Never miss the most important colony actions by scheduling local notifications",
-  "notificationsFeatureInfoButton": "Schedule Notifications",
-  "scientificClassificationsFeatureInfoTitle": "Scientific Classifications",
-  "scientificClassificationsFeatureInfoDescription": "Scientific information concerning the special ants in The Ants Underground Kingdom",
-  "scientificClassificationsFeatureInfoButton": "View Classifications",
-  "soldierAntsComparisonFeatureInfoTitle": "Soldier Ants Comparison",
+  "notificationsFeatureInfoButton": "Schedule notifications",
+  "scientificClassificationsFeatureInfoTitle": "Scientific classifications",
+  "scientificClassificationsFeatureInfoDescription": "Scientific information concerning the special ants in the ants underground kingdom",
+  "scientificClassificationsFeatureInfoButton": "View classifications",
+  "soldierAntsComparisonFeatureInfoTitle": "Soldier ants comparison",
   "soldierAntsComparisonFeatureInfoDescription": "Interested in the base stats for soldier ants? This feature is for you. A side by side comparison of the base soldier stats",
-  "soldierAntsComparisonFeatureInfoButton": "Soldier Stats",
-  "antTiersTitle": "Ant Tiers",
+  "soldierAntsComparisonFeatureInfoButton": "Soldier stats",
+  "antTiersTitle": "Ant tiers",
+  "colonyActionSchedulerTitle": "Colony action scheduler",
+  "colonyAction": "Colony action",
+  "caTypeAnthillDevelopment": "Anthill development",
+  "caTypeColonyEvolution": "Colony evolution",
+  "caTypeMassDevelopment": "Mass development",
+  "caTypeHatchSoldierAnts": "Hatch soldier ants",
+  "caTypeSpecialAntDevelopment": "Special ant development",
+  "caTaskBuildingPower": "Building power +1",
+  "caTaskEnhancementPower": "Enhance building power +1",
+  "caTaskEvolutionPower": "Evolution power +1",
+  "caTaskSpeedupEvolving": "Each use of 1 min speedup when evolving",
+  "caTaskConsumeBioEssence": "Consume a Bio-Essence",
+  "caTaskConsumeSpecialHypha": "Consume a special hypha",
+  "caTaskConsumeHypha": "Consume a hypha",
+  "caTaskConsumeFungus": "Consume a fungus nutrient {tier}",
+  "@caTaskConsumeFungus": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskObtainCell": "Obtain a {tier}-star Cell",
+  "@caTaskObtainCell": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeCell": "Consume a {tier}-star Cell",
+  "@caTaskConsumeCell": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskSpeedupAny": "Each use of any 1 min speedup",
+  "caTaskSpeedupBuilding": "Each use of 1 min speedup when upgrading buildings",
+  "caTaskSpeedupBuildingEnhancement": "Each use of 1 min speedup when enhancing buildings",
+  "caTaskSpeedupHatchingSoldiers": "Each use of 1 min speedup when hatching soldier ants",
+  "caTaskHatchSoldierAnt": "Hatch a T-{tier} soldier ant",
+  "@caTaskHatchSoldierAnt": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeCellFluid": "Consume 1 cell fluid T-{tier}",
+  "caTaskConsumeCreatureRemain": "Use 1 creature remain",
+  "caTaskConsumeSpore": "Use 1 spore",
+  "caTaskRedeemSpore": "Redeem for 1 spore [from mutation pool]",
+  "caTaskUseTimeLimitedEgg": "Use 1 time-limited egg",
+  "caTaskUseTertiaryEgg": "Use 1 tertiary egg",
+  "caTaskUseSecondaryEgg": "Use 1 secondary egg",
+  "caTaskUsePrimaryEgg": "Use 1 primary egg",
+  "caTaskUseSeasonEgg": "Use 1 season egg",
+  "caTaskUnlockSpecialAntSkill": "Unlock 1 skill for any special ant",
+  "caTaskSpecialAntExperience": "Special ant EXP +10",
+  "caTaskStarUpSpecialAnts": "Star up special ant to {star}-Star",
+  "@caTaskStarUpSpecialAnts": {
+    "placeholders": {
+      "star": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskObtainGene": "Obtain a {tier}-star gene",
+  "@caTaskObtainGene": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeGene": "Consume a {tier}-star gene",
+  "@caTaskConsumeGene": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeGeneticFactor": "Consume a genetic factor T-{tier}",
+  "@caTaskConsumeGeneticFactor": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskObtainGerm": "Obtain a {tier}-star germ",
+  "@caTaskObtainGerm": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeGerm": "Consume a {tier}-star germ",
+  "@caTaskConsumeGerm": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeGermMedium": "Consume a germ medium T-{tier}",
+  "@caTaskConsumeGermMedium": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskHatchInsect": "Hatch 1 insect",
+  "caTaskMakeInsectFodder": "Make 1 insect fodder",
+  "caTaskUseInsectFodder": "Use 1 insect fodder",
+  "caTaskButcherInsect": "Get 1 insect shell by butchering insects",
+  "caTaskUseInsectShell": "Use 1 insect shell",
+  "caTaskStarUpInsect": "Star up any insect to {star}-star",
+  "@caTaskStarUpInsect": {
+    "placeholders": {
+      "star": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTestTitle": "Ants companion",
+  "notificationTestBody": "Test notification",
+  "notificationTestButtonLabel": "Test notification",
   "pvpFull": "Player Versus Player",
   "pvpAbbreviation": "PvP",
   "pveFull": "Player Versus Environment",
@@ -47,12 +180,12 @@
     "description": "Abbreviation for Guardian Shooter Shooter(GSS) in english"
   },
   "warzoneAnthillDevelopment": "Anthill development",
-  "warzoneGatherResources": "Gather Resources",
+  "warzoneGatherResources": "Gather resources",
   "warzoneEvolution": "Evolution",
-  "warzoneSpecialAnts": "Strengthen Special Ants",
-  "warzoneHatchSoldierAnts": "Hatch Soldier Ants",
+  "warzoneSpecialAnts": "Strengthen special ants",
+  "warzoneHatchSoldierAnts": "Hatch soldier ants",
   "warzoneFreeChoice": "Free choice",
-  "warzoneInsectHatching": "Insect Hatching",
+  "warzoneInsectHatching": "Insect hatching",
   "scientificDomain": "Domain",
   "scientificKingdom": "Kingdom",
   "scientificPhylum": "Phylum",

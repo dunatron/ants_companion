@@ -15,8 +15,7 @@ import 'package:go_router/go_router.dart';
 import 'package:haptic_feedback/haptic_feedback.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-import 'dart:math';
+import 'package:intl/intl.dart';
 
 class ColonyActionSchedulerScreen extends StatefulWidget {
   const ColonyActionSchedulerScreen({super.key});
@@ -52,8 +51,12 @@ class _ColonyActionSchedulerScreenState
     super.dispose();
   }
 
-  viewColonyActionTasks(ColonyAction colonyAction) {
-    final taskList = CATask.colonyActionTaskList(colonyAction.key);
+  viewColonyActionTasks(ColonyAction colonyAction, AppLocalizations l10n,
+      NumberFormat numberFormat) {
+    final taskList = CATask.colonyActionTaskList(
+      colonyAction.key,
+      l10n,
+    );
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -63,6 +66,8 @@ class _ColonyActionSchedulerScreenState
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
             itemBuilder: (context, index) {
               final item = taskList[index];
+
+              final pointsText = '+${numberFormat.format(item.points)}';
 
               return Card(
                 child: Padding(
@@ -75,7 +80,7 @@ class _ColonyActionSchedulerScreenState
                         style: Theme.of(context).textTheme.bodyMedium,
                       ),
                       Text(
-                        '+${item.points.toString()}',
+                        pointsText,
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
@@ -96,8 +101,10 @@ class _ColonyActionSchedulerScreenState
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
+    final locale = Localizations.localeOf(context);
+    final numberFormat = NumberFormat('#,###', 'ar');
     return SliverPageLayout(
-      title: 'Notification Scheduler',
+      title: l10n.colonyActionSchedulerTitle,
       slivers: [
         ConstrainedSliverWidth(
           maxWidth: 280,
@@ -105,12 +112,13 @@ class _ColonyActionSchedulerScreenState
             child: ElevatedButton(
               onPressed: () {
                 LocalNotifications.showSimpleNotification(
-                  title: 'Colony Action',
-                  body: 'Hatch Soldier Ants',
-                  payload: '/ca-scheduler/1-12',
+                  title: l10n.notificationTestTitle,
+                  body: l10n.notificationTestBody,
+                  payload: '',
+                  // payload: '/ca-scheduler/1-12',
                 );
               },
-              child: const Text('Test Notification'),
+              child: Text(l10n.notificationTestButtonLabel),
             ),
           ),
         ),
@@ -131,7 +139,8 @@ class _ColonyActionSchedulerScreenState
                       (it) => it.key == key,
                     );
 
-                    final caName = key.colonyActionName();
+                    final caName =
+                        key.colonyActionTypeFromKey().displayName(l10n);
 
                     return ListTile(
                       // leading: Text('${item.key}: $caName\n${item.date.toUtc()}'),
@@ -154,7 +163,7 @@ class _ColonyActionSchedulerScreenState
                       ),
                       leading: IconButton(
                         onPressed: () {
-                          viewColonyActionTasks(item);
+                          viewColonyActionTasks(item, l10n, numberFormat);
                         },
                         icon: const Icon(Icons.info_outlined),
                       ),
