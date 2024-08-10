@@ -2,7 +2,7 @@ part of '../local_ants_list.dart';
 
 const saharanSilverAnt = Ant(
   id: 'saharan_silver_ant',
-  name: 'saharan_silver_ant',
+  name: 'Saharan Silver Ant',
   description: '',
   scientificName: 'Cataglyphis bombycina',
   type: AntType.guardian,
