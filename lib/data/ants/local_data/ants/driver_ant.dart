@@ -37,7 +37,7 @@ const driverAnt = Ant(
 
 const driverAntPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

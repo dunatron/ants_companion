@@ -36,7 +36,7 @@ class AdsCarousel extends StatelessWidget {
     ads.disposeAllAds();
 
     // adds a delay to not immediately load the ads, for performance
-    Future.delayed(const Duration(seconds: 10), () {
+    Future.delayed(const Duration(seconds: 3), () {
       for (var adId in adIds) {
         ads.loadBannerAd(adId, AdSize.mediumRectangle);
       }

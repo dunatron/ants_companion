@@ -37,7 +37,7 @@ const rockBandit = Ant(
 
 const rockBanditPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

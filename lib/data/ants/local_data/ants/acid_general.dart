@@ -33,7 +33,7 @@ const acidGeneral = Ant(
 
 const acidGeneralPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
     reason: 'There are much better ants to use for shooter pve',

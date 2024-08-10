@@ -42,7 +42,7 @@ const whiteVelvetPveTags = [
 
 const whiteVelvetPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
     reason: terribleForPvpF,

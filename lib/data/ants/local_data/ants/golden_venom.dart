@@ -38,7 +38,7 @@ const goldenVenom = Ant(
 
 const goldenVenomPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
     reason: terribleForPveF,

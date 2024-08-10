@@ -33,7 +33,7 @@ const predator = Ant(
 
 const predatorPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

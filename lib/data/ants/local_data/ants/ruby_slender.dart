@@ -33,7 +33,7 @@ const rubySlender = Ant(
 
 const rubySlenderPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

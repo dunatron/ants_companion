@@ -38,7 +38,7 @@ const blackCancer = Ant(
 
 const blackCancerPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

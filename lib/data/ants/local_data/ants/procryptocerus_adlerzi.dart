@@ -33,7 +33,7 @@ const procryptocerusAdlerzi = Ant(
 
 const procryptocerusAdlerziPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

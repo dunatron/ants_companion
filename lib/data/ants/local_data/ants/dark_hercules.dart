@@ -33,7 +33,7 @@ const darkHercules = Ant(
 
 const darkHerculesPveTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
     reason: terribleForPveF,

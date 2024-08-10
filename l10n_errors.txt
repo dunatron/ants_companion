@@ -1,1 +1,65 @@
-{}
+{
+  "ar": [
+    "antTiersTitle"
+  ],
+
+  "bg": [
+    "antTiersTitle"
+  ],
+
+  "de": [
+    "antTiersTitle"
+  ],
+
+  "es": [
+    "antTiersTitle"
+  ],
+
+  "fil": [
+    "antTiersTitle"
+  ],
+
+  "hu": [
+    "antTiersTitle"
+  ],
+
+  "it": [
+    "antTiersTitle"
+  ],
+
+  "ja": [
+    "antTiersTitle"
+  ],
+
+  "mk": [
+    "antTiersTitle"
+  ],
+
+  "nl": [
+    "antTiersTitle"
+  ],
+
+  "pl": [
+    "antTiersTitle"
+  ],
+
+  "ru": [
+    "antTiersTitle"
+  ],
+
+  "tr": [
+    "antTiersTitle"
+  ],
+
+  "uk": [
+    "antTiersTitle"
+  ],
+
+  "vi": [
+    "antTiersTitle"
+  ],
+
+  "zh": [
+    "antTiersTitle"
+  ]
+}

@@ -37,7 +37,7 @@ const myrmecotypusRettenmeyeri = Ant(
 
 const myrmecotypusRettenmeyeriPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

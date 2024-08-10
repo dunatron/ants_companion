@@ -40,7 +40,7 @@ const brownRogue = Ant(
 
 const brownRoguePveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
     reason: terribleForPveF,

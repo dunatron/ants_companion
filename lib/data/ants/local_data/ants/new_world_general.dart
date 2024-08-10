@@ -37,7 +37,7 @@ const newWorldGeneral = Ant(
 
 const newWorldGeneralPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

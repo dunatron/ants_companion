@@ -26,10 +26,6 @@ enum TierRating {
   d(
     order: 5,
     color: Colors.lightBlue,
-  ),
-  f(
-    order: 6,
-    color: Colors.grey,
   );
 
   const TierRating({
@@ -44,7 +40,6 @@ enum TierRating {
         TierRating.b => 'B',
         TierRating.c => 'C',
         TierRating.d => 'D',
-        TierRating.f => 'F',
       };
 
   final int order;

@@ -34,7 +34,7 @@ const myrmarachneFormicaria = Ant(
 
 const myrmarachneFormicariaPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

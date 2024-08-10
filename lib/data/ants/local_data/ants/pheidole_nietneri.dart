@@ -37,7 +37,7 @@ const pheidoleNietneri = Ant(
 
 const pheidoleNietneriPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

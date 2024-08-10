@@ -33,7 +33,7 @@ const shieldWarden = Ant(
 
 const shieldWardenPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
     reason: terribleForPveF,

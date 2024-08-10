@@ -37,7 +37,7 @@ const dolichoderusBispinosus = Ant(
 
 const dolichoderusBispinosusPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,

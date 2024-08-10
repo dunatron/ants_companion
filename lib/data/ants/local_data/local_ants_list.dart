@@ -89,7 +89,7 @@ const terribleForPvpF =
 
 const examplePveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,
@@ -98,7 +98,7 @@ const examplePveTags = [
 
 const examplePvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
     reason: terribleForPvpF,

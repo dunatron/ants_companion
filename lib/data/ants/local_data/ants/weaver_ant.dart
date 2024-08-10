@@ -37,7 +37,7 @@ const weaverAnt = Ant(
 
 const weaverAntPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
     reason: terribleForPveF,
