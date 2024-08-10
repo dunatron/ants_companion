@@ -46,12 +46,12 @@ const shikareeMasterPvpTags = [
     rating: TierRating.a,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: 'Deals a high amount of damage to multiple targets',
+    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: 'Deals a high amount of damage to multiple targets',
+    reason: '',
   ),
 ];

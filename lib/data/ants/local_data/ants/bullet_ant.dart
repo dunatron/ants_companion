@@ -53,24 +53,9 @@ const bulletAntPveTags = [
 ];
 const bulletAntPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.b,
-    antType: AntType.universal,
-    rowPosition: RowPosition.front,
-    reason: 'Bullet Ant is ok for PVP although '
-        'there are better f2p options available',
-  ),
-  AntPvpTierTag(
-    rating: TierRating.b,
+    rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: 'Bullet Ant is ok for PVP although '
-        'there are better f2p options available',
-  ),
-  AntPvpTierTag(
-    rating: TierRating.b,
-    antType: AntType.universal,
-    rowPosition: RowPosition.back,
-    reason: 'Bullet Ant is ok for PVP although '
-        'there are better f2p options available',
+    reason: '',
   ),
 ];

@@ -42,10 +42,9 @@ const jetBlackPveTags = [
 
 const jetBlackPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.c,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason:
-        'A solid guardian front liner which can punish normal attack spammers',
+    reason: '',
   ),
 ];

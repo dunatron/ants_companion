@@ -46,7 +46,7 @@ const blackCancerPveTags = [
 ];
 const blackCancerPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.c,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: betterOptionsAvailableC,

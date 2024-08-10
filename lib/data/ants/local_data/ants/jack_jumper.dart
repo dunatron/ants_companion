@@ -9,12 +9,7 @@ const jackJumper = Ant(
   role: AntRole.ranged,
   tierTags: [
     ...jackJumperPveTags,
-    AntPvpTierTag(
-      rating: TierRating.a,
-      antType: AntType.universal,
-      reason: 'It does an ok amount of damage in the back row',
-      rowPosition: RowPosition.back,
-    ),
+    ...jackJumperPvpTags,
   ],
   scientificClassification: AntScientificClassification(
     species: 'Myrmecia pilosula',
@@ -64,5 +59,14 @@ const jackJumperPveTags = [
     reason: 'It does an ok amount of damage consistently while its '
         'awakening buffs the attack of all ants when jack jumper releases '
         'a combat skill',
+  ),
+];
+
+const jackJumperPvpTags = [
+  AntPvpTierTag(
+    rating: TierRating.b,
+    antType: AntType.universal,
+    rowPosition: RowPosition.back,
+    reason: '',
   ),
 ];

@@ -42,15 +42,15 @@ const hairyPantherPveTags = [
 
 const hairyPantherPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: 'One of the best guardian ants capable of extremely high damage',
+    reason: '',
   ),
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: 'One of the best guardian ants capable of extremely high damage',
+    reason: '',
   ),
 ];

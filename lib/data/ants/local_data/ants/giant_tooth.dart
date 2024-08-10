@@ -40,17 +40,21 @@ const giantToothPveTags = [
 ];
 const giantToothPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: 'With its awakening it is one of the best ants in the game '
-        'for crowd control',
+    reason: '',
   ),
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: 'With its awakening it is one of the best ants in the game '
-        'for crowd control. Its weakness is its range',
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.b,
+    antType: AntType.gss,
+    rowPosition: RowPosition.front,
+    reason: '',
   ),
 ];

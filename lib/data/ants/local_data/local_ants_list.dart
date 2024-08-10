@@ -73,6 +73,8 @@ part 'ants/strumigenys_eggersi.dart';
 part 'ants/weaver_ant.dart';
 part 'ants/white_velvet.dart';
 part 'ants/wise_berserker.dart';
+part 'ants/merannoplus_bicolor.dart';
+part 'ants/merannoplus_castaneus.dart';
 
 const notTheWorstB = 'This does work but there are better options';
 const betterOptionsAvailableC = 'There are better options available';

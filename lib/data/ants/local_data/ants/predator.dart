@@ -42,9 +42,9 @@ const predatorPveTags = [
 
 const predatorPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.b,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'Just a super bad ant especially for shooters.. of which it is...',
+    reason: '',
   ),
 ];

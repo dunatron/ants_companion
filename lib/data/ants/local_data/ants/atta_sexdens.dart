@@ -52,19 +52,25 @@ const attaSexdensPvpTags = [
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.guardian,
+    rowPosition: RowPosition.front,
+    reason: 'One of the best guardian ants for PVP',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.sPlus,
+    antType: AntType.guardian,
     rowPosition: RowPosition.middle,
     reason: 'One of the best guardian ants for PVP',
   ),
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
     reason: 'One of the best guardian ants for PVP',
   ),
   AntPvpTierTag(
-    rating: TierRating.a,
-    antType: AntType.guardian,
+    rating: TierRating.sPlus,
+    antType: AntType.gss,
     rowPosition: RowPosition.front,
-    reason: 'One of the best guardian ants for PVP',
+    reason: 'The best guardian Ant for GSS',
   ),
 ];

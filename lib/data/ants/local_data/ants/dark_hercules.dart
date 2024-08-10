@@ -42,9 +42,9 @@ const darkHerculesPveTags = [
 
 const darkHerculesPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.c,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: 'This ant is fairly average in general',
+    reason: '',
   ),
 ];

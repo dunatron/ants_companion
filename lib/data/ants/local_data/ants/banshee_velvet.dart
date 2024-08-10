@@ -48,7 +48,7 @@ const bansheeVelvetPveTags = [
 
 const bansheeVelvetPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.c,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
     reason: betterOptionsAvailableC,

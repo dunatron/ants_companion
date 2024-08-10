@@ -49,6 +49,12 @@ const weaverAntPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: 'One of the best support shooter ants in the game',
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.s,
+    antType: AntType.gss,
+    rowPosition: RowPosition.middle,
+    reason: '',
   ),
 ];

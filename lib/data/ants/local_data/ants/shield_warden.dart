@@ -42,15 +42,9 @@ const shieldWardenPveTags = [
 
 const shieldWardenPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
-    antType: AntType.guardian,
-    rowPosition: RowPosition.front,
-    reason: 'A decent option for the guardian front line',
-  ),
-  AntPvpTierTag(
     rating: TierRating.b,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: 'A decent option for the middle line especially for duel of queens',
+    reason: '',
   ),
 ];

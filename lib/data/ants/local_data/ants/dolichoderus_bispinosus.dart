@@ -46,10 +46,9 @@ const dolichoderusBispinosusPveTags = [
 
 const dolichoderusBispinosusPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'One of the best shooter ants for PVP in the front row '
-        'especially with wise berserker',
+    reason: '',
   ),
 ];

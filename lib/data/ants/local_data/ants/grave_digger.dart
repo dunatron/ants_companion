@@ -46,15 +46,13 @@ const graveDiggerPvpTags = [
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
-    reason: 'Only if Golden Crystal is present does this become an S tier.'
-        'Golden crystal allows it a better chance to get off its crowd '
-        'control ability',
-    rowPosition: RowPosition.middle,
+    rowPosition: RowPosition.back,
+    reason: 'With golden crystal in the troop at the middle position',
   ),
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.carrier,
-    reason: 'Running grave digger in the front is a viable option',
     rowPosition: RowPosition.front,
+    reason: '',
   )
 ];

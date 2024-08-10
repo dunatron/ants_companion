@@ -41,9 +41,9 @@ const enigmaticTaylorPveTags = [
 ];
 const enigmaticTaylorPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: terribleForPvpF,
+    reason: '',
   ),
 ];

@@ -42,9 +42,9 @@ const strumigenysEggersiPveTags = [
 
 const strumigenysEggersiPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: 'The best carrier ant front liner in the game for PVP',
+    reason: '',
   ),
 ];

@@ -34,7 +34,7 @@ const rubySlender = Ant(
 const rubySlenderPveTags = [
   AntPveTierTag(
     rating: TierRating.f,
-    antType: AntType.shooter,
+    antType: AntType.universal,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,
   ),
@@ -42,9 +42,9 @@ const rubySlenderPveTags = [
 
 const rubySlenderPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
-    antType: AntType.shooter,
+    rating: TierRating.d,
+    antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: terribleForPvpF,
+    reason: '',
   ),
 ];

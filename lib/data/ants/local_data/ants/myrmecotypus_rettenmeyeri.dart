@@ -49,6 +49,6 @@ const myrmecotypusRettenmeyeriPvpTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'Really solid choice for a shooter PVP front line',
+    reason: '',
   ),
 ];

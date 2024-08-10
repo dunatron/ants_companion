@@ -37,17 +37,9 @@ const duskyLurkerPveTags = [
 
 const duskyLurkerPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.c,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: 'Is a viable support ant for PVP especially if your '
-        'back line deals high/extremely high damage',
-  ),
-  AntPvpTierTag(
-    rating: TierRating.a,
-    antType: AntType.universal,
-    rowPosition: RowPosition.middle,
-    reason: 'Is a viable support ant for PVP especially if your '
-        'back line deals high/extremely high damage',
+    reason: '',
   ),
 ];

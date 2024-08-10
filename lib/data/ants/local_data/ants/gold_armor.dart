@@ -46,13 +46,7 @@ const goldArmorPvpTags = [
   AntPvpTierTag(
     rating: TierRating.c,
     antType: AntType.carrier,
-    rowPosition: RowPosition.front,
-    reason: 'Not the best ant for pvp situations',
-  ),
-  AntPvpTierTag(
-    rating: TierRating.c,
-    antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: 'Not the best ant for pvp situations',
+    reason: '',
   )
 ];

@@ -45,9 +45,9 @@ const bloodGiantPveTags = [
 ];
 const bloodGiantPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.c,
+    rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: betterOptionsAvailableC,
+    reason: "While it can heal itself it lacks any other real PvP capabilities",
   ),
 ];

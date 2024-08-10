@@ -53,15 +53,15 @@ const crimsonPearlPveTags = [
 
 const crimsonPearlPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.a,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: 'One of the better universal ants in terms of raw damage',
+    reason: '',
   ),
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.a,
     antType: AntType.universal,
     rowPosition: RowPosition.back,
-    reason: 'One of the better universal ants in terms of raw damage',
+    reason: '',
   )
 ];

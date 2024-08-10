@@ -42,11 +42,15 @@ const wiseBerserkerPveTags = [
 
 const wiseBerserkerPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'A high damage dealing ant. '
-        'Loves ants that allow it to auto attack again'
-        'Abilities that buff auto attacks are really great too',
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.s,
+    antType: AntType.gss,
+    rowPosition: RowPosition.back,
+    reason: '',
   ),
 ];

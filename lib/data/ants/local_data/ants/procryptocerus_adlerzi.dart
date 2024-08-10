@@ -42,10 +42,15 @@ const procryptocerusAdlerziPveTags = [
 
 const procryptocerusAdlerziPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason:
-        'One of the meatiest of all ants. Of course this is an S tier front liner for PVP',
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.s,
+    antType: AntType.gss,
+    rowPosition: RowPosition.front,
+    reason: '',
   ),
 ];

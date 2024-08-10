@@ -49,13 +49,7 @@ const goldenVenomPvpTags = [
   AntPvpTierTag(
     rating: TierRating.b,
     antType: AntType.carrier,
-    rowPosition: RowPosition.middle,
-    reason: notTheWorstB,
-  ),
-  AntPvpTierTag(
-    rating: TierRating.b,
-    antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: notTheWorstB,
+    reason: '',
   ),
 ];

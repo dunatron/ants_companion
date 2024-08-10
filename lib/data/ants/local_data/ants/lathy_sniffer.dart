@@ -49,7 +49,12 @@ const lathySnifferPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'Simply the best shooter ants in the game. '
-        'Deals extremely high ramping damage',
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.s,
+    antType: AntType.gss,
+    rowPosition: RowPosition.back,
+    reason: '',
   ),
 ];
