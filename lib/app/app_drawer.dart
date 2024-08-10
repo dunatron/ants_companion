@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -14,7 +16,7 @@ class AppDrawer extends StatelessWidget {
           DrawerHeader(
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: AssetImage('assets/banners/ant_reading_menu_2.png'),
                 fit: BoxFit.cover,
               ),
@@ -23,7 +25,7 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Ant Tier Rankings'),
+            title: Text(l10n.antTiersTitle),
             onTap: () {
               Navigator.pop(context);
               context.go('/ant-tiers');
@@ -31,7 +33,7 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Colony Action Scheduler'),
+            title: Text('Colony Action Scheduler'),
             onTap: () {
               context.go('/ca-scheduler');
               Navigator.pop(context);
@@ -39,7 +41,7 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Scientific Classifications'),
+            title: Text('Scientific Classifications'),
             onTap: () {
               context.go('/scientific-classifications');
               Navigator.pop(context);
@@ -47,7 +49,7 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Soldier Comparison'),
+            title: Text('Soldier Comparison'),
             onTap: () {
               context.go('/soldier-ants-comparison');
               Navigator.pop(context);

@@ -2,10 +2,12 @@ import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
 import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
-import 'package:ants_companion/ui/layouts/page_layout.dart';
 import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:intl/intl.dart';
 
 class ColonyActionDetailsScreen extends StatelessWidget {
   const ColonyActionDetailsScreen({super.key, required this.caKey});
@@ -14,8 +16,12 @@ class ColonyActionDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final caName = caKey.colonyActionName();
-    final tasks = CATask.colonyActionTaskList(caKey);
+    final l10n = AppLocalizations.of(context);
+    final locale = Localizations.localeOf(context);
+
+    final caName = caKey.colonyActionTypeFromKey().displayName(l10n);
+    final numberFormat = NumberFormat('#,###', locale.toLanguageTag());
+    final tasks = CATask.colonyActionTaskList(caKey, l10n);
 
     return SliverPageLayout(
       title: caName,

@@ -1,37 +1,47 @@
+import 'dart:math';
+
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class CATask {
   CATask(this.title, this.points);
 
   final String title;
   final int points;
 
-  static CATask get buildingPower => CATask('Building Power +1', 1000);
+  static CATask buildingPower(AppLocalizations l10n) =>
+      CATask(l10n.caTaskBuildingPower, 1000);
 
-  static CATask get enhancementPower =>
-      CATask('Enhance Building Power +1', 1000);
+  static CATask enhancementPower(AppLocalizations l10n) =>
+      CATask(l10n.caTaskEnhancementPower, 1000);
 
-  static CATask get evolutionPower => CATask('Evolution Power +1', 400);
-  static CATask get speedupEvolving =>
-      CATask('each use of 1 min speedup when evolving', 400);
-  static CATask get consumeBioEssence => CATask('Building Power +1', 25000);
+  static CATask evolutionPower(AppLocalizations l10n) =>
+      CATask(l10n.caTaskEvolutionPower, 400);
 
-  static CATask get consumeSpecialHypha =>
-      CATask('Consume a Special Hypha', 10000);
+  static CATask speedupEvolving(AppLocalizations l10n) =>
+      CATask(l10n.caTaskSpeedupEvolving, 400);
 
-  static CATask get consumeHypha => CATask('Consume a Hypha', 2000);
+  static CATask consumeBioEssence(AppLocalizations l10n) =>
+      CATask(l10n.caTaskConsumeBioEssence, 25000);
 
-  static List<CATask> get consumeFungusList =>
-      List.generate(4, (index) => CATask.consumeFungus(index + 1));
+  static CATask consumeSpecialHypha(AppLocalizations l10n) =>
+      CATask(l10n.caTaskConsumeSpecialHypha, 10000);
 
-  static CATask consumeFungus(int tier) => CATask(
-        'Consume a Fungus Nutrient $tier',
+  static CATask consumeHypha(AppLocalizations l10n) =>
+      CATask(l10n.caTaskConsumeHypha, 2000);
+
+  static List<CATask> consumeFungusList(AppLocalizations l10n) =>
+      List.generate(4, (index) => CATask.consumeFungus(index + 1, l10n));
+
+  static CATask consumeFungus(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskConsumeFungus(tier),
         switch (tier) { 1 => 200, 2 => 1000, 3 => 4000, 4 => 10000, _ => 200 },
       );
 
-  static List<CATask> get obtainCellList =>
-      List.generate(6, (index) => CATask.obtainCell(index + 2));
+  static List<CATask> obtainCellList(AppLocalizations l10n) =>
+      List.generate(6, (index) => CATask.obtainCell(index + 2, l10n));
 
-  static CATask obtainCell(int tier) => CATask(
-        'Obtain a $tier-Star Cell',
+  static CATask obtainCell(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskObtainCell(tier),
         switch (tier) {
           2 => 10000,
           3 => 100000,
@@ -43,11 +53,11 @@ class CATask {
         },
       );
 
-  static List<CATask> get consumeCellList =>
-      List.generate(6, (index) => CATask.consumeCell(index + 2));
+  static List<CATask> consumeCellList(AppLocalizations l10n) =>
+      List.generate(6, (index) => CATask.consumeCell(index + 2, l10n));
 
-  static CATask consumeCell(int tier) => CATask(
-        'Consume a $tier-Star Cell',
+  static CATask consumeCell(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskConsumeCell(tier),
         switch (tier) {
           2 => 6000,
           3 => 60000,
@@ -59,22 +69,23 @@ class CATask {
         },
       );
 
-  static CATask get speedupAny => CATask('Each use of any 1 min speedup', 400);
+  static CATask speedupAny(AppLocalizations l10n) =>
+      CATask(l10n.caTaskSpeedupAny, 400);
 
-  static CATask get speedupBuilding =>
-      CATask('Each use of 1 min Speedup when upgrading buildings', 900);
+  static CATask speedupBuilding(AppLocalizations l10n) =>
+      CATask(l10n.caTaskSpeedupBuilding, 900);
 
-  static CATask get speedupBuildingEnhancement =>
-      CATask('Each use of 1 min Speedup when enhancing buildings', 900);
+  static CATask speedupBuildingEnhancement(AppLocalizations l10n) =>
+      CATask(l10n.caTaskSpeedupBuildingEnhancement, 900);
 
-  static CATask get speedupHatchingSoldiers =>
-      CATask('Each use of 1 min Speedup when hatching Soldier Ants', 400);
+  static CATask speedupHatchingSoldiers(AppLocalizations l10n) =>
+      CATask(l10n.caTaskSpeedupHatchingSoldiers, 400);
 
-  static List<CATask> get hatchSoldierAntsList =>
-      List.generate(10, (index) => CATask.hatchSoldierAnt(index + 1));
+  static List<CATask> hatchSoldierAntsList(AppLocalizations l10n) =>
+      List.generate(10, (index) => CATask.hatchSoldierAnt(index + 1, l10n));
 
-  static CATask hatchSoldierAnt(int tier) => CATask(
-        'Hatch a T-$tier Soldier Ant',
+  static CATask hatchSoldierAnt(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskHatchSoldierAnt(tier),
         switch (tier) {
           1 => 5,
           2 => 25,
@@ -90,40 +101,42 @@ class CATask {
         },
       );
 
-  static List<CATask> get consumeCellFluidList =>
-      List.generate(4, (index) => CATask.consumeCellFluid(index + 1));
+  static List<CATask> consumeCellFluidList(AppLocalizations l10n) =>
+      List.generate(4, (index) => CATask.consumeCellFluid(index + 1, l10n));
 
-  static CATask consumeCellFluid(int tier) => CATask(
-        'Consume 1 cell fluid T-$tier',
+  static CATask consumeCellFluid(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskConsumeCellFluid(tier),
         switch (tier) { 1 => 200, 2 => 1000, 3 => 4000, 4 => 10000, _ => 0 },
       );
 
-  static CATask get consumeCreatureRemain =>
-      CATask('Use 1 creature remain', 700);
+  static CATask consumeCreatureRemain(AppLocalizations l10n) =>
+      CATask(l10n.caTaskConsumeCreatureRemain, 700);
 
-  static CATask get consumeSpore => CATask('Use 1 spore', 2000);
+  static CATask consumeSpore(AppLocalizations l10n) =>
+      CATask(l10n.caTaskConsumeSpore, 2000);
 
-  static CATask get redeemSpore =>
-      CATask('Redeem for 1 spore [from mutation pool]', 1000);
+  static CATask redeemSpore(AppLocalizations l10n) =>
+      CATask(l10n.caTaskRedeemSpore, 1000);
 
-  static List<CATask> get consumeEggs => [
-        CATask('Use 1 Time-limited Egg', 200000),
-        CATask('Use 1 Tertiary Egg', 200000),
-        CATask('Use 1 Secondary Egg', 50000),
-        CATask('Use 1 Primary Egg', 10000),
-        CATask('Use 1 Season Egg', 200000),
+  static List<CATask> consumeEggs(AppLocalizations l10n) => [
+        CATask(l10n.caTaskUseTimeLimitedEgg, 200000),
+        CATask(l10n.caTaskUseTertiaryEgg, 200000),
+        CATask(l10n.caTaskUseSecondaryEgg, 50000),
+        CATask(l10n.caTaskUsePrimaryEgg, 10000),
+        CATask(l10n.caTaskUseSeasonEgg, 200000),
       ];
 
-  static CATask get unlockSpecialAntSkill =>
-      CATask('Unlock 1 skill for any Special Ant', 20000);
+  static CATask unlockSpecialAntSkill(AppLocalizations l10n) =>
+      CATask(l10n.caTaskUnlockSpecialAntSkill, 20000);
 
-  static CATask get specialAntExperience => CATask('Special Ant EXP +10', 1);
+  static CATask specialAntExperience(AppLocalizations l10n) =>
+      CATask(l10n.caTaskSpecialAntExperience, 1);
 
-  static List<CATask> get starUpSpecialAntsList =>
-      List.generate(8, (index) => CATask.starUpSpecialAnts(index + 1));
+  static List<CATask> starUpSpecialAntsList(AppLocalizations l10n) =>
+      List.generate(8, (index) => CATask.starUpSpecialAnts(index + 1, l10n));
 
-  static CATask starUpSpecialAnts(int star) => CATask(
-        'Star up special ant to $star-Star',
+  static CATask starUpSpecialAnts(int star, AppLocalizations l10n) => CATask(
+        l10n.caTaskStarUpSpecialAnts(star),
         switch (star) {
           1 => 1500000,
           2 => 2000000,
@@ -137,11 +150,11 @@ class CATask {
         },
       );
 
-  static List<CATask> get obtainGeneList =>
-      List.generate(9, (index) => CATask.obtainGene(index + 2));
+  static List<CATask> obtainGeneList(AppLocalizations l10n) =>
+      List.generate(9, (index) => CATask.obtainGene(index + 2, l10n));
 
-  static CATask obtainGene(int tier) => CATask(
-        'Obtain a $tier-Star Gene',
+  static CATask obtainGene(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskObtainGene(tier),
         switch (tier) {
           2 => 10000,
           3 => 40000,
@@ -156,11 +169,11 @@ class CATask {
         },
       );
 
-  static List<CATask> get consumeGeneList =>
-      List.generate(9, (index) => CATask.consumeGene(index + 2));
+  static List<CATask> consumeGeneList(AppLocalizations l10n) =>
+      List.generate(9, (index) => CATask.consumeGene(index + 2, l10n));
 
-  static CATask consumeGene(int tier) => CATask(
-        'Consume a $tier-Star Gene',
+  static CATask consumeGene(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskConsumeGene(tier),
         switch (tier) {
           2 => 6000,
           3 => 24000,
@@ -175,19 +188,19 @@ class CATask {
         },
       );
 
-  static List<CATask> get consumeGeneticFactorList =>
-      List.generate(4, (index) => CATask.consumeGeneticFactor(index + 1));
+  static List<CATask> consumeGeneticFactorList(AppLocalizations l10n) =>
+      List.generate(4, (index) => CATask.consumeGeneticFactor(index + 1, l10n));
 
-  static CATask consumeGeneticFactor(int tier) => CATask(
-        'Consume a Genetic Factor T-$tier',
+  static CATask consumeGeneticFactor(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskConsumeGeneticFactor(tier),
         switch (tier) { 1 => 200, 2 => 1000, 3 => 4000, 4 => 10000, _ => 0 },
       );
 
-  static List<CATask> get obtainGermList =>
-      List.generate(9, (index) => CATask.obtainGerm(index + 2));
+  static List<CATask> obtainGermList(AppLocalizations l10n) =>
+      List.generate(9, (index) => CATask.obtainGerm(index + 2, l10n));
 
-  static CATask obtainGerm(int tier) => CATask(
-        'Obtain a $tier-Star Germ',
+  static CATask obtainGerm(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskObtainGerm(tier),
         switch (tier) {
           2 => 10000,
           3 => 40000,
@@ -202,11 +215,11 @@ class CATask {
         },
       );
 
-  static List<CATask> get consumeGermList =>
-      List.generate(9, (index) => CATask.consumeGerm(index + 2));
+  static List<CATask> consumeGermList(AppLocalizations l10n) =>
+      List.generate(9, (index) => CATask.consumeGerm(index + 2, l10n));
 
-  static CATask consumeGerm(int tier) => CATask(
-        'Consume a $tier-Star Germ',
+  static CATask consumeGerm(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskConsumeGerm(tier),
         switch (tier) {
           2 => 6000,
           3 => 24000,
@@ -221,69 +234,73 @@ class CATask {
         },
       );
 
-  static List<CATask> get consumeGermMediumList =>
-      List.generate(4, (index) => CATask.consumeGermMedium(index + 1));
+  static List<CATask> consumeGermMediumList(AppLocalizations l10n) =>
+      List.generate(4, (index) => CATask.consumeGermMedium(index + 1, l10n));
 
-  static CATask consumeGermMedium(int tier) => CATask(
-        'Consume a Germ Medium T-$tier',
+  static CATask consumeGermMedium(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskConsumeGermMedium(tier),
         switch (tier) { 1 => 200, 2 => 1000, 3 => 4000, 4 => 10000, _ => 0 },
       );
 
-  static List<CATask> colonyActionTaskList(String caKey) => switch (caKey) {
+  static List<CATask> colonyActionTaskList(
+    String caKey,
+    AppLocalizations l10n,
+  ) =>
+      switch (caKey) {
         // Monday
-        '1-0' || '1-8' || '1-16' => monday1,
-        '1-1' || '1-9' || '1-17' => monday2,
-        '1-2' || '1-10' || '1-18' => monday3,
-        '1-3' || '1-11' || '1-19' => monday4,
-        '1-4' || '1-12' || '1-20' => monday5,
-        '1-5' || '1-13' || '1-21' => monday6,
-        '1-6' || '1-14' || '1-22' => monday7,
-        '1-7' || '1-15' || '1-23' => monday8,
+        '1-0' || '1-8' || '1-16' => monday1(l10n),
+        '1-1' || '1-9' || '1-17' => monday2(l10n),
+        '1-2' || '1-10' || '1-18' => monday3(l10n),
+        '1-3' || '1-11' || '1-19' => monday4(l10n),
+        '1-4' || '1-12' || '1-20' => monday5(l10n),
+        '1-5' || '1-13' || '1-21' => monday6(l10n),
+        '1-6' || '1-14' || '1-22' => monday7(l10n),
+        '1-7' || '1-15' || '1-23' => monday8(l10n),
         // Tuesday
-        '2-0' || '2-8' || '2-16' => tuesday1,
-        '2-1' || '2-9' || '2-17' => tuesday2,
-        '2-2' || '2-10' || '2-18' => tuesday3,
-        '2-3' || '2-11' || '2-19' => tuesday4,
-        '2-4' || '2-12' || '2-20' => tuesday5,
-        '2-5' || '2-13' || '2-21' => tuesday6,
-        '2-6' || '2-14' || '2-22' => tuesday7,
-        '2-7' || '2-15' || '2-23' => tuesday8,
+        '2-0' || '2-8' || '2-16' => tuesday1(l10n),
+        '2-1' || '2-9' || '2-17' => tuesday2(l10n),
+        '2-2' || '2-10' || '2-18' => tuesday3(l10n),
+        '2-3' || '2-11' || '2-19' => tuesday4(l10n),
+        '2-4' || '2-12' || '2-20' => tuesday5(l10n),
+        '2-5' || '2-13' || '2-21' => tuesday6(l10n),
+        '2-6' || '2-14' || '2-22' => tuesday7(l10n),
+        '2-7' || '2-15' || '2-23' => tuesday8(l10n),
         // Wed
-        '3-0' || '3-8' || '3-16' => wednesday1,
-        '3-1' || '3-9' || '3-17' => wednesday2,
-        '3-2' || '3-10' || '3-18' => wednesday3,
-        '3-3' || '3-11' || '3-19' => wednesday4,
-        '3-4' || '3-12' || '3-20' => wednesday5,
-        '3-5' || '3-13' || '3-21' => wednesday6,
-        '3-6' || '3-14' || '3-22' => wednesday7,
-        '3-7' || '3-15' || '3-23' => wednesday8,
+        '3-0' || '3-8' || '3-16' => wednesday1(l10n),
+        '3-1' || '3-9' || '3-17' => wednesday2(l10n),
+        '3-2' || '3-10' || '3-18' => wednesday3(l10n),
+        '3-3' || '3-11' || '3-19' => wednesday4(l10n),
+        '3-4' || '3-12' || '3-20' => wednesday5(l10n),
+        '3-5' || '3-13' || '3-21' => wednesday6(l10n),
+        '3-6' || '3-14' || '3-22' => wednesday7(l10n),
+        '3-7' || '3-15' || '3-23' => wednesday8(l10n),
         // Thursday
-        '4-0' || '4-8' || '4-16' => thursday1,
-        '4-1' || '4-9' || '4-17' => thursday2,
-        '4-2' || '4-10' || '4-18' => thursday3,
-        '4-3' || '4-11' || '4-19' => thursday4,
-        '4-4' || '4-12' || '4-20' => thursday5,
-        '4-5' || '4-13' || '4-21' => thursday6,
-        '4-6' || '4-14' || '4-22' => thursday7,
-        '4-7' || '4-15' || '4-23' => thursday8,
+        '4-0' || '4-8' || '4-16' => thursday1(l10n),
+        '4-1' || '4-9' || '4-17' => thursday2(l10n),
+        '4-2' || '4-10' || '4-18' => thursday3(l10n),
+        '4-3' || '4-11' || '4-19' => thursday4(l10n),
+        '4-4' || '4-12' || '4-20' => thursday5(l10n),
+        '4-5' || '4-13' || '4-21' => thursday6(l10n),
+        '4-6' || '4-14' || '4-22' => thursday7(l10n),
+        '4-7' || '4-15' || '4-23' => thursday8(l10n),
         // Friday
-        '5-0' || '5-8' || '5-16' => friday1,
-        '5-1' || '5-9' || '5-17' => friday2,
-        '5-2' || '5-10' || '5-18' => friday3,
-        '5-3' || '5-11' || '5-19' => friday4,
-        '5-4' || '5-12' || '5-20' => friday5,
-        '5-5' || '5-13' || '5-21' => friday6,
-        '5-6' || '5-14' || '5-22' => friday7,
-        '5-7' || '5-15' || '5-23' => friday8,
+        '5-0' || '5-8' || '5-16' => friday1(l10n),
+        '5-1' || '5-9' || '5-17' => friday2(l10n),
+        '5-2' || '5-10' || '5-18' => friday3(l10n),
+        '5-3' || '5-11' || '5-19' => friday4(l10n),
+        '5-4' || '5-12' || '5-20' => friday5(l10n),
+        '5-5' || '5-13' || '5-21' => friday6(l10n),
+        '5-6' || '5-14' || '5-22' => friday7(l10n),
+        '5-7' || '5-15' || '5-23' => friday8(l10n),
         // Saturday
-        '6-0' || '6-8' || '6-16' => saturday1,
-        '6-1' || '6-9' || '6-17' => saturday2,
-        '6-2' || '6-10' || '6-18' => saturday3,
-        '6-3' || '6-11' || '6-19' => saturday4,
-        '6-4' || '6-12' || '6-20' => saturday5,
-        '6-5' || '6-13' || '6-21' => saturday6,
-        '6-6' || '6-14' || '6-22' => saturday7,
-        '6-7' || '6-15' || '6-23' => saturday8,
+        '6-0' || '6-8' || '6-16' => saturday1(l10n),
+        '6-1' || '6-9' || '6-17' => saturday2(l10n),
+        '6-2' || '6-10' || '6-18' => saturday3(l10n),
+        '6-3' || '6-11' || '6-19' => saturday4(l10n),
+        '6-4' || '6-12' || '6-20' => saturday5(l10n),
+        '6-5' || '6-13' || '6-21' => saturday6(l10n),
+        '6-6' || '6-14' || '6-22' => saturday7(l10n),
+        '6-7' || '6-15' || '6-23' => saturday8(l10n),
         // Sunday
         '7-0' || '7-8' || '7-16' => [],
         '7-1' || '7-9' || '7-17' => [],
@@ -295,312 +312,475 @@ class CATask {
         '7-7' || '7-15' || '7-23' => [],
         String() => throw UnimplementedError('colonyActionPointsInfo $caKey'),
       };
+
+  static List<CATask> monday1(AppLocalizations l10n) {
+    return [CATask.buildingPower(l10n), CATask.enhancementPower(l10n)];
+  }
+
+  static List<CATask> monday2(AppLocalizations l10n) {
+    return [
+      CATask.evolutionPower(l10n),
+      CATask.speedupEvolving(l10n),
+      CATask.consumeBioEssence(l10n),
+      CATask.consumeSpecialHypha(l10n),
+      CATask.consumeHypha(l10n),
+      ...CATask.consumeFungusList(l10n)
+    ];
+  }
+
+  static List<CATask> monday3(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> monday4(AppLocalizations l10n) {
+    return [
+      CATask.speedupAny(l10n),
+      CATask.consumeBioEssence(l10n),
+      CATask.consumeSpecialHypha(l10n),
+      CATask.consumeHypha(l10n),
+      ...CATask.consumeFungusList(l10n),
+    ];
+  }
+
+  static List<CATask> monday5(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.enhancementPower(l10n)
+    ];
+  }
+
+  static List<CATask> monday6(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.speedupBuilding(l10n),
+      CATask.consumeBioEssence(l10n),
+      CATask.consumeSpecialHypha(l10n),
+      CATask.consumeHypha(l10n),
+      ...CATask.consumeFungusList(l10n),
+      CATask.speedupBuildingEnhancement(l10n)
+    ];
+  }
+
+  static List<CATask> monday7(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.enhancementPower(l10n),
+      ...CATask.hatchSoldierAntsList(l10n),
+    ];
+  }
+
+  static List<CATask> monday8(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.enhancementPower(l10n),
+      ...CATask.hatchSoldierAntsList(l10n),
+      CATask.consumeBioEssence(l10n),
+      CATask.consumeSpecialHypha(l10n),
+      CATask.consumeHypha(l10n),
+      ...CATask.consumeFungusList(l10n),
+    ];
+  }
+
+  static List<CATask> tuesday1(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.speedupBuilding(l10n),
+      CATask.enhancementPower(l10n),
+      CATask.speedupBuildingEnhancement(l10n)
+    ];
+  }
+
+  static List<CATask> tuesday2(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.consumeBioEssence(l10n),
+      CATask.enhancementPower(l10n),
+      ...CATask.obtainCellList(l10n),
+      ...CATask.consumeCellList(l10n),
+      ...CATask.consumeCellFluidList(l10n),
+    ];
+  }
+
+  static List<CATask> tuesday3(AppLocalizations l10n) {
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+    ];
+  }
+
+  static List<CATask> tuesday4(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.enhancementPower(l10n),
+      ...CATask.hatchSoldierAntsList(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainCellList(l10n),
+      ...CATask.consumeCellList(l10n),
+      ...CATask.consumeCellFluidList(l10n),
+    ];
+  }
+
+  static List<CATask> tuesday5(AppLocalizations l10n) {
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.speedupEvolving(l10n),
+      CATask.speedupBuilding(l10n),
+    ];
+  }
+
+  static List<CATask> tuesday6(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainCellList(l10n),
+      ...CATask.consumeCellList(l10n),
+      ...CATask.consumeCellFluidList(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> tuesday7(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      ...CATask.hatchSoldierAntsList(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> tuesday8(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainCellList(l10n),
+      ...CATask.consumeCellList(l10n),
+      ...CATask.consumeCellFluidList(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> wednesday1(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.speedupBuilding(l10n),
+      CATask.enhancementPower(l10n),
+      CATask.speedupBuildingEnhancement(l10n)
+    ];
+  }
+
+  static List<CATask> wednesday2(AppLocalizations l10n) {
+    return [
+      CATask.evolutionPower(l10n),
+      CATask.speedupEvolving(l10n),
+      CATask.consumeCreatureRemain(l10n)
+    ];
+  }
+
+  static List<CATask> wednesday3(AppLocalizations l10n) {
+    return [CATask.speedupHatchingSoldiers(l10n)];
+  }
+
+  static List<CATask> wednesday4(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.consumeCreatureRemain(l10n),
+      CATask.enhancementPower(l10n)
+    ];
+  }
+
+  static List<CATask> wednesday5(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      ...CATask.hatchSoldierAntsList(l10n),
+      CATask.enhancementPower(l10n)
+    ];
+  }
+
+  static List<CATask> wednesday6(AppLocalizations l10n) {
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.speedupEvolving(l10n),
+      CATask.speedupBuilding(l10n),
+      CATask.consumeCreatureRemain(l10n),
+    ];
+  }
+
+  static List<CATask> wednesday7(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> wednesday8(AppLocalizations l10n) {
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.speedupEvolving(l10n),
+      CATask.speedupBuilding(l10n),
+      CATask.consumeCreatureRemain(l10n)
+    ];
+  }
+
+  static List<CATask> thursday1(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.speedupBuilding(l10n),
+      CATask.enhancementPower(l10n),
+      CATask.speedupBuildingEnhancement(l10n),
+    ];
+  }
+
+  static List<CATask> thursday2(AppLocalizations l10n) {
+    return [
+      CATask.consumeSpore(l10n),
+      CATask.redeemSpore(l10n),
+      ...CATask.consumeEggs(l10n),
+      CATask.unlockSpecialAntSkill(l10n),
+      CATask.specialAntExperience(l10n),
+      ...CATask.starUpSpecialAntsList(l10n),
+    ];
+  }
+
+  static List<CATask> thursday3(AppLocalizations l10n) {
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.speedupEvolving(l10n),
+      CATask.speedupBuilding(l10n),
+    ];
+  }
+
+  static List<CATask> thursday4(AppLocalizations l10n) {
+    return [
+      CATask.consumeSpore(l10n),
+      CATask.redeemSpore(l10n),
+      ...CATask.consumeEggs(l10n),
+      CATask.unlockSpecialAntSkill(l10n),
+      CATask.specialAntExperience(l10n),
+      ...CATask.starUpSpecialAntsList(l10n),
+    ];
+  }
+
+  static List<CATask> thursday5(AppLocalizations l10n) {
+    return [CATask.speedupAny(l10n)];
+  }
+
+  static List<CATask> thursday6(AppLocalizations l10n) {
+    return [
+      CATask.consumeSpore(l10n),
+      CATask.redeemSpore(l10n),
+      ...CATask.consumeEggs(l10n),
+      CATask.unlockSpecialAntSkill(l10n),
+      CATask.specialAntExperience(l10n),
+      ...CATask.starUpSpecialAntsList(l10n),
+    ];
+  }
+
+  static List<CATask> thursday7(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> thursday8(AppLocalizations l10n) {
+    return [
+      CATask.redeemSpore(l10n),
+      ...CATask.consumeEggs(l10n),
+      CATask.unlockSpecialAntSkill(l10n),
+      CATask.specialAntExperience(l10n),
+      ...CATask.starUpSpecialAntsList(l10n),
+    ];
+  }
+
+  static List<CATask> friday1(AppLocalizations l10n) {
+    return [CATask.speedupAny(l10n)];
+  }
+
+  static List<CATask> friday2(AppLocalizations l10n) {
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.speedupEvolving(l10n),
+      CATask.speedupBuilding(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainGeneList(l10n),
+      ...CATask.consumeGeneList(l10n),
+      ...CATask.consumeGeneticFactorList(l10n),
+    ];
+  }
+
+  static List<CATask> friday3(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> friday4(AppLocalizations l10n) {
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainGeneList(l10n),
+      ...CATask.consumeGeneList(l10n),
+      ...CATask.consumeGeneticFactorList(l10n),
+    ];
+  }
+
+  static List<CATask> friday5(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> friday6(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      ...CATask.hatchSoldierAntsList(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainGeneList(l10n),
+      ...CATask.consumeGeneList(l10n),
+      ...CATask.consumeGeneticFactorList(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> friday7(AppLocalizations l10n) {
+    return [
+      CATask.evolutionPower(l10n),
+      ...CATask.hatchSoldierAntsList(l10n),
+    ];
+  }
+
+  static List<CATask> friday8(AppLocalizations l10n) {
+    return [
+      CATask.speedupAny(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainGeneList(l10n),
+      ...CATask.consumeGeneList(l10n),
+      ...CATask.consumeGeneticFactorList(l10n),
+    ];
+  }
+
+  static List<CATask> saturday1(AppLocalizations l10n) {
+    return [CATask.speedupAny(l10n)];
+  }
+
+  static List<CATask> saturday2(AppLocalizations l10n) {
+    return [
+      CATask.evolutionPower(l10n),
+      CATask.speedupEvolving(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainGermList(l10n),
+      ...CATask.consumeGermList(l10n),
+      ...CATask.consumeGermMediumList(l10n),
+    ];
+  }
+
+  static List<CATask> saturday3(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.speedupBuilding(l10n),
+      CATask.enhancementPower(l10n),
+      CATask.speedupBuildingEnhancement(l10n),
+    ];
+  }
+
+  static List<CATask> saturday4(AppLocalizations l10n) {
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainGermList(l10n),
+      ...CATask.consumeGermList(l10n),
+      ...CATask.consumeGermMediumList(l10n),
+    ];
+  }
+
+  static List<CATask> saturday5(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> saturday6(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainGermList(l10n),
+      ...CATask.consumeGermList(l10n),
+      ...CATask.consumeGermMediumList(l10n),
+      CATask.enhancementPower(l10n),
+    ];
+  }
+
+  static List<CATask> saturday7(AppLocalizations l10n) {
+    return [
+      CATask.buildingPower(l10n),
+      CATask.enhancementPower(l10n),
+      ...CATask.hatchSoldierAntsList(l10n),
+    ];
+  }
+
+  static List<CATask> saturday8(AppLocalizations l10n) {
+    return [
+      CATask.evolutionPower(l10n),
+      ...CATask.hatchSoldierAntsList(l10n),
+      CATask.consumeBioEssence(l10n),
+      ...CATask.obtainGermList(l10n),
+      ...CATask.consumeGermList(l10n),
+      ...CATask.consumeGermMediumList(l10n),
+    ];
+  }
+
+  static List<CATask> sunday1(AppLocalizations l10n) {
+    return [];
+  }
+
+  static List<CATask> sunday2(AppLocalizations l10n) {
+    return [];
+  }
+
+  static List<CATask> sunday3(AppLocalizations l10n) {
+    return [];
+  }
+
+  static List<CATask> sunday4(AppLocalizations l10n) {
+    return [];
+  }
+
+  static List<CATask> sunday5(AppLocalizations l10n) {
+    return [];
+  }
+
+  static List<CATask> sunday6(AppLocalizations l10n) {
+    return [];
+  }
+
+  static List<CATask> sunday7(AppLocalizations l10n) {
+    return [];
+  }
+
+  static List<CATask> sunday8(AppLocalizations l10n) {
+    return [];
+  }
 }
-
-final monday1 = [CATask.buildingPower, CATask.enhancementPower];
-final monday2 = [
-  CATask.evolutionPower,
-  CATask.speedupEvolving,
-  CATask.consumeBioEssence,
-  CATask.consumeSpecialHypha,
-  CATask.consumeHypha,
-  ...CATask.consumeFungusList
-];
-final monday3 = [CATask.buildingPower, CATask.enhancementPower];
-final monday4 = [
-  CATask.speedupAny,
-  CATask.consumeBioEssence,
-  CATask.consumeSpecialHypha,
-  CATask.consumeHypha,
-  ...CATask.consumeFungusList,
-];
-final monday5 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.enhancementPower
-];
-final monday6 = [
-  CATask.buildingPower,
-  CATask.speedupBuilding,
-  CATask.consumeBioEssence,
-  CATask.consumeSpecialHypha,
-  CATask.consumeHypha,
-  ...CATask.consumeFungusList,
-  CATask.speedupBuildingEnhancement
-];
-final monday7 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.enhancementPower,
-  ...CATask.hatchSoldierAntsList,
-];
-final monday8 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.enhancementPower,
-  ...CATask.hatchSoldierAntsList,
-  CATask.consumeBioEssence,
-  CATask.consumeSpecialHypha,
-  CATask.consumeHypha,
-  ...CATask.consumeFungusList,
-];
-
-final tuesday1 = [
-  CATask.buildingPower,
-  CATask.speedupBuilding,
-  CATask.enhancementPower,
-  CATask.speedupBuildingEnhancement
-];
-final tuesday2 = [
-  CATask.buildingPower,
-  CATask.consumeBioEssence,
-  CATask.enhancementPower,
-  ...CATask.obtainCellList,
-  ...CATask.consumeCellList,
-  ...CATask.consumeCellFluidList,
-];
-final tuesday3 = [
-  CATask.speedupHatchingSoldiers,
-];
-final tuesday4 = [
-  CATask.buildingPower,
-  CATask.enhancementPower,
-  ...CATask.hatchSoldierAntsList,
-  CATask.consumeBioEssence,
-  ...CATask.obtainCellList,
-  ...CATask.consumeCellList,
-  ...CATask.consumeCellFluidList,
-];
-final tuesday5 = [
-  CATask.speedupHatchingSoldiers,
-  CATask.speedupEvolving,
-  CATask.speedupBuilding,
-];
-final tuesday6 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.speedupHatchingSoldiers,
-  CATask.consumeBioEssence,
-  ...CATask.obtainCellList,
-  ...CATask.consumeCellList,
-  ...CATask.consumeCellFluidList,
-  CATask.enhancementPower,
-];
-final tuesday7 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  ...CATask.hatchSoldierAntsList,
-  CATask.enhancementPower,
-];
-final tuesday8 = [
-  CATask.buildingPower,
-  CATask.consumeBioEssence,
-  ...CATask.obtainCellList,
-  ...CATask.consumeCellList,
-  ...CATask.consumeCellFluidList,
-  CATask.enhancementPower,
-];
-
-final wednesday1 = [
-  CATask.buildingPower,
-  CATask.speedupBuilding,
-  CATask.enhancementPower,
-  CATask.speedupBuildingEnhancement
-];
-final wednesday2 = [
-  CATask.evolutionPower,
-  CATask.speedupEvolving,
-  CATask.consumeCreatureRemain
-];
-final wednesday3 = [CATask.speedupHatchingSoldiers];
-final wednesday4 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.consumeCreatureRemain,
-  CATask.enhancementPower
-];
-final wednesday5 = [
-  CATask.buildingPower,
-  ...CATask.hatchSoldierAntsList,
-  CATask.enhancementPower
-];
-final wednesday6 = [
-  CATask.speedupHatchingSoldiers,
-  CATask.speedupEvolving,
-  CATask.speedupBuilding,
-  CATask.consumeCreatureRemain,
-];
-final wednesday7 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.speedupHatchingSoldiers,
-  CATask.enhancementPower,
-];
-final wednesday8 = [
-  CATask.speedupHatchingSoldiers,
-  CATask.speedupEvolving,
-  CATask.speedupBuilding,
-  CATask.consumeCreatureRemain
-];
-
-final thursday1 = [
-  CATask.buildingPower,
-  CATask.speedupBuilding,
-  CATask.enhancementPower,
-  CATask.speedupBuildingEnhancement,
-];
-final thursday2 = [
-  CATask.consumeSpore,
-  CATask.redeemSpore,
-  ...CATask.consumeEggs,
-  CATask.unlockSpecialAntSkill,
-  CATask.specialAntExperience,
-  ...CATask.starUpSpecialAntsList,
-];
-final thursday3 = [
-  CATask.speedupHatchingSoldiers,
-  CATask.speedupEvolving,
-  CATask.speedupBuilding,
-];
-final thursday4 = [
-  CATask.consumeSpore,
-  CATask.redeemSpore,
-  ...CATask.consumeEggs,
-  CATask.unlockSpecialAntSkill,
-  CATask.specialAntExperience,
-  ...CATask.starUpSpecialAntsList,
-];
-final thursday5 = [CATask.speedupAny];
-final thursday6 = [
-  CATask.consumeSpore,
-  CATask.redeemSpore,
-  ...CATask.consumeEggs,
-  CATask.unlockSpecialAntSkill,
-  CATask.specialAntExperience,
-  ...CATask.starUpSpecialAntsList,
-];
-final thursday7 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.speedupHatchingSoldiers,
-  CATask.enhancementPower,
-];
-final thursday8 = [
-  CATask.consumeSpore,
-  CATask.redeemSpore,
-  ...CATask.consumeEggs,
-  CATask.unlockSpecialAntSkill,
-  CATask.specialAntExperience,
-  ...CATask.starUpSpecialAntsList,
-];
-
-final friday1 = [CATask.speedupAny];
-final friday2 = [
-  CATask.speedupHatchingSoldiers,
-  CATask.speedupEvolving,
-  CATask.speedupBuilding,
-  CATask.consumeBioEssence,
-  ...CATask.obtainGeneList,
-  ...CATask.consumeGeneList,
-  ...CATask.consumeGeneticFactorList,
-];
-final friday3 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.speedupHatchingSoldiers,
-  CATask.enhancementPower,
-];
-final friday4 = [
-  CATask.speedupHatchingSoldiers,
-  CATask.consumeBioEssence,
-  ...CATask.obtainGeneList,
-  ...CATask.consumeGeneList,
-  ...CATask.consumeGeneticFactorList,
-];
-final friday5 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.speedupHatchingSoldiers,
-  CATask.enhancementPower,
-];
-final friday6 = [
-  CATask.buildingPower,
-  ...CATask.hatchSoldierAntsList,
-  CATask.consumeBioEssence,
-  ...CATask.obtainGeneList,
-  ...CATask.consumeGeneList,
-  ...CATask.consumeGeneticFactorList,
-  CATask.enhancementPower,
-];
-final friday7 = [
-  CATask.evolutionPower,
-  ...CATask.hatchSoldierAntsList,
-];
-final friday8 = [
-  CATask.speedupAny,
-  CATask.consumeBioEssence,
-  ...CATask.obtainGeneList,
-  ...CATask.consumeGeneList,
-  ...CATask.consumeGeneticFactorList,
-];
-
-final saturday1 = [CATask.speedupAny];
-final saturday2 = [
-  CATask.evolutionPower,
-  CATask.speedupEvolving,
-  CATask.consumeBioEssence,
-  ...CATask.obtainGermList,
-  ...CATask.consumeGermList,
-  ...CATask.consumeGermMediumList,
-];
-final saturday3 = [
-  CATask.buildingPower,
-  CATask.speedupBuilding,
-  CATask.enhancementPower,
-  CATask.speedupBuildingEnhancement,
-];
-final saturday4 = [
-  CATask.speedupHatchingSoldiers,
-  CATask.consumeBioEssence,
-  ...CATask.obtainGermList,
-  ...CATask.consumeGermList,
-  ...CATask.consumeGermMediumList,
-];
-final saturday5 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.speedupHatchingSoldiers,
-  CATask.enhancementPower,
-];
-final saturday6 = [
-  CATask.buildingPower,
-  CATask.evolutionPower,
-  CATask.speedupHatchingSoldiers,
-  CATask.consumeBioEssence,
-  ...CATask.obtainGermList,
-  ...CATask.consumeGermList,
-  ...CATask.consumeGermMediumList,
-  CATask.enhancementPower,
-];
-final saturday7 = [
-  CATask.buildingPower,
-  CATask.enhancementPower,
-  ...CATask.hatchSoldierAntsList,
-];
-final saturday8 = [
-  CATask.evolutionPower,
-  ...CATask.hatchSoldierAntsList,
-  CATask.consumeBioEssence,
-  ...CATask.obtainGermList,
-  ...CATask.consumeGermList,
-  ...CATask.consumeGermMediumList,
-];
-
-final sunday1 = [];
-final sunday2 = [];
-final sunday3 = [];
-final sunday4 = [];
-final sunday5 = [];
-final sunday6 = [];
-final sunday7 = [];
-final sunday8 = [];

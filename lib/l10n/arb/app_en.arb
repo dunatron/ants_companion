@@ -31,6 +31,127 @@
   "soldierAntsComparisonFeatureInfoDescription": "Interested in the base stats for soldier ants? This feature is for you. A side by side comparison of the base soldier stats",
   "soldierAntsComparisonFeatureInfoButton": "Soldier Stats",
   "antTiersTitle": "Ant Tiers",
+  "colonyActionSchedulerTitle": "Colony Action Scheduler",
+  "colonyAction": "Colony Action",
+  "caTypeAnthillDevelopment": "Anthill Development",
+  "caTypeColonyEvolution": "Colony Evolution",
+  "caTypeMassDevelopment": "Mass Development",
+  "caTypeHatchSoldierAnts": "Hatch Soldier Ants",
+  "caTypeSpecialAntDevelopment": "Special Ant Development",
+  "caTaskBuildingPower": "Building Power +1",
+  "caTaskEnhancementPower": "Enhance Building Power +1",
+  "caTaskEvolutionPower": "Evolution Power +1",
+  "caTaskSpeedupEvolving": "Each use of 1 min speedup when evolving",
+  "caTaskConsumeBioEssence": "Consume a Bio-Essence",
+  "caTaskConsumeSpecialHypha": "Consume a Special Hypha",
+  "caTaskConsumeHypha": "Consume a Hypha",
+  "caTaskConsumeFungus": "Consume a Fungus Nutrient {tier}",
+  "@caTaskConsumeFungus": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskObtainCell": "Obtain a {tier}-Star Cell",
+  "@caTaskObtainCell": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeCell": "Consume a {tier}-Star Cell",
+  "@caTaskConsumeCell": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskSpeedupAny": "Each use of any 1 min speedup",
+  "caTaskSpeedupBuilding": "Each use of 1 min Speedup when upgrading buildings",
+  "caTaskSpeedupBuildingEnhancement": "Each use of 1 min Speedup when enhancing buildings",
+  "caTaskSpeedupHatchingSoldiers": "Each use of 1 min Speedup when hatching Soldier Ants",
+  "caTaskHatchSoldierAnt": "Hatch a T-{tier} Soldier Ant",
+  "@caTaskHatchSoldierAnt": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeCellFluid": "Consume 1 cell fluid T-{tier}",
+  "caTaskConsumeCreatureRemain": "Use 1 creature remain",
+  "caTaskConsumeSpore": "Use 1 spore",
+  "caTaskRedeemSpore": "Redeem for 1 spore [from mutation pool]",
+  "caTaskUseTimeLimitedEgg": "Use 1 Time-limited Egg",
+  "caTaskUseTertiaryEgg": "Use 1 Tertiary Egg",
+  "caTaskUseSecondaryEgg": "Use 1 Secondary Egg",
+  "caTaskUsePrimaryEgg": "Use 1 Primary Egg",
+  "caTaskUseSeasonEgg": "Use 1 Season Egg",
+  "caTaskUnlockSpecialAntSkill": "Unlock 1 skill for any Special Ant",
+  "caTaskSpecialAntExperience": "Special Ant EXP +10",
+  "caTaskStarUpSpecialAnts": "Star up special ant to {star}-Star",
+  "@caTaskStarUpSpecialAnts": {
+    "placeholders": {
+      "star": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskObtainGene": "Obtain a {tier}-Star Gene",
+  "@caTaskObtainGene": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeGene": "Consume a {tier}-Star Gene",
+  "@caTaskConsumeGene": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeGeneticFactor": "Consume a Genetic Factor T-{tier}",
+  "@caTaskConsumeGeneticFactor": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskObtainGerm": "Obtain a {tier}-Star Germ",
+  "@caTaskObtainGerm": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeGerm": "Consume a {tier}-Star Germ",
+  "@caTaskConsumeGerm": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTaskConsumeGermMedium": "Consume a Germ Medium T-{tier}",
+  "@caTaskConsumeGermMedium": {
+    "placeholders": {
+      "tier": {
+        "type": "int"
+      }
+    }
+  },
+  "caTask": "",
+  "notificationTestTitle": "Ants Companion",
+  "notificationTestBody": "Test notification",
+  "notificationTestButtonLabel": "Test Notification",
   "pvpFull": "Player Versus Player",
   "pvpAbbreviation": "PvP",
   "pveFull": "Player Versus Environment",
