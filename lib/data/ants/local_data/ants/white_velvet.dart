@@ -33,17 +33,16 @@ const whiteVelvet = Ant(
 
 const whiteVelvetPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
-    antType: AntType.shooter,
-    rowPosition: RowPosition.front,
-    reason:
-        'Atrocious ant. The fact this is a hard to get/paid ant is craaaazy',
+    rating: TierRating.d,
+    antType: AntType.universal,
+    rowPosition: RowPosition.middle,
+    reason: '',
   ),
 ];
 
 const whiteVelvetPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
     reason: terribleForPvpF,

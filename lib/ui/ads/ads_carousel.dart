@@ -34,10 +34,13 @@ class AdsCarousel extends StatelessWidget {
     if (!AdsService.enabled) return const SizedBox();
     // ToDo: maybe handle this in a less blasty approach
     ads.disposeAllAds();
-    for (var adId in adIds) {
-      ads.loadBannerAd(adId, AdSize.mediumRectangle);
-    }
 
+    // adds a delay to not immediately load the ads, for performance
+    Future.delayed(const Duration(seconds: 3), () {
+      for (var adId in adIds) {
+        ads.loadBannerAd(adId, AdSize.mediumRectangle);
+      }
+    });
     return Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxHeight: _carouselContainerHeight),
@@ -46,7 +49,6 @@ class AdsCarousel extends StatelessWidget {
           itemExtent: _carouselItemWidth,
           shrinkExtent: _carouselItemWidth,
           shape: Border.all(width: _borderThickness, color: Colors.transparent),
-          // onTap: null,
           padding: const EdgeInsets.all(_itemPadding),
           children: List<Widget>.generate(
             adIds.length,

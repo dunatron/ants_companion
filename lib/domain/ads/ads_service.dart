@@ -67,8 +67,17 @@ class AdsService {
 
   bool _initialized = false;
 
-  final int maxRetryAttempts = 3;
-  final Duration retryDelay = const Duration(seconds: 20);
+  // retry forever
+  final int maxRetryAttempts = double.maxFinite.toInt();
+  // final int maxRetryAttempts = 30;
+  Duration retryDelay = const Duration(seconds: 10);
+
+  // If retryDelay is less than 5 minutes, bump it by 10 seconds
+  _increaseRetryDelay() {
+    if (retryDelay < const Duration(minutes: 5)) {
+      retryDelay += const Duration(seconds: 10);
+    }
+  }
 
   Future<void> initialize() async {
     logger.d('Initializing Ad service');
@@ -127,6 +136,7 @@ class AdsService {
           ad.dispose();
           if (attempt < maxRetryAttempts) {
             Future.delayed(retryDelay, () {
+              // _increaseRetryDelay();
               loadBannerAdWithRetry(adUnitId, size, attempt: attempt + 1);
             });
           } else {

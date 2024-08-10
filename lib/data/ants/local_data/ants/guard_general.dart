@@ -37,7 +37,7 @@ const guardGeneral = Ant(
 
 const guardGeneralPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,
@@ -45,9 +45,9 @@ const guardGeneralPveTags = [
 ];
 const guardGeneralPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPvpF,
+    reason: '',
   ),
 ];

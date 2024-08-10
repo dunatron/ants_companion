@@ -4,13 +4,11 @@ import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details.dart';
-import 'package:ants_companion/ui/ants/ant_details/ant_details_screen.dart';
-
 import 'package:ants_companion/ui/ant_tiers/ant_tier_indicator.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
-import 'package:ants_companion/ui/modal_single_page_view.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TierSection extends StatelessWidget {
   const TierSection({
@@ -43,41 +41,9 @@ class TierSection extends StatelessWidget {
             tierTag: tierTag,
           ));
 
-  // _launchAntDetails(
-  //   final Ant ant,
-  //   AntTierTag tierTag,
-  //   BuildContext context,
-  // ) =>
-  //     showModalBottomSheet(
-  //       context: context,
-  //       isScrollControlled: true,
-  //       enableDrag: true,
-  //       showDragHandle: true,
-  //       builder: (BuildContext _) {
-  //         return DraggableScrollableSheet(
-  //           maxChildSize: 1,
-  //           initialChildSize: kIsWeb ? 0.8 : 0.5,
-  //           expand: false,
-  //           builder: (
-  //             BuildContext context,
-  //             ScrollController scrollController,
-  //           ) =>
-  //               ModalSinglePageView(
-  //             controller: scrollController,
-  //             child: AntTierDetails(
-  //               ant: ant,
-  //               tierTag: tierTag,
-  //             ),
-  //           ),
-  //         );
-  //       },
-  //     );
-
   @override
   Widget build(BuildContext context) {
-    // List<Ant> frontRow = [];
-    // List<Ant> middleRow = [];
-    // List<Ant> backRow = [];
+    final l10n = AppLocalizations.of(context);
 
     List<Map<AntTierTag, Ant>> frontRow = [];
     List<Map<AntTierTag, Ant>> middleRow = [];
@@ -92,9 +58,7 @@ class TierSection extends StatelessWidget {
         final valid = tag.rating == tierRating &&
             tag.antType == antType &&
             isCorrectTagType;
-        // final valid = tag.rating == tierRating &&
-        //     (tag.antType == antType || tag.antType == AntType.universal) &&
-        //     isCorrectTagType;
+
         if (tag.rowPosition == RowPosition.front && valid) {
           frontRow.add({tag: ant});
         } else if (tag.rowPosition == RowPosition.middle && valid) {
@@ -110,10 +74,8 @@ class TierSection extends StatelessWidget {
     }
 
     return Container(
-      // color: tierRating.color,
       margin: const EdgeInsets.only(bottom: 64),
       child: Column(
-        // crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
@@ -131,9 +93,8 @@ class TierSection extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const Text('Front'),
+                    Text(l10n.rowPositionFront),
                     const SizedBox(height: 16),
-                    // ...frontRow.map((ant) => Chip(label: Text(ant.name)))
                     ...frontRow.map(
                       (antTagMap) => AntTierIndicator(
                         availableWidth: availableWidth / 3,
@@ -153,7 +114,7 @@ class TierSection extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const Text('Middle'),
+                    Text(l10n.rowPositionMiddle),
                     const SizedBox(height: 16),
                     ...middleRow.map((antTagMap) => AntTierIndicator(
                           availableWidth: availableWidth / 3,
@@ -172,7 +133,7 @@ class TierSection extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const Text('Back'),
+                    Text(l10n.rowPositionBack),
                     const SizedBox(height: 16),
                     ...backRow.map((antTagMap) => AntTierIndicator(
                           availableWidth: availableWidth / 3,

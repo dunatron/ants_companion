@@ -42,15 +42,9 @@ const darkGiantPveTags = [
 
 const darkGiantPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.b,
+    rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: notTheWorstB,
-  ),
-  AntPvpTierTag(
-    rating: TierRating.b,
-    antType: AntType.carrier,
-    rowPosition: RowPosition.middle,
-    reason: notTheWorstB,
+    reason: '',
   ),
 ];

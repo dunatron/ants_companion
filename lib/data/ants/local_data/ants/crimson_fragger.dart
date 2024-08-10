@@ -59,15 +59,15 @@ const crimsonFraggerPveTags = [
 ];
 const crimsonFraggerPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: 'One of the best universal ants for PVP',
+    reason: '',
   ),
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.back,
-    reason: 'One of the best universal ants for PVP',
+    reason: '',
   ),
 ];

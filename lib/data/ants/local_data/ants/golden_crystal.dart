@@ -61,13 +61,13 @@ const goldenCrystalPvpTags = [
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
-    reason: 'Its just Super strong',
-    rowPosition: RowPosition.back,
+    rowPosition: RowPosition.middle,
+    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
-    reason: 'Its just Super strong',
-    rowPosition: RowPosition.middle,
-  )
+    rowPosition: RowPosition.back,
+    reason: '',
+  ),
 ];

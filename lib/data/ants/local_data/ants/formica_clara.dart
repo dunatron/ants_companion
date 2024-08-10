@@ -41,23 +41,21 @@ const formicaClaraPveTags = [
 ];
 const formicaClaraPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'One of the better shooter ants for PVP in the front row. '
-        'It is however better suited to the middle',
+    reason: '',
   ),
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: 'One of the best shooter ants for the mid row',
+    reason: '',
   ),
   AntPvpTierTag(
-    rating: TierRating.a,
-    antType: AntType.shooter,
-    rowPosition: RowPosition.back,
-    reason: 'One of the better shooter ants for PVP.'
-        'It is however better suited to the middle',
+    rating: TierRating.sPlus,
+    antType: AntType.gss,
+    rowPosition: RowPosition.middle,
+    reason: '',
   ),
 ];

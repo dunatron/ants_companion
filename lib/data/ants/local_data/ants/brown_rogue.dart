@@ -40,7 +40,7 @@ const brownRogue = Ant(
 
 const brownRoguePveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
     reason: terribleForPveF,
@@ -48,17 +48,17 @@ const brownRoguePveTags = [
 ];
 const brownRoguePvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.a,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
     reason: 'A really good ant for PVP which can easily '
         'take out the enemies back-line. Needs awakening for S tier',
   ),
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.a,
     antType: AntType.universal,
     rowPosition: RowPosition.back,
-    reason: 'A really good ant for PVP which can easily '
+    reason: 'A really good ant for PvP which can easily '
         'take out the enemies back-line. Needs awakening for S tier',
   ),
   AntPvpTierTag(
@@ -66,5 +66,19 @@ const brownRoguePvpTags = [
     antType: AntType.universal,
     rowPosition: RowPosition.back,
     reason: 'Without awakening this ant falls into B tier',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.a,
+    antType: AntType.gss,
+    rowPosition: RowPosition.middle,
+    reason: 'A really good ant for PvP which can easily '
+        'take out the enemies back-line. Needs awakening for S tier',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.a,
+    antType: AntType.gss,
+    rowPosition: RowPosition.back,
+    reason: 'A really good ant for PvP which can easily '
+        'take out the enemies back-line. Needs awakening for S tier',
   ),
 ];

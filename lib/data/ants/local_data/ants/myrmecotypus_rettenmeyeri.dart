@@ -37,7 +37,7 @@ const myrmecotypusRettenmeyeri = Ant(
 
 const myrmecotypusRettenmeyeriPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,
@@ -49,6 +49,6 @@ const myrmecotypusRettenmeyeriPvpTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'Really solid choice for a shooter PVP front line',
+    reason: '',
   ),
 ];

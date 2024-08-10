@@ -32,4 +32,29 @@ const emeraldJewelAnt = Ant(
 );
 
 const emeraldJewelAntPveTags = [];
-const emeraldJewelAntPvpTags = [];
+const emeraldJewelAntPvpTags = [
+  AntPvpTierTag(
+    rating: TierRating.sPlus,
+    antType: AntType.shooter,
+    rowPosition: RowPosition.middle,
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.sPlus,
+    antType: AntType.shooter,
+    rowPosition: RowPosition.back,
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.sPlus,
+    antType: AntType.gss,
+    rowPosition: RowPosition.middle,
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.sPlus,
+    antType: AntType.gss,
+    rowPosition: RowPosition.back,
+    reason: '',
+  ),
+];

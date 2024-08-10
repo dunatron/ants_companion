@@ -42,4 +42,11 @@ const blackKnight = Ant(
 );
 
 const blackKnightPveTags = [];
-const blackKnightPvpTags = [];
+const blackKnightPvpTags = [
+  AntPvpTierTag(
+    rating: TierRating.sPlus,
+    antType: AntType.guardian,
+    rowPosition: RowPosition.front,
+    reason: "The best guardian ant in the front row",
+  ),
+];

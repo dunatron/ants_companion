@@ -33,7 +33,7 @@ const jetBlack = Ant(
 
 const jetBlackPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,
@@ -42,10 +42,9 @@ const jetBlackPveTags = [
 
 const jetBlackPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.c,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason:
-        'A solid guardian front liner which can punish normal attack spammers',
+    reason: '',
   ),
 ];

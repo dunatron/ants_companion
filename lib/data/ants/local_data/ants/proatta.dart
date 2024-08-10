@@ -44,21 +44,13 @@ const proattaPvpTags = [
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.guardian,
-    rowPosition: RowPosition.front,
-    reason: 'One of the best guardian ants. '
-        'Better suited to the middle if possible',
-  ),
-  AntPvpTierTag(
-    rating: TierRating.s,
-    antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: 'One of the best guardian ants',
+    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: 'One of the best guardian ants. '
-        'Better suited to the middle if possible',
+    reason: '',
   ),
 ];

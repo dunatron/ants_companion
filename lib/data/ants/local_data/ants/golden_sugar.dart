@@ -58,9 +58,9 @@ const goldenSugarPveTags = [
 
 const goldenSugarPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.b,
+    rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.back,
-    reason: notTheWorstB,
+    reason: '',
   ),
 ];

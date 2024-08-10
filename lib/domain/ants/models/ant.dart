@@ -86,7 +86,7 @@ extension on List<AntTierTag> {
 
   TierRating topTierRating() {
     if (isEmpty) {
-      return TierRating.f;
+      return TierRating.d;
     }
     return map((e) => e.rating)
         .reduce((current, next) => current.order < next.order ? current : next);

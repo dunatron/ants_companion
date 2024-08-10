@@ -37,7 +37,7 @@ const pheidoleNietneri = Ant(
 
 const pheidoleNietneriPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,
@@ -46,9 +46,9 @@ const pheidoleNietneriPveTags = [
 
 const pheidoleNietneriPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: 'One of the best guardian front liners',
+    reason: '',
   ),
 ];

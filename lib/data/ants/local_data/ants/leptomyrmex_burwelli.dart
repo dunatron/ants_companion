@@ -47,19 +47,15 @@ const leptomyrmexBurwelliPveTags = [
 
 const leptomyrmexBurwelliPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: 'The best carrier ant in the game, '
-        'applying de-buffs to enemies and '
-        'buffs to allies while dealing the hardest hitting ability in the game',
+    reason: '',
   ),
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: 'The best carrier ant in the game, '
-        'applying de-buffs to enemies and '
-        'buffs to allies while dealing the hardest hitting ability in the game',
+    reason: '',
   ),
 ];

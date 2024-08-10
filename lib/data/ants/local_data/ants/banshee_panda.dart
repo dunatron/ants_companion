@@ -46,6 +46,6 @@ const bansheePandaPvpTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'With awakening and 8 starred this is viable in the front for pvp',
+    reason: 'With awakening and 8 starred this is great in the front for pvp',
   ),
 ];

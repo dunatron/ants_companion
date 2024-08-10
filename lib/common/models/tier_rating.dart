@@ -3,9 +3,13 @@
 import 'package:flutter/material.dart';
 
 enum TierRating {
+  sPlus(
+    order: 2,
+    color: Colors.red,
+  ),
   s(
     order: 2,
-    color: Colors.yellow,
+    color: Colors.orange,
   ),
   a(
     order: 3,
@@ -13,15 +17,15 @@ enum TierRating {
   ),
   b(
     order: 4,
-    color: Colors.blue,
+    color: Colors.green,
   ),
   c(
     order: 5,
-    color: Colors.green,
+    color: Colors.teal,
   ),
-  f(
-    order: 6,
-    color: Colors.grey,
+  d(
+    order: 5,
+    color: Colors.lightBlue,
   );
 
   const TierRating({
@@ -30,11 +34,12 @@ enum TierRating {
   });
 
   String get displayText => switch (this) {
+        TierRating.sPlus => 'S+',
         TierRating.s => 'S',
         TierRating.a => 'A',
         TierRating.b => 'B',
         TierRating.c => 'C',
-        TierRating.f => 'F',
+        TierRating.d => 'D',
       };
 
   final int order;

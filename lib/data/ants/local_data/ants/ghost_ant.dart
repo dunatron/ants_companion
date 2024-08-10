@@ -42,15 +42,9 @@ const ghostAntPveTags = [
 
 const ghostAntPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
-    antType: AntType.carrier,
-    rowPosition: RowPosition.front,
-    reason: 'A really strong and viable carrier ant',
-  ),
-  AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: 'A really strong and viable carrier ant',
+    reason: '',
   ),
 ];

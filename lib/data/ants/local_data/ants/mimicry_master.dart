@@ -14,7 +14,7 @@ const mimicryMaster = Ant(
     ...mimicryMasterPveTags,
     ...mimicryMasterPvpTags,
   ],
-  // We dont know what this ant actually is.
+  // We don't know what this ant actually is.
   // ToDo: mimicry master Scientific classification
 );
 
@@ -29,15 +29,15 @@ const mimicryMasterPveTags = [
 
 const mimicryMasterPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.b,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: 'Is a solid choice for any guardian player',
+    reason: '',
   ),
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.b,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: 'Is a solid choice for any guardian player',
+    reason: '',
   ),
 ];

@@ -5,7 +5,7 @@ const duskyLurker = Ant(
   name: 'Dusky Lurker',
   description: 'This special ant is very mysterious, and no more information '
       'has been disclosed so far',
-  scientificName: 'ahhhm msterious Ant',
+  scientificName: 'ahhhm mysterious Ant',
   type: AntType.universal,
   role: AntRole.support,
   tierTags: [
@@ -37,17 +37,9 @@ const duskyLurkerPveTags = [
 
 const duskyLurkerPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.c,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: 'Is a viable support ant for PVP especially if your '
-        'back line deals high/extremely high damage',
-  ),
-  AntPvpTierTag(
-    rating: TierRating.a,
-    antType: AntType.universal,
-    rowPosition: RowPosition.middle,
-    reason: 'Is a viable support ant for PVP especially if your '
-        'back line deals high/extremely high damage',
+    reason: '',
   ),
 ];

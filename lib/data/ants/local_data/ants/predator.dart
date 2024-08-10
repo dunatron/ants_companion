@@ -4,7 +4,7 @@ const predator = Ant(
   id: 'predator',
   name: 'Predator',
   description: '',
-  scientificName: 'Psalidomyrmex reicenspergeri',
+  scientificName: 'Psalidomyrmex reichenspergeri',
   type: AntType.shooter,
   role: AntRole.melee,
   tierTags: [
@@ -12,7 +12,7 @@ const predator = Ant(
     ...predatorPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Psalidomyrmex reicenspergeri',
+    species: 'Psalidomyrmex reichenspergeri',
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,
@@ -33,7 +33,7 @@ const predator = Ant(
 
 const predatorPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,
@@ -42,9 +42,9 @@ const predatorPveTags = [
 
 const predatorPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.b,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'Just a super bad ant especially for shooters.. of which it is...',
+    reason: '',
   ),
 ];

@@ -33,7 +33,7 @@ const strumigenysEggersi = Ant(
 
 const strumigenysEggersiPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,
@@ -42,9 +42,9 @@ const strumigenysEggersiPveTags = [
 
 const strumigenysEggersiPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: 'The best carrier ant front liner in the game for PVP',
+    reason: '',
   ),
 ];

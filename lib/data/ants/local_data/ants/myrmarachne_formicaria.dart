@@ -34,7 +34,7 @@ const myrmarachneFormicaria = Ant(
 
 const myrmarachneFormicariaPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
     reason: terribleForPveF,
@@ -43,12 +43,15 @@ const myrmarachneFormicariaPveTags = [
 
 const myrmarachneFormicariaPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.s,
     antType: AntType.carrier,
-    reason: 'One of the best front line carrier ants in the game for PVP.'
-        'It steals the defense of the enemies front row. '
-        'Applies a damage de-buff to all enemies.'
-        'Chance to silence a random enemy whenever it receives damage',
+    reason: '',
     rowPosition: RowPosition.front,
+  ),
+  AntPvpTierTag(
+    rating: TierRating.s,
+    antType: AntType.carrier,
+    reason: '',
+    rowPosition: RowPosition.middle,
   )
 ];

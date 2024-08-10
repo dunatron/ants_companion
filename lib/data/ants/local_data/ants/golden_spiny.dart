@@ -34,7 +34,7 @@ const goldenSpiny = Ant(
 
 const goldenSpinyPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
     reason: terribleForPveF,
@@ -43,9 +43,9 @@ const goldenSpinyPveTags = [
 
 const goldenSpinyPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.universal,
-    rowPosition: RowPosition.middle,
-    reason: terribleForPvpF,
+    rowPosition: RowPosition.back,
+    reason: '',
   ),
 ];

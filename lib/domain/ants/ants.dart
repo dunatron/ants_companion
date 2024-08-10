@@ -1,4 +1,3 @@
-import 'package:ants_companion/common/models/game_mode.dart';
 import 'package:ants_companion/data/ants/local_data/local_ants_list.dart';
 import 'package:ants_companion/data/ants/meta_troops/meta_troops_local.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';

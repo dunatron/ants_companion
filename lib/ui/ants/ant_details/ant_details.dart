@@ -1,4 +1,3 @@
-import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
@@ -10,6 +9,7 @@ import 'package:ants_companion/ui/section.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AntDetails extends StatelessWidget {
   const AntDetails({super.key, required this.ant});
@@ -84,7 +84,7 @@ class AntDetails extends StatelessWidget {
             Section(
               child: Center(
                 child: Container(
-                  constraints: BoxConstraints(maxWidth: 200),
+                  constraints: const BoxConstraints(maxWidth: 400),
                   child: AntScientificDetails(
                     details: scientificClassification,
                   ),
@@ -98,12 +98,13 @@ class AntDetails extends StatelessWidget {
 }
 
 class _TagDetails extends StatelessWidget {
-  const _TagDetails({super.key, required this.tag});
+  const _TagDetails({required this.tag});
 
   final AntTierTag tag;
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final isPvpTag = tag is AntPvpTierTag;
     return SizedBox(
       width: double.infinity,
@@ -112,26 +113,31 @@ class _TagDetails extends StatelessWidget {
         children: [
           Center(
             child: Container(
-              constraints: BoxConstraints(maxWidth: 200),
+              constraints: const BoxConstraints(maxWidth: 400),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     tag.rating.displayText,
-                    style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                    style: Theme.of(context).textTheme.displayMedium?.copyWith(
                           color: tag.rating.color,
                           fontWeight: FontWeight.bold,
                         ),
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    '${isPvpTag ? 'PVP' : 'PVE'}',
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    isPvpTag ? l10n.pvpAbbreviation : l10n.pveAbbreviation,
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    '${tag.rowPosition.name}',
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    tag.rowPosition.displayText(l10n),
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    tag.antType.displayText(l10n),
+                    style: Theme.of(context).textTheme.bodyLarge,
                   ),
                 ],
               ),

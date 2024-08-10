@@ -44,7 +44,7 @@ const gracefulTwigAntPveTags = [
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: notTheWorstB,
+    reason: '',
   ),
 ];
 
@@ -53,6 +53,6 @@ const gracefulTwigAntPvpTags = [
     rating: TierRating.a,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: 'A really strong support ant',
+    reason: '',
   ),
 ];

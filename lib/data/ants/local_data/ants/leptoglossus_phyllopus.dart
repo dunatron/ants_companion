@@ -33,4 +33,17 @@ const leptoglossusPhyllopus = Ant(
 );
 
 const leptoglossusPhyllopusPveTags = [];
-const leptoglossusPhyllopusPvpTags = [];
+const leptoglossusPhyllopusPvpTags = [
+  AntPvpTierTag(
+    rating: TierRating.sPlus,
+    antType: AntType.carrier,
+    rowPosition: RowPosition.front,
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.sPlus,
+    antType: AntType.carrier,
+    rowPosition: RowPosition.middle,
+    reason: '',
+  ),
+];

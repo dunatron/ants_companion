@@ -4,11 +4,7 @@ const acidGeneral = Ant(
   id: 'acid_general',
   name: 'Acid General',
   scientificName: 'Mystrium oberthueri',
-  description: 'A unique species of ants in Madagascar, Africa.\n'
-      'They are extremely powerful carnivorous ants that feed on large local '
-      'centipedes, they are large in size and can reach 10-11 mm.\nThe colony '
-      'is very small with only dozens of ants, but its hunting soldier ants '
-      'can account for more than half of the colony.',
+  description: '',
   scientificClassification: AntScientificClassification(
     species: 'Mystrium oberthueri',
     phylum: ScientificPhylum.arthropoda,
@@ -37,7 +33,7 @@ const acidGeneral = Ant(
 
 const acidGeneralPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
     reason: 'There are much better ants to use for shooter pve',
@@ -45,13 +41,7 @@ const acidGeneralPveTags = [
 ];
 const acidGeneralPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.c,
-    antType: AntType.shooter,
-    rowPosition: RowPosition.middle,
-    reason: 'There are better shooter ants for pvp',
-  ),
-  AntPvpTierTag(
-    rating: TierRating.c,
+    rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
     reason: 'There are better shooter ants for pvp',

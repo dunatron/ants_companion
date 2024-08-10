@@ -42,10 +42,21 @@ const slimArchedPveTags = [
 
 const slimArchedPvpTags = [
   AntPvpTierTag(
-    rating: TierRating.a,
+    rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason:
-        'Deals an ok amount of damage while providing crowd control and self healing',
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.b,
+    antType: AntType.universal,
+    rowPosition: RowPosition.middle,
+    reason: '',
+  ),
+  AntPvpTierTag(
+    rating: TierRating.b,
+    antType: AntType.gss,
+    rowPosition: RowPosition.front,
+    reason: '',
   ),
 ];

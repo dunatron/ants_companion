@@ -6,7 +6,7 @@ const goldenVenom = Ant(
   description: 'A mysterious ant spider, common in rainforest area with humid '
       'climates. It is large, and its bright colours indicate that it is '
       'extremely dangerous.',
-  // nonde actually supplied
+  // none actually supplied
   // maybe Telamonia dimidiata bsed on below link
   // https://www.reddit.com/r/theantsundergroundkd/comments/18jasr7/what_is_the_golden_venom_ant_based_on/
   scientificName: 'Telamonia dimidiata',
@@ -38,7 +38,7 @@ const goldenVenom = Ant(
 
 const goldenVenomPveTags = [
   AntPveTierTag(
-    rating: TierRating.f,
+    rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
     reason: terribleForPveF,
@@ -49,13 +49,7 @@ const goldenVenomPvpTags = [
   AntPvpTierTag(
     rating: TierRating.b,
     antType: AntType.carrier,
-    rowPosition: RowPosition.middle,
-    reason: notTheWorstB,
-  ),
-  AntPvpTierTag(
-    rating: TierRating.b,
-    antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: notTheWorstB,
+    reason: '',
   ),
 ];
