@@ -75,6 +75,10 @@ part 'ants/white_velvet.dart';
 part 'ants/wise_berserker.dart';
 part 'ants/merannoplus_bicolor.dart';
 part 'ants/merannoplus_castaneus.dart';
+part 'ants/carpenter_ant.dart';
+part 'ants/cyphomyrmex_rimosus.dart';
+part 'ants/saharan_silver_ant.dart';
+part 'ants/crematogaster_inflata.dart';
 
 const notTheWorstB = 'This does work but there are better options';
 const betterOptionsAvailableC = 'There are better options available';
@@ -111,8 +115,11 @@ const List<Ant> localAntsList = [
   bloodGiant,
   brownRogue,
   bulletAnt,
+  carpenterAnt,
+  crematogasterInflata,
   crimsonFragger,
   crimsonPearl,
+  cyphomyrmexRimosus,
   darkGiant,
   darkHercules,
   dolichoderusBispinosus,
@@ -138,6 +145,8 @@ const List<Ant> localAntsList = [
   leafDevourer,
   leptoglossusPhyllopus,
   leptomyrmexBurwelli,
+  merannoplusBicolor,
+  merannoplusCastaneus,
   mimicryMaster,
   myrmarachneFormicaria,
   myrmecotypusRettenmeyeri,
@@ -150,6 +159,7 @@ const List<Ant> localAntsList = [
   reapMaster,
   rockBandit,
   rubySlender,
+  saharanSilverAnt,
   shieldWarden,
   shikareeMaster,
   slimArched,

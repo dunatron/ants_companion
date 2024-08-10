@@ -1,18 +1,18 @@
 part of '../local_ants_list.dart';
 
-const merannoplusBicolor = Ant(
-  id: 'merannoplus_bicolor',
-  name: 'Merannoplus Bicolor',
+const crematogasterInflata = Ant(
+  id: 'crematogaster_inflata',
+  name: 'Crematogaster Inflata',
   description: '',
-  scientificName: 'Merannoplus bicolor',
-  type: AntType.guardian,
-  role: AntRole.melee,
+  scientificName: 'Crematogaster inflata',
+  type: AntType.shooter,
+  role: AntRole.support,
   tierTags: [
-    ...merannoplusBicolorPveTags,
-    ...merannoplusBicolorPvpTags,
+    ...crematogasterInflataPveTags,
+    ...crematogasterInflataPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Merannoplus bicolor',
+    species: 'Crematogaster inflata',
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,
@@ -20,36 +20,30 @@ const merannoplusBicolor = Ant(
     infraorder: null,
     family: ScientificFamily.formicidae,
     subfamily: ScientificSubfamily.myrmicinae,
-    tribe: null,
-    genus: ScientificGenus.meranoplus,
+    tribe: ScientificTribe.crematogastrini,
+    genus: ScientificGenus.crematogaster,
   ),
   externalLinks: [
     AntExternalLink(
       type: AntExternalLinkType.antWiki,
-      subUrl: 'Meranoplus_bicolor',
+      subUrl: 'Crematogaster_inflata',
     ),
   ],
 );
 
-const merannoplusBicolorPveTags = [];
+const crematogasterInflataPveTags = [];
 
-const merannoplusBicolorPvpTags = [
-  AntPvpTierTag(
-    rating: TierRating.sPlus,
-    antType: AntType.guardian,
-    rowPosition: RowPosition.front,
-    reason: '',
-  ),
+const crematogasterInflataPvpTags = [
   AntPvpTierTag(
     rating: TierRating.s,
-    antType: AntType.guardian,
+    antType: AntType.shooter,
     rowPosition: RowPosition.middle,
     reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
-    rowPosition: RowPosition.front,
+    rowPosition: RowPosition.middle,
     reason: '',
   ),
 ];

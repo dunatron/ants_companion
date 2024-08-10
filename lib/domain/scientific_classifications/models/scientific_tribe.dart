@@ -4,10 +4,11 @@ enum ScientificTribe {
   camponotini,
   crematogastrini,
   dolichoderini,
+  ectatommini,
+  formicini,
+  harpactorini,
   leptomyrmecini,
   myrmeciini,
   oecophyllini,
   ponerini,
-  ectatommini,
-  harpactorini,
 }

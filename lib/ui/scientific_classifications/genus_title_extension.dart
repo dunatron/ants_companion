@@ -47,5 +47,8 @@ extension ScientificGenusExtension on ScientificGenus {
         ScientificGenus.tetramorium => 'tetramorium',
         ScientificGenus.tetraponera => 'tetraponera',
         ScientificGenus.thaumatomyrmex => 'thaumatomyrmex',
+        ScientificGenus.cataglyphis => 'cataglyphis',
+        ScientificGenus.crematogaster => 'crematogaster',
+        ScientificGenus.meranoplus => 'meranoplus',
       };
 }

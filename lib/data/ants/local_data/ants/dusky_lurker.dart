@@ -5,7 +5,7 @@ const duskyLurker = Ant(
   name: 'Dusky Lurker',
   description: 'This special ant is very mysterious, and no more information '
       'has been disclosed so far',
-  scientificName: 'ahhhm msterious Ant',
+  scientificName: 'ahhhm mysterious Ant',
   type: AntType.universal,
   role: AntRole.support,
   tierTags: [

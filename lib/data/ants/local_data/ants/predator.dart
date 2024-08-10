@@ -4,7 +4,7 @@ const predator = Ant(
   id: 'predator',
   name: 'Predator',
   description: '',
-  scientificName: 'Psalidomyrmex reicenspergeri',
+  scientificName: 'Psalidomyrmex reichenspergeri',
   type: AntType.shooter,
   role: AntRole.melee,
   tierTags: [
@@ -12,7 +12,7 @@ const predator = Ant(
     ...predatorPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Psalidomyrmex reicenspergeri',
+    species: 'Psalidomyrmex reichenspergeri',
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,
