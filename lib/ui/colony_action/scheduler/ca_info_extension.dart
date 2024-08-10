@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class CATask {
@@ -242,6 +240,49 @@ class CATask {
         switch (tier) { 1 => 200, 2 => 1000, 3 => 4000, 4 => 10000, _ => 0 },
       );
 
+  static CATask hatchInsect(AppLocalizations l10n) =>
+      CATask(l10n.caTaskHatchInsect, 200000);
+
+  static CATask makeInsectFodder(AppLocalizations l10n) =>
+      CATask(l10n.caTaskMakeInsectFodder, 100);
+
+  static CATask useInsectFodder(AppLocalizations l10n) =>
+      CATask(l10n.caTaskUseInsectFodder, 50);
+
+  static CATask butcherInsect(AppLocalizations l10n) =>
+      CATask(l10n.caTaskButcherInsect, 50);
+
+  static CATask useInsectShell(AppLocalizations l10n) =>
+      CATask(l10n.caTaskUseInsectShell, 50);
+
+  static List<CATask> starUpInsectList(AppLocalizations l10n) =>
+      List.generate(10, (index) => CATask.starUpInsect(index + 2, l10n));
+
+  static CATask starUpInsect(int tier, AppLocalizations l10n) => CATask(
+        l10n.caTaskStarUpInsect(tier),
+        switch (tier) {
+          2 => 200000,
+          3 => 400000,
+          4 => 800000,
+          5 => 1000000,
+          6 => 2000000,
+          7 => 3000000,
+          8 => 4500000,
+          9 => 6000000,
+          10 => 8000000,
+          11 => 10000000,
+          _ => 0
+        },
+      );
+
+  static List<CATask> insectTasksGroup(AppLocalizations l10n) => [
+        CATask.makeInsectFodder(l10n),
+        CATask.useInsectFodder(l10n),
+        CATask.butcherInsect(l10n),
+        CATask.useInsectShell(l10n),
+        ...CATask.starUpInsectList(l10n),
+      ];
+
   static List<CATask> colonyActionTaskList(
     String caKey,
     AppLocalizations l10n,
@@ -302,14 +343,14 @@ class CATask {
         '6-6' || '6-14' || '6-22' => saturday7(l10n),
         '6-7' || '6-15' || '6-23' => saturday8(l10n),
         // Sunday
-        '7-0' || '7-8' || '7-16' => [],
-        '7-1' || '7-9' || '7-17' => [],
-        '7-2' || '7-10' || '7-18' => [],
-        '7-3' || '7-11' || '7-19' => [],
-        '7-4' || '7-12' || '7-20' => [],
-        '7-5' || '7-13' || '7-21' => [],
-        '7-6' || '7-14' || '7-22' => [],
-        '7-7' || '7-15' || '7-23' => [],
+        '7-0' || '7-8' || '7-16' => sunday1(l10n),
+        '7-1' || '7-9' || '7-17' => sunday2(l10n),
+        '7-2' || '7-10' || '7-18' => sunday3(l10n),
+        '7-3' || '7-11' || '7-19' => sunday4(l10n),
+        '7-4' || '7-12' || '7-20' => sunday5(l10n),
+        '7-5' || '7-13' || '7-21' => sunday6(l10n),
+        '7-6' || '7-14' || '7-22' => sunday7(l10n),
+        '7-7' || '7-15' || '7-23' => sunday8(l10n),
         String() => throw UnimplementedError('colonyActionPointsInfo $caKey'),
       };
 
@@ -753,34 +794,60 @@ class CATask {
   }
 
   static List<CATask> sunday1(AppLocalizations l10n) {
-    return [];
+    return [
+      CATask.buildingPower(l10n),
+      CATask.speedupBuilding(l10n),
+    ];
   }
 
   static List<CATask> sunday2(AppLocalizations l10n) {
-    return [];
+    return [
+      CATask.speedupAny(l10n),
+      ...CATask.insectTasksGroup(l10n),
+    ];
   }
 
   static List<CATask> sunday3(AppLocalizations l10n) {
-    return [];
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+      CATask.speedupEvolving(l10n),
+      CATask.speedupBuilding(l10n),
+    ];
   }
 
   static List<CATask> sunday4(AppLocalizations l10n) {
-    return [];
+    return [
+      CATask.evolutionPower(l10n),
+      CATask.speedupEvolving(l10n),
+      ...CATask.insectTasksGroup(l10n),
+    ];
   }
 
   static List<CATask> sunday5(AppLocalizations l10n) {
-    return [];
+    return [
+      CATask.speedupAny(l10n),
+    ];
   }
 
   static List<CATask> sunday6(AppLocalizations l10n) {
-    return [];
+    return [
+      CATask.speedupHatchingSoldiers(l10n),
+      ...CATask.insectTasksGroup(l10n),
+    ];
   }
 
   static List<CATask> sunday7(AppLocalizations l10n) {
-    return [];
+    return [
+      CATask.buildingPower(l10n),
+      CATask.evolutionPower(l10n),
+      CATask.speedupHatchingSoldiers(l10n),
+    ];
   }
 
   static List<CATask> sunday8(AppLocalizations l10n) {
-    return [];
+    return [
+      CATask.evolutionPower(l10n),
+      ...CATask.insectTasksGroup(l10n),
+    ];
   }
 }

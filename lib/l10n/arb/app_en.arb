@@ -148,7 +148,19 @@
       }
     }
   },
-  "caTask": "",
+  "caTaskHatchInsect": "Hatch 1 Insect",
+  "caTaskMakeInsectFodder": "Make 1 Insect Fodder",
+  "caTaskUseInsectFodder": "Use 1 Insect Fodder",
+  "caTaskButcherInsect": "Get 1 Insect Shell by Butchering insects",
+  "caTaskUseInsectShell": "Use 1 Insect Shell",
+  "caTaskStarUpInsect": "Star Up any Insect to {star}-Star",
+  "@caTaskStarUpInsect": {
+    "placeholders": {
+      "star": {
+        "type": "int"
+      }
+    }
+  },
   "notificationTestTitle": "Ants Companion",
   "notificationTestBody": "Test notification",
   "notificationTestButtonLabel": "Test Notification",
