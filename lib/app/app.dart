@@ -2,6 +2,7 @@ import 'package:ants_companion/bootstrap/router.dart';
 import 'package:ants_companion/common/theme/dark_color_scheme.dart';
 import 'package:ants_companion/common/theme/light_color_scheme.dart';
 import 'package:ants_companion/core/snackbar_service.dart';
+import 'package:ants_companion/ui/draggable_scroll_configuration.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      scrollBehavior: DraggableScrollBehavior(),
       key: const ValueKey('antsApp'),
       debugShowCheckedModeBanner: false,
       scaffoldMessengerKey: SnackbarService().scaffoldMessengerKey,

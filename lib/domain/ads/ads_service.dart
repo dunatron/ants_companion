@@ -80,6 +80,9 @@ class AdsService {
   }
 
   Future<void> initialize() async {
+    if (!platformSupportsAds) {
+      return;
+    }
     logger.d('Initializing Ad service');
     if (_initialized) {
       logger.d('Ads have already been initialized');
