@@ -50,3 +50,14 @@ The different languages we will support
 - Macedonian(mk)
 - Japanese(ja)
 - Chinese(zh)
+
+## Android Play Store
+
+- [google play console](https://play.google.com/console/u)
+
+## Android play store compliance
+
+- [Developer Content Policy](https://play.google/developer-content-policy/)
+- [App Bundle](https://developer.android.com/guide/app-bundle)
+- [Play App Signing Terms](https://play.google/play-app-signing-terms/)
+- [Play App Signing](https://support.google.com/googleplay/android-developer/answer/9842756?hl=en)
