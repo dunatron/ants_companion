@@ -2,7 +2,7 @@ import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/core/log/loggers.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 
-import 'package:ants_companion/ui/ants/ant_card/ant_card_2.dart';
+import 'package:ants_companion/ui/ants/ant_card/ant_card.dart';
 import 'package:ants_companion/ui/draggable_scroll_configuration.dart';
 
 import 'package:flutter/material.dart';
@@ -143,9 +143,7 @@ class _AntsCarouselState extends State<AntsCarousel>
                   },
                   children: List<Widget>.generate(
                     widget.ants.length,
-                    (int index) => AntCard2(
-                      ant: widget.ants[index],
-                    ),
+                    (int index) => AntCard(ant: widget.ants[index]),
                   ),
                 );
               },

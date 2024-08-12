@@ -38,7 +38,7 @@ class ColonyActionDetailsScreen extends StatelessWidget {
 
               return ListTile(
                 title: Text(task.title),
-                subtitle: Text(task.points.toString()),
+                subtitle: Text(numberFormat.format(task.points)),
               );
             },
           ),

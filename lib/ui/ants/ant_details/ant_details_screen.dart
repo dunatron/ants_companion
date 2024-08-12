@@ -18,19 +18,7 @@ class AntDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScrollView(
       controller: scrollController,
-      slivers: [
-        SliverToBoxAdapter(
-          child: AntDetails(ant: ant),
-        ),
-        // SliverList.builder(
-        //   itemCount: 100,
-        //   itemBuilder: (context, index) {
-        //     return ListTile(
-        //       title: Text('Index: $index'),
-        //     );
-        //   },
-        // )
-      ],
+      slivers: [SliverToBoxAdapter(child: AntDetails(ant: ant))],
     );
   }
 }

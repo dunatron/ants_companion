@@ -8,6 +8,8 @@ import 'package:intl/intl.dart';
 
 import 'package:flutter/material.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class SoldierAntsComparisonScreen extends StatefulWidget {
   const SoldierAntsComparisonScreen({super.key});
 
@@ -22,8 +24,11 @@ class _SoldierAntsComparisonScreenState
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final locale = AppLocalizations.of(context).localeName;
+
     NumberFormat numberFormat = NumberFormat.decimalPatternDigits(
-      locale: 'en_us',
+      locale: locale,
       decimalDigits: 2,
     );
 
@@ -40,43 +45,51 @@ class _SoldierAntsComparisonScreenState
 
     double attackPower = math.sqrt(ants) * carrier.attack * (1 + attackBonus);
 
+    String typeOnTypeText(SoldierType type1, SoldierType type2,
+        SoldierAnt soldier1, SoldierAnt soldier2) {
+      return '${l10n.typeOnType(
+        type1.displayName(l10n),
+        type2.displayName(l10n),
+      )} ${numberFormat.format(
+        SoldierAnt.lostPerNormalAttack(soldier1, soldier2),
+      )}';
+    }
+
     return PageLayout(
       title: 'Soldier Stats',
       widgets: [
         SizedBox(
           height: 50,
-          child: DraggableScrollConfiguration(
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: tiers.length,
-              itemBuilder: (context, index) {
-                final tier = tiers[index];
-                final isSelected = _selectedTier == tier;
-                return Padding(
-                  padding: const EdgeInsets.all(Spacing.s),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                        _selectedTier = tier;
-                      });
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: isSelected
-                          ? Theme.of(context).colorScheme.primary
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: tiers.length,
+            itemBuilder: (context, index) {
+              final tier = tiers[index];
+              final isSelected = _selectedTier == tier;
+              return Padding(
+                padding: const EdgeInsets.all(Spacing.s),
+                child: ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      _selectedTier = tier;
+                    });
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: isSelected
+                        ? Theme.of(context).colorScheme.primary
+                        : null,
+                  ),
+                  child: Text(
+                    tier.toString(),
+                    style: TextStyle(
+                      color: isSelected
+                          ? Theme.of(context).colorScheme.onPrimary
                           : null,
                     ),
-                    child: Text(
-                      tier.toString(),
-                      style: TextStyle(
-                        color: isSelected
-                            ? Theme.of(context).colorScheme.onPrimary
-                            : null,
-                      ),
-                    ),
                   ),
-                );
-              },
-            ),
+                ),
+              );
+            },
           ),
         ),
         Row(
@@ -90,34 +103,42 @@ class _SoldierAntsComparisonScreenState
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(numberFormat.format(
-                SoldierAnt.calculateDamage(5, guard.attack, guard.defense))),
-            Text(
-                'guard on guard: ${SoldierAnt.lostPerNormalAttack(guard, guard).toStringAsFixed(2)}'),
-            Text(
-                'guard on shooter: ${SoldierAnt.lostPerNormalAttack(guard, shooter).toStringAsFixed(2)}'),
-            Text(
-                'guard on carrier: ${SoldierAnt.lostPerNormalAttack(guard, carrier).toStringAsFixed(2)}'),
-            Text(
-                'shooter on guard: ${SoldierAnt.lostPerNormalAttack(shooter, guard).toStringAsFixed(2)}'),
-            Text(
-                'shooter on shooter: ${SoldierAnt.lostPerNormalAttack(shooter, shooter).toStringAsFixed(2)}'),
-            Text(
-                'shooter on carrier: ${SoldierAnt.lostPerNormalAttack(shooter, carrier).toStringAsFixed(2)}'),
-            Text(
-                'carrier on guard: ${SoldierAnt.lostPerNormalAttack(carrier, guard).toStringAsFixed(2)}'),
-            Text(
-                'carrier on shooter: ${SoldierAnt.lostPerNormalAttack(carrier, shooter).toStringAsFixed(2)}'),
-            Text(
-                'carrier on carrier: ${SoldierAnt.lostPerNormalAttack(carrier, carrier).toStringAsFixed(2)}'),
+            // Text(numberFormat.format(
+            //     SoldierAnt.calculateDamage(5, guard.attack, guard.defense))),
+            Text(typeOnTypeText(
+                SoldierType.guardian, SoldierType.guardian, guard, guard)),
+            Text(typeOnTypeText(
+                SoldierType.guardian, SoldierType.shooter, guard, shooter)),
+            Text(typeOnTypeText(
+                SoldierType.guardian, SoldierType.carrier, guard, carrier)),
+            Text(typeOnTypeText(
+                SoldierType.shooter, SoldierType.guardian, shooter, guard)),
+            Text(typeOnTypeText(
+                SoldierType.shooter, SoldierType.shooter, shooter, shooter)),
+            Text(typeOnTypeText(
+                SoldierType.shooter, SoldierType.carrier, shooter, carrier)),
+            Text(typeOnTypeText(
+                SoldierType.carrier, SoldierType.guardian, carrier, guard)),
+            Text(typeOnTypeText(
+                SoldierType.carrier, SoldierType.shooter, carrier, shooter)),
+            Text(typeOnTypeText(
+                SoldierType.carrier, SoldierType.carrier, carrier, carrier)),
             const SizedBox(height: 60),
-            const Text('Damage from a squad'),
+            Text(l10n.damageFromSquadLabel),
             Text(numberFormat.format(attackPower)),
           ],
         ),
       ],
     );
   }
+}
+
+extension on SoldierType {
+  String displayName(AppLocalizations l10n) => switch (this) {
+        SoldierType.guardian => l10n.antTypeGuardian,
+        SoldierType.shooter => l10n.antTypeShooter,
+        SoldierType.carrier => l10n.antTypeCarrier,
+      };
 }
 
 // refactor this code.

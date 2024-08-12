@@ -10,11 +10,41 @@ class LocaleSelector extends StatelessWidget {
   DropdownMenuItem<Locale> _buildMenuItem(
     Locale locale,
     AppLocalizations l10n,
+    TextTheme textTheme,
   ) =>
       DropdownMenuItem<Locale>(
         value: locale,
-        child: Text(locale.languageCode.localeName(l10n)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              locale.languageCode.localeName(l10n),
+              style: textTheme.bodyMedium?.copyWith(height: 1),
+            ),
+            Text(
+              ' | ',
+              style: textTheme.bodyLarge?.copyWith(height: 1),
+            ),
+            Text(
+              locale.languageCode.fixedLocaleName(),
+              style: textTheme.labelSmall?.copyWith(height: 1),
+            ),
+          ],
+        ),
       );
+  // DropdownMenuItem<Locale>(
+  //   value: locale,
+  //   child: Text(locale.languageCode.localeName(l10n)),
+  // );
+  // DropdownMenuItem<Locale>(
+  //   value: locale,
+  //   child: ListTile(
+  //     title: Text(
+  //       locale.languageCode.localeName(l10n),
+  //     ),
+  //     subtitle: Text('Subtitle'),
+  //   ),
+  // );
 
   // List<DropdownMenuItem<Locale>> _buildItems(List<Locale> locales) =>
   //     List<DropdownMenuItem<Locale>>.from(locales.map(_buildMenuItem));
@@ -22,9 +52,10 @@ class LocaleSelector extends StatelessWidget {
   List<DropdownMenuItem<Locale>> _buildItems(
     List<Locale> locales,
     AppLocalizations l10n,
+    TextTheme textTheme,
   ) =>
       List<DropdownMenuItem<Locale>>.from(locales.map(
-        (it) => _buildMenuItem(it, l10n),
+        (it) => _buildMenuItem(it, l10n, textTheme),
       ));
 
   @override
@@ -32,7 +63,9 @@ class LocaleSelector extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     final Locales locales = GetIt.I();
 
-    final items = _buildItems(locales.supportedLocales(), l10n);
+    final textTheme = Theme.of(context).textTheme;
+
+    final items = _buildItems(locales.supportedLocales(), l10n, textTheme);
 
     return StreamBuilder(
       stream: locales.currentLocale(),
@@ -41,7 +74,7 @@ class LocaleSelector extends StatelessWidget {
           return const Center(child: CircularProgressIndicator());
         }
         if (snapshot.hasError) {
-          return const Center(child: Text('Error loading locales'));
+          return Center(child: Text(l10n.localeSelectorError));
         }
         final currentLocale = snapshot.data;
 
@@ -70,6 +103,32 @@ extension on String {
         'ar' => l10n.arabic,
         'tr' => l10n.turkish,
         'de' => l10n.german,
+        'ja' => l10n.japanese,
+        'mk' => l10n.macedonian,
+        'ru' => l10n.russian,
+        'zh' => l10n.chinese,
+        'vi' => l10n.vietnamese,
+        _ => this,
+      };
+
+  String fixedLocaleName() => switch (this) {
+        'en' => 'English',
+        'fil' => 'Filipino',
+        'uk' => 'Українська', // Ukrainian in its native script
+        'it' => 'Italiano',
+        'es' => 'Español',
+        'bg' => 'Български', // Bulgarian in its native script
+        'hu' => 'Magyar',
+        'nl' => 'Nederlands',
+        'pl' => 'Polski',
+        'ar' => 'العربية', // Arabic in its native script
+        'tr' => 'Türkçe',
+        'de' => 'Deutsch',
+        'ja' => '日本語', // Japanese in its native script
+        'mk' => 'Македонски', // Macedonian in its native script
+        'ru' => 'Русский', // Russian in its native script
+        'zh' => '中文', // Chinese in its native script
+        'vi' => 'Tiếng Việt', // Vietnamese in its native script
         _ => this,
       };
 }

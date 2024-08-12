@@ -67,11 +67,6 @@ class AntDetails extends StatelessWidget {
           Section(
             child: Divider(color: Theme.of(context).colorScheme.primary),
           ),
-          // Section(
-          //     child: Text(
-          //   'Tier Ratings',
-          //   style: Theme.of(context).textTheme.titleLarge,
-          // )),
           Section(
             child: Column(
               children: [...tags.map((tag) => _TagDetails(tag: tag))],
