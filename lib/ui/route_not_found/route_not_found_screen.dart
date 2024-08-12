@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class RouteNotFoundScreen extends StatelessWidget {
   const RouteNotFoundScreen({super.key, required this.routePath});
@@ -8,18 +9,19 @@ class RouteNotFoundScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       body: SizedBox.expand(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Route not found'),
+            Text(l10n.routeNotFound),
             Text(routePath),
             ElevatedButton(
               onPressed: () {
                 context.go('/');
               },
-              child: const Text('Home'),
+              child: Text(l10n.home),
             )
           ],
         ),

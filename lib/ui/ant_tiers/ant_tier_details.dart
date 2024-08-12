@@ -128,7 +128,6 @@ class _TagDetails extends StatelessWidget {
                 constraints: const BoxConstraints(maxWidth: 300),
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  // color: selected ? Theme.of(context) : null,
                   border: selected
                       ? Border.all(
                           color: Theme.of(context).colorScheme.primary,
@@ -147,7 +146,7 @@ class _TagDetails extends StatelessWidget {
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      isPvpTag ? 'PVP' : 'PVE',
+                      isPvpTag ? l10n.pvpAbbreviation : l10n.pveAbbreviation,
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     const SizedBox(width: 8),

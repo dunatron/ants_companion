@@ -44,13 +44,13 @@ class ScientificClassificationsScreen extends StatelessWidget {
 
     // ScientificSubfamilyTranslationExtensions
     return PageLayout(
-      title: 'Classifications',
+      title: l10n.scientificClassificationsTitle,
       crossAxisAlignment: CrossAxisAlignment.start,
       constraints: const BoxConstraints(maxWidth: 800),
       widgets: [
         AttributeArea(
-          title: 'Family',
-          description: descriptions.family,
+          title: l10n.scientificFamily,
+          description: descriptions.family(l10n),
           antsWithAttribute: scientificClassifications.countAntsWithFamily(),
           totalAnts: totalAnts,
           items: ScientificFamily.values,
@@ -63,8 +63,8 @@ class ScientificClassificationsScreen extends StatelessWidget {
           nameItemBuilder: (item, index) => item.name,
         ),
         AttributeArea(
-          title: 'Sub Family',
-          description: descriptions.subfamily,
+          title: l10n.scientificSubfamily,
+          description: descriptions.subfamily(l10n),
           antsWithAttribute: scientificClassifications.countAntsWithSubfamily(),
           totalAnts: totalAnts,
           items: ScientificSubfamily.values,
@@ -77,8 +77,8 @@ class ScientificClassificationsScreen extends StatelessWidget {
           nameItemBuilder: (item, index) => item.name,
         ),
         AttributeArea(
-          title: 'Tribe',
-          description: descriptions.tribe,
+          title: l10n.scientificTribe,
+          description: descriptions.tribe(l10n),
           items: ScientificTribe.values,
           antsWithAttribute: scientificClassifications.countAntsWithTribe(),
           totalAnts: totalAnts,
@@ -91,8 +91,8 @@ class ScientificClassificationsScreen extends StatelessWidget {
           nameItemBuilder: (item, index) => item.name,
         ),
         AttributeArea(
-          title: 'Genus',
-          description: descriptions.genus,
+          title: l10n.scientificGenus,
+          description: descriptions.genus(l10n),
           items: ScientificGenus.values,
           antsWithAttribute: scientificClassifications.countAntsWithGenus(),
           totalAnts: totalAnts,
@@ -110,35 +110,23 @@ class ScientificClassificationsScreen extends StatelessWidget {
 }
 
 class AttributeDescriptions {
-  String get species =>
-      "The species name of the organism. This is the specific name used to "
-      "identify individual organisms within a genus. For example, "
-      "Formica rufa is the species name for the red wood ant.";
+  String speciesDescription(AppLocalizations l10n) =>
+      l10n.scientificSpeciesDescription;
 
-  String get domain =>
-      'The highest taxonomic rank used to classify living organisms. '
-      'All organisms are classified into one of the three domains: '
-      'Bacteria, Archaea, or Eukaryota. For most of our organisms, this '
-      'will be Eukaryota, which includes all complex life forms.';
+  String domain(AppLocalizations l10n) => l10n.scientificDomainDescription;
 
-  String get kingdom =>
-      'The taxonomic rank below the domain and above the phylum. Organisms are grouped into one of several kingdoms based on fundamental differences in their biology. In our classifications, this is typically Animalia for animals, which includes ants, wasps, and spiders.';
-  String get phylum =>
-      'A major taxonomic rank below the kingdom and above the class. Organisms within a phylum share a basic structural framework. For example, arthropods, which include ants and spiders, belong to the phylum Arthropoda.';
-  String get subphylum =>
-      'A taxonomic rank below the phylum and above the class. Subphyla represent more specific groupings within a phylum. For instance, the subphylum Chelicerata includes spiders and wasps, distinguishing them from other arthropods.';
-  String get classification =>
-      'A broad taxonomic rank that includes multiple orders within a phylum. This field encompasses the general classification of the organism, such as Insecta for insects.';
-  String get order =>
-      'A taxonomic rank below the class and above the family. Orders group organisms that are more closely related to each other. For example, the order Hymenoptera includes ants and wasps.';
-  String get infraorder =>
-      'A taxonomic rank below the order and above the family. Infraorders represent subgroups within an order that share more specific characteristics. For instance, the infraorder Myrmecina includes ants.';
-  String get family =>
-      'A taxonomic rank below the order and above the subfamily. Families group organisms that are even more closely related. For example, the family Formicidae consists of all ants.';
-  String get subfamily =>
-      'A taxonomic rank below the family and above the tribe. Subfamilies represent more specialized groupings within a family. For example, the subfamily Myrmicinae includes various types of ants.';
-  String get tribe =>
-      'A taxonomic rank below the subfamily and above the genus. Tribes group closely related organisms within a subfamily. For example, the tribe Formicini includes ants within the genus Formica.';
-  String get genus =>
-      'A taxonomic rank below the family and above the species. Genera group species that are closely related and share a common ancestor. For example, the genus Camponotum includes various species of carpenter ants.';
+  String kingdom(AppLocalizations l10n) => l10n.scientificKingdomDescription;
+  String phylum(AppLocalizations l10n) => l10n.scientificPhylumDescription;
+  String subphylum(AppLocalizations l10n) =>
+      l10n.scientificSubphylumDescription;
+  String classification(AppLocalizations l10n) =>
+      l10n.scientificClassificationDescription;
+  String order(AppLocalizations l10n) => l10n.scientificOrderDescription;
+  String infraorder(AppLocalizations l10n) =>
+      l10n.scientificInfraorderDescription;
+  String family(AppLocalizations l10n) => l10n.scientificFamilyDescription;
+  String subfamily(AppLocalizations l10n) =>
+      l10n.scientificSubfamilyDescription;
+  String tribe(AppLocalizations l10n) => l10n.scientificTribeDescription;
+  String genus(AppLocalizations l10n) => l10n.scientificGenusDescription;
 }

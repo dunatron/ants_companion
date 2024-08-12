@@ -33,7 +33,7 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Colony Action Scheduler'),
+            title: Text(l10n.colonyActionSchedulerTitle),
             onTap: () {
               context.go('/ca-scheduler');
               Navigator.pop(context);
@@ -41,7 +41,7 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Scientific Classifications'),
+            title: Text(l10n.scientificClassificationsTitle),
             onTap: () {
               context.go('/scientific-classifications');
               Navigator.pop(context);
@@ -49,7 +49,7 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('Soldier Comparison'),
+            title: Text(l10n.soldierStatsTitle),
             onTap: () {
               context.go('/soldier-ants-comparison');
               Navigator.pop(context);

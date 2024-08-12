@@ -24,6 +24,10 @@ We can the run the translate package
 arb_translate
 ```
 
+## Gemini console
+
+[Gemini Console](https://aistudio.google.com/)
+
 ## l10n
 
 The different languages we will support

@@ -10,7 +10,7 @@ class AntProfileImage extends StatelessWidget {
 
   final String imagePath;
   final double radius;
-  final VoidCallback? onTap; // Optional callback for tap events
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {

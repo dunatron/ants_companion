@@ -12,7 +12,6 @@ import 'package:ants_companion/ui/home/notifications_feature_info.dart';
 import 'package:ants_companion/ui/home/scientific_classifications_feature_info.dart';
 import 'package:ants_companion/ui/home/soldier_ants_comparison_feature_info.dart';
 import 'package:ants_companion/ui/home/welcome_info.dart';
-import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
 import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
 
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
@@ -125,20 +124,6 @@ class HomeScreen extends StatelessWidget {
           ants: ants,
         ),
       );
-
-  ConstrainedSliverWidth _buildAntsTierFeatureInfo() {
-    return const ConstrainedSliverWidth(
-      maxWidth: 500,
-      child: SliverPadding(
-        padding: EdgeInsets.symmetric(
-          horizontal: Spacing.l,
-        ),
-        sliver: SliverToBoxAdapter(
-          child: AntsTierFeatureInfo(),
-        ),
-      ),
-    );
-  }
 
   Widget _buildAdsCarousel() {
     if (AdsService.enabled) {
