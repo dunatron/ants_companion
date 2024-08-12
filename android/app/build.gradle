@@ -5,22 +5,10 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
-def localProperties = new Properties()
-def localPropertiesFile = rootProject.file("local.properties")
-if (localPropertiesFile.exists()) {
-    localPropertiesFile.withReader("UTF-8") { reader ->
-        localProperties.load(reader)
-    }
-}
-
-def flutterVersionCode = localProperties.getProperty("flutter.versionCode")
-if (flutterVersionCode == null) {
-    flutterVersionCode = "1"
-}
-
-def flutterVersionName = localProperties.getProperty("flutter.versionName")
-if (flutterVersionName == null) {
-    flutterVersionName = "1.0"
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 
 android {
@@ -35,31 +23,61 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
     defaultConfig {
-        
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.ants_companion"
         // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
+        // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = flutterVersionCode.toInteger()
-        versionName = flutterVersionName
         // Notifications: added for notifications
         multiDexEnabled true
+        versionCode = flutter.versionCode.toInteger()
+        versionName = flutter.versionName
     }
 
     buildTypes {
         release {
+            // Specifies the signing configuration for release builds. Signing configurations are used to sign APKs or app bundles.
+            // It uses the release signing configuration defined in the signingConfigs block. 
+            // This is important for distributing your app to users via app stores or other methods.
+            signingConfig signingConfigs.release
+            // Enables code shrinking and obfuscation for release builds. When set to true, 
+            // this option enables ProGuard or R8 to remove unused code and optimize the app, 
+            // which can reduce the size of the APK and improve performance. 
+            // It also obfuscates code to make it harder to reverse-engineer.
+            minifyEnabled true
+            // Specifies the ProGuard configuration files to use for code shrinking and obfuscation. 
+            // getDefaultProguardFile('proguard-android.txt') refers to a default ProGuard configuration file 
+            // that comes with the Android SDK. 
+            // You can customize ProGuard rules by adding additional configuration files if needed
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+            // Note: x86 is excluded as it's not supported by Flutter, meaning the build will not include native libraries for this architecture.
+            ndk {
+                abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64'
+            }
+        }
+        debug {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.debug
+            // signingConfig = signingConfigs.debug
+            signingConfig signingConfigs.debug
         }
     }
-    
 }
-
-
 
 flutter {
     source = "../.."
