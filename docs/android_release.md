@@ -119,3 +119,9 @@ buildTypes {
     }
   }
 ```
+
+You might need to run `flutter clean` after changing the gradle file. This prevents cached builds from affecting the signing process.
+
+```bash
+flutter build appbundle
+```
