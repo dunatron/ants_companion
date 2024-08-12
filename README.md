@@ -51,6 +51,10 @@ The different languages we will support
 - Japanese(ja)
 - Chinese(zh)
 
+## Generate Icons for launcher
+
+[App Icon](https://www.appicon.co/)
+
 ## Android Play Store
 
 - [google play console](https://play.google.com/console/u)
@@ -61,3 +65,32 @@ The different languages we will support
 - [App Bundle](https://developer.android.com/guide/app-bundle)
 - [Play App Signing Terms](https://play.google/play-app-signing-terms/)
 - [Play App Signing](https://support.google.com/googleplay/android-developer/answer/9842756?hl=en)
+
+## Play store beta release
+
+- 20 testers opted in for at least 14 days
+
+#### Requirements
+
+1. **Android app build file and app signing key**
+   - Android uses two signing keys: upload and app signing.
+   - [flutter release android](https://docs.flutter.dev/deployment/android)
+   - [android official play store documentation](https://support.google.com/googleplay/android-developer/answer/9842756?hl=en&visit_id=638590377975321919-1281253226&rd=1)
+2. **App name**
+   - Ants Companion
+3. **Short description**
+4. **Full Description**
+   - Ants Companion app is used as a guide to help users get the most out of "The Ants: Underground Kingdom"
+   - Very useful to help know what the strongest ants are for different situations and what lineups you should use
+   - Main Features
+   - Ant Tier Ratings
+   - Colony Action Scheduler
+   - Scientific Information
+   - Soldier Stats Comparison
+   - Strongest lineups
+5. App Icon
+6. Feature Graphic
+7. Video (Optional)
+8. App screenshots (Phone/Tablet)
+9. Privacy Policy
+10. 20 testers for closed testing for 14 days opted in
