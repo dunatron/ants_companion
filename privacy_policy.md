@@ -1,10 +1,10 @@
 # Privacy Policy
 
-**Effective Date:** [Date]
+**Effective Date:** 12th August 2024
 
 ## 1. Introduction
 
-Welcome to [App Name]! We are committed to protecting your privacy. This Privacy Policy explains how we handle and protect any information we don’t collect from you. As our app does not collect any personal data or require any sign-in, we do not store or process any of your personal information.
+Welcome to The Ant Companion! We are committed to protecting your privacy. This Privacy Policy explains how we handle and protect any information we don’t collect from you. As our app does not collect any personal data or require any sign-in, we do not store or process any of your personal information.
 
 ## 2. Information We Do Not Collect
 
@@ -31,7 +31,7 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 
 ## 7. Contact Us
 
-If you have any questions or concerns about this Privacy Policy, please contact us at [Contact Information].
+If you have any questions or concerns about this Privacy Policy, please contact us at antscompanion@gmail.com.
 
 ## 8. Children's Privacy
 
