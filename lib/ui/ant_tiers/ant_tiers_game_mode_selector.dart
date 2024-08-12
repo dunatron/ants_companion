@@ -1,3 +1,4 @@
+import 'package:ants_companion/common/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -16,7 +17,7 @@ class AntTiersGameModeSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+      padding: const EdgeInsets.all(Spacing.l),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -35,7 +36,7 @@ class AntTiersGameModeSelector extends StatelessWidget {
             onPressed: () => onChange(false),
             child: Text(l10n.pveAbbreviation),
           ),
-          const SizedBox(width: 16),
+          const SizedBox(width: Spacing.l),
           ElevatedButton(
             style: ButtonStyle(
                 foregroundColor: pvpSelected

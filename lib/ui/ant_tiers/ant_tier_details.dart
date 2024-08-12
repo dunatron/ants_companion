@@ -50,7 +50,7 @@ class _AntTierDetailsState extends State<AntTierDetails> {
             ),
           Section(
             child: Text(
-              '${isPvpTag ? 'PVP' : 'PVE'} ${selectedTag.antType.displayText(l10n)}',
+              '${isPvpTag ? l10n.pvpAbbreviation : l10n.pveAbbreviation} ${selectedTag.antType.displayText(l10n)}',
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),

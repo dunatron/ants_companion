@@ -1,4 +1,5 @@
 import 'package:ants_companion/common/spacing.dart';
+import 'package:ants_companion/core/log/loggers.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 
 import 'package:ants_companion/ui/ants/ant_card/ant_card_2.dart';
@@ -27,20 +28,31 @@ class AntsCarousel extends StatefulWidget {
 
 class _AntsCarouselState extends State<AntsCarousel>
     with WidgetsBindingObserver {
+  final logger = appLogger(AntsCarousel);
   late CarouselController _carouselController;
 
   double availableItemWidth = 400;
 
-  void goToIndex(final int pageIndex) => _carouselController.animateTo(
-        pageIndex * 400,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeIn,
-      );
+  double initialWidth = 400;
+
+  int currentItemIndex = 0;
+
+  void goToIndex(final int pageIndex) {
+    logger.d('go to index: $pageIndex');
+    logger.d('carousel offset: ${_carouselController.offset}');
+
+    currentItemIndex = pageIndex;
+
+    _carouselController.animateTo(
+      (pageIndex * availableItemWidth),
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeIn,
+    );
+  }
 
   @override
   void initState() {
-    WidgetsBinding.instance.addObserver(this);
-
+    // WidgetsBinding.instance.addObserver(this);
     _initializePageController();
 
     super.initState();
@@ -50,6 +62,21 @@ class _AntsCarouselState extends State<AntsCarousel>
   Size get screenSize => MediaQuery.of(context).size;
 
   void _initializePageController() {
+    _carouselController = CarouselController(initialItem: 0);
+    _carouselController.addListener(() {
+      // final d = (_carouselController.offset / availableItemWidth).ceil();
+      // currentItemIndex = d;
+      Scrollable.ensureVisible(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+        antsCarouselKey.currentContext!,
+      );
+    });
+  }
+
+  void _resetController() {
+    _carouselController.dispose();
+
     _carouselController = CarouselController(initialItem: 0);
     _carouselController.addListener(() {
       Scrollable.ensureVisible(
@@ -63,7 +90,6 @@ class _AntsCarouselState extends State<AntsCarousel>
   @override
   void dispose() {
     _carouselController.dispose();
-    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
@@ -85,15 +111,30 @@ class _AntsCarouselState extends State<AntsCarousel>
             constraints: const BoxConstraints(maxHeight: height),
             child: LayoutBuilder(
               builder: (context, constraints) {
+                logger.d('maxWidth: ${constraints.maxWidth}');
+
+                // very hacky for another broken flutter widget
                 if (constraints.maxWidth < 400) {
                   availableItemWidth = constraints.maxWidth;
+                } else {
+                  availableItemWidth = 400;
+                }
+                if (initialWidth != constraints.maxWidth) {
+                  initialWidth = constraints.maxWidth;
+
+                  if (_carouselController.hasClients) {
+                    logger.d(currentItemIndex);
+                    goToIndex(currentItemIndex);
+                  }
+                  _resetController();
                 }
 
                 return CarouselView(
                   controller: _carouselController,
                   itemSnapping: true,
-                  itemExtent: 400,
-                  shrinkExtent: 240,
+                  itemExtent: availableItemWidth,
+                  shrinkExtent:
+                      constraints.maxWidth < 240 ? constraints.maxWidth : 240,
                   shape: Border.all(width: 2, color: Colors.transparent),
                   padding: const EdgeInsets.all(8),
                   onTap: (index) {
@@ -102,7 +143,9 @@ class _AntsCarouselState extends State<AntsCarousel>
                   },
                   children: List<Widget>.generate(
                     widget.ants.length,
-                    (int index) => AntCard2(ant: widget.ants[index]),
+                    (int index) => AntCard2(
+                      ant: widget.ants[index],
+                    ),
                   ),
                 );
               },
