@@ -1,4 +1,5 @@
 import 'package:ants_companion/ui/modal_single_page_view.dart';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -25,12 +26,16 @@ class BottomSheetModal extends StatelessWidget {
 
   final Widget child;
 
+  static bool get scrollsNormally =>
+      defaultTargetPlatform == TargetPlatform.android ||
+      defaultTargetPlatform == TargetPlatform.iOS;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: DraggableScrollableSheet(
         maxChildSize: 1,
-        initialChildSize: kIsWeb ? 0.8 : 0.5,
+        initialChildSize: scrollsNormally ? 0.5 : 1,
         expand: false,
         builder: (
           BuildContext context,
