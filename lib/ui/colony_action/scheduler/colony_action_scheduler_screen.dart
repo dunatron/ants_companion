@@ -157,7 +157,7 @@ class _ColonyActionSchedulerScreenState
                           children: <TextSpan>[
                             TextSpan(
                                 text: '${item.date.toUtc().hour} UTC',
-                                style: TextStyle(fontWeight: FontWeight.w400)),
+                                style: const TextStyle(fontWeight: FontWeight.w400)),
                           ],
                         ),
                       ),

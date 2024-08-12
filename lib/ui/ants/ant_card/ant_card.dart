@@ -109,7 +109,7 @@ class AntCard extends StatelessWidget {
               style: Theme.of(context).textTheme.labelSmall,
               textAlign: TextAlign.end,
             ),
-            Text(
+            const Text(
               // ant.topPveRating().displayText,
               'F',
               // style: Theme.of(context)

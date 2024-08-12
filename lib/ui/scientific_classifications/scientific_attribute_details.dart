@@ -32,11 +32,11 @@ class ScientificAttributeDetails extends StatelessWidget {
           children: [
             ...ants.map(
               (it) => Container(
-                padding: EdgeInsets.all(Spacing.n),
+                padding: const EdgeInsets.all(Spacing.n),
                 child: Column(
                   children: [
                     AntProfileImage(imagePath: it.profilePath),
-                    SizedBox(
+                    const SizedBox(
                       height: Spacing.n,
                     ),
                     Text(

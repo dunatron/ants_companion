@@ -11,12 +11,12 @@ class AntsTierFeatureInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     return Container(
-      constraints: BoxConstraints(maxWidth: 400),
+      constraints: const BoxConstraints(maxWidth: 400),
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(Spacing.l),
           child: Container(
-            constraints: BoxConstraints(maxWidth: 400),
+            constraints: const BoxConstraints(maxWidth: 400),
             child: Column(
               children: [
                 Text(

@@ -1,4 +1,3 @@
-import 'package:ants_companion/app/app.dart';
 import 'package:ants_companion/app/app_locale_provider.dart';
 import 'package:ants_companion/bootstrap/bootstrap.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';

@@ -29,7 +29,6 @@ class AntsSliverAppBar extends StatelessWidget {
 
 class _TitleWithBackButton extends StatelessWidget {
   const _TitleWithBackButton({
-    super.key,
     required this.title,
   });
 

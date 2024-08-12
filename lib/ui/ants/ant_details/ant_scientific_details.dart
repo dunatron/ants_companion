@@ -1,5 +1,4 @@
 import 'package:ants_companion/domain/ants/models/ant_scientific_classification.dart';
-import 'package:ants_companion/ui/scientific_classifications/scientific_subfamily_extension.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';

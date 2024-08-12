@@ -46,7 +46,7 @@ class ScientificClassificationsScreen extends StatelessWidget {
     return PageLayout(
       title: 'Classifications',
       crossAxisAlignment: CrossAxisAlignment.start,
-      constraints: BoxConstraints(maxWidth: 800),
+      constraints: const BoxConstraints(maxWidth: 800),
       widgets: [
         AttributeArea(
           title: 'Family',
