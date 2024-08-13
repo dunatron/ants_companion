@@ -8,13 +8,13 @@ import 'package:ants_companion/ui/soldier_ants/soldier_ants_comparison_screen.da
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-GoRouter routerConfig() => GoRouter(
-      initialLocation: '/',
-      errorBuilder: (context, state) => RouteNotFoundScreen(
-        routePath: state.fullPath ?? 'fff',
-      ),
-      routes: routes,
-    );
+final GoRouter routerConfig = GoRouter(
+  initialLocation: '/',
+  errorBuilder: (context, state) => RouteNotFoundScreen(
+    routePath: state.fullPath ?? 'fff',
+  ),
+  routes: routes,
+);
 
 final routes = <RouteBase>[
   GoRoute(
