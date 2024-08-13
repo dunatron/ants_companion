@@ -79,6 +79,8 @@ class LocalNotifications {
       onDidReceiveNotificationResponse: onNotificationTap,
       onDidReceiveBackgroundNotificationResponse: notificationTapBackground,
     );
+
+    didNotificationLaunchApp();
   }
 
   static Future<List<PendingNotificationRequest>> pendingNotifications() async {
@@ -280,5 +282,18 @@ class LocalNotifications {
         ?.areNotificationsEnabled();
 
     return enabled ?? true;
+  }
+
+  static Future<void> didNotificationLaunchApp() async {
+    final details = await _flutterLocalNotificationsPlugin
+        .getNotificationAppLaunchDetails();
+
+    if (details != null) {
+      final didNotificationLaunchApp = details.didNotificationLaunchApp;
+      if (didNotificationLaunchApp) {
+        // ExternalAppLauncher.launchAntsUndergroundKingdom();
+        onClickNotification.add(details.notificationResponse!.payload!);
+      }
+    }
   }
 }

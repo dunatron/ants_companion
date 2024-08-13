@@ -27,7 +27,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final upgrader = Upgrader(debugDisplayAlways: true);
+    final upgrader = Upgrader(debugDisplayAlways: false);
     return MaterialApp.router(
       scrollBehavior: DraggableScrollBehavior(),
       key: const ValueKey('antsApp'),

@@ -114,8 +114,8 @@ class _ColonyActionSchedulerScreenState
                 LocalNotifications.showSimpleNotification(
                   title: l10n.notificationTestTitle,
                   body: l10n.notificationTestBody,
-                  payload: '',
-                  // payload: '/ca-scheduler/1-12',
+                  // payload: '',
+                  payload: '/ca-scheduler/1-12',
                 );
               },
               child: Text(l10n.notificationTestButtonLabel),
