@@ -2,6 +2,8 @@ import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/ants.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
+import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
+import 'package:ants_companion/domain/notifications/local_notifications.dart';
 import 'package:ants_companion/ui/ads/ads_carousel.dart';
 import 'package:ants_companion/ui/ants/ant_details/ant_details.dart';
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
@@ -15,6 +17,7 @@ import 'package:ants_companion/ui/home/welcome_info.dart';
 import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
 
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
+import 'package:external_app_launcher/external_app_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -24,18 +27,31 @@ class HomeScreen extends StatelessWidget {
   _launchAntDetails(final Ant ant, BuildContext context) =>
       buildBottomSheetModal(context, AntDetails(ant: ant));
 
+  Future<void> checkIfLaunchedFromNotification() async {
+    LocalNotifications.didNotificationLaunchApp();
+  }
+
   @override
   Widget build(BuildContext context) {
     final scrollController = ScrollController();
     final antsList = Ants.antsList();
 
     final l10n = AppLocalizations.of(context);
+    checkIfLaunchedFromNotification();
 
     return NotificationTappedProvider(
       child: SliverPageLayout(
         controller: scrollController,
         title: l10n.appTitle,
         slivers: [
+          if (ExternalAppLauncher.platformCanOpenApps)
+            SliverToBoxAdapter(
+              child: ElevatedButton(
+                onPressed: () =>
+                    ExternalAppLauncher.launchAntsUndergroundKingdom(),
+                child: Text('Launch Ants App'),
+              ),
+            ),
           _buildBanner(context),
           _buildSpace(),
           _buildWelcome(),

@@ -1,5 +1,8 @@
+import 'dart:async';
 import 'dart:io';
 
+import 'package:ants_companion/domain/ads/ads_service.dart';
+import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
 import 'package:ants_companion/domain/notifications/notification_channels.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -42,11 +45,15 @@ class LocalNotifications {
 
   static final onClickNotification = BehaviorSubject<String>();
 
+  static final launchUndergroundKingdomCountdown = BehaviorSubject<int>();
+
   // on tap any notification
   static void onNotificationTap(
     NotificationResponse notificationResponse,
   ) {
+    // ExternalAppLauncher.launchAntsUndergroundKingdom();
     onClickNotification.add(notificationResponse.payload!);
+    pushIntsEverySecond();
   }
 
   /// Initialize the local notifications plugin.
@@ -79,6 +86,8 @@ class LocalNotifications {
       onDidReceiveNotificationResponse: onNotificationTap,
       onDidReceiveBackgroundNotificationResponse: notificationTapBackground,
     );
+
+    // pushIntsEverySecond();
   }
 
   static Future<List<PendingNotificationRequest>> pendingNotifications() async {
@@ -280,5 +289,39 @@ class LocalNotifications {
         ?.areNotificationsEnabled();
 
     return enabled ?? true;
+  }
+
+  static Future<void> didNotificationLaunchApp() async {
+    final details = await _flutterLocalNotificationsPlugin
+        .getNotificationAppLaunchDetails();
+
+    if (details != null) {
+      final didNotificationLaunchApp = details.didNotificationLaunchApp;
+      if (didNotificationLaunchApp) {
+        // ExternalAppLauncher.launchAntsUndergroundKingdom();
+        pushIntsEverySecond();
+        onClickNotification.add(details.notificationResponse!.payload!);
+      }
+    }
+  }
+
+  static void pushIntsEverySecond() {
+    int counter = 5;
+
+    Timer.periodic(const Duration(seconds: 1), (timer) {
+      // launchUndergroundKingdomCountdown.add(counter);
+      // counter++;
+      // print(counter);
+      // launchUndergroundKingdomCountdown.onPause();
+      if (counter == 0) {
+        launchUndergroundKingdomCountdown.add(counter);
+        timer.cancel(); // Stop the timer after 5 seconds
+        launchUndergroundKingdomCountdown.close();
+      } else {
+        launchUndergroundKingdomCountdown
+            .add(counter); // Push the current integer to the subject
+        counter--;
+      }
+    });
   }
 }
