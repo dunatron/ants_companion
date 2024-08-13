@@ -68,9 +68,9 @@ class AdsService {
   bool _initialized = false;
 
   // retry forever
-  final int maxRetryAttempts = double.maxFinite.toInt();
-  // final int maxRetryAttempts = 30;
-  Duration retryDelay = const Duration(seconds: 10);
+  // final int maxRetryAttempts = double.maxFinite.toInt();
+  final int maxRetryAttempts = 3;
+  Duration retryDelay = const Duration(seconds: 20);
 
   // If retryDelay is less than 5 minutes, bump it by 10 seconds
   _increaseRetryDelay() {
