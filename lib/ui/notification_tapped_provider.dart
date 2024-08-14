@@ -1,5 +1,5 @@
+import 'package:ants_companion/core/log/loggers.dart';
 import 'package:ants_companion/core/snackbar_service.dart';
-import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
 import 'package:ants_companion/domain/notifications/local_notifications.dart';
 
 import 'package:flutter/material.dart';
@@ -17,6 +17,8 @@ class NotificationTappedProvider extends StatefulWidget {
 
 class _NotificationTappedProviderState
     extends State<NotificationTappedProvider> {
+  final logger = appLogger(NotificationTappedProvider);
+
   @override
   void initState() {
     super.initState();
@@ -29,9 +31,9 @@ class _NotificationTappedProviderState
   }
 
   listenToNotifications() {
-    print('Listening to notifications');
+    logger.d('Listening to notifications');
     LocalNotifications.onClickNotification.stream.listen((event) async {
-      print('Received Notification $event');
+      logger.d('Received Notification $event');
       if (event.isNotEmpty) {
         if (event.contains('/ca-scheduler')) {
           _handleColonyActionNotificationPayload(event);

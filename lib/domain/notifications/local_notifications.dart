@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:ants_companion/core/log/loggers.dart';
 import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
 import 'package:ants_companion/domain/notifications/notification_channels.dart';
 import 'package:flutter/foundation.dart';
@@ -10,17 +11,20 @@ import 'package:rxdart/subjects.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
+final notificationsLogger = appLogger(LocalNotifications);
+
 // import 'package:flutter_timezone/flutter_timezone.dart';
 
 @pragma('vm:entry-point')
 void notificationTapBackground(NotificationResponse notificationResponse) {
   // ignore: avoid_print
-  print('notification(${notificationResponse.id}) action tapped: '
-      '${notificationResponse.actionId} with'
-      ' payload: ${notificationResponse.payload}');
+  notificationsLogger
+      .d('notification(${notificationResponse.id}) action tapped: '
+          '${notificationResponse.actionId} with'
+          ' payload: ${notificationResponse.payload}');
   if (notificationResponse.input?.isNotEmpty ?? false) {
     // ignore: avoid_print
-    print(
+    notificationsLogger.d(
         'notification action tapped with input: ${notificationResponse.input}');
   }
 }
@@ -62,7 +66,8 @@ class LocalNotifications {
 
     final initializationSettingsDarwin = DarwinInitializationSettings(
       onDidReceiveLocalNotification: (id, title, body, payload) {
-        print('DarwinInitializationSettings: onDidReceiveLocalNotification');
+        notificationsLogger
+            .d('DarwinInitializationSettings: onDidReceiveLocalNotification');
       },
     );
     const initializationSettingsLinux =

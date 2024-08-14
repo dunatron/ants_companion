@@ -84,6 +84,7 @@ class ColonyActionNotificationDetails extends StatelessWidget {
             Text('${colonyAction.hour} UTC'),
             IconButton(
               onPressed: () {
+                // ToDo: must schedule a notification
                 _colonyActions.updateColonyAction(
                   colonyAction.copyWith(
                     notificationEnabled: !colonyAction.notificationEnabled,

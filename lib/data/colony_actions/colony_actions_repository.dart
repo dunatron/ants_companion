@@ -32,11 +32,11 @@ class ColonyActionsRepository implements ColonyActionsProvider {
   Stream<List<ColonyAction>> weeklyList() => _weeklyListSubject.stream;
 
   @override
-  Stream<ColonyAction?> byKey(String key) => _weeklyListSubject.stream
+  Stream<ColonyAction?> byKey(final String key) => _weeklyListSubject.stream
       .map((it) => it.firstWhere((ca) => ca.key == key));
 
   @override
-  Future<void> updateColonyAction(ColonyAction item) async {
+  Future<void> updateColonyAction(final ColonyAction item) async {
     await _datasource.updateColonyAction(item);
     final currentList = _weeklyListSubject.value;
 

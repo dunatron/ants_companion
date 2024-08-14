@@ -56,9 +56,10 @@ class SnackbarService {
 
       if (remainingSeconds <= 0) {
         subject.add(remainingSeconds);
-        timer.cancel();
+
         ExternalAppLauncher.launchAntsUndergroundKingdom();
         hideCurrent();
+        timer.cancel();
       } else {
         subject.add(remainingSeconds);
       }
@@ -125,7 +126,12 @@ class SnackbarService {
       ),
     );
     // Ensure the BehaviorSubject is closed after Snackbar duration
-    Future.delayed(duration, () => closeSubject());
+    Future.delayed(
+      /// the extra 3 seconds is so we don't have a race condition
+      /// and accidentally close it too early
+      Duration(seconds: duration.inSeconds + 3),
+      () => closeSubject(),
+    );
   }
 }
 

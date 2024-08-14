@@ -170,7 +170,7 @@ class _ColonyActionSchedulerScreenState
                       ),
                       trailing: Checkbox(
                         value: item.notificationEnabled,
-                        onChanged: (v) async {
+                        onChanged: (final v) async {
                           final can = await Haptics.canVibrate();
                           // Vibrate only if device is capable of haptic feedback
                           if (can) {
@@ -184,6 +184,7 @@ class _ColonyActionSchedulerScreenState
                               body: caName,
                               payload: '/ca-scheduler/${item.key}',
                               date: item.date,
+                              // date: DateTime.now().add(Duration(seconds: 5)),
                             );
                           } else {
                             await LocalNotifications.cancelNotificationChannel(
