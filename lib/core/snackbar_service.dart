@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +37,6 @@ class SnackbarService {
   }
 
   void showOpenAntsSnackbar() {
-    SnackbarType type = SnackbarType.info;
     Duration duration = const Duration(seconds: 5);
     int remainingSeconds = duration.inSeconds;
 
@@ -73,10 +74,10 @@ class SnackbarService {
         content: StreamBuilder(
           stream: subject.stream,
           builder: (context, snapshot) {
+            final l10n = AppLocalizations.of(context);
             final data = snapshot.data;
             final snackBarTheme = Theme.of(context).snackBarTheme;
 
-            // final countdownText = data == null ? '${data ?? 5}';
             final countdownText = switch (data) {
               0 => 'GO',
               int() => data.toString(),
@@ -86,17 +87,9 @@ class SnackbarService {
             return Row(
               children: [
                 Expanded(
-                  child: Text(
-                    // 'Opening Ants Underground Kingdom',
-                    'Launching Game',
-                    // style: TextStyle(
-                    //   fontSize: Theme.of(context).textTheme.displaySmall?.fontSize,
-                    // ),
-                  ),
+                  child: Text(l10n.launchGame),
                 ),
-                SizedBox(
-                  width: 16,
-                ),
+                const SizedBox(width: Spacing.l),
                 Text(
                   countdownText,
                   style: TextStyle(
@@ -107,13 +100,6 @@ class SnackbarService {
                 )
               ],
             );
-
-            // return Text(
-            //   'Opening Ants Underground Kingdom in - ${data ?? 5}',
-            //   // style: TextStyle(
-            //   //   fontSize: Theme.of(context).textTheme.displaySmall?.fontSize,
-            //   // ),
-            // );
           },
         ),
         action: SnackBarAction(
