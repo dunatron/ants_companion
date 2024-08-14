@@ -50,7 +50,7 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<!-- Allows opening of the ants the underground kingdom -->
-    	<string>line3rdp.com.allstarunion.ta.ios</string>
+		<string>line3rdp.com.allstarunion.ta.ios</string>
 	</array>
 </dict>
 </plist>
