@@ -13,7 +13,8 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.base12.ants_companion"
-    compileSdk = flutter.compileSdkVersion
+    // compileSdk = flutter.compileSdkVersion
+    compileSdkVersion 34
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -41,8 +42,8 @@ android {
         applicationId = "com.base12.ants_companion"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        // minSdk = flutter.minSdkVersion
-        minSdkVersion 28
+        minSdk = flutter.minSdkVersion
+        // minSdkVersion 28
         targetSdk = flutter.targetSdkVersion
         // Notifications: added for notifications
         multiDexEnabled true

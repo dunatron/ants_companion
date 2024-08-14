@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
 import 'package:ants_companion/domain/notifications/notification_channels.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';

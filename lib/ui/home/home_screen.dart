@@ -1,7 +1,9 @@
 import 'package:ants_companion/common/spacing.dart';
+import 'package:ants_companion/core/snackbar_service.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/ants.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
+import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
 import 'package:ants_companion/ui/ads/ads_carousel.dart';
 import 'package:ants_companion/ui/ants/ant_details/ant_details.dart';
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
@@ -36,6 +38,16 @@ class HomeScreen extends StatelessWidget {
         controller: scrollController,
         title: l10n.appTitle,
         slivers: [
+          SliverToBoxAdapter(
+            child: ElevatedButton(
+                onPressed: () {
+                  // ExternalAppLauncher.launchAntsUndergroundKingdom();
+                  SnackbarService().showOpenAntsSnackbar();
+                  // SnackbarService()
+                  //     .showSnackbar('TEST', duration: Duration(seconds: 3));
+                },
+                child: Text('SnaCkbAR Test')),
+          ),
           _buildBanner(context),
           _buildSpace(),
           _buildWelcome(),

@@ -1,3 +1,4 @@
+import 'package:ants_companion/core/snackbar_service.dart';
 import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
 import 'package:ants_companion/domain/notifications/local_notifications.dart';
 
@@ -22,15 +23,19 @@ class _NotificationTappedProviderState
     listenToNotifications();
   }
 
+  _handleColonyActionNotificationPayload(String payload) {
+    context.go(payload);
+    SnackbarService().showOpenAntsSnackbar();
+  }
+
   listenToNotifications() {
     print('Listening to notifications');
     LocalNotifications.onClickNotification.stream.listen((event) async {
       print('Received Notification $event');
       if (event.isNotEmpty) {
-        context.go(event);
-        Future.delayed(Duration(seconds: 5), () {
-          ExternalAppLauncher.launchAntsUndergroundKingdom();
-        });
+        if (event.contains('/ca-scheduler')) {
+          _handleColonyActionNotificationPayload(event);
+        }
       }
     });
   }

@@ -98,3 +98,9 @@ The different languages we will support
 8. App screenshots (Phone/Tablet)
 9. Privacy Policy
 10. 20 testers for closed testing for 14 days opted in
+
+## handy commands
+
+```bash
+open ios/Runner.xcworkspace
+```
