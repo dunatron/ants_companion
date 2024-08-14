@@ -47,5 +47,10 @@
 	<true/>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-8577724747514488~2362066077</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<!-- Allows opening of the ants the underground kingdom -->
+		<string>line3rdp.com.allstarunion.ta.ios</string>
+	</array>
 </dict>
 </plist>

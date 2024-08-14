@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/ants.dart';
@@ -6,7 +9,7 @@ import 'package:ants_companion/ui/ads/ads_carousel.dart';
 import 'package:ants_companion/ui/ants/ant_details/ant_details.dart';
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
-import 'package:ants_companion/ui/home/ants_tier_feaure_info.dart';
+import 'package:ants_companion/ui/home/ants_tier_feature_info.dart';
 import 'package:ants_companion/ui/home/feature_masonry_grid.dart';
 import 'package:ants_companion/ui/home/notifications_feature_info.dart';
 import 'package:ants_companion/ui/home/scientific_classifications_feature_info.dart';
@@ -15,8 +18,6 @@ import 'package:ants_companion/ui/home/welcome_info.dart';
 import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
 
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

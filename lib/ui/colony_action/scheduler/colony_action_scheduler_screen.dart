@@ -87,10 +87,6 @@ class _ColonyActionSchedulerScreenState
                   ),
                 ),
               );
-              // return ListTile(
-              //   leading: Text(item.title),
-              //   trailing: Text(item.points.toString()),
-              // );
             },
           ),
         );
@@ -110,11 +106,11 @@ class _ColonyActionSchedulerScreenState
           maxWidth: 280,
           child: SliverToBoxAdapter(
             child: ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
+                await LocalNotifications.requestPermissions();
                 LocalNotifications.showSimpleNotification(
                   title: l10n.notificationTestTitle,
                   body: l10n.notificationTestBody,
-                  // payload: '',
                   payload: '/ca-scheduler/1-12',
                 );
               },
@@ -143,10 +139,15 @@ class _ColonyActionSchedulerScreenState
                         key.colonyActionTypeFromKey().displayName(l10n);
 
                     return ListTile(
-                      // leading: Text('${item.key}: $caName\n${item.date.toUtc()}'),
                       onTap: () {
                         context.go('/ca-scheduler/${item.key}');
                       },
+                      leading: IconButton(
+                        onPressed: () {
+                          viewColonyActionTasks(item, l10n, numberFormat);
+                        },
+                        icon: const Icon(Icons.info_outlined),
+                      ),
                       subtitle: RichText(
                         text: TextSpan(
                           text: '$caName\n',
@@ -162,18 +163,12 @@ class _ColonyActionSchedulerScreenState
                           ],
                         ),
                       ),
-                      leading: IconButton(
-                        onPressed: () {
-                          viewColonyActionTasks(item, l10n, numberFormat);
-                        },
-                        icon: const Icon(Icons.info_outlined),
-                      ),
                       trailing: Checkbox(
                         value: item.notificationEnabled,
-                        onChanged: (v) async {
-                          final can = await Haptics.canVibrate();
+                        onChanged: (final v) async {
+                          final canVibrate = await Haptics.canVibrate();
                           // Vibrate only if device is capable of haptic feedback
-                          if (can) {
+                          if (canVibrate) {
                             await Haptics.vibrate(HapticsType.success);
                           }
                           if (v == true) {
@@ -184,6 +179,7 @@ class _ColonyActionSchedulerScreenState
                               body: caName,
                               payload: '/ca-scheduler/${item.key}',
                               date: item.date,
+                              // date: DateTime.now().add(Duration(seconds: 5)),
                             );
                           } else {
                             await LocalNotifications.cancelNotificationChannel(

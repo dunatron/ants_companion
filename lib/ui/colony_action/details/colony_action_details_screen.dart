@@ -1,4 +1,6 @@
+import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
+import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
 import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
@@ -7,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:intl/intl.dart';
 
 class ColonyActionDetailsScreen extends StatelessWidget {
@@ -29,6 +32,16 @@ class ColonyActionDetailsScreen extends StatelessWidget {
         SliverToBoxAdapter(
           child: ColonyActionNotificationDetails(caKey: caKey),
         ),
+        if (AdsService.enabled)
+          SliverPadding(
+            padding: EdgeInsets.symmetric(vertical: 16),
+            sliver: SliverToBoxAdapter(
+              child: AdCard(
+                adId: AdsService.antDetailsAdUnitId,
+                selfLoad: AdCardSelfLoad(size: AdSize.banner),
+              ),
+            ),
+          ),
         ConstrainedSliverWidth(
           maxWidth: 560,
           child: SliverList.builder(
@@ -71,6 +84,7 @@ class ColonyActionNotificationDetails extends StatelessWidget {
             Text('${colonyAction.hour} UTC'),
             IconButton(
               onPressed: () {
+                // ToDo: must schedule a notification
                 _colonyActions.updateColonyAction(
                   colonyAction.copyWith(
                     notificationEnabled: !colonyAction.notificationEnabled,

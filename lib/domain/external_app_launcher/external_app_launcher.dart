@@ -11,9 +11,8 @@ class ExternalAppLauncher {
   static Future<int> launchAntsUndergroundKingdom() async {
     var openAppResult = await LaunchApp.openApp(
       androidPackageName: 'com.star.union.planetant',
-      iosUrlScheme: 'pulsesecure://',
-      appStoreLink:
-          'itms-apps://itunes.apple.com/us/app/pulse-secure/id945832041',
+      iosUrlScheme: 'line3rdp.com.allstarunion.ta.ios://',
+      appStoreLink: 'itms-apps://itunes.apple.com/app/id1568415097',
     );
     return openAppResult;
   }
