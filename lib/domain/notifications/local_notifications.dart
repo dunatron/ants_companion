@@ -185,6 +185,7 @@ class LocalNotifications {
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: DateTimeComponents.time,
+      payload: payload,
     );
   }
 
