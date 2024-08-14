@@ -110,7 +110,8 @@ class _ColonyActionSchedulerScreenState
           maxWidth: 280,
           child: SliverToBoxAdapter(
             child: ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
+                await LocalNotifications.requestPermissions();
                 LocalNotifications.showSimpleNotification(
                   title: l10n.notificationTestTitle,
                   body: l10n.notificationTestBody,
