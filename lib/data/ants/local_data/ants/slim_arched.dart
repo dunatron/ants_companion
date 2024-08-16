@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const slimArched = Ant(
   id: 'slim_arched',
   name: 'Slim Arched',
-  description: '',
   scientificName: 'Camponotus mirabilis',
+  species: ScientificSpecies.camponotusMirabilis,
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [

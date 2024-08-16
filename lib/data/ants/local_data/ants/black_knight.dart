@@ -4,13 +4,7 @@ const blackKnight = Ant(
   id: 'black_knight',
   name: 'Black Knight',
   scientificName: 'Cephalotes alfaroi',
-  species: Species.ant,
-  description: 'It is a species of ant distributed in Costa Rica and Panama, '
-      'where it resides in the humid environments of tropical forests.\n'
-      'This ant falls into the medium to large size category, with worker ants '
-      'generally measuring around 10mm in length and soldier ants capable of '
-      'reaching lengths up to 13mm.\n'
-      'There is relatively little research on this species to date.',
+  species: ScientificSpecies.cephalotesAlfaroi,
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [

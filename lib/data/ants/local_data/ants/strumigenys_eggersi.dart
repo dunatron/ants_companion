@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const strumigenysEggersi = Ant(
   id: 'strumigenys_eggersi',
   name: 'Strumigenys Eggersi',
-  description: '',
   scientificName: 'Strumigenys Eggersi',
+  species: ScientificSpecies.strumigenysEggersi,
   type: AntType.carrier,
   role: AntRole.melee,
   tierTags: [

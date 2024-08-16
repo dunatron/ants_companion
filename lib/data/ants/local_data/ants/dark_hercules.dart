@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const darkHercules = Ant(
   id: 'dark_hercules',
   name: 'Dark Hercules',
-  description: '',
+  species: ScientificSpecies.myrmarachneGisti,
   scientificName: 'Myrmarachne Gisti',
   type: AntType.guardian,
   role: AntRole.ranged,

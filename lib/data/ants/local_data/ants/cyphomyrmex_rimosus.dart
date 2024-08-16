@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const cyphomyrmexRimosus = Ant(
   id: 'cyphomyrmex_rimosus',
   name: 'Cyphomyrmex rimosus',
-  description: '',
+  species: ScientificSpecies.cyphomyrmexRimosus,
   scientificName: 'Cyphomyrmex rimosus',
   type: AntType.carrier,
   role: AntRole.ranged,

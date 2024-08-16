@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const guardGeneral = Ant(
   id: 'guard_general',
   name: 'Guard General',
-  description: '',
+  species: ScientificSpecies.harpegnathosVenator,
   scientificName: 'Harpegnathos venator',
   type: AntType.guardian,
   role: AntRole.melee,

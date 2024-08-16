@@ -4,12 +4,7 @@ const crimsonPearl = Ant(
   id: 'crimson_pearl',
   name: 'Crimson Pearl',
   scientificName: 'Myrmarachne sp',
-  description: 'Is a genus of ant-mimicking jumping spiders '
-      'Myrmarachne(The same as brown rogue) of the salticidae family and can '
-      'be found in south Asia and Southeast Asia. '
-      'Mimic is their natural skill.\n'
-      'They are commonly called ant-mimicking spiders, but they are not '
-      'the only spiders that have this attribute.',
+  species: ScientificSpecies.myrmarachneSp,
   scientificClassification: AntScientificClassification(
     species: ScientificSpecies.myrmarachneSp,
     phylum: ScientificPhylum.arthropoda,

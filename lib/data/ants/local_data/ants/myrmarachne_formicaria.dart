@@ -4,10 +4,9 @@ const myrmarachneFormicaria = Ant(
   id: 'myrmarachne_formicaria',
   name: 'Myrmarachne Formicaria',
   scientificName: 'Myrmarachne Formicaria',
-  description: 'An OP carrier Ant',
+  species: ScientificSpecies.myrmarachneFormicaria,
   type: AntType.carrier,
   role: AntRole.melee,
-  species: Species.spider,
   tierTags: [
     ...myrmarachneFormicariaPveTags,
     ...myrmarachneFormicariaPvpTags,

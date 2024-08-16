@@ -3,9 +3,8 @@ part of '../local_ants_list.dart';
 const duskyLurker = Ant(
   id: 'dusky_lurker',
   name: 'Dusky Lurker',
-  description: 'This special ant is very mysterious, and no more information '
-      'has been disclosed so far',
-  scientificName: 'ahhhm mysterious Ant',
+  species: ScientificSpecies.unknown, // Not its actual species
+  scientificName: 'Unknown',
   type: AntType.universal,
   role: AntRole.support,
   tierTags: [

@@ -4,7 +4,7 @@ const acidGeneral = Ant(
   id: 'acid_general',
   name: 'Acid General',
   scientificName: 'Mystrium oberthueri',
-  description: '',
+  species: ScientificSpecies.mystriumOberthueri,
   scientificClassification: AntScientificClassification(
     species: ScientificSpecies.mystriumOberthueri,
     phylum: ScientificPhylum.arthropoda,

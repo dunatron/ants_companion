@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const leptomyrmexBurwelli = Ant(
   id: 'leptomyrmex_burwelli',
   name: 'Leptomyrmex Burwelli',
-  description: '',
   scientificName: 'Leptomyrmex Burwelli',
+  species: ScientificSpecies.leptomyrmexBurwelli,
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [

@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const procryptocerusAdlerzi = Ant(
   id: 'procryptocerus_adlerzi',
   name: 'Procryptocerus Adlerzi',
-  description: '',
   scientificName: 'Procryptocerus Adlerzi',
+  species: ScientificSpecies.procryptocerusAdlerzi,
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [

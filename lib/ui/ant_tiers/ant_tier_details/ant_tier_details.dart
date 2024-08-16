@@ -8,6 +8,7 @@ import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_tag_detail
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/view_model/ant_tier_details_view_model.dart';
 
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
+import 'package:ants_companion/ui/scientific_classifications/scientific_species_extension.dart';
 import 'package:ants_companion/ui/section.dart';
 
 import 'package:flutter/material.dart';
@@ -56,7 +57,7 @@ class _AntTierDetailsState extends State<AntTierDetails> {
       child: Column(
         children: [
           Text(
-            widget.ant.name,
+            widget.ant.species.commonName(l10n),
             style: Theme.of(context).textTheme.titleLarge,
           ),
           if (profilePictureUrl.isNotEmpty)
@@ -107,7 +108,20 @@ class _AntTierDetailsState extends State<AntTierDetails> {
             child: Divider(color: Theme.of(context).colorScheme.primary),
           ),
           AntTierDetailsTagsList(viewModel: viewModel, tierTags: tags),
-          Section(child: Text('widget.ant.scientificClassification.genus')),
+          Section(
+            child: Divider(color: Theme.of(context).colorScheme.primary),
+          ),
+          Section(
+            child: Text(
+              widget.ant.species.scientificName(l10n),
+              style: Theme.of(context).textTheme.bodyLarge,
+            ),
+          ),
+          Section(
+            child: Text(
+              widget.ant.species.description(l10n),
+            ),
+          ),
         ],
       ),
     );

@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const driverAnt = Ant(
   id: 'driver_ant',
   name: 'Driver Ant',
-  description: '',
+  species: ScientificSpecies.dorylusDriver,
   scientificName: 'Dorylus driver',
   type: AntType.universal,
   role: AntRole.support,

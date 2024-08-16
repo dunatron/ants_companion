@@ -4,7 +4,7 @@ const goldenCrystal = Ant(
   id: 'golden_crystal',
   name: 'Golden Crystal',
   scientificName: 'Leptogenys elongata',
-  description: 'An OP carrier Ant',
+  species: ScientificSpecies.leptogenysElongata,
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [

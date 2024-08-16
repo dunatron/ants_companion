@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const goldenSpiny = Ant(
   id: 'golden_spiny',
   name: 'Golden Spiny',
-  description: '',
   scientificName: 'Polyrhachis trapezoidea',
+  species: ScientificSpecies.polyrhachisTrapezoidea,
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

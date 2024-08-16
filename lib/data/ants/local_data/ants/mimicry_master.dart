@@ -3,10 +3,7 @@ part of '../local_ants_list.dart';
 const mimicryMaster = Ant(
   id: 'mimicry_master',
   name: 'Mimicry Master',
-  description: 'Its a kind of unknown and unnamed Alydid Bug. Found in some '
-      'particular regions of South America, a special species of insect. This '
-      'species usually mimic ants to get better living environments. Looks '
-      'like the camponotus Sericeiventris.',
+  species: ScientificSpecies.unknown,
   scientificName: 'Unknown',
   type: AntType.guardian,
   role: AntRole.ranged,

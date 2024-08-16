@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const shieldWarden = Ant(
   id: 'shield_warden',
   name: 'Shield Warden',
-  description: '',
   scientificName: 'Cataulacus huberi',
+  species: ScientificSpecies.cataulacusHuberi,
   type: AntType.guardian,
   role: AntRole.support,
   tierTags: [

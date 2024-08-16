@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const crematogasterInflata = Ant(
   id: 'crematogaster_inflata',
   name: 'Crematogaster Inflata',
-  description: '',
+  species: ScientificSpecies.crematogasterInflata,
   scientificName: 'Crematogaster inflata',
   type: AntType.shooter,
   role: AntRole.support,

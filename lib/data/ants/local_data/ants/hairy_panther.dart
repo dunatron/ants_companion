@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const hairyPanther = Ant(
   id: 'hairy_panther',
   name: 'Hairy Panther',
-  description: '',
+  species: ScientificSpecies.neoponeraVillosa,
   scientificName: 'Neoponera villosa',
   type: AntType.guardian,
   role: AntRole.ranged,

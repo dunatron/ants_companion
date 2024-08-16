@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const predator = Ant(
   id: 'predator',
   name: 'Predator',
-  description: '',
   scientificName: 'Psalidomyrmex reichenspergeri',
+  species: ScientificSpecies.psalidomyrmexReichenspergeri,
   type: AntType.shooter,
   role: AntRole.melee,
   tierTags: [

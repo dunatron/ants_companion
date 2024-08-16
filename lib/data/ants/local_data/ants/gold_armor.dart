@@ -4,7 +4,7 @@ const goldArmor = Ant(
   id: 'gold_armor',
   name: 'Gold Armor',
   scientificName: 'Daceton armigerum',
-  description: 'A really nice PVE ant',
+  species: ScientificSpecies.dacetonArmigerum,
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [

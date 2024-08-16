@@ -1,5 +1,7 @@
 import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
+import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
+import 'package:ants_companion/ui/scientific_classifications/scientific_species_extension.dart';
 
 import 'package:flutter/material.dart';
 
@@ -19,6 +21,7 @@ class AntCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
+
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(0),
@@ -45,7 +48,7 @@ class AntCard extends StatelessWidget {
                       margin: const EdgeInsets.all(8),
                       color: Theme.of(context).colorScheme.surfaceContainerLow,
                       child: Text(
-                        ant.name,
+                        ant.species.commonName(l10n),
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     ),

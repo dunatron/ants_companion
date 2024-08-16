@@ -4,8 +4,7 @@ const graveDigger = Ant(
   id: 'grave_digger',
   name: 'Grave Digger',
   scientificName: 'Prionopelta humicola',
-  description: 'A support ant with crowd control abilities, '
-      'pairs really nicely with golden crystal',
+  species: ScientificSpecies.prionopeltaHumicola,
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

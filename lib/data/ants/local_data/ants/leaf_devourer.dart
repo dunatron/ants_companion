@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const leafDevourer = Ant(
   id: 'leaf_devourer',
   name: 'Leaf Devourer',
-  description: '',
   scientificName: 'Atta laevigata',
+  species: ScientificSpecies.attaLaevigata,
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [

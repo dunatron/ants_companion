@@ -4,12 +4,7 @@ const attaSexdens = Ant(
   id: 'atta_sexdens',
   name: 'Atta Sexdens',
   scientificName: 'Atta Sexdens',
-  description: 'It is a leaf-cutter ant that lives in South America. '
-      'Each anthill may contain tens of thousands of individuals, occupying an '
-      'area of more than 30 square meters.\n\nThey build complex underground '
-      'anthills to accommodate high humidity and stable temperatures. They '
-      'feed leaves cut and collected from plants.\nAlthough they are leaf-cutter '
-      'ants, they have strong territorial awareness and garrison habits',
+  species: ScientificSpecies.attaSexdens,
   type: AntType.guardian,
   role: AntRole.ranged,
   scientificClassification: AntScientificClassification(

@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const rubySlender = Ant(
   id: 'ruby_slender',
   name: 'Ruby Slender',
-  description: '',
   scientificName: 'Gnamptogenys mordax',
+  species: ScientificSpecies.gnamptogenysMordax,
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [

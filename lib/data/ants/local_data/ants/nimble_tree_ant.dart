@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const nimbleTreeAnt = Ant(
   id: 'nimble_tree_ant',
   name: 'Nimble Tree Ant',
-  description: '',
   scientificName: 'Pseudomyrmex boopis',
+  species: ScientificSpecies.pseudomyrmexBoopis,
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

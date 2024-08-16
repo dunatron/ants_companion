@@ -4,7 +4,7 @@ const jackJumper = Ant(
   id: 'jack_jumper',
   name: 'Jack Jumper',
   scientificName: 'Myrmecia pilosula',
-  description: 'Reliable damage ant, good for pve',
+  species: ScientificSpecies.myrmeciaPilosula,
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

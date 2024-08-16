@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const gracefulTwigAnt = Ant(
   id: 'graceful_twig_ant',
   name: 'Graceful Twig Ant',
-  description: '',
   scientificName: 'Pseudomyrmex gracilis',
+  species: ScientificSpecies.pseudomyrmexGracilis,
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [

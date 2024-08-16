@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const wiseBerserker = Ant(
   id: 'wise_berserker',
   name: 'Wise Berserker',
-  description: '',
   scientificName: 'Mystrium camillae',
+  species: ScientificSpecies.mystriumCamillae,
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [

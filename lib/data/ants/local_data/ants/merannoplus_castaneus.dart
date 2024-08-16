@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const merannoplusCastaneus = Ant(
   id: 'merannoplus_castaneus',
   name: 'Merannoplus Castaneus',
-  description: '',
   scientificName: 'Merannoplus castaneus',
+  species: ScientificSpecies.merannoplusCastaneus,
   type: AntType.guardian,
   role: AntRole.support,
   tierTags: [

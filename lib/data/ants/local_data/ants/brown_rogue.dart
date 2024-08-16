@@ -4,14 +4,7 @@ const brownRogue = Ant(
   id: 'brown_rogue',
   name: 'Brown Rogue',
   scientificName: 'Myrmarachne plataleoides',
-  species: Species.spider,
-  description: 'It is a jumping spider belonging to the genus Arachnididae, '
-      'which is distributed in many regions of india, Sri Lanka, China and '
-      'Southeast Asia.\n'
-      'They imitate the Oecophylla smaragdina in shape, but unlike their '
-      'aggressive nature, Myrmarachne plataleoides are more cautious in nature '
-      'and even appear a little timid. They will weave a thin net on the '
-      'leaves and hide in the net. Ambush the prey underneath',
+  species: ScientificSpecies.myrmarachnePlataleoides,
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

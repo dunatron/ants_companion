@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const rockBandit = Ant(
   id: 'rock_bandit',
   name: 'Rock Bandit',
-  description: '',
   scientificName: 'Cyphomyrmex flavidus',
+  species: ScientificSpecies.cyphomyrmexFlavidus,
   type: AntType.guardian,
   role: AntRole.support,
   tierTags: [

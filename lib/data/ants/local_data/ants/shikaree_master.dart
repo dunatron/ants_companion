@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const shikareeMaster = Ant(
   id: 'shikaree_master',
   name: 'Shikaree Master',
-  description: '',
   scientificName: 'Arilus cristatus',
+  species: ScientificSpecies.arilusCristatus,
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [

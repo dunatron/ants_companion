@@ -4,15 +4,7 @@ const bulletAnt = Ant(
   id: 'bullet_ant',
   name: 'Bullet Ant',
   scientificName: 'Paraponera clavata',
-  description: 'Found in most of the central and northern South America, it '
-      'inhabits the jungle and has a body length of at least 20mm\n. '
-      "It's thought to be the most aggressive ant species. They have "
-      'rapid biting mandibles which will sting and inject erosive venom. '
-      'Its not an exaggeration that once stung, you will feel like you were '
-      'hit by a bullet. Many local primitive tribes still retain the ritual '
-      'of being stung by Bullet Ants to prove their courage. As they are '
-      'omnivorous, they hunt insects and collect honeydew. They usually have '
-      'a fixed territory and do not eave that piece of land.',
+  species: ScientificSpecies.paraponeraClavata,
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

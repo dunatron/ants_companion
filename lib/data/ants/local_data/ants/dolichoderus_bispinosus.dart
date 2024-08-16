@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const dolichoderusBispinosus = Ant(
   id: 'dolichoderus_bispinosus',
   name: 'Dolichoderus bispinosus',
-  description: '',
+  species: ScientificSpecies.dolichoderusBispinosus,
   scientificName: 'Dolichoderus bispinosus',
   type: AntType.shooter,
   role: AntRole.melee,

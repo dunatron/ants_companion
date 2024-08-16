@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const giantTooth = Ant(
     id: 'giant_tooth',
     name: 'Giant Tooth',
-    description: '',
     scientificName: 'Odontomachus coquereli',
+    species: ScientificSpecies.odontomachusCoquereli,
     type: AntType.universal,
     role: AntRole.support,
     tierTags: [

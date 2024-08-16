@@ -1,61 +1,62 @@
 enum ScientificSpecies {
-  mystriumOberthueri, // 'Mystrium oberthueri'
+  ampulexCompressa, // Ampulex compressa
+  aphantochilusRogersi,
+  arilusCristatus, // Arilus cristatus
+  attaLaevigata, // Atta laevigata
   attaSexdens, // Atta Sexdens
-  euspinoliaMilitaris, // Euspinolia militaris
-  dasymutillaOccidentalis, // Dasymutilla occidentalis
-  aphantochilusRogersi, // Aphantochilus rogersi
-  cephalotesAlfaroi, // Cephalotes alfaroi
-  nomamyrmexEsenbeckii, // Nomamyrmex esenbeckii
-  myrmarachnePlataleoides, // Myrmarachne plataleoides
-  paraponeraClavata, // Paraponera clavata
   camponotusColoratus, // Camponotus coloratus
-  crematogasterInflata, // Crematogaster inflata
-  camponotusChromaiodes, //Camponotus chromaiodes
-  myrmarachneSp, // Myrmarachne sp
+  camponotusChromaiodes, // Camponotus chromaiodes
+  camponotusMirabilis, // Camponotus mirabilis
+  camponotusSericeiventris, // Camponotus sericeiventris
+  cataulacusHuberi, // Cataulacus huberi
+  cataglyphisBombycina, // Cataglyphis bombycina
+  cephalotesAlfaroi, // Cephalotes alfaroi
+  crematogasterInflata,
+  cyphomyrmexFlavidus, // Cyphomyrmex flavidus
   cyphomyrmexRimosus, // Cyphomyrmex rimosus
-  ecitonRapax, // Eciton rapax
-  myrmarachneGisti, // Myrmarachne Gisti
+  dacetonArmigerum, // Daceton armigerum
+  dasymutillaGloriosa, // Dasymutilla gloriosa
+  dasymutillaOccidentalis, // Dasymutilla occidentalis
   dolichoderusBispinosus, // Dolichoderus bispinosus
   dorylusDriver, // Dorylus driver
-  ampulexCompressa, // Ampulex compressa
-  tetramoriumPulcherrimum, // Tetramorium pulcherrimum
+  ecitonRapax, // Eciton rapax
+  echitonBurchellii, // Echiton burchellii
+  euspinoliaMilitaris, // Euspinolia militaris
   formicaClara, // Formica Clara
-  tapinomaMelanocephalum, // Tapinoma melanocephalum
-  odontomachusCoquereli, // Odontomachus coquereli
-  dacetonArmigerum, // Daceton armigerum
-  leptogenysElongata, // Leptogenys elongata
-  polyrhachisTrapezoidea, // Polyrhachis trapezoidea
-  camponotusSericeiventris, // Camponotus sericeiventris
-  telamoniaDimidiata, // Telamonia dimidiata,
-  pseudomyrmexGracilis, // Pseudomyrmex gracilis
-  prionopeltaHumicola, // Prionopelta humicola
+  gnamptogenysMordax, // Gnamptogenys mordax
   harpegnathosVenator, // Harpegnathos venator
-  neoponeraVillosa, // Neoponera villosa
-  myrmeciaPilosula, // Myrmecia pilosula
-  plectroctenaCristata, // Plectroctena cristata
-  tetraponeraRufonigra, // Tetraponera
-  attaLaevigata, // Atta laevigata
+  leptogenysElongata, // Leptogenys elongata
   leptoglossusPhyllopus, // Leptoglossus Phyllopus
   leptomyrmexBurwelli, // Leptomyrmex Burwelli
   merannoplusBicolor, // Merannoplus bicolor
   merannoplusCastaneus, // Merannoplus castaneus
-  myrmarachneFormicaria, // Myrmarachne Formicaria
+  myrmeciaPilosula, // Myrmecia pilosula
   myrmecotypusRettenmeyeri, // Myrmecotypus Rettenmeyeri
-  echitonBurchellii, // Echiton burchellii
-  pseudomyrmexBoopis, // Pseudomyrmex boopis
+  myrmarachneFormicaria, // Myrmarachne Formicaria
+  myrmarachneGisti, // Myrmarachne Gisti
+  myrmarachnePlataleoides, // Myrmarachne plataleoides
+  myrmarachneSp, // Myrmarachne sp
+  mystriumCamillae, // Mystrium camillae
+  mystriumOberthueri, // Mystrium oberthueri
+  nomamyrmexEsenbeckii, // Nomamyrmex esenbeckii
+  neoponeraVillosa, // Neoponera villosa
+  oecophyllaLonginoda,
+  odontomachusCoquereli, // Odontomachus coquereli
   pheidoleNietneri, // Pheidole nietneri
-  psalidomyrmexReichenspergeri, // Psalidomyrmex reichenspergeri
+  paraponeraClavata, // Paraponera clavata
+  plectroctenaCristata, // Plectroctena cristata
+  polyrhachisTrapezoidea, // Polyrhachis trapezoidea
   proattaButteli, // Proatta butteli
   procryptocerusAdlerzi, // Procryptocerus Adlerzi
-  thaumatomyrmexAtrox, // Thaumatomyrmex Atrox
-  cyphomyrmexFlavidus, // Cyphomyrmex flavidus
-  gnamptogenysMordax, // Gnamptogenys mordax
-  cataglyphisBombycina, // Cataglyphis bombycina
-  cataulacusHuberi, // Cataulacus huberi
-  arilusCristatus, // Arilus cristatus
-  camponotusMirabilis, // Camponotus mirabilis
+  pseudomyrmexBoopis, // Pseudomyrmex boopis
+  pseudomyrmexGracilis, // Pseudomyrmex gracilis
+  psalidomyrmexReichenspergeri, // Psalidomyrmex reichenspergeri
+  prionopeltaHumicola, // Prionopelta humicola
   strumigenysEggersi, // Strumigenys Eggersi
-  oecophyllaLonginoda, // Oecophylla longinoda
-  dasymutillaGloriosa, // Dasymutilla gloriosa
-  mystriumCamillae, // Mystrium camillae
+  tapinomaMelanocephalum, // Tapinoma melanocephalum
+  telamoniaDimidiata, // Telamonia dimidiata
+  tetraponeraRufonigra, // Tetraponera
+  tetramoriumPulcherrimum, // Tetramorium pulcherrimum
+  thaumatomyrmexAtrox, // Thaumatomyrmex Atrox
+  unknown,
 }

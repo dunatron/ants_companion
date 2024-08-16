@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const goldenSugar = Ant(
   id: 'golden_sugar',
   name: 'Golden Sugar',
-  description: '',
   scientificName: 'Camponotus sericeiventris',
+  species: ScientificSpecies.camponotusSericeiventris,
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [

@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const darkGiant = Ant(
   id: 'dark_giant',
   name: 'Dark Giant',
-  description: '',
+  species: ScientificSpecies.ecitonRapax,
   scientificName: 'Eciton rapax',
   type: AntType.carrier,
   role: AntRole.support,
