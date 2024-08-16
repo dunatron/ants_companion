@@ -158,6 +158,7 @@ class LocalNotifications {
       const Duration(seconds: 5),
     );
 
+    // ToDo: test this extensively
     await _flutterLocalNotificationsPlugin.zonedSchedule(
       3,
       title,
@@ -167,7 +168,8 @@ class LocalNotifications {
       androidScheduleMode: AndroidScheduleMode.alarmClock,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
-      matchDateTimeComponents: DateTimeComponents.time,
+      // matchDateTimeComponents: DateTimeComponents.time,
+      matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
     );
   }
 
@@ -190,7 +192,7 @@ class LocalNotifications {
       androidScheduleMode: AndroidScheduleMode.alarmClock,
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
-      matchDateTimeComponents: DateTimeComponents.time,
+      matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
       payload: payload,
     );
   }

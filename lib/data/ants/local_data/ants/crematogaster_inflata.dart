@@ -12,7 +12,7 @@ const crematogasterInflata = Ant(
     ...crematogasterInflataPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Crematogaster inflata',
+    species: ScientificSpecies.crematogasterInflata,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

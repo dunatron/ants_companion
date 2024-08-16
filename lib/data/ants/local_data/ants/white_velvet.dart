@@ -12,7 +12,7 @@ const whiteVelvet = Ant(
     ...whiteVelvetPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Dasymutilla gloriosa',
+    species: ScientificSpecies.dasymutillaGloriosa,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

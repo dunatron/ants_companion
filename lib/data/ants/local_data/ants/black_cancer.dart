@@ -17,7 +17,7 @@ const blackCancer = Ant(
     ...blackCancerPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Aphantochilus rogersi',
+    species: ScientificSpecies.aphantochilusRogersi,
     phylum: ScientificPhylum.arthropoda,
     subphylum: ScientificSubphylum.chelicerata,
     classification: ScientificClassification.arachnida,

@@ -12,7 +12,7 @@ const goldenCrystal = Ant(
     ...goldenCrystalPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Leptogenys elongata',
+    species: ScientificSpecies.leptogenysElongata,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

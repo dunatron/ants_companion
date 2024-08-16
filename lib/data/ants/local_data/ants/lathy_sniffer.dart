@@ -12,7 +12,7 @@ const lathySniffer = Ant(
     ...lathySnifferPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Tetraponera rufonigra',
+    species: ScientificSpecies.tetraponeraRufonigra,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

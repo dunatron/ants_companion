@@ -13,7 +13,7 @@ const myrmecotypusRettenmeyeri = Ant(
     ...myrmecotypusRettenmeyeriPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Myrmecotypus Rettenmeyeri',
+    species: ScientificSpecies.myrmecotypusRettenmeyeri,
     phylum: ScientificPhylum.arthropoda,
     subphylum: ScientificSubphylum.chelicerata, // missing
     classification: ScientificClassification.arachnida,

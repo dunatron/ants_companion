@@ -25,6 +25,14 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.message),
+            title: Text('Theme Picker'),
+            onTap: () {
+              Navigator.pop(context);
+              context.go('/theme-picker');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.message),
             title: Text(l10n.antTiersTitle),
             onTap: () {
               Navigator.pop(context);

@@ -12,7 +12,7 @@ const saharanSilverAnt = Ant(
     ...saharanSilverAntPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Cataglyphis bombycina',
+    species: ScientificSpecies.cataglyphisBombycina,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

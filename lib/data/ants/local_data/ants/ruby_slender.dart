@@ -12,7 +12,7 @@ const rubySlender = Ant(
     ...rubySlenderPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Gnamptogenys mordax',
+    species: ScientificSpecies.gnamptogenysMordax,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

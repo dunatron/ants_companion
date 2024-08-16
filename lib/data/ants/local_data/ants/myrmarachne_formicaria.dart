@@ -13,7 +13,7 @@ const myrmarachneFormicaria = Ant(
     ...myrmarachneFormicariaPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Myrmarachne Formicaria',
+    species: ScientificSpecies.myrmarachneFormicaria,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.arachnida,

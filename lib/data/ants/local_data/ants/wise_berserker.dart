@@ -12,7 +12,7 @@ const wiseBerserker = Ant(
     ...wiseBerserkerPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Mystrium camillae',
+    species: ScientificSpecies.mystriumCamillae,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

@@ -12,7 +12,7 @@ const goldArmor = Ant(
     ...goldArmorPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: '',
+    species: ScientificSpecies.dacetonArmigerum,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

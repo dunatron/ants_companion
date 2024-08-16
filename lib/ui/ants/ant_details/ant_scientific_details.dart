@@ -52,7 +52,10 @@ class AntScientificDetails extends StatelessWidget {
             attribute: l10n.scientificGenus,
             value: details.genus.name,
           ),
-          _Attribute(attribute: l10n.scientificSpecies, value: details.species),
+          _Attribute(
+            attribute: l10n.scientificSpecies,
+            value: details.species.name,
+          ),
         ],
       ),
     );

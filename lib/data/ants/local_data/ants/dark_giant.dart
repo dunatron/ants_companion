@@ -12,7 +12,7 @@ const darkGiant = Ant(
     ...darkGiantPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Eciton rapax',
+    species: ScientificSpecies.ecitonRapax,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

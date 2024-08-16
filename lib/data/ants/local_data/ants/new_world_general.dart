@@ -12,7 +12,7 @@ const newWorldGeneral = Ant(
     ...newWorldGeneralPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Echiton burchellii',
+    species: ScientificSpecies.echitonBurchellii,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

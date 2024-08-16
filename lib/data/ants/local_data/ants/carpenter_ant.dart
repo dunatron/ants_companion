@@ -12,7 +12,7 @@ const carpenterAnt = Ant(
     ...carpenterAntPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Camponotus coloratus',
+    species: ScientificSpecies.camponotusColoratus,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

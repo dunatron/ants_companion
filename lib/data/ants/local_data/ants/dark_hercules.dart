@@ -12,7 +12,7 @@ const darkHercules = Ant(
     ...darkHerculesPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Myrmarachne Gisti',
+    species: ScientificSpecies.myrmarachneGisti,
     phylum: ScientificPhylum.arthropoda,
     subphylum: ScientificSubphylum.chelicerata, // missing
     classification: ScientificClassification.arachnida,

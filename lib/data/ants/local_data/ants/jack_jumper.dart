@@ -12,7 +12,7 @@ const jackJumper = Ant(
     ...jackJumperPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Myrmecia pilosula',
+    species: ScientificSpecies.myrmeciaPilosula,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

@@ -12,7 +12,7 @@ const ghostAnt = Ant(
     ...ghostAntPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Tapinoma melanocephalum',
+    species: ScientificSpecies.tapinomaMelanocephalum,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

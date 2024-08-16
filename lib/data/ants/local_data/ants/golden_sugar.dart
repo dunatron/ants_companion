@@ -12,7 +12,7 @@ const goldenSugar = Ant(
     ...goldenSugarPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Camponotus sericeiventris',
+    species: ScientificSpecies.camponotusSericeiventris,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

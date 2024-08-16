@@ -12,7 +12,7 @@ const reapMaster = Ant(
     ...reapMasterPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Thaumatomyrmex Atrox',
+    species: ScientificSpecies.thaumatomyrmexAtrox,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

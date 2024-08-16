@@ -12,7 +12,7 @@ const leptoglossusPhyllopus = Ant(
     ...leptoglossusPhyllopusPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Leptoglossus Phyllopus',
+    species: ScientificSpecies.leptoglossusPhyllopus,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

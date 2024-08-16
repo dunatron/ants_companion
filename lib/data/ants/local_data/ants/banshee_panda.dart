@@ -14,7 +14,7 @@ const bansheePanda = Ant(
     ...bansheePandaPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Euspinolia militaris',
+    species: ScientificSpecies.euspinoliaMilitaris,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null,
     classification: ScientificClassification.insecta,

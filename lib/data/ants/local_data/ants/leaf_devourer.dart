@@ -12,7 +12,7 @@ const leafDevourer = Ant(
     ...leafDevourerPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Atta laevigata',
+    species: ScientificSpecies.attaLaevigata,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

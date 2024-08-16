@@ -6,16 +6,18 @@ class AntsAppBar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     required this.title,
     this.actions = const [],
+    this.forceAsHome = false,
   });
 
   final String title;
 
   final List<Widget> actions;
+  final bool forceAsHome;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final canPop = Navigator.of(context).canPop();
+    final canPop = Navigator.of(context).canPop() && !forceAsHome;
     return AppBar(
       leading: canPop
           ? IconButton(

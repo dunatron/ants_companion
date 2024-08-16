@@ -12,7 +12,7 @@ const goldenSpiny = Ant(
     ...goldenSpinyPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Polyrhachis trapezoidea',
+    species: ScientificSpecies.polyrhachisTrapezoidea,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

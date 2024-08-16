@@ -12,6 +12,7 @@ class PageLayout extends StatelessWidget {
     required this.widgets,
     this.controller,
     this.floatingActionButton,
+    this.padding,
   });
 
   final String title;
@@ -24,6 +25,8 @@ class PageLayout extends StatelessWidget {
   final CrossAxisAlignment crossAxisAlignment;
 
   final BoxConstraints? constraints;
+
+  final EdgeInsets? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +48,7 @@ class PageLayout extends StatelessWidget {
       appBar: AntsAppBar(title: title),
       drawer: const SafeArea(child: AppDrawer()),
       body: SingleChildScrollView(
+        padding: padding,
         child: childWidget,
       ),
       floatingActionButton: floatingActionButton,

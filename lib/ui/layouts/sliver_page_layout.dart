@@ -11,6 +11,7 @@ class SliverPageLayout extends StatelessWidget {
     required this.slivers,
     this.controller,
     this.floatingActionButton,
+    this.forceAsHome = false,
   });
 
   final String title;
@@ -21,12 +22,15 @@ class SliverPageLayout extends StatelessWidget {
 
   final Widget? floatingActionButton;
 
+  final bool forceAsHome;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AntsAppBar(
         title: title,
         actions: actions,
+        forceAsHome: forceAsHome,
       ),
       drawer: const SafeArea(child: AppDrawer()),
       body: CustomScrollView(

@@ -12,7 +12,7 @@ const gracefulTwigAnt = Ant(
     ...gracefulTwigAntPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Pseudomyrmex gracilis',
+    species: ScientificSpecies.pseudomyrmexGracilis,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

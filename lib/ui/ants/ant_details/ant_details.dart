@@ -50,13 +50,13 @@ class AntDetails extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
-          Section(
-            child: Text(
-              ant.description,
-              textAlign: TextAlign.left,
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
-          ),
+          // Section(
+          //   child: Text(
+          //     ant.description,
+          //     textAlign: TextAlign.left,
+          //     style: Theme.of(context).textTheme.bodyLarge,
+          //   ),
+          // ),
           if (AdsService.enabled)
             Section(
               child: AdCard(
