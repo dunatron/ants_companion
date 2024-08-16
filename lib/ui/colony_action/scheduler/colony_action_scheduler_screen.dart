@@ -99,6 +99,8 @@ class _ColonyActionSchedulerScreenState
     final l10n = AppLocalizations.of(context);
     final locale = Localizations.localeOf(context);
     final numberFormat = NumberFormat('#,###', 'ar');
+    final localDateFormatter = DateFormat('h:mm a');
+
     return SliverPageLayout(
       title: l10n.colonyActionSchedulerTitle,
       slivers: [
@@ -157,9 +159,13 @@ class _ColonyActionSchedulerScreenState
                               ?.copyWith(fontWeight: FontWeight.bold),
                           children: <TextSpan>[
                             TextSpan(
-                                text: '${item.date.toUtc().hour} UTC',
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.w400)),
+                              // text:
+                              //     '${item.date.toUtc().hour} UTC - ${localDateFormatter.format(item.date)}',
+                              text:
+                                  '${item.date.toUtc().hour} UTC - ${localDateFormatter.format(item.date.toLocal())}',
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.w400),
+                            ),
                           ],
                         ),
                       ),

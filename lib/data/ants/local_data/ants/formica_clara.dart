@@ -12,7 +12,7 @@ const formicaClara = Ant(
     ...formicaClaraPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: '',
+    species: ScientificSpecies.formicaClara,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

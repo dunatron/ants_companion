@@ -12,7 +12,7 @@ const jetBlack = Ant(
     ...jetBlackPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Plectroctena cristata',
+    species: ScientificSpecies.plectroctenaCristata,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

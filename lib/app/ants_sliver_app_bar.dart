@@ -4,9 +4,11 @@ class AntsSliverAppBar extends StatelessWidget {
   const AntsSliverAppBar({
     super.key,
     required this.title,
+    this.forceAsHomeRoute = false,
   });
 
   final String title;
+  final bool forceAsHomeRoute;
 
   @override
   Widget build(BuildContext context) {

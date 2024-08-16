@@ -5,6 +5,7 @@ import 'package:ants_companion/ui/route_not_found/route_not_found_screen.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tiers_screen.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_classifications_screen.dart';
 import 'package:ants_companion/ui/soldier_ants/soldier_ants_comparison_screen.dart';
+import 'package:ants_companion/ui/theme/theme_picker_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -21,6 +22,11 @@ final routes = <RouteBase>[
     path: '/',
     builder: (BuildContext context, GoRouterState state) => const HomeScreen(),
     routes: [
+      GoRoute(
+        path: 'theme-picker',
+        builder: (BuildContext context, GoRouterState state) =>
+            const ThemePickerScreen(),
+      ),
       GoRoute(
         path: 'ant-tiers',
         builder: (BuildContext context, GoRouterState state) =>

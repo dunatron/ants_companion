@@ -13,7 +13,7 @@ const graveDigger = Ant(
     ...graveDiggerPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Prionopelta humicola',
+    species: ScientificSpecies.prionopeltaHumicola,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

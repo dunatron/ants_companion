@@ -18,7 +18,7 @@ const blackKnight = Ant(
     ...blackKnightPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Cephalotes alfaroi',
+    species: ScientificSpecies.cephalotesAlfaroi,
     phylum: ScientificPhylum.arthropoda,
     subphylum: ScientificSubphylum.chelicerata,
     classification: ScientificClassification.insecta,

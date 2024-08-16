@@ -12,7 +12,7 @@ const enigmaticTaylor = Ant(
     ...enigmaticTaylorPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: '',
+    species: ScientificSpecies.tetramoriumPulcherrimum,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

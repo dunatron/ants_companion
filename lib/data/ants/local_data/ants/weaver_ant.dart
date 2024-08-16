@@ -12,7 +12,7 @@ const weaverAnt = Ant(
     ...weaverAntPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Oecophylla longinoda',
+    species: ScientificSpecies.oecophyllaLonginoda,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

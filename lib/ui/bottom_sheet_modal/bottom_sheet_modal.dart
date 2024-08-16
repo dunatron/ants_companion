@@ -35,7 +35,8 @@ class BottomSheetModal extends StatelessWidget {
     return SafeArea(
       child: DraggableScrollableSheet(
         maxChildSize: 1,
-        initialChildSize: scrollsNormally ? 0.5 : 1,
+        // initialChildSize: scrollsNormally ? 0.5 : 1,
+        initialChildSize: 1,
         expand: false,
         builder: (
           BuildContext context,

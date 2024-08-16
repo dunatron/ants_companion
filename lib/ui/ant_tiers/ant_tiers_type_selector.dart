@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
-import 'package:ants_companion/ui/draggable_scroll_configuration.dart';
 
 class AntTiersTypeSelector extends StatelessWidget {
   const AntTiersTypeSelector({
@@ -25,47 +22,28 @@ class AntTiersTypeSelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
+
+    bool ignoreType(AntType antType) {
+      return !isPvp && (antType == AntType.universal || antType == AntType.gss);
+    }
+
+    final antTypes = [
+      ...AntType.values.where((antType) => !ignoreType(antType))
+    ];
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: DraggableScrollConfiguration(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-              ...AntType.values.map(
-                (antType) => ignoreType(antType)
-                    ? Container()
-                    : Padding(
-                        padding: const EdgeInsets.only(right: 4),
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                              visualDensity: VisualDensity.compact,
-                              foregroundColor: antType == type
-                                  ? WidgetStateProperty.all<Color>(
-                                      Theme.of(context).colorScheme.onPrimary,
-                                    )
-                                  : null,
-                              backgroundColor: antType == type
-                                  ? WidgetStateProperty.all<Color>(
-                                      Theme.of(context).colorScheme.primary,
-                                    )
-                                  : null),
-                          onPressed: () => changeAntType(antType),
-                          child: Text(
-                            antType.displayText(l10n).toUpperCase(),
-                            style: TextStyle(
-                              fontSize: Theme.of(context)
-                                  .textTheme
-                                  .labelSmall
-                                  ?.fontSize,
-                            ),
-                          ),
-                        ),
-                      ),
-              ),
-            ],
+      child: DropdownButton<AntType>(
+        value: type,
+        items: List<DropdownMenuItem<AntType>>.from(
+          antTypes.map(
+            (antType) => DropdownMenuItem<AntType>(
+              value: antType,
+              child: Text(antType.displayText(l10n)),
+            ),
           ),
         ),
+        onChanged: (newAntType) =>
+            newAntType != null ? changeAntType(newAntType) : null,
       ),
     );
   }

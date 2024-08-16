@@ -12,7 +12,7 @@ const slimArched = Ant(
     ...slimArchedPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Camponotus mirabilis',
+    species: ScientificSpecies.camponotusMirabilis,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

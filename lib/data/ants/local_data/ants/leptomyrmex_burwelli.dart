@@ -12,7 +12,7 @@ const leptomyrmexBurwelli = Ant(
     ...leptomyrmexBurwelliPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Leptomyrmex Burwelli',
+    species: ScientificSpecies.leptomyrmexBurwelli,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

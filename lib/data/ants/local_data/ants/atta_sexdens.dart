@@ -13,7 +13,7 @@ const attaSexdens = Ant(
   type: AntType.guardian,
   role: AntRole.ranged,
   scientificClassification: AntScientificClassification(
-    species: 'Atta Sexdens',
+    species: ScientificSpecies.attaSexdens,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

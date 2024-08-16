@@ -12,7 +12,7 @@ const rockBandit = Ant(
     ...rockBanditPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Cyphomyrmex flavidus',
+    species: ScientificSpecies.cyphomyrmexFlavidus,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

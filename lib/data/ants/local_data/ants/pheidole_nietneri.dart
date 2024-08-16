@@ -12,7 +12,7 @@ const pheidoleNietneri = Ant(
     ...pheidoleNietneriPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Pheidole nietneri',
+    species: ScientificSpecies.pheidoleNietneri,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

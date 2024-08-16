@@ -11,7 +11,7 @@ const crimsonPearl = Ant(
       'They are commonly called ant-mimicking spiders, but they are not '
       'the only spiders that have this attribute.',
   scientificClassification: AntScientificClassification(
-    species: 'Myrmarachne sp',
+    species: ScientificSpecies.myrmarachneSp,
     phylum: ScientificPhylum.arthropoda,
     subphylum: ScientificSubphylum.chelicerata,
     classification: ScientificClassification.arachnida,

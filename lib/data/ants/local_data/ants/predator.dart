@@ -12,7 +12,7 @@ const predator = Ant(
     ...predatorPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Psalidomyrmex reichenspergeri',
+    species: ScientificSpecies.psalidomyrmexReichenspergeri,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

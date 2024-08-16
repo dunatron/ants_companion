@@ -12,7 +12,7 @@ const hairyPanther = Ant(
     ...hairyPantherPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Neoponera villosa',
+    species: ScientificSpecies.neoponeraVillosa,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

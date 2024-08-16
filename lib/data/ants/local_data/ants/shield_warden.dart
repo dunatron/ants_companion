@@ -12,7 +12,7 @@ const shieldWarden = Ant(
     ...shieldWardenPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Cataulacus huberi',
+    species: ScientificSpecies.cataulacusHuberi,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

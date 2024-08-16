@@ -12,7 +12,7 @@ const merannoplusCastaneus = Ant(
     ...merannoplusCastaneusPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Merannoplus castaneus',
+    species: ScientificSpecies.merannoplusCastaneus,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

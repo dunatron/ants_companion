@@ -12,7 +12,7 @@ const proatta = Ant(
     ...proattaPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Proatta butteli',
+    species: ScientificSpecies.proattaButteli,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

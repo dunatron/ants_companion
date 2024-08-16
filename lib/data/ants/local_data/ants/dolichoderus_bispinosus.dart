@@ -12,7 +12,7 @@ const dolichoderusBispinosus = Ant(
     ...dolichoderusBispinosusPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Dolichoderus bispinosus',
+    species: ScientificSpecies.dolichoderusBispinosus,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

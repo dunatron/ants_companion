@@ -12,7 +12,7 @@ const guardGeneral = Ant(
     ...guardGeneralPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Harpegnathos venator',
+    species: ScientificSpecies.harpegnathosVenator,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

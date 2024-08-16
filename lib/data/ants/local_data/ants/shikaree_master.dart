@@ -12,7 +12,7 @@ const shikareeMaster = Ant(
     ...shikareeMasterPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: '',
+    species: ScientificSpecies.arilusCristatus,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

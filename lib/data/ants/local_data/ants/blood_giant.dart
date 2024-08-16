@@ -16,7 +16,7 @@ const bloodGiant = Ant(
     ...bloodGiantPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Nomamyrmex esenbeckii',
+    species: ScientificSpecies.nomamyrmexEsenbeckii,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null,
     classification: ScientificClassification.insecta,

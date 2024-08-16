@@ -12,7 +12,7 @@ const emeraldJewelAnt = Ant(
     ...emeraldJewelAntPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: '',
+    species: ScientificSpecies.ampulexCompressa,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

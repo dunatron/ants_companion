@@ -12,7 +12,7 @@ const strumigenysEggersi = Ant(
     ...strumigenysEggersiPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Strumigenys Eggersi',
+    species: ScientificSpecies.strumigenysEggersi,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

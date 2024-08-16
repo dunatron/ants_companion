@@ -12,7 +12,7 @@ const driverAnt = Ant(
     ...driverAntPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Dorylus driver',
+    species: ScientificSpecies.dorylusDriver,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

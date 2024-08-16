@@ -12,7 +12,7 @@ const cyphomyrmexRimosus = Ant(
     ...cyphomyrmexRimosusPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Cyphomyrmex rimosus',
+    species: ScientificSpecies.cyphomyrmexRimosus,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

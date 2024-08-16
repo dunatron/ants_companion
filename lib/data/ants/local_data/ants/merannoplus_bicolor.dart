@@ -12,7 +12,7 @@ const merannoplusBicolor = Ant(
     ...merannoplusBicolorPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Merannoplus bicolor',
+    species: ScientificSpecies.merannoplusBicolor,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

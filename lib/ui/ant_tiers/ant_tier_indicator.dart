@@ -24,11 +24,15 @@ class AntTierIndicator extends StatelessWidget {
     return Container(
       width: diameter,
       height: diameter,
-      padding: const EdgeInsets.all(2),
+      // padding: const EdgeInsets.all(1),
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: tierRating.color,
-        border: Border.all(color: Colors.transparent),
+        // color: tierRating.color,
+        border: Border.all(
+          // color: Theme.of(context).colorScheme.primary,
+          color: Colors.transparent,
+          width: 2,
+        ),
         borderRadius: BorderRadius.circular(diameter / 2),
       ),
       child: Center(

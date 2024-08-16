@@ -18,7 +18,7 @@ const bansheeVelvet = Ant(
     ...bansheeVelvetPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Dasymutilla occidentalis',
+    species: ScientificSpecies.dasymutillaOccidentalis,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null,
     classification: ScientificClassification.insecta,

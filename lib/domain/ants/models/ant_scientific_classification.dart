@@ -6,6 +6,7 @@ import 'package:ants_companion/domain/scientific_classifications/models/scientif
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_kingdom.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_order.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_phylum.dart';
+import 'package:ants_companion/domain/scientific_classifications/models/scientific_species.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_subfamily.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_subphylum.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_tribe.dart';
@@ -25,7 +26,7 @@ class AntScientificClassification {
     required this.genus,
   });
 
-  final String species;
+  final ScientificSpecies species;
 
   final ScientificDomain domain = ScientificDomain.eukaryota;
 

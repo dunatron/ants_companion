@@ -3,7 +3,7 @@ import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tier_details.dart';
+import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_indicator.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:flutter/material.dart';
@@ -45,6 +45,8 @@ class TierSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
 
+    final theme = Theme.of(context);
+
     List<Map<AntTierTag, Ant>> frontRow = [];
     List<Map<AntTierTag, Ant>> middleRow = [];
     List<Map<AntTierTag, Ant>> backRow = [];
@@ -80,10 +82,8 @@ class TierSection extends StatelessWidget {
         children: [
           Text(
             tierRating.displayText,
-            style: Theme.of(context)
-                .textTheme
-                .displayMedium
-                ?.copyWith(color: tierRating.color),
+            style: theme.textTheme.displaySmall
+                ?.copyWith(color: theme.colorScheme.primary),
           ),
           const SizedBox(height: 24),
           Row(

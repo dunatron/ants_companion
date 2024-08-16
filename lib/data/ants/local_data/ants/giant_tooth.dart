@@ -12,7 +12,7 @@ const giantTooth = Ant(
       ...giantToothPvpTags,
     ],
     scientificClassification: AntScientificClassification(
-      species: '',
+      species: ScientificSpecies.odontomachusCoquereli,
       phylum: ScientificPhylum.arthropoda,
       subphylum: null, // missing
       classification: ScientificClassification.insecta,

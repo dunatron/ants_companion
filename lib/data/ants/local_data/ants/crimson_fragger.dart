@@ -14,7 +14,7 @@ const crimsonFragger = Ant(
     ...crimsonFraggerPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Camponotus chromaiodes',
+    species: ScientificSpecies.camponotusChromaiodes,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null,
     classification: ScientificClassification.insecta,

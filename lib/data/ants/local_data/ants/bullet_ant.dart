@@ -20,7 +20,7 @@ const bulletAnt = Ant(
     ...bulletAntPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Paraponera clavata',
+    species: ScientificSpecies.paraponeraClavata,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null,
     classification: ScientificClassification.insecta,

@@ -12,7 +12,7 @@ const nimbleTreeAnt = Ant(
     ...nimbleTreeAntPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Pseudomyrmex boopis',
+    species: ScientificSpecies.pseudomyrmexBoopis,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

@@ -17,7 +17,7 @@ const goldenVenom = Ant(
     ...goldenVenomPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Telamonia dimidiata',
+    species: ScientificSpecies.telamoniaDimidiata,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.arachnida,

@@ -19,7 +19,7 @@ const brownRogue = Ant(
     ...brownRoguePvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: 'Myrmarachne plataleoides',
+    species: ScientificSpecies.myrmarachnePlataleoides,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null,
     classification: ScientificClassification.arachnida,

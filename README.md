@@ -108,3 +108,5 @@ open ios/Runner.xcworkspace
 ## handy resources
 
 - [Get url scheme of any ios app](https://www.reddit.com/r/workflow/comments/2tlx29/get_url_scheme_of_any_app/)
+- [Play console](https://play.google.com/)
+- [Google Ad Mob](https://apps.admob.com/)

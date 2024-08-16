@@ -6,7 +6,7 @@ const acidGeneral = Ant(
   scientificName: 'Mystrium oberthueri',
   description: '',
   scientificClassification: AntScientificClassification(
-    species: 'Mystrium oberthueri',
+    species: ScientificSpecies.mystriumOberthueri,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,

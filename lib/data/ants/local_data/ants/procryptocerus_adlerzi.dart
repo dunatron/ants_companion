@@ -12,7 +12,7 @@ const procryptocerusAdlerzi = Ant(
     ...procryptocerusAdlerziPvpTags,
   ],
   scientificClassification: AntScientificClassification(
-    species: '',
+    species: ScientificSpecies.procryptocerusAdlerzi,
     phylum: ScientificPhylum.arthropoda,
     subphylum: null, // missing
     classification: ScientificClassification.insecta,
