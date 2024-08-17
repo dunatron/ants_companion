@@ -1,6 +1,6 @@
 import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tiers_display.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -9,7 +9,7 @@ import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/ants.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/ui/ads/ads_carousel.dart';
-import 'package:ants_companion/ui/ants/ant_details/ant_details.dart';
+
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/home/ants_tier_feature_info.dart';
@@ -27,7 +27,6 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   _launchAntDetails(final Ant ant, BuildContext context) =>
-      // buildBottomSheetModal(context, AntDetails(ant: ant));
       buildBottomSheetModal(
         context,
         AntTierDetails(
@@ -56,12 +55,13 @@ class HomeScreen extends StatelessWidget {
           _buildSpecialAntsTitle(l10n, context),
           _buildSpace(),
           _buildCarousel(context, antsList),
-          _buildSingleAdCard(),
+          _buildSingleAdCard(context),
           // _buildAdsCarousel(),
           _buildAppFeatureTitle(context, l10n),
           _buildSpace(),
           _buildFeaturesMasonryGrid(),
           _buildSpace(),
+          // _buildAdsCarousel(),
         ],
       ),
     );
@@ -139,25 +139,34 @@ class HomeScreen extends StatelessWidget {
         ),
       );
 
-  Widget _buildSingleAdCard() {
+  Widget _buildSingleAdCard(BuildContext context) {
     if (AdsService.enabled) {
       return SliverPadding(
         padding: const EdgeInsets.only(bottom: Spacing.vl),
         sliver: SliverToBoxAdapter(
           child: ConstrainedBox(
-            constraints: BoxConstraints(
-                // maxHeight: 100,
-                // maxWidth: 100,
+            constraints: const BoxConstraints(
+              maxWidth: 300,
+              maxHeight: 250,
+            ),
+            child: Container(
+              // color: Theme.of(context).colorScheme.surfaceContainerHigh,
+              child: Center(
+                child: AdCard(
+                  adId: AdsService.homeAdUnitId,
+                  selfLoad: AdCardSelfLoad(size: AdSize.mediumRectangle),
                 ),
-            child: Center(
-              child: AdCard(
-                adId: AdsService.carousel1Item1,
-                selfLoad: AdCardSelfLoad(size: AdSize.mediumRectangle),
               ),
             ),
           ),
         ),
       );
+      // Container(
+      //           color: Theme.of(context).colorScheme.surfaceContainerHigh,
+      //           child: Center(
+      //             child: AdCard(adId: adIds[index]),
+      //           ),
+      //         )
     }
 
     return const SliverToBoxAdapter(child: SizedBox());

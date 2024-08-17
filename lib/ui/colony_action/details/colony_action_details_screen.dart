@@ -3,7 +3,6 @@ import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
-import 'package:ants_companion/ui/colony_action/scheduler/colony_action_scheduler_screen.dart';
 import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
 import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +38,7 @@ class ColonyActionDetailsScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 16),
             sliver: SliverToBoxAdapter(
               child: AdCard(
-                adId: AdsService.antDetailsAdUnitId,
+                adId: AdsService.colonyActionDetailsAdUnitId,
                 selfLoad: AdCardSelfLoad(size: AdSize.banner),
               ),
             ),

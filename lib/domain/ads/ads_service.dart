@@ -11,7 +11,7 @@ import 'package:rxdart/rxdart.dart';
 const String heathAndroidPhoneId = '16D265166C7DAF515FA40F177BD4D2C3';
 
 const String heathIOSPhoneId = '4151243ac11bbda74d48d0dfa0ec3fa9';
-const String heathIOSPhoneReleaseId = 'c3a4319d34bfe0386a0315f71e14e4e6';
+const String heathIOSPhoneReleaseId = 'a1744d10ccfe668b389a67b23971217b';
 
 const String heathIPadId = '294b3bfcad8d794c558e08d5eabd1337';
 const String heathIPadId2 = 'd8a5df37edce96ec9b116c8b6218934b';
@@ -24,11 +24,14 @@ const List<String> testDeviceIds = [
   heathIPadId2,
 ];
 
-const _enableAds = true;
+const _enableAds = false;
 
 class AdsService {
   static String homeAdUnitId = 'ca-app-pub-8577724747514488/4573507812';
   static String antDetailsAdUnitId = 'ca-app-pub-8577724747514488/8321181130';
+
+  static String colonyActionDetailsAdUnitId =
+      'ca-app-pub-8577724747514488/2934785216';
 
   // carousel#1item#2
   static String carousel1Item1 = 'ca-app-pub-8577724747514488/1202643986';
@@ -139,14 +142,14 @@ class AdsService {
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
           logger.d('Failed to load Banner Ad: ${ad.adUnitId}\n error: $error');
           ad.dispose();
-          if (attempt < maxRetryAttempts) {
-            Future.delayed(retryDelay, () {
-              // _increaseRetryDelay();
-              loadBannerAdWithRetry(adUnitId, size, attempt: attempt + 1);
-            });
-          } else {
-            logger.e('Max retry attempts reached for ad unit: $adUnitId');
-          }
+          // if (attempt < maxRetryAttempts) {
+          //   Future.delayed(retryDelay, () {
+          //     // _increaseRetryDelay();
+          //     loadBannerAdWithRetry(adUnitId, size, attempt: attempt + 1);
+          //   });
+          // } else {
+          //   logger.e('Max retry attempts reached for ad unit: $adUnitId');
+          // }
         },
       ),
     );
