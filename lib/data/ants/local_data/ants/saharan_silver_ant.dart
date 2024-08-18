@@ -36,7 +36,6 @@ const saharanSilverAntPveTags = [
     rating: TierRating.s,
     rowPosition: RowPosition.back,
     antType: AntType.shooter,
-    reason: '',
   )
 ];
 
@@ -45,24 +44,20 @@ const List<AntPvpTierTag> saharanSilverAntPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.gss,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.gss,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

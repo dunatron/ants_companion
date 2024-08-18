@@ -40,7 +40,6 @@ const pheidoleNietneriPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,6 +48,5 @@ const pheidoleNietneriPvpTags = [
     rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

@@ -27,22 +27,19 @@ const crimsonPearl = Ant(
 
 const crimsonPearlPveTags = [
   AntPveTierTag(
-    rating: TierRating.s,
+    rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: 'Its just Super strong',
   ),
   AntPveTierTag(
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: 'Its just Super strong',
   ),
   AntPveTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: 'Its just Super strong',
   ),
 ];
 
@@ -51,12 +48,10 @@ const crimsonPearlPvpTags = [
     rating: TierRating.a,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.universal,
     rowPosition: RowPosition.back,
-    reason: '',
   )
 ];

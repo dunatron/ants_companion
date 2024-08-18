@@ -41,6 +41,5 @@ const blackKnightPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: "The best guardian ant in the front row",
   ),
 ];

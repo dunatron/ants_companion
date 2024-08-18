@@ -36,7 +36,6 @@ const ghostAntPveTags = [
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: notTheWorstB,
   ),
 ];
 
@@ -45,6 +44,5 @@ const ghostAntPvpTags = [
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

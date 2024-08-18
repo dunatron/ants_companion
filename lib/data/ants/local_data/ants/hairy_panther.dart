@@ -36,7 +36,6 @@ const hairyPantherPveTags = [
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,12 +44,10 @@ const hairyPantherPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

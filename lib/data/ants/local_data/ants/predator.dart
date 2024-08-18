@@ -36,7 +36,6 @@ const predatorPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const predatorPvpTags = [
     rating: TierRating.b,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

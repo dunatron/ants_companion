@@ -40,7 +40,6 @@ const dolichoderusBispinosusPveTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,6 +48,5 @@ const dolichoderusBispinosusPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

@@ -36,7 +36,6 @@ const blackCancerPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 const blackCancerPvpTags = [
@@ -44,6 +43,5 @@ const blackCancerPvpTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: betterOptionsAvailableC,
   ),
 ];

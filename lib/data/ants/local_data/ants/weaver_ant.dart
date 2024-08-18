@@ -40,7 +40,6 @@ const weaverAntPveTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,12 +48,10 @@ const weaverAntPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

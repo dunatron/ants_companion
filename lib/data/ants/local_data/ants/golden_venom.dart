@@ -40,7 +40,6 @@ const goldenVenomPveTags = [
     rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,6 +48,5 @@ const goldenVenomPvpTags = [
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

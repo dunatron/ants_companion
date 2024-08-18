@@ -36,7 +36,6 @@ const darkHerculesPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const darkHerculesPvpTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

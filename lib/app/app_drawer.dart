@@ -58,7 +58,7 @@ class AppDrawer extends StatelessWidget {
           // ),
           ListTile(
             leading: const Icon(Icons.palette_outlined),
-            title: Text('Theme Picker'),
+            title: Text(l10n.themePicker),
             onTap: () {
               // Navigator.pop(context);
               context.go('/theme-picker');
@@ -66,7 +66,7 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.developer_mode),
-            title: Text('Device Info'),
+            title: Text(l10n.deviceInfo),
             onTap: () {
               // Navigator.pop(context);
               context.go('/device-info');

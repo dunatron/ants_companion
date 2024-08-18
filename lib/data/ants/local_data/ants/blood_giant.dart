@@ -36,7 +36,6 @@ const bloodGiantPveTags = [
     rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 const bloodGiantPvpTags = [
@@ -44,6 +43,5 @@ const bloodGiantPvpTags = [
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: "While it can heal itself it lacks any other real PvP capabilities",
   ),
 ];

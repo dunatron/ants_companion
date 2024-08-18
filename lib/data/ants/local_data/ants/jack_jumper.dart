@@ -40,25 +40,16 @@ const jackJumperPveTags = [
     rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: 'It does an ok amount of damage consistently while its '
-        'awakening buffs the attack of all ants when jack jumper releases '
-        'a combat skill',
   ),
   AntPveTierTag(
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'It does an ok amount of damage consistently while its '
-        'awakening buffs the attack of all ants when jack jumper releases '
-        'a combat skill',
   ),
   AntPveTierTag(
     rating: TierRating.a,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: 'It does an ok amount of damage consistently while its '
-        'awakening buffs the attack of all ants when jack jumper releases '
-        'a combat skill',
   ),
 ];
 
@@ -67,6 +58,5 @@ const jackJumperPvpTags = [
     rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

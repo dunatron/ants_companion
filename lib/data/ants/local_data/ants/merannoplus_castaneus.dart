@@ -38,18 +38,15 @@ const merannoplusCastaneusPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.gss,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

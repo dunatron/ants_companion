@@ -36,7 +36,6 @@ const cyphomyrmexRimosusPveTags = [
     rating: TierRating.s,
     rowPosition: RowPosition.back,
     antType: AntType.carrier,
-    reason: '',
   )
 ];
 
@@ -45,12 +44,10 @@ const cyphomyrmexRimosusPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

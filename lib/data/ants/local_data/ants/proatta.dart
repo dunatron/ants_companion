@@ -36,7 +36,6 @@ const proattaPveTags = [
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: 'One of the best guardian ants in the game for damage',
   ),
 ];
 
@@ -45,12 +44,10 @@ const proattaPvpTags = [
     rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

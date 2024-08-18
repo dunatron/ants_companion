@@ -40,7 +40,6 @@ const lathySnifferPveTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'Best shooter option for PVE',
   ),
 ];
 
@@ -49,12 +48,10 @@ const lathySnifferPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

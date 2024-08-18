@@ -36,7 +36,6 @@ const nimbleTreeAntPveTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: 'Needs wise berserker',
   ),
 ];
 
@@ -45,6 +44,5 @@ const nimbleTreeAntPvpTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

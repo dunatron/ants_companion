@@ -40,8 +40,6 @@ const leptomyrmexBurwelliPveTags = [
     rating: TierRating.s,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: 'Provides a damage buff for other ants and '
-        'deals extremely high damage',
   ),
 ];
 
@@ -50,12 +48,10 @@ const leptomyrmexBurwelliPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

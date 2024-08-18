@@ -36,7 +36,6 @@ const reapMasterPveTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: 'Can deal a good amount of high damage when its not sleeping',
   ),
 ];
 
@@ -45,12 +44,10 @@ const reapMasterPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

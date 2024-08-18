@@ -37,7 +37,6 @@ const goldenSpinyPveTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -46,6 +45,5 @@ const goldenSpinyPvpTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

@@ -36,7 +36,6 @@ const whiteVelvetPveTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];
 
@@ -45,6 +44,5 @@ const whiteVelvetPvpTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: terribleForPvpF,
   ),
 ];

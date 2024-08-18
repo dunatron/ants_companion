@@ -18,19 +18,16 @@ const duskyLurkerPveTags = [
     rating: TierRating.b,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: notTheWorstB,
   ),
   AntPveTierTag(
     rating: TierRating.b,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: notTheWorstB,
   ),
   AntPveTierTag(
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: notTheWorstB,
   ),
 ];
 
@@ -39,6 +36,5 @@ const duskyLurkerPvpTags = [
     rating: TierRating.c,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

@@ -40,7 +40,6 @@ const rockBanditPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,6 +48,5 @@ const rockBanditPvpTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

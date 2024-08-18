@@ -36,7 +36,6 @@ const bansheeVelvetPveTags = [
     rating: TierRating.c,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const bansheeVelvetPvpTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: betterOptionsAvailableC,
   ),
 ];

@@ -38,12 +38,10 @@ const leptoglossusPhyllopusPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

@@ -36,7 +36,6 @@ const myrmarachneFormicariaPveTags = [
     rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -44,13 +43,11 @@ const myrmarachneFormicariaPvpTags = [
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
-    reason: '',
     rowPosition: RowPosition.front,
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
-    reason: '',
     rowPosition: RowPosition.middle,
   )
 ];

@@ -36,7 +36,6 @@ const acidGeneralPveTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'There are much better ants to use for shooter pve',
   ),
 ];
 const acidGeneralPvpTags = [
@@ -44,6 +43,5 @@ const acidGeneralPvpTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'There are better shooter ants for pvp',
   ),
 ];

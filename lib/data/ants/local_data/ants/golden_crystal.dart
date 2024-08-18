@@ -53,7 +53,6 @@ const goldenCrystalPveTags = [
     rating: TierRating.s,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: 'The best option to run for the damage it provides',
   ),
 ];
 
@@ -62,12 +61,10 @@ const goldenCrystalPvpTags = [
     rating: TierRating.s,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

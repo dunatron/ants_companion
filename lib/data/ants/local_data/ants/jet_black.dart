@@ -36,7 +36,6 @@ const jetBlackPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const jetBlackPvpTags = [
     rating: TierRating.c,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

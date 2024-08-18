@@ -36,7 +36,6 @@ const darkGiantPveTags = [
     rating: TierRating.c,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: betterOptionsAvailableC,
   ),
 ];
 
@@ -45,6 +44,5 @@ const darkGiantPvpTags = [
     rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

@@ -39,7 +39,6 @@ const myrmecotypusRettenmeyeriPveTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -48,6 +47,5 @@ const myrmecotypusRettenmeyeriPvpTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

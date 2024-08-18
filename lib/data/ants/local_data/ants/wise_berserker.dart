@@ -36,7 +36,6 @@ const wiseBerserkerPveTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'Does a decent amount of damage',
   ),
 ];
 
@@ -45,12 +44,10 @@ const wiseBerserkerPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

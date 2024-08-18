@@ -40,7 +40,6 @@ const leafDevourerPveTags = [
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: 'One of the best guardian damage dealers',
   ),
 ];
 
@@ -49,12 +48,10 @@ const leafDevourerPvpTags = [
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

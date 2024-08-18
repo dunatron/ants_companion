@@ -36,7 +36,6 @@ const bansheePandaPveTags = [
     rating: TierRating.c,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'Terrible do not use for PVE',
   ),
 ];
 const bansheePandaPvpTags = [
@@ -44,6 +43,5 @@ const bansheePandaPvpTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: 'With awakening and 8 starred this is great in the front for pvp',
   ),
 ];

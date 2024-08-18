@@ -36,7 +36,6 @@ const slimArchedPveTags = [
     rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: 'Deals an ok amount of damage',
   ),
 ];
 
@@ -45,18 +44,15 @@ const slimArchedPvpTags = [
     rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.b,
     antType: AntType.gss,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

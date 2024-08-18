@@ -20,7 +20,6 @@ const mimicryMasterPveTags = [
     rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: 'Deals a good amount of damage',
   ),
 ];
 
@@ -29,12 +28,10 @@ const mimicryMasterPvpTags = [
     rating: TierRating.b,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.b,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

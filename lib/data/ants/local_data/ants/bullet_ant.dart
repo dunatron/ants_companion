@@ -40,7 +40,6 @@ const bulletAntPveTags = [
     rating: TierRating.b,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 const bulletAntPvpTags = [
@@ -48,6 +47,5 @@ const bulletAntPvpTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

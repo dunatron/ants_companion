@@ -36,7 +36,6 @@ const rubySlenderPveTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const rubySlenderPvpTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

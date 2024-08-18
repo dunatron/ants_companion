@@ -40,19 +40,16 @@ const goldenSugarPveTags = [
     rating: TierRating.b,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: notTheWorstB,
   ),
   AntPveTierTag(
     rating: TierRating.b,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: notTheWorstB,
   ),
   AntPveTierTag(
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: notTheWorstB,
   ),
 ];
 
@@ -61,6 +58,5 @@ const goldenSugarPvpTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

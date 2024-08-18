@@ -40,7 +40,6 @@ const guardGeneralPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 const guardGeneralPvpTags = [
@@ -48,6 +47,5 @@ const guardGeneralPvpTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

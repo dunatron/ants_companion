@@ -40,7 +40,6 @@ const driverAntPveTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 const driverAntPvpTags = [
@@ -48,6 +47,5 @@ const driverAntPvpTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];
