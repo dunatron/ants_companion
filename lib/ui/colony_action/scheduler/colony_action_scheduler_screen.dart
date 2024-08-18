@@ -104,20 +104,26 @@ class _ColonyActionSchedulerScreenState
     return SliverPageLayout(
       title: l10n.colonyActionSchedulerTitle,
       slivers: [
+        // ConstrainedSliverWidth(
+        //   maxWidth: 280,
+        //   child: SliverToBoxAdapter(
+        //     child: ElevatedButton(
+        //       onPressed: () async {
+        //         await LocalNotifications.requestPermissions();
+        //         LocalNotifications.showSimpleNotification(
+        //           title: l10n.notificationTestTitle,
+        //           body: l10n.notificationTestBody,
+        //           payload: '/ca-scheduler/1-12',
+        //         );
+        //       },
+        //       child: Text(l10n.notificationTestButtonLabel),
+        //     ),
+        //   ),
+        // ),
         ConstrainedSliverWidth(
           maxWidth: 280,
           child: SliverToBoxAdapter(
-            child: ElevatedButton(
-              onPressed: () async {
-                await LocalNotifications.requestPermissions();
-                LocalNotifications.showSimpleNotification(
-                  title: l10n.notificationTestTitle,
-                  body: l10n.notificationTestBody,
-                  payload: '/ca-scheduler/1-12',
-                );
-              },
-              child: Text(l10n.notificationTestButtonLabel),
-            ),
+            child: Text(l10n.colonyActionSchedulerDescription),
           ),
         ),
         ConstrainedSliverWidth(

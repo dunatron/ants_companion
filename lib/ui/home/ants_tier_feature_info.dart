@@ -29,7 +29,7 @@ class AntsTierFeatureInfo extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 16),
-          TierStarRating(starCount: 6),
+          const TierStarRating(starCount: 6),
           const SizedBox(height: Spacing.vl),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
