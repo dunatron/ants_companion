@@ -4,7 +4,7 @@ import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
 import 'package:ants_companion/ui/section.dart';
-import 'package:ants_companion/ui/ant_tiers/tier_section.dart';
+import 'package:ants_companion/ui/ant_tiers/tier_section/tier_section.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tiers_game_mode_selector.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tiers_type_selector.dart';
 

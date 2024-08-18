@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const predator = Ant(
   id: 'predator',
   name: 'Predator',
-  description: '',
   scientificName: 'Psalidomyrmex reichenspergeri',
+  species: ScientificSpecies.psalidomyrmexReichenspergeri,
   type: AntType.shooter,
   role: AntRole.melee,
   tierTags: [
@@ -36,7 +36,6 @@ const predatorPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const predatorPvpTags = [
     rating: TierRating.b,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

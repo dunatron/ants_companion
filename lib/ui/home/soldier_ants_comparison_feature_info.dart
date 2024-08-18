@@ -10,6 +10,7 @@ class SoldierAntsComparisonFeatureInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     return FeatureCard(
+      onTap: () => context.go('/soldier-ants-comparison'),
       child: Column(
         children: [
           Text(
@@ -23,7 +24,7 @@ class SoldierAntsComparisonFeatureInfo extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          ElevatedButton(
+          TextButton(
             onPressed: () => context.go('/soldier-ants-comparison'),
             child: Text(l10n.soldierAntsComparisonFeatureInfoButton),
           )

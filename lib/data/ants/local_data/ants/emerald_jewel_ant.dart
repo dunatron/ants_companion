@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const emeraldJewelAnt = Ant(
   id: 'emerald_jewel_ant',
   name: 'Emerald Jewel Ant',
-  description: '',
+  species: ScientificSpecies.ampulexCompressa,
   scientificName: 'Ampulex compressa',
   type: AntType.shooter,
   role: AntRole.ranged,
@@ -31,30 +31,32 @@ const emeraldJewelAnt = Ant(
   ],
 );
 
-const emeraldJewelAntPveTags = [];
+const emeraldJewelAntPveTags = [
+  AntPveTierTag(
+    rating: TierRating.s,
+    rowPosition: RowPosition.middle,
+    antType: AntType.shooter,
+  )
+];
 const emeraldJewelAntPvpTags = [
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.gss,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.gss,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:ants_companion/data/themes/models/color_seed.dart';
+import 'package:ants_companion/domain/themes/models/color_seed.dart';
 import 'package:ants_companion/domain/themes/themes.dart';
 import 'package:ants_companion/ui/home/scientific_classifications_feature_info.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';

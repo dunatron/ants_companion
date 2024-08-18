@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const shieldWarden = Ant(
   id: 'shield_warden',
   name: 'Shield Warden',
-  description: '',
   scientificName: 'Cataulacus huberi',
+  species: ScientificSpecies.cataulacusHuberi,
   type: AntType.guardian,
   role: AntRole.support,
   tierTags: [
@@ -36,7 +36,6 @@ const shieldWardenPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const shieldWardenPvpTags = [
     rating: TierRating.b,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

@@ -1,29 +1,40 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 
+import 'package:ants_companion/data/_store_model_type_ids.dart';
+
+import 'package:hive/hive.dart';
+
+part 'color_seed.g.dart';
+
+@HiveType(typeId: StoreModelTypeIds.colorSeed)
 class ColorSeed extends Equatable {
   const ColorSeed({
     required this.brightness,
-    required this.color,
+    required this.colorValue,
     required this.dynamicSchemeVariant,
   });
-  final Color color;
-  final Brightness brightness;
-  final DynamicSchemeVariant dynamicSchemeVariant;
+
+  @HiveField(0)
+  final int colorValue;
+
+  @HiveField(1)
+  final String brightness;
+
+  @HiveField(2)
+  final String dynamicSchemeVariant;
 
   ColorSeed copyWith({
-    final Brightness? brightness,
-    final Color? color,
-    final DynamicSchemeVariant? dynamicSchemeVariant,
+    final String? brightness,
+    final int? colorValue,
+    final String? dynamicSchemeVariant,
   }) {
     return ColorSeed(
       brightness: brightness ?? this.brightness,
-      color: color ?? this.color,
+      colorValue: colorValue ?? this.colorValue,
       dynamicSchemeVariant: dynamicSchemeVariant ?? this.dynamicSchemeVariant,
     );
   }
 
   @override
-  // TODO: implement props
-  List<Object?> get props => [brightness, color, dynamicSchemeVariant];
+  List<Object?> get props => [brightness, colorValue, dynamicSchemeVariant];
 }

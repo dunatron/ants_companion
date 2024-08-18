@@ -10,7 +10,8 @@
      But must be an alarm, timer, or calendar app.
      It also just works for development
       -->
-    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <!-- <uses-permission android:name="android.permission.USE_EXACT_ALARM" /> -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <!-- ToDo: below 2 are probably not needed -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />

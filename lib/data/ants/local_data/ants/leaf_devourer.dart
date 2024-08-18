@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const leafDevourer = Ant(
   id: 'leaf_devourer',
   name: 'Leaf Devourer',
-  description: '',
   scientificName: 'Atta laevigata',
+  species: ScientificSpecies.attaLaevigata,
   type: AntType.guardian,
   role: AntRole.ranged,
   tierTags: [
@@ -40,7 +40,6 @@ const leafDevourerPveTags = [
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: 'One of the best guardian damage dealers',
   ),
 ];
 
@@ -49,12 +48,10 @@ const leafDevourerPvpTags = [
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

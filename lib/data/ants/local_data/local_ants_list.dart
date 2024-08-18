@@ -17,7 +17,6 @@ import 'package:ants_companion/domain/scientific_classifications/models/scientif
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_subfamily.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_subphylum.dart';
 import 'package:ants_companion/domain/scientific_classifications/models/scientific_tribe.dart';
-import 'package:ants_companion/domain/ants/models/species.dart';
 
 part 'ants/acid_general.dart';
 part 'ants/atta_sexdens.dart';
@@ -93,7 +92,6 @@ const examplePveTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -102,7 +100,6 @@ const examplePvpTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: terribleForPvpF,
   ),
 ];
 

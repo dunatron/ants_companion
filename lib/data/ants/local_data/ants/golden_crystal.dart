@@ -4,7 +4,7 @@ const goldenCrystal = Ant(
   id: 'golden_crystal',
   name: 'Golden Crystal',
   scientificName: 'Leptogenys elongata',
-  description: 'An OP carrier Ant',
+  species: ScientificSpecies.leptogenysElongata,
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [
@@ -53,7 +53,6 @@ const goldenCrystalPveTags = [
     rating: TierRating.s,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: 'The best option to run for the damage it provides',
   ),
 ];
 
@@ -62,12 +61,10 @@ const goldenCrystalPvpTags = [
     rating: TierRating.s,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

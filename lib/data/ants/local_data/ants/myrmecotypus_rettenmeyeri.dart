@@ -3,11 +3,10 @@ part of '../local_ants_list.dart';
 const myrmecotypusRettenmeyeri = Ant(
   id: 'myrmecotypus_rettenmeyeri',
   name: 'Myrmecotypus Rettenmeyeri',
-  description: '',
   scientificName: 'Myrmecotypus Rettenmeyeri',
+  species: ScientificSpecies.myrmecotypusRettenmeyeri,
   type: AntType.shooter,
   role: AntRole.melee,
-  species: Species.spider,
   tierTags: [
     ...myrmecotypusRettenmeyeriPveTags,
     ...myrmecotypusRettenmeyeriPvpTags,
@@ -40,7 +39,6 @@ const myrmecotypusRettenmeyeriPveTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,6 +47,5 @@ const myrmecotypusRettenmeyeriPvpTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

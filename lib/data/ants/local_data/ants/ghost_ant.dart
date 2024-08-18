@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const ghostAnt = Ant(
   id: 'ghost_ant',
   name: 'Ghost Ant',
-  description: '',
   scientificName: 'Tapinoma melanocephalum',
+  species: ScientificSpecies.tapinomaMelanocephalum,
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [
@@ -36,7 +36,6 @@ const ghostAntPveTags = [
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: notTheWorstB,
   ),
 ];
 
@@ -45,6 +44,5 @@ const ghostAntPvpTags = [
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

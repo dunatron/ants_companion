@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const whiteVelvet = Ant(
   id: 'white_velvet',
   name: 'White Velvet',
-  description: '',
   scientificName: 'Dasymutilla gloriosa',
+  species: ScientificSpecies.dasymutillaGloriosa,
   type: AntType.universal,
   role: AntRole.support,
   tierTags: [
@@ -36,7 +36,6 @@ const whiteVelvetPveTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];
 
@@ -45,6 +44,5 @@ const whiteVelvetPvpTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: terribleForPvpF,
   ),
 ];

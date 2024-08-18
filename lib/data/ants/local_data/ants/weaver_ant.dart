@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const weaverAnt = Ant(
   id: 'weaver_ant',
   name: 'Weaver Ant',
-  description: '',
   scientificName: 'Oecophylla longinoda',
+  species: ScientificSpecies.oecophyllaLonginoda,
   type: AntType.shooter,
   role: AntRole.support,
   tierTags: [
@@ -40,7 +40,6 @@ const weaverAntPveTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,12 +48,10 @@ const weaverAntPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

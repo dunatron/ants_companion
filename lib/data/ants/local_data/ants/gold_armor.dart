@@ -4,7 +4,7 @@ const goldArmor = Ant(
   id: 'gold_armor',
   name: 'Gold Armor',
   scientificName: 'Daceton armigerum',
-  description: 'A really nice PVE ant',
+  species: ScientificSpecies.dacetonArmigerum,
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [
@@ -35,18 +35,24 @@ const goldArmorPveTags = [
   AntPveTierTag(
     rating: TierRating.a,
     rowPosition: RowPosition.front,
+    antType: AntType.guardian,
+  ),
+  AntPveTierTag(
+    rating: TierRating.a,
+    rowPosition: RowPosition.front,
+    antType: AntType.shooter,
+  ),
+  AntPveTierTag(
+    rating: TierRating.a,
+    rowPosition: RowPosition.front,
     antType: AntType.carrier,
-    reason:
-        'It can boost the damage of other ants vs pangolin and groundhog with '
-        'its awakening while also doing a decent amount of damage itself',
   )
 ];
 
 const goldArmorPvpTags = [
   AntPvpTierTag(
     rating: TierRating.c,
-    antType: AntType.carrier,
+    antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: '',
   )
 ];

@@ -230,18 +230,33 @@ class LocalNotifications {
   }
 
   static Future<void> _requestAndroidPermissions() async {
+    notificationsLogger.d('Requetsing notification permissions');
     final androidNotificationsPlugin =
         _flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
             AndroidFlutterLocalNotificationsPlugin>();
 
     if (androidNotificationsPlugin == null) {
+      notificationsLogger.d('androidNotificationsPlugin is null');
       return;
     }
-    await androidNotificationsPlugin.requestNotificationsPermission();
+    notificationsLogger.d('requesting permissions');
+    final permissions =
+        await androidNotificationsPlugin.requestNotificationsPermission();
+    notificationsLogger.d('permissions result: $permissions');
+    final can =
+        await androidNotificationsPlugin.canScheduleExactNotifications();
+    notificationsLogger.d('Can schedule exact alarms: $can');
+    if (can == true) {
+      notificationsLogger.d('requestExactAlarmsPermission');
+      final exactAlarmPermission =
+          await androidNotificationsPlugin.requestExactAlarmsPermission();
+      notificationsLogger.d('exactAlarmPermission: ${exactAlarmPermission}');
+    }
 
-    await androidNotificationsPlugin.requestExactAlarmsPermission();
-
-    await androidNotificationsPlugin.requestFullScreenIntentPermission();
+    final fullScreenIntentPermssion =
+        await androidNotificationsPlugin.requestFullScreenIntentPermission();
+    notificationsLogger
+        .d('fullScreenIntentPermssion: ${fullScreenIntentPermssion}');
   }
 
   static Future<bool> areNotificationsEnabled() async {

@@ -1,6 +1,8 @@
 import 'package:ants_companion/ui/ads/ad_card.dart';
+import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tiers_display.dart';
+import 'package:ants_companion/ui/home/theme_picker_feature_info.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -9,7 +11,7 @@ import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/ants.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/ui/ads/ads_carousel.dart';
-import 'package:ants_companion/ui/ants/ant_details/ant_details.dart';
+
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/home/ants_tier_feature_info.dart';
@@ -27,7 +29,6 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   _launchAntDetails(final Ant ant, BuildContext context) =>
-      // buildBottomSheetModal(context, AntDetails(ant: ant));
       buildBottomSheetModal(
         context,
         AntTierDetails(
@@ -53,15 +54,16 @@ class HomeScreen extends StatelessWidget {
           _buildSpace(),
           _buildWelcome(),
           _buildSpace(),
-          _buildSpecialAntsTitle(l10n, context),
-          _buildSpace(),
+          // _buildSpecialAntsTitle(l10n, context),
+          // _buildSpace(),
           _buildCarousel(context, antsList),
-          _buildSingleAdCard(),
+          _buildSingleAdCard(context),
           // _buildAdsCarousel(),
-          _buildAppFeatureTitle(context, l10n),
-          _buildSpace(),
+          // _buildAppFeatureTitle(context, l10n),
+          // _buildSpace(),
           _buildFeaturesMasonryGrid(),
           _buildSpace(),
+          // _buildAdsCarousel(),
         ],
       ),
     );
@@ -75,7 +77,8 @@ class HomeScreen extends StatelessWidget {
           AntsTierFeatureInfo(),
           NotificationsFeatureInfo(),
           ScientificClassificationsFeatureInfo(),
-          SoldierAntsComparisonFeatureInfo(),
+          ThemePickerFeatureInfo(),
+          // SoldierAntsComparisonFeatureInfo(),
         ],
       ),
     );
@@ -139,33 +142,36 @@ class HomeScreen extends StatelessWidget {
         ),
       );
 
-  Widget _buildSingleAdCard() {
-    if (AdsService.enabled) {
-      return SliverPadding(
+  Widget _buildSingleAdCard(BuildContext context) {
+    return AdWidgetBuilder(
+      isSliver: true,
+      child: SliverPadding(
         padding: const EdgeInsets.only(bottom: Spacing.vl),
         sliver: SliverToBoxAdapter(
           child: ConstrainedBox(
-            constraints: BoxConstraints(
-                // maxHeight: 100,
-                // maxWidth: 100,
+            constraints: const BoxConstraints(
+              maxWidth: 300,
+              maxHeight: 250,
+            ),
+            child: Container(
+              // color: Theme.of(context).colorScheme.surfaceContainerHigh,
+              child: Center(
+                child: AdCard(
+                  adId: AdsService.homeAdUnitId,
+                  selfLoad: AdCardSelfLoad(size: AdSize.mediumRectangle),
                 ),
-            child: Center(
-              child: AdCard(
-                adId: AdsService.carousel1Item1,
-                selfLoad: AdCardSelfLoad(size: AdSize.mediumRectangle),
               ),
             ),
           ),
         ),
-      );
-    }
-
-    return const SliverToBoxAdapter(child: SizedBox());
+      ),
+    );
   }
 
   Widget _buildAdsCarousel() {
-    if (AdsService.enabled) {
-      return SliverPadding(
+    return AdWidgetBuilder(
+      isSliver: true,
+      child: SliverPadding(
         padding: const EdgeInsets.only(bottom: Spacing.vl),
         sliver: SliverToBoxAdapter(
           child: AdsCarousel(
@@ -174,10 +180,8 @@ class HomeScreen extends StatelessWidget {
             ads: AdsService(),
           ),
         ),
-      );
-    }
-
-    return const SliverToBoxAdapter(child: SizedBox());
+      ),
+    );
   }
 
   SliverPadding _buildAppFeatureTitle(

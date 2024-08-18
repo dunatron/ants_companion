@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const leptoglossusPhyllopus = Ant(
   id: 'leptoglossus_phyllopus',
   name: 'Leptoglossus Phyllopus',
-  description: '',
   scientificName: 'Leptoglossus Phyllopus',
+  species: ScientificSpecies.leptoglossusPhyllopus,
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [
@@ -38,12 +38,10 @@ const leptoglossusPhyllopusPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

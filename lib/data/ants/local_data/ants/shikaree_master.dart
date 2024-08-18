@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const shikareeMaster = Ant(
   id: 'shikaree_master',
   name: 'Shikaree Master',
-  description: '',
   scientificName: 'Arilus cristatus',
+  species: ScientificSpecies.arilusCristatus,
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [
@@ -37,7 +37,6 @@ const shikareeMasterPveTags = [
     rating: TierRating.a,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: 'Deals a high amount of damage',
   ),
 ];
 
@@ -46,12 +45,10 @@ const shikareeMasterPvpTags = [
     rating: TierRating.a,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

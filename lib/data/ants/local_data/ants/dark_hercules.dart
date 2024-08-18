@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const darkHercules = Ant(
   id: 'dark_hercules',
   name: 'Dark Hercules',
-  description: '',
+  species: ScientificSpecies.myrmarachneGisti,
   scientificName: 'Myrmarachne Gisti',
   type: AntType.guardian,
   role: AntRole.ranged,
@@ -36,7 +36,6 @@ const darkHerculesPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const darkHerculesPvpTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

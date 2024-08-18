@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const carpenterAnt = Ant(
   id: 'carpenter_ant',
   name: 'Carpenter Ant',
-  description: '',
+  species: ScientificSpecies.camponotusColoratus,
   scientificName: 'Camponotus coloratus',
   type: AntType.carrier,
   role: AntRole.support,
@@ -38,12 +38,10 @@ const carpenterAntPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

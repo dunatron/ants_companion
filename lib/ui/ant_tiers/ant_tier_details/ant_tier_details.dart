@@ -2,13 +2,15 @@ import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
+import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_reason.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_tags_list.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_tag_details.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/view_model/ant_tier_details_view_model.dart';
 
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
+import 'package:ants_companion/ui/scientific_classifications/scientific_species_extension.dart';
 import 'package:ants_companion/ui/section.dart';
+import 'package:ants_companion/ui/tier_star_rating/tier_star_ratings.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -56,7 +58,7 @@ class _AntTierDetailsState extends State<AntTierDetails> {
       child: Column(
         children: [
           Text(
-            widget.ant.name,
+            widget.ant.species.commonName(l10n),
             style: Theme.of(context).textTheme.titleLarge,
           ),
           if (profilePictureUrl.isNotEmpty)
@@ -72,42 +74,70 @@ class _AntTierDetailsState extends State<AntTierDetails> {
               if (data == null) {
                 return const SizedBox();
               }
+
+              final isPvpTag = data.tierTag is AntPvpTierTag;
               return Section(
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        if (isPvpTag) ...[
+                          Text(
+                            data.tierTag.rowPosition.displayText(l10n),
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          const SizedBox(width: 8),
+                        ],
+                        Text(
+                          data.tierTag.antType.displayText(l10n),
+                          style: Theme.of(context).textTheme.titleLarge,
+                        )
+                      ],
+                    ),
+                    Text(
+                      isPvpTag ? l10n.pvpFull : l10n.pveFull,
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                    const SizedBox(width: 8),
                     Text(
                       data.tierTag.rating.displayText,
                       style: Theme.of(context).textTheme.displaySmall,
                     ),
-                    const SizedBox(width: 8),
-                    Text(
-                      data.tierTag.rowPosition.displayText(l10n),
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      data.tierTag.antType.displayText(l10n),
-                      style: Theme.of(context).textTheme.titleLarge,
-                    )
+                    TierStarRating(starCount: data.tierTag.rating.starCount),
                   ],
                 ),
               );
             },
           ),
           AntTierDetailsReason(viewModel: viewModel),
-          if (AdsService.enabled)
-            Section(
+          AdWidgetBuilder(
+            child: Section(
               child: AdCard(
                 adId: AdsService.antDetailsAdUnitId,
                 selfLoad: AdCardSelfLoad(size: AdSize.banner),
               ),
             ),
+          ),
           Section(
             child: Divider(color: Theme.of(context).colorScheme.primary),
           ),
           AntTierDetailsTagsList(viewModel: viewModel, tierTags: tags),
-          Section(child: Text('widget.ant.scientificClassification.genus')),
+          // Section(
+          //   child: Divider(color: Theme.of(context).colorScheme.primary),
+          // ),
+          Section(
+            child: Text(
+              widget.ant.species.scientificName(l10n),
+              style: Theme.of(context).textTheme.bodyLarge,
+            ),
+          ),
+          Section(
+            child: Text(
+              widget.ant.species.description(l10n),
+            ),
+          ),
         ],
       ),
     );

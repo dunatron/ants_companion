@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const cyphomyrmexRimosus = Ant(
   id: 'cyphomyrmex_rimosus',
   name: 'Cyphomyrmex rimosus',
-  description: '',
+  species: ScientificSpecies.cyphomyrmexRimosus,
   scientificName: 'Cyphomyrmex rimosus',
   type: AntType.carrier,
   role: AntRole.ranged,
@@ -31,19 +31,23 @@ const cyphomyrmexRimosus = Ant(
   ],
 );
 
-const cyphomyrmexRimosusPveTags = [];
+const cyphomyrmexRimosusPveTags = [
+  AntPveTierTag(
+    rating: TierRating.s,
+    rowPosition: RowPosition.back,
+    antType: AntType.carrier,
+  )
+];
 
 const cyphomyrmexRimosusPvpTags = [
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

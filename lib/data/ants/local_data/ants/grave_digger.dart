@@ -4,8 +4,7 @@ const graveDigger = Ant(
   id: 'grave_digger',
   name: 'Grave Digger',
   scientificName: 'Prionopelta humicola',
-  description: 'A support ant with crowd control abilities, '
-      'pairs really nicely with golden crystal',
+  species: ScientificSpecies.prionopeltaHumicola,
   type: AntType.carrier,
   role: AntRole.support,
   tierTags: [
@@ -37,8 +36,6 @@ const graveDiggerPveTags = [
     rating: TierRating.b,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: 'There are simply better options to run for pve damage. '
-        'Yes even with golden crystal',
   ),
 ];
 
@@ -47,12 +44,10 @@ const graveDiggerPvpTags = [
     rating: TierRating.s,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: 'With golden crystal in the troop at the middle position',
   ),
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: '',
   )
 ];

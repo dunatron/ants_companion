@@ -34,7 +34,7 @@ class App extends StatelessWidget {
         }
         return MaterialApp.router(
           scrollBehavior: DraggableScrollBehavior(),
-          // key: const ValueKey('antsApp'),
+          key: const ValueKey('antsApp'),
           debugShowCheckedModeBanner: false,
           scaffoldMessengerKey: SnackbarService().scaffoldMessengerKey,
           theme: ThemeData(

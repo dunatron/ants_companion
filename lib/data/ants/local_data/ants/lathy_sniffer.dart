@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const lathySniffer = Ant(
   id: 'lathy_sniffer',
   name: 'Lathy Sniffer',
-  description: '',
   scientificName: 'Tetraponera rufonigra',
+  species: ScientificSpecies.tetraponeraRufonigra,
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [
@@ -40,7 +40,6 @@ const lathySnifferPveTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'Best shooter option for PVE',
   ),
 ];
 
@@ -49,12 +48,10 @@ const lathySnifferPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

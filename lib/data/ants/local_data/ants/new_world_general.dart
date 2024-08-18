@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const newWorldGeneral = Ant(
   id: 'new_world_general',
   name: 'New World General',
-  description: '',
   scientificName: 'Echiton burchellii',
+  species: ScientificSpecies.echitonBurchellii,
   type: AntType.carrier,
   role: AntRole.ranged,
   tierTags: [
@@ -40,7 +40,6 @@ const newWorldGeneralPveTags = [
     rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,6 +48,5 @@ const newWorldGeneralPvpTags = [
     rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

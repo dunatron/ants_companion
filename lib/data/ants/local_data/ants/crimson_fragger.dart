@@ -4,9 +4,7 @@ const crimsonFragger = Ant(
   id: 'crimson_fragger',
   name: 'Crimson Fragger',
   scientificName: 'Camponotus chromaiodes',
-  description: 'Lives in forested areas at lower elevations and builds nests '
-      'in decaying wood(both logs and stumps) that extend all the way to '
-      'the ground.',
+  species: ScientificSpecies.camponotusChromaiodes,
   type: AntType.universal,
   role: AntRole.ranged,
   tierTags: [
@@ -42,19 +40,16 @@ const crimsonFraggerPveTags = [
     rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
-    reason: 'Deals a consistent amount of high damage',
   ),
   AntPveTierTag(
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'Deals a consistent amount of high damage',
   ),
   AntPveTierTag(
     rating: TierRating.a,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
-    reason: 'Deals a consistent amount of high damage',
   ),
 ];
 const crimsonFraggerPvpTags = [
@@ -62,12 +57,10 @@ const crimsonFraggerPvpTags = [
     rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.b,
     antType: AntType.universal,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const crematogasterInflata = Ant(
   id: 'crematogaster_inflata',
   name: 'Crematogaster Inflata',
-  description: '',
+  species: ScientificSpecies.crematogasterInflata,
   scientificName: 'Crematogaster inflata',
   type: AntType.shooter,
   role: AntRole.support,
@@ -38,12 +38,10 @@ const crematogasterInflataPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

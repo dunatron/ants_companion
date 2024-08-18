@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const wiseBerserker = Ant(
   id: 'wise_berserker',
   name: 'Wise Berserker',
-  description: '',
   scientificName: 'Mystrium camillae',
+  species: ScientificSpecies.mystriumCamillae,
   type: AntType.shooter,
   role: AntRole.ranged,
   tierTags: [
@@ -36,7 +36,6 @@ const wiseBerserkerPveTags = [
     rating: TierRating.a,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'Does a decent amount of damage',
   ),
 ];
 
@@ -45,12 +44,10 @@ const wiseBerserkerPvpTags = [
     rating: TierRating.s,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

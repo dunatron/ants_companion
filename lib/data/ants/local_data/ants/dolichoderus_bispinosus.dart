@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const dolichoderusBispinosus = Ant(
   id: 'dolichoderus_bispinosus',
   name: 'Dolichoderus bispinosus',
-  description: '',
+  species: ScientificSpecies.dolichoderusBispinosus,
   scientificName: 'Dolichoderus bispinosus',
   type: AntType.shooter,
   role: AntRole.melee,
@@ -40,7 +40,6 @@ const dolichoderusBispinosusPveTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,6 +48,5 @@ const dolichoderusBispinosusPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

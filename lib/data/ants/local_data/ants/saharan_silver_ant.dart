@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const saharanSilverAnt = Ant(
   id: 'saharan_silver_ant',
   name: 'Saharan Silver Ant',
-  description: '',
   scientificName: 'Cataglyphis bombycina',
+  species: ScientificSpecies.cataglyphisBombycina,
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [
@@ -31,31 +31,33 @@ const saharanSilverAnt = Ant(
   ],
 );
 
-const saharanSilverAntPveTags = [];
+const saharanSilverAntPveTags = [
+  AntPveTierTag(
+    rating: TierRating.s,
+    rowPosition: RowPosition.back,
+    antType: AntType.shooter,
+  )
+];
 
 const List<AntPvpTierTag> saharanSilverAntPvpTags = [
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.gss,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.gss,
     rowPosition: RowPosition.back,
-    reason: '',
   ),
 ];

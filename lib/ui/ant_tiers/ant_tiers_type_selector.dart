@@ -31,14 +31,20 @@ class AntTiersTypeSelector extends StatelessWidget {
       ...AntType.values.where((antType) => !ignoreType(antType))
     ];
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.all(8),
       child: DropdownButton<AntType>(
         value: type,
         items: List<DropdownMenuItem<AntType>>.from(
           antTypes.map(
             (antType) => DropdownMenuItem<AntType>(
               value: antType,
-              child: Text(antType.displayText(l10n)),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Text(
+                  antType.displayText(l10n),
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+              ),
             ),
           ),
         ),

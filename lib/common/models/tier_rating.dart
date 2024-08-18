@@ -42,6 +42,15 @@ enum TierRating {
         TierRating.d => 'D',
       };
 
+  int get starCount => switch (this) {
+        TierRating.sPlus => 6,
+        TierRating.s => 5,
+        TierRating.a => 4,
+        TierRating.b => 3,
+        TierRating.c => 2,
+        TierRating.d => 1,
+      };
+
   final int order;
   final Color color;
 }

@@ -1,5 +1,8 @@
 import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
+import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
+import 'package:ants_companion/ui/ants/ant_card/ant_card_tier_ratings.dart';
+import 'package:ants_companion/ui/scientific_classifications/scientific_species_extension.dart';
 
 import 'package:flutter/material.dart';
 
@@ -19,6 +22,7 @@ class AntCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
+
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(0),
@@ -41,29 +45,39 @@ class AntCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(4),
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 4,
+                        horizontal: 8,
+                      ),
                       margin: const EdgeInsets.all(8),
-                      color: Theme.of(context).colorScheme.surfaceContainerLow,
+                      decoration: BoxDecoration(
+                        color:
+                            Theme.of(context).colorScheme.surfaceContainerLow,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
                       child: Text(
-                        ant.name,
+                        ant.species.commonName(l10n),
                         style: Theme.of(context).textTheme.bodyLarge,
                       ),
                     ),
                     const Expanded(child: SizedBox()),
+                    AntCardTierRatings(
+                      ant: ant,
+                    ),
                     // TierRating
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        _TierRatingCircle(
-                          title: l10n.pveAbbreviation,
-                          rating: ant.topPveRating(),
-                        ),
-                        _TierRatingCircle(
-                          title: l10n.pvpAbbreviation,
-                          rating: ant.topPvpRating(),
-                        ),
-                      ],
-                    )
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.end,
+                    //   children: [
+                    //     _TierRatingCircle(
+                    //       title: l10n.pveAbbreviation,
+                    //       rating: ant.topPveRating(),
+                    //     ),
+                    //     _TierRatingCircle(
+                    //       title: l10n.pvpAbbreviation,
+                    //       rating: ant.topPvpRating(),
+                    //     ),
+                    //   ],
+                    // )
                   ],
                 ),
               ),
@@ -85,7 +99,7 @@ class _TierRatingCircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.only(right: 8),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surfaceContainerLow,

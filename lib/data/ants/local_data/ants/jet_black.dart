@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const jetBlack = Ant(
   id: 'jet_black',
   name: 'Jet Black',
-  description: '',
   scientificName: 'Plectroctena cristata',
+  species: ScientificSpecies.plectroctenaCristata,
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [
@@ -36,7 +36,6 @@ const jetBlackPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const jetBlackPvpTags = [
     rating: TierRating.c,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

@@ -4,10 +4,9 @@ const myrmarachneFormicaria = Ant(
   id: 'myrmarachne_formicaria',
   name: 'Myrmarachne Formicaria',
   scientificName: 'Myrmarachne Formicaria',
-  description: 'An OP carrier Ant',
+  species: ScientificSpecies.myrmarachneFormicaria,
   type: AntType.carrier,
   role: AntRole.melee,
-  species: Species.spider,
   tierTags: [
     ...myrmarachneFormicariaPveTags,
     ...myrmarachneFormicariaPvpTags,
@@ -37,7 +36,6 @@ const myrmarachneFormicariaPveTags = [
     rating: TierRating.d,
     antType: AntType.carrier,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,13 +43,11 @@ const myrmarachneFormicariaPvpTags = [
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
-    reason: '',
     rowPosition: RowPosition.front,
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.carrier,
-    reason: '',
     rowPosition: RowPosition.middle,
   )
 ];

@@ -4,7 +4,7 @@ const acidGeneral = Ant(
   id: 'acid_general',
   name: 'Acid General',
   scientificName: 'Mystrium oberthueri',
-  description: '',
+  species: ScientificSpecies.mystriumOberthueri,
   scientificClassification: AntScientificClassification(
     species: ScientificSpecies.mystriumOberthueri,
     phylum: ScientificPhylum.arthropoda,
@@ -36,7 +36,6 @@ const acidGeneralPveTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'There are much better ants to use for shooter pve',
   ),
 ];
 const acidGeneralPvpTags = [
@@ -44,6 +43,5 @@ const acidGeneralPvpTags = [
     rating: TierRating.d,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
-    reason: 'There are better shooter ants for pvp',
   ),
 ];

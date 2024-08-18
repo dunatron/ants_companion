@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const formicaClara = Ant(
   id: 'formica_clara',
   name: 'Formica Clara',
-  description: '',
   scientificName: 'Formica Clara',
+  species: ScientificSpecies.formicaClara,
   type: AntType.shooter,
   role: AntRole.support,
   tierTags: [
@@ -36,7 +36,6 @@ const formicaClaraPveTags = [
     rating: TierRating.b,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: notTheWorstB,
   ),
 ];
 const formicaClaraPvpTags = [
@@ -44,18 +43,15 @@ const formicaClaraPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.sPlus,
     antType: AntType.gss,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

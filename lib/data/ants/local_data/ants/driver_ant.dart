@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const driverAnt = Ant(
   id: 'driver_ant',
   name: 'Driver Ant',
-  description: '',
+  species: ScientificSpecies.dorylusDriver,
   scientificName: 'Dorylus driver',
   type: AntType.universal,
   role: AntRole.support,
@@ -40,7 +40,6 @@ const driverAntPveTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 const driverAntPvpTags = [
@@ -48,6 +47,5 @@ const driverAntPvpTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
 ];

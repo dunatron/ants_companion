@@ -10,6 +10,7 @@ class NotificationsFeatureInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
     return FeatureCard(
+      onTap: () => context.go('/ca-scheduler'),
       child: Column(
         children: [
           Text(
@@ -23,9 +24,9 @@ class NotificationsFeatureInfo extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          ElevatedButton(
-            onPressed: () => context.go('/ca-scheduler'),
-            child: Text(l10n.notificationsFeatureInfoButton),
+          const Icon(
+            Icons.notification_add_outlined,
+            size: 42,
           )
         ],
       ),

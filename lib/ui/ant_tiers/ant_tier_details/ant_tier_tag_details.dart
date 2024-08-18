@@ -21,6 +21,10 @@ class AntTierTagDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     final isPvpTag = tag is AntPvpTierTag;
     final l10n = AppLocalizations.of(context);
+
+    final mainText = isPvpTag
+        ? '${tag.rowPosition.displayText(l10n)} ${tag.antType.displayText(l10n)}'
+        : tag.antType.displayText(l10n);
     return SizedBox(
       width: double.infinity,
       child: Column(
@@ -28,44 +32,50 @@ class AntTierTagDetails extends StatelessWidget {
         children: [
           Center(
             child: InkWell(
+              borderRadius: BorderRadius.circular(8),
               onTap: () {
                 onTagTap(tag);
               },
               child: Container(
                 constraints: const BoxConstraints(maxWidth: 300),
-                padding: const EdgeInsets.symmetric(horizontal: 8),
+                padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
                   border: selected
                       ? Border.all(
                           color: Theme.of(context).colorScheme.primary,
                         )
-                      : null,
+                      : Border.all(
+                          color: Colors.transparent,
+                        ),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text(
-                      tag.rating.displayText,
-                      style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                            color: tag.rating.color,
-                            fontWeight: FontWeight.bold,
-                          ),
+                    SizedBox(
+                      width: 56,
+                      child: Text(
+                        textAlign: TextAlign.right,
+                        tag.rating.displayText,
+                        style:
+                            Theme.of(context).textTheme.displaySmall?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                      ),
+                    ),
+                    const SizedBox(width: 16),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(mainText),
+                        Text(
+                          isPvpTag ? l10n.pvpFull : l10n.pveFull,
+                          style: Theme.of(context).textTheme.bodySmall,
+                        ),
+                      ],
                     ),
                     const SizedBox(width: 8),
-                    Text(
-                      isPvpTag ? l10n.pvpAbbreviation : l10n.pveAbbreviation,
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      tag.rowPosition.displayText(l10n),
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                    const SizedBox(width: 8),
-                    Text(
-                      tag.antType.displayText(l10n),
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
                   ],
                 ),
               ),

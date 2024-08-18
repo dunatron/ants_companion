@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const pheidoleNietneri = Ant(
   id: 'pheidole_nietneri',
   name: 'Pheidole Nietneri',
-  description: 'Pheidole nietneri',
-  scientificName: '',
+  scientificName: 'Pheidole Nietneri',
+  species: ScientificSpecies.pheidoleNietneri,
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [
@@ -40,7 +40,6 @@ const pheidoleNietneriPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -49,6 +48,5 @@ const pheidoleNietneriPvpTags = [
     rating: TierRating.a,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

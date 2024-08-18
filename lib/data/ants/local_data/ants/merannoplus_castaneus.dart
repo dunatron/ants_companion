@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const merannoplusCastaneus = Ant(
   id: 'merannoplus_castaneus',
   name: 'Merannoplus Castaneus',
-  description: '',
   scientificName: 'Merannoplus castaneus',
+  species: ScientificSpecies.merannoplusCastaneus,
   type: AntType.guardian,
   role: AntRole.support,
   tierTags: [
@@ -38,18 +38,15 @@ const merannoplusCastaneusPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.middle,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.gss,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

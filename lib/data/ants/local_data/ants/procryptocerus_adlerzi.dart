@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const procryptocerusAdlerzi = Ant(
   id: 'procryptocerus_adlerzi',
   name: 'Procryptocerus Adlerzi',
-  description: '',
   scientificName: 'Procryptocerus Adlerzi',
+  species: ScientificSpecies.procryptocerusAdlerzi,
   type: AntType.guardian,
   role: AntRole.melee,
   tierTags: [
@@ -36,7 +36,6 @@ const procryptocerusAdlerziPveTags = [
     rating: TierRating.d,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,12 +44,10 @@ const procryptocerusAdlerziPvpTags = [
     rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
   AntPvpTierTag(
     rating: TierRating.s,
     antType: AntType.gss,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];

@@ -3,8 +3,8 @@ part of '../local_ants_list.dart';
 const rubySlender = Ant(
   id: 'ruby_slender',
   name: 'Ruby Slender',
-  description: '',
   scientificName: 'Gnamptogenys mordax',
+  species: ScientificSpecies.gnamptogenysMordax,
   type: AntType.universal,
   role: AntRole.melee,
   tierTags: [
@@ -36,7 +36,6 @@ const rubySlenderPveTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: terribleForPveF,
   ),
 ];
 
@@ -45,6 +44,5 @@ const rubySlenderPvpTags = [
     rating: TierRating.d,
     antType: AntType.universal,
     rowPosition: RowPosition.front,
-    reason: '',
   ),
 ];
