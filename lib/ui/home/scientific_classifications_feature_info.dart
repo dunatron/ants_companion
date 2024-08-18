@@ -25,10 +25,9 @@ class ScientificClassificationsFeatureInfo extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          TextButton.icon(
-            icon: const Icon(Icons.groups_3),
-            onPressed: () => context.go('/scientific-classifications'),
-            label: Text(l10n.scientificClassificationsFeatureInfoButton),
+          const Icon(
+            Icons.groups_3,
+            size: 42,
           )
         ],
       ),

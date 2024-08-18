@@ -4,6 +4,7 @@ import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_indicator.dart';
+import 'package:ants_companion/ui/tier_star_rating/tier_star_ratings.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -49,18 +50,19 @@ class PveTierSection extends StatelessWidget {
     }
     return Container(
       margin: const EdgeInsets.only(bottom: Spacing.xl),
+      width: double.infinity,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             tierRating.displayText,
-            style: theme.textTheme.displaySmall
-                ?.copyWith(color: theme.colorScheme.primary),
+            style: theme.textTheme.displaySmall,
           ),
+          TierStarRating(starCount: tierRating.starCount),
           const SizedBox(height: 24),
           Wrap(
             spacing: 8,
-            alignment: WrapAlignment.center,
+            alignment: WrapAlignment.spaceAround,
             children: [
               ...validAnts.map(
                 (antTagMap) => AntTierIndicator(

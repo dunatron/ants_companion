@@ -1,6 +1,7 @@
 import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
+import 'package:ants_companion/ui/home/theme_picker_feature_info.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -53,13 +54,13 @@ class HomeScreen extends StatelessWidget {
           _buildSpace(),
           _buildWelcome(),
           _buildSpace(),
-          _buildSpecialAntsTitle(l10n, context),
-          _buildSpace(),
+          // _buildSpecialAntsTitle(l10n, context),
+          // _buildSpace(),
           _buildCarousel(context, antsList),
           _buildSingleAdCard(context),
           // _buildAdsCarousel(),
-          _buildAppFeatureTitle(context, l10n),
-          _buildSpace(),
+          // _buildAppFeatureTitle(context, l10n),
+          // _buildSpace(),
           _buildFeaturesMasonryGrid(),
           _buildSpace(),
           // _buildAdsCarousel(),
@@ -76,7 +77,8 @@ class HomeScreen extends StatelessWidget {
           AntsTierFeatureInfo(),
           NotificationsFeatureInfo(),
           ScientificClassificationsFeatureInfo(),
-          SoldierAntsComparisonFeatureInfo(),
+          ThemePickerFeatureInfo(),
+          // SoldierAntsComparisonFeatureInfo(),
         ],
       ),
     );

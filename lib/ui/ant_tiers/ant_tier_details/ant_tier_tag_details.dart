@@ -59,7 +59,6 @@ class AntTierTagDetails extends StatelessWidget {
                         tag.rating.displayText,
                         style:
                             Theme.of(context).textTheme.displaySmall?.copyWith(
-                                  color: tag.rating.color,
                                   fontWeight: FontWeight.bold,
                                 ),
                       ),

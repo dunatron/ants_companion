@@ -18,41 +18,44 @@ class AntTiersGameModeSelector extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.all(Spacing.l),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ElevatedButton(
-            style: ButtonStyle(
-                foregroundColor: !pvpSelected
-                    ? WidgetStateProperty.all<Color>(
-                        Theme.of(context).colorScheme.onPrimary,
-                      )
-                    : null,
-                backgroundColor: !pvpSelected
-                    ? WidgetStateProperty.all<Color>(
-                        Theme.of(context).colorScheme.primary,
-                      )
-                    : null),
-            onPressed: () => onChange(false),
-            child: Text(l10n.pveAbbreviation),
-          ),
-          const SizedBox(width: Spacing.l),
-          ElevatedButton(
-            style: ButtonStyle(
-                foregroundColor: pvpSelected
-                    ? WidgetStateProperty.all<Color>(
-                        Theme.of(context).colorScheme.onPrimary,
-                      )
-                    : null,
-                backgroundColor: pvpSelected
-                    ? WidgetStateProperty.all<Color>(
-                        Theme.of(context).colorScheme.primary,
-                      )
-                    : null),
-            onPressed: () => onChange(true),
-            child: Text(l10n.pvpAbbreviation),
-          ),
-        ],
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              style: ButtonStyle(
+                  foregroundColor: !pvpSelected
+                      ? WidgetStateProperty.all<Color>(
+                          Theme.of(context).colorScheme.onPrimary,
+                        )
+                      : null,
+                  backgroundColor: !pvpSelected
+                      ? WidgetStateProperty.all<Color>(
+                          Theme.of(context).colorScheme.primary,
+                        )
+                      : null),
+              onPressed: () => onChange(false),
+              child: Text(l10n.pveFull),
+            ),
+            const SizedBox(width: Spacing.l),
+            ElevatedButton(
+              style: ButtonStyle(
+                  foregroundColor: pvpSelected
+                      ? WidgetStateProperty.all<Color>(
+                          Theme.of(context).colorScheme.onPrimary,
+                        )
+                      : null,
+                  backgroundColor: pvpSelected
+                      ? WidgetStateProperty.all<Color>(
+                          Theme.of(context).colorScheme.primary,
+                        )
+                      : null),
+              onPressed: () => onChange(true),
+              child: Text(l10n.pvpFull),
+            ),
+          ],
+        ),
       ),
     );
   }

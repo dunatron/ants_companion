@@ -10,6 +10,7 @@ import 'package:ants_companion/ui/ant_tiers/ant_tier_details/view_model/ant_tier
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_species_extension.dart';
 import 'package:ants_companion/ui/section.dart';
+import 'package:ants_companion/ui/tier_star_rating/tier_star_ratings.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -79,19 +80,16 @@ class _AntTierDetailsState extends State<AntTierDetails> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      data.tierTag.rating.displayText,
-                      style: Theme.of(context).textTheme.displaySmall,
-                    ),
-                    const SizedBox(width: 8),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          data.tierTag.rowPosition.displayText(l10n),
-                          style: Theme.of(context).textTheme.titleLarge,
-                        ),
-                        const SizedBox(width: 8),
+                        if (isPvpTag) ...[
+                          Text(
+                            data.tierTag.rowPosition.displayText(l10n),
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          const SizedBox(width: 8),
+                        ],
                         Text(
                           data.tierTag.antType.displayText(l10n),
                           style: Theme.of(context).textTheme.titleLarge,
@@ -102,6 +100,12 @@ class _AntTierDetailsState extends State<AntTierDetails> {
                       isPvpTag ? l10n.pvpFull : l10n.pveFull,
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
+                    const SizedBox(width: 8),
+                    Text(
+                      data.tierTag.rating.displayText,
+                      style: Theme.of(context).textTheme.displaySmall,
+                    ),
+                    TierStarRating(starCount: data.tierTag.rating.starCount),
                   ],
                 ),
               );

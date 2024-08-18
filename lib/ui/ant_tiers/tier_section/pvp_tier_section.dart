@@ -6,6 +6,7 @@ import 'package:ants_companion/domain/ants/models/ant_type.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_indicator.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
+import 'package:ants_companion/ui/tier_star_rating/tier_star_ratings.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -82,9 +83,9 @@ class PvpTierSection extends StatelessWidget {
         children: [
           Text(
             tierRating.displayText,
-            style: theme.textTheme.displaySmall
-                ?.copyWith(color: theme.colorScheme.primary),
+            style: theme.textTheme.displaySmall,
           ),
+          TierStarRating(starCount: tierRating.starCount),
           const SizedBox(height: 24),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,1 +1,81 @@
-{}
+{
+  "ar": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "bg": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "de": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "es": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "fil": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "hu": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "it": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "ja": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "mk": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "nl": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "pl": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "ru": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "tr": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "uk": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "vi": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ],
+
+  "zh": [
+    "themePickerFeatureInfoTitle",
+    "themePickerFeatureInfoDescription"
+  ]
+}
