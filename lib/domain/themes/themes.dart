@@ -1,4 +1,4 @@
-import 'package:ants_companion/data/themes/models/color_seed.dart';
+import 'package:ants_companion/domain/themes/models/color_seed.dart';
 
 class Themes {
   const Themes(this._provider);

@@ -31,7 +31,6 @@ class AdsCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (!AdsService.enabled) return const SizedBox();
     // ToDo: maybe handle this in a less blasty approach
     ads.disposeAllAds();
 

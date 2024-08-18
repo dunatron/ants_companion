@@ -19,6 +19,7 @@ enum ScientificSpecies {
   dasymutillaOccidentalis, // Dasymutilla occidentalis
   dolichoderusBispinosus, // Dolichoderus bispinosus
   dorylusDriver, // Dorylus driver
+  duskyLurker,
   ecitonRapax, // Eciton rapax
   echitonBurchellii, // Echiton burchellii
   euspinoliaMilitaris, // Euspinolia militaris
@@ -30,6 +31,7 @@ enum ScientificSpecies {
   leptomyrmexBurwelli, // Leptomyrmex Burwelli
   merannoplusBicolor, // Merannoplus bicolor
   merannoplusCastaneus, // Merannoplus castaneus
+  mimicryMaster,
   myrmeciaPilosula, // Myrmecia pilosula
   myrmecotypusRettenmeyeri, // Myrmecotypus Rettenmeyeri
   myrmarachneFormicaria, // Myrmarachne Formicaria
@@ -58,5 +60,4 @@ enum ScientificSpecies {
   tetraponeraRufonigra, // Tetraponera
   tetramoriumPulcherrimum, // Tetramorium pulcherrimum
   thaumatomyrmexAtrox, // Thaumatomyrmex Atrox
-  unknown,
 }

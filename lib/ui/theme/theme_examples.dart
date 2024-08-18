@@ -1,4 +1,4 @@
-import 'package:ants_companion/data/themes/models/color_seed.dart';
+import 'package:ants_companion/domain/themes/models/color_seed.dart';
 import 'package:ants_companion/ui/theme/scheme_variant_picker.dart';
 import 'package:flutter/material.dart';
 

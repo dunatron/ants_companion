@@ -1,6 +1,7 @@
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
+import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
 import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
@@ -33,9 +34,10 @@ class ColonyActionDetailsScreen extends StatelessWidget {
         SliverToBoxAdapter(
           child: ColonyActionNotificationDetails(caKey: caKey),
         ),
-        if (AdsService.enabled)
-          SliverPadding(
-            padding: EdgeInsets.symmetric(vertical: 16),
+        AdWidgetBuilder(
+          isSliver: true,
+          child: SliverPadding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
             sliver: SliverToBoxAdapter(
               child: AdCard(
                 adId: AdsService.colonyActionDetailsAdUnitId,
@@ -43,6 +45,7 @@ class ColonyActionDetailsScreen extends StatelessWidget {
               ),
             ),
           ),
+        ),
         ConstrainedSliverWidth(
           maxWidth: 560,
           child: SliverList.builder(

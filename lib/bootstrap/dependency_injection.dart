@@ -10,9 +10,9 @@ import 'package:get_it/get_it.dart';
 Future<void> setupDI() async {
   await registerDataSources();
 
-  GetIt.I.registerSingleton(Themes(ThemesRepository()));
+  GetIt.I.registerSingleton(Themes(ThemesRepository(GetIt.I())));
 
-  GetIt.I.registerSingleton(Locales(LocalesRepository()));
+  GetIt.I.registerSingleton(Locales(LocalesRepository(GetIt.I())));
 
   GetIt.I.registerLazySingleton(
     () => ColonyActions(ColonyActionsRepository(GetIt.I())),

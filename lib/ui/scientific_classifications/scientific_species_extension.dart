@@ -25,6 +25,7 @@ extension ScientificSpeciesExtension on ScientificSpecies {
           l10n.dasymutillaOccidentalis,
         ScientificSpecies.dolichoderusBispinosus => l10n.dolichoderusBispinosus,
         ScientificSpecies.dorylusDriver => l10n.dorylusDriver,
+        ScientificSpecies.duskyLurker => l10n.duskyLurker,
         ScientificSpecies.ecitonRapax => l10n.ecitonRapax,
         ScientificSpecies.echitonBurchellii => l10n.echitonBurchellii,
         ScientificSpecies.euspinoliaMilitaris => l10n.euspinoliaMilitaris,
@@ -36,6 +37,7 @@ extension ScientificSpeciesExtension on ScientificSpecies {
         ScientificSpecies.leptomyrmexBurwelli => l10n.leptomyrmexBurwelli,
         ScientificSpecies.merannoplusBicolor => l10n.merannoplusBicolor,
         ScientificSpecies.merannoplusCastaneus => l10n.merannoplusCastaneus,
+        ScientificSpecies.mimicryMaster => l10n.mimicryMaster,
         ScientificSpecies.myrmeciaPilosula => l10n.myrmeciaPilosula,
         ScientificSpecies.myrmecotypusRettenmeyeri =>
           l10n.myrmecotypusRettenmeyeri,
@@ -68,7 +70,6 @@ extension ScientificSpeciesExtension on ScientificSpecies {
         ScientificSpecies.tetramoriumPulcherrimum =>
           l10n.tetramoriumPulcherrimum,
         ScientificSpecies.thaumatomyrmexAtrox => l10n.thaumatomyrmexAtrox,
-        ScientificSpecies.unknown => 'Unknown',
       };
 
   String commonName(AppLocalizations l10n) => switch (this) {
@@ -99,6 +100,7 @@ extension ScientificSpeciesExtension on ScientificSpecies {
         ScientificSpecies.dolichoderusBispinosus =>
           l10n.dolichoderusBispinosusCommon,
         ScientificSpecies.dorylusDriver => l10n.dorylusDriverCommon,
+        ScientificSpecies.duskyLurker => l10n.duskyLurkerCommon,
         ScientificSpecies.ecitonRapax => l10n.ecitonRapaxCommon,
         ScientificSpecies.echitonBurchellii => l10n.echitonBurchelliiCommon,
         ScientificSpecies.euspinoliaMilitaris => l10n.euspinoliaMilitarisCommon,
@@ -112,6 +114,7 @@ extension ScientificSpeciesExtension on ScientificSpecies {
         ScientificSpecies.merannoplusBicolor => l10n.merannoplusBicolorCommon,
         ScientificSpecies.merannoplusCastaneus =>
           l10n.merannoplusCastaneusCommon,
+        ScientificSpecies.mimicryMaster => l10n.mimicryMasterCommon,
         ScientificSpecies.myrmeciaPilosula => l10n.myrmeciaPilosulaCommon,
         ScientificSpecies.myrmecotypusRettenmeyeri =>
           l10n.myrmecotypusRettenmeyeriCommon,
@@ -153,7 +156,6 @@ extension ScientificSpeciesExtension on ScientificSpecies {
         ScientificSpecies.tetramoriumPulcherrimum =>
           l10n.tetramoriumPulcherrimumCommon,
         ScientificSpecies.thaumatomyrmexAtrox => l10n.thaumatomyrmexAtroxCommon,
-        ScientificSpecies.unknown => 'Unknown',
       };
 
   String description(AppLocalizations l10n) => switch (this) {
@@ -190,6 +192,7 @@ extension ScientificSpeciesExtension on ScientificSpecies {
         ScientificSpecies.dolichoderusBispinosus =>
           l10n.dolichoderusBispinosusDescription,
         ScientificSpecies.dorylusDriver => l10n.dorylusDriverDescription,
+        ScientificSpecies.duskyLurker => l10n.duskyLurkerDescription,
         ScientificSpecies.ecitonRapax => l10n.ecitonRapaxDescription,
         ScientificSpecies.echitonBurchellii =>
           l10n.echitonBurchelliiDescription,
@@ -210,6 +213,7 @@ extension ScientificSpeciesExtension on ScientificSpecies {
           l10n.merannoplusBicolorDescription,
         ScientificSpecies.merannoplusCastaneus =>
           l10n.merannoplusCastaneusDescription,
+        ScientificSpecies.mimicryMaster => l10n.mimicryMasterDescription,
         ScientificSpecies.myrmeciaPilosula => l10n.myrmeciaPilosulaDescription,
         ScientificSpecies.myrmecotypusRettenmeyeri =>
           l10n.myrmecotypusRettenmeyeriDescription,
@@ -259,6 +263,5 @@ extension ScientificSpeciesExtension on ScientificSpecies {
           l10n.tetramoriumPulcherrimumDescription,
         ScientificSpecies.thaumatomyrmexAtrox =>
           l10n.thaumatomyrmexAtroxDescription,
-        ScientificSpecies.unknown => 'Unknown',
       };
 }

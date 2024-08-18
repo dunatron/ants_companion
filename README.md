@@ -8,6 +8,12 @@ A new Flutter project.
 
 the list of features and what we need to do
 
+## Build dunner
+
+```bash
+dart run build_runner build
+```
+
 ## Generate l10n file
 
 run this from the root of the project to generate the `l10n.yaml`  

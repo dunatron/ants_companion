@@ -35,6 +35,22 @@ const goldArmorPveTags = [
   AntPveTierTag(
     rating: TierRating.a,
     rowPosition: RowPosition.front,
+    antType: AntType.guardian,
+    reason:
+        'It can boost the damage of other ants vs pangolin and groundhog with '
+        'its awakening while also doing a decent amount of damage itself',
+  ),
+  AntPveTierTag(
+    rating: TierRating.a,
+    rowPosition: RowPosition.front,
+    antType: AntType.shooter,
+    reason:
+        'It can boost the damage of other ants vs pangolin and groundhog with '
+        'its awakening while also doing a decent amount of damage itself',
+  ),
+  AntPveTierTag(
+    rating: TierRating.a,
+    rowPosition: RowPosition.front,
     antType: AntType.carrier,
     reason:
         'It can boost the damage of other ants vs pangolin and groundhog with '
@@ -45,7 +61,7 @@ const goldArmorPveTags = [
 const goldArmorPvpTags = [
   AntPvpTierTag(
     rating: TierRating.c,
-    antType: AntType.carrier,
+    antType: AntType.universal,
     rowPosition: RowPosition.middle,
     reason: '',
   )

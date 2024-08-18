@@ -10,8 +10,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class TierSection extends StatelessWidget {
-  const TierSection({
+class PvpTierSection extends StatelessWidget {
+  const PvpTierSection({
     super.key,
     required this.ants,
     required this.antType,

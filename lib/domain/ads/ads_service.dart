@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:ants_companion/core/log/loggers.dart';
+import 'package:ants_companion/domain/device_info/device_info.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -24,7 +25,19 @@ const List<String> testDeviceIds = [
   heathIPadId2,
 ];
 
-const _enableAds = false;
+const _enableAds = true;
+
+const heathIOSDeviceId = '8E2F56FB-27E9-45FD-A91B-FA79D37FFC44';
+const heathIPadDeviceId = 'EB1855A1-3F23-4580-AFCE-B0FE7946EB8C';
+const heathAndroidDeviceId = 'TP1A.220624.014';
+const ninaAndroidDeviceId = 'SP1A.210812.016';
+
+const disableAdsWhiteList = [
+  heathIOSDeviceId,
+  heathIPadDeviceId,
+  heathAndroidDeviceId,
+  ninaAndroidDeviceId,
+];
 
 class AdsService {
   static String homeAdUnitId = 'ca-app-pub-8577724747514488/4573507812';
@@ -68,7 +81,19 @@ class AdsService {
       defaultTargetPlatform == TargetPlatform.android ||
       defaultTargetPlatform == TargetPlatform.iOS;
 
-  static bool get enabled => platformSupportsAds && _enableAds;
+  static Future<bool> enabled() async {
+    final deviceId = await DeviceInfo.getDeviceId();
+
+    print('DEVICE_ID: $deviceId');
+    if (platformSupportsAds == false) return false;
+    if (_enableAds == false) return false;
+
+    if (disableAdsWhiteList.contains(deviceId)) {
+      return false;
+    }
+
+    return true;
+  }
 
   bool _initialized = false;
 
@@ -85,16 +110,20 @@ class AdsService {
   }
 
   Future<void> initialize() async {
+    logger.d('Initializing Ad service');
     if (!platformSupportsAds) {
+      logger.d('Platform does not support adds');
       return;
     }
-    logger.d('Initializing Ad service');
+
+    if (!await enabled()) {
+      logger.d('Ads will not initialize as they are not enabled');
+    }
+
     if (_initialized) {
       logger.d('Ads have already been initialized');
     }
-    if (!enabled) {
-      logger.d('Ads will not initialize as they are not enabled');
-    }
+
     await MobileAds.instance.initialize();
     logger.d('Ads service has been initialized');
     // Ad our device as a test device for ads
@@ -119,7 +148,14 @@ class AdsService {
     AdSize size, {
     int attempt = 0,
   }) async {
-    if (!enabled) return;
+    if (!await enabled()) return;
+
+    final deviceId = await DeviceInfo.getDeviceId();
+
+    if (disableAdsWhiteList.contains(deviceId)) {
+      logger.d('Ad will not load as it is whitelisted');
+      return;
+    }
 
     // check if ad is already loaded
     if (_bannerSubject.value.containsKey(adUnitId)) {

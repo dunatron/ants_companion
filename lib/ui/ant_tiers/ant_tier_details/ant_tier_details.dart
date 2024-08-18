@@ -2,9 +2,9 @@ import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
+import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_reason.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_tags_list.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_tag_details.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/view_model/ant_tier_details_view_model.dart';
 
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
@@ -73,8 +73,10 @@ class _AntTierDetailsState extends State<AntTierDetails> {
               if (data == null) {
                 return const SizedBox();
               }
+
+              final isPvpTag = data.tierTag is AntPvpTierTag;
               return Section(
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
@@ -82,35 +84,45 @@ class _AntTierDetailsState extends State<AntTierDetails> {
                       style: Theme.of(context).textTheme.displaySmall,
                     ),
                     const SizedBox(width: 8),
-                    Text(
-                      data.tierTag.rowPosition.displayText(l10n),
-                      style: Theme.of(context).textTheme.titleLarge,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          data.tierTag.rowPosition.displayText(l10n),
+                          style: Theme.of(context).textTheme.titleLarge,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          data.tierTag.antType.displayText(l10n),
+                          style: Theme.of(context).textTheme.titleLarge,
+                        )
+                      ],
                     ),
-                    const SizedBox(width: 8),
                     Text(
-                      data.tierTag.antType.displayText(l10n),
-                      style: Theme.of(context).textTheme.titleLarge,
-                    )
+                      isPvpTag ? l10n.pvpFull : l10n.pveFull,
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
                   ],
                 ),
               );
             },
           ),
           AntTierDetailsReason(viewModel: viewModel),
-          if (AdsService.enabled)
-            Section(
+          AdWidgetBuilder(
+            child: Section(
               child: AdCard(
                 adId: AdsService.antDetailsAdUnitId,
                 selfLoad: AdCardSelfLoad(size: AdSize.banner),
               ),
             ),
+          ),
           Section(
             child: Divider(color: Theme.of(context).colorScheme.primary),
           ),
           AntTierDetailsTagsList(viewModel: viewModel, tierTags: tags),
-          Section(
-            child: Divider(color: Theme.of(context).colorScheme.primary),
-          ),
+          // Section(
+          //   child: Divider(color: Theme.of(context).colorScheme.primary),
+          // ),
           Section(
             child: Text(
               widget.ant.species.scientificName(l10n),

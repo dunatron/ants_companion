@@ -31,7 +31,14 @@ const cyphomyrmexRimosus = Ant(
   ],
 );
 
-const cyphomyrmexRimosusPveTags = [];
+const cyphomyrmexRimosusPveTags = [
+  AntPveTierTag(
+    rating: TierRating.s,
+    rowPosition: RowPosition.back,
+    antType: AntType.carrier,
+    reason: '',
+  )
+];
 
 const cyphomyrmexRimosusPvpTags = [
   AntPvpTierTag(

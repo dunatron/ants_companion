@@ -1,4 +1,5 @@
 import 'package:ants_companion/ui/ads/ad_card.dart';
+import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
 
 import 'package:flutter/material.dart';
@@ -140,8 +141,9 @@ class HomeScreen extends StatelessWidget {
       );
 
   Widget _buildSingleAdCard(BuildContext context) {
-    if (AdsService.enabled) {
-      return SliverPadding(
+    return AdWidgetBuilder(
+      isSliver: true,
+      child: SliverPadding(
         padding: const EdgeInsets.only(bottom: Spacing.vl),
         sliver: SliverToBoxAdapter(
           child: ConstrainedBox(
@@ -160,21 +162,14 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-      );
-      // Container(
-      //           color: Theme.of(context).colorScheme.surfaceContainerHigh,
-      //           child: Center(
-      //             child: AdCard(adId: adIds[index]),
-      //           ),
-      //         )
-    }
-
-    return const SliverToBoxAdapter(child: SizedBox());
+      ),
+    );
   }
 
   Widget _buildAdsCarousel() {
-    if (AdsService.enabled) {
-      return SliverPadding(
+    return AdWidgetBuilder(
+      isSliver: true,
+      child: SliverPadding(
         padding: const EdgeInsets.only(bottom: Spacing.vl),
         sliver: SliverToBoxAdapter(
           child: AdsCarousel(
@@ -183,10 +178,8 @@ class HomeScreen extends StatelessWidget {
             ads: AdsService(),
           ),
         ),
-      );
-    }
-
-    return const SliverToBoxAdapter(child: SizedBox());
+      ),
+    );
   }
 
   SliverPadding _buildAppFeatureTitle(

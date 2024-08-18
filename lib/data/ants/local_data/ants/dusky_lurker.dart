@@ -3,7 +3,7 @@ part of '../local_ants_list.dart';
 const duskyLurker = Ant(
   id: 'dusky_lurker',
   name: 'Dusky Lurker',
-  species: ScientificSpecies.unknown, // Not its actual species
+  species: ScientificSpecies.duskyLurker, // Not its actual species
   scientificName: 'Unknown',
   type: AntType.universal,
   role: AntRole.support,

@@ -11,6 +11,7 @@ class ScientificClassificationsFeatureInfo extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
 
     return FeatureCard(
+      onTap: () => context.go('/scientific-classifications'),
       child: Column(
         children: [
           Text(
@@ -24,9 +25,10 @@ class ScientificClassificationsFeatureInfo extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          ElevatedButton(
+          TextButton.icon(
+            icon: const Icon(Icons.groups_3),
             onPressed: () => context.go('/scientific-classifications'),
-            child: Text(l10n.scientificClassificationsFeatureInfoButton),
+            label: Text(l10n.scientificClassificationsFeatureInfoButton),
           )
         ],
       ),
