@@ -1,12 +1,14 @@
 import 'dart:async';
 
 import 'package:ants_companion/core/log/loggers.dart';
+import 'package:ants_companion/domain/ads/ad_units.dart';
 import 'package:ants_companion/domain/device_info/device_info.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:rxdart/rxdart.dart';
 
+// Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("16D265166C7DAF515FA40F177BD4D2C3")) to get test ads on this device.
 // You can also test with your own ad unit IDs by registering your device as a
 // test device. Check the lRgs for your device's ID value.
 const String heathAndroidPhoneId = '16D265166C7DAF515FA40F177BD4D2C3';
@@ -25,7 +27,7 @@ const List<String> testDeviceIds = [
   heathIPadId2,
 ];
 
-const _enableAds = true;
+const _enableAds = false;
 
 const heathIOSDeviceId = '8E2F56FB-27E9-45FD-A91B-FA79D37FFC44';
 const heathIPadDeviceId = 'EB1855A1-3F23-4580-AFCE-B0FE7946EB8C';
@@ -35,33 +37,12 @@ const ninaAndroidDeviceId = 'SP1A.210812.016';
 const disableAdsWhiteList = [
   heathIOSDeviceId,
   heathIPadDeviceId,
-  heathAndroidDeviceId,
+  // heathAndroidDeviceId,
   ninaAndroidDeviceId,
 ];
 
 class AdsService {
-  static String homeAdUnitId = 'ca-app-pub-8577724747514488/4573507812';
-  static String antDetailsAdUnitId = 'ca-app-pub-8577724747514488/8321181130';
-
-  static String colonyActionDetailsAdUnitId =
-      'ca-app-pub-8577724747514488/2934785216';
-
-  // carousel#1item#2
-  static String carousel1Item1 = 'ca-app-pub-8577724747514488/1202643986';
-  static String carousel1Item2 = 'ca-app-pub-8577724747514488/6263398977';
-  static String carousel1Item3 = 'ca-app-pub-8577724747514488/6524217458';
-  static String carousel1Item4 = 'ca-app-pub-8577724747514488/4405320570';
-  static String carousel1Item5 = 'ca-app-pub-8577724747514488/4851079108';
-  static String carousel1Item6 = 'ca-app-pub-8577724747514488/5459381942';
-
-  static List<String> carouselOneIds = [
-    carousel1Item1,
-    carousel1Item2,
-    carousel1Item3,
-    carousel1Item4,
-    carousel1Item5,
-    carousel1Item6
-  ];
+  static List<String> carouselOneIds = AdUnits.carouselOneIds;
 
   // Singleton pattern
   static final AdsService _instance = AdsService._internal();

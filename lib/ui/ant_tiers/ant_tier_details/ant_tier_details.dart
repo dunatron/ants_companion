@@ -1,3 +1,4 @@
+import 'package:ants_companion/domain/ads/ad_units.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
@@ -114,15 +115,17 @@ class _AntTierDetailsState extends State<AntTierDetails> {
           AntTierDetailsReason(viewModel: viewModel),
           AdWidgetBuilder(
             child: Section(
+              // padding: EdgeInsets.symmetric(vertical: 16, horizontal: 0),
+              padding: EdgeInsets.only(top: 0, bottom: 16, left: 0, right: 0),
               child: AdCard(
-                adId: AdsService.antDetailsAdUnitId,
+                adId: AdUnits.antDetailsAdUnitId,
                 selfLoad: AdCardSelfLoad(size: AdSize.banner),
               ),
             ),
           ),
-          Section(
-            child: Divider(color: Theme.of(context).colorScheme.primary),
-          ),
+          // Section(
+          //   child: Divider(color: Theme.of(context).colorScheme.primary),
+          // ),
           AntTierDetailsTagsList(viewModel: viewModel, tierTags: tags),
           // Section(
           //   child: Divider(color: Theme.of(context).colorScheme.primary),

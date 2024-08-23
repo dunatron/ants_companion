@@ -1,6 +1,4 @@
-import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
 import 'package:ants_companion/ui/ants/ant_card/ant_card_tier_ratings.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_species_extension.dart';
 
@@ -64,60 +62,12 @@ class AntCard extends StatelessWidget {
                     AntCardTierRatings(
                       ant: ant,
                     ),
-                    // TierRating
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.end,
-                    //   children: [
-                    //     _TierRatingCircle(
-                    //       title: l10n.pveAbbreviation,
-                    //       rating: ant.topPveRating(),
-                    //     ),
-                    //     _TierRatingCircle(
-                    //       title: l10n.pvpAbbreviation,
-                    //       rating: ant.topPvpRating(),
-                    //     ),
-                    //   ],
-                    // )
                   ],
                 ),
               ),
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class _TierRatingCircle extends StatelessWidget {
-  const _TierRatingCircle({required this.title, required this.rating});
-
-  final String title;
-
-  final TierRating rating;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.only(right: 8),
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surfaceContainerLow,
-        shape: BoxShape.circle,
-      ),
-      child: Column(
-        children: [
-          Text(
-            title,
-            style: Theme.of(context).textTheme.labelSmall,
-            textAlign: TextAlign.end,
-          ),
-          Text(
-            rating.displayText,
-            style: Theme.of(context).textTheme.labelLarge,
-            textAlign: TextAlign.center,
-          )
-        ],
       ),
     );
   }

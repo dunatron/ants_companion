@@ -1,6 +1,7 @@
 import 'package:ants_companion/core/log/loggers.dart';
 import 'package:ants_companion/core/snackbar_service.dart';
 import 'package:ants_companion/domain/notifications/local_notifications.dart';
+import 'package:ants_companion/domain/notifications/models/notification_payload.dart';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -30,14 +31,20 @@ class _NotificationTappedProviderState
     SnackbarService().showOpenAntsSnackbar();
   }
 
+  /// We will have to pass something more robust i think
+  /// caKey only really. so to identify it is a ColonyActionNotification
+  /// caKey
   listenToNotifications() {
     logger.d('Listening to notifications');
-    LocalNotifications.onClickNotification.stream.listen((event) async {
-      logger.d('Received Notification $event');
-      if (event.isNotEmpty) {
-        if (event.contains('/ca-scheduler')) {
-          _handleColonyActionNotificationPayload(event);
-        }
+
+    LocalNotifications.onClickNotification.stream.listen((payload) async {
+      logger.d('Received Notification $payload');
+
+      // NotificationPayload
+      if (payload is ColonyActionNotificationPayload) {
+        _handleColonyActionNotificationPayload(
+          '/ca-scheduler/details/${payload.caKey}',
+        );
       }
     });
   }

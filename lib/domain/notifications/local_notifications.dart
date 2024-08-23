@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:ants_companion/core/log/loggers.dart';
 import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
+import 'package:ants_companion/domain/notifications/models/notification_payload.dart';
 import 'package:ants_companion/domain/notifications/notification_channels.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -45,13 +46,30 @@ class LocalNotifications {
   static final FlutterLocalNotificationsPlugin
       _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
-  static final onClickNotification = BehaviorSubject<String>();
+  // static final onClickNotification = BehaviorSubject<String>();
+  static final onClickNotification = BehaviorSubject<NotificationPayload>();
 
   // on tap any notification
   static void onNotificationTap(
     NotificationResponse notificationResponse,
   ) {
-    onClickNotification.add(notificationResponse.payload!);
+    final payload = _payloadOrNullFromString(notificationResponse.payload);
+    if (payload != null) {
+      onClickNotification.add(payload);
+    }
+  }
+
+  static NotificationPayload? _payloadOrNullFromString(
+      final String? jsonString) {
+    if (jsonString == null || jsonString.isEmpty) {
+      return null;
+    }
+    try {
+      final payload = NotificationPayload.fromJsonString(jsonString);
+      return payload;
+    } catch (e) {
+      return null;
+    }
   }
 
   /// Initialize the local notifications plugin.
@@ -160,10 +178,12 @@ class LocalNotifications {
 
     // ToDo: test this extensively
     await _flutterLocalNotificationsPlugin.zonedSchedule(
-      3,
+      // 3,
+      5000,
       title,
       body,
       scheduledDate,
+      payload: payload,
       NotificationChannels.zonedScheduleChannelDetails(),
       androidScheduleMode: AndroidScheduleMode.alarmClock,
       uiLocalNotificationDateInterpretation:
@@ -177,11 +197,13 @@ class LocalNotifications {
     required int id,
     required String title,
     required String body,
-    required String payload,
+    required String caKey,
     required DateTime date,
   }) async {
     await requestPermissions();
     final scheduledDate = tz.TZDateTime.from(date, tz.local);
+
+    // final scheduledDate.
 
     await _flutterLocalNotificationsPlugin.zonedSchedule(
       id,
@@ -193,7 +215,11 @@ class LocalNotifications {
       uiLocalNotificationDateInterpretation:
           UILocalNotificationDateInterpretation.absoluteTime,
       matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
-      payload: payload,
+      payload: ColonyActionNotificationPayload(
+        caKey: caKey,
+        scheduledAt: tz.TZDateTime.from(DateTime.now(), tz.local),
+        scheduledFor: scheduledDate,
+      ).toJsonString(),
     );
   }
 
@@ -316,7 +342,14 @@ class LocalNotifications {
       final didNotificationLaunchApp = details.didNotificationLaunchApp;
       if (didNotificationLaunchApp) {
         // ExternalAppLauncher.launchAntsUndergroundKingdom();
-        onClickNotification.add(details.notificationResponse!.payload!);
+        // onClickNotification.add(details.notificationResponse!.payload!);
+
+        final payload =
+            _payloadOrNullFromString(details.notificationResponse?.payload);
+
+        if (payload != null) {
+          onClickNotification.add(payload);
+        }
       }
     }
   }

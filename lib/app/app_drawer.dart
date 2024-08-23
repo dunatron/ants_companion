@@ -64,6 +64,15 @@ class AppDrawer extends StatelessWidget {
               context.go('/theme-picker');
             },
           ),
+
+          ListTile(
+            leading: const Icon(Icons.developer_mode),
+            title: Text('Pending Notifications'),
+            onTap: () {
+              // Navigator.pop(context);
+              context.go('/ca-scheduler/pending');
+            },
+          ),
           ListTile(
             leading: const Icon(Icons.developer_mode),
             title: Text(l10n.deviceInfo),

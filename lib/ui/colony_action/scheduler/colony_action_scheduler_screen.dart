@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/domain/colony_actions/models/colony_action.dart';
 import 'package:ants_companion/domain/notifications/local_notifications.dart';
+import 'package:ants_companion/domain/notifications/models/notification_payload.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
 import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
@@ -101,29 +102,76 @@ class _ColonyActionSchedulerScreenState
     final numberFormat = NumberFormat('#,###', 'ar');
     final localDateFormatter = DateFormat('h:mm a');
 
+    var checkedCount = 0;
+
+    for (final ca in weeklySchedule) {
+      if (ca.notificationEnabled) {
+        checkedCount++;
+      }
+    }
+
     return SliverPageLayout(
       title: l10n.colonyActionSchedulerTitle,
       slivers: [
-        // ConstrainedSliverWidth(
-        //   maxWidth: 280,
-        //   child: SliverToBoxAdapter(
-        //     child: ElevatedButton(
-        //       onPressed: () async {
-        //         await LocalNotifications.requestPermissions();
-        //         LocalNotifications.showSimpleNotification(
-        //           title: l10n.notificationTestTitle,
-        //           body: l10n.notificationTestBody,
-        //           payload: '/ca-scheduler/1-12',
-        //         );
-        //       },
-        //       child: Text(l10n.notificationTestButtonLabel),
-        //     ),
-        //   ),
-        // ),
+        ConstrainedSliverWidth(
+          maxWidth: 280,
+          child: SliverToBoxAdapter(
+            child: ElevatedButton(
+              onPressed: () async {
+                await LocalNotifications.requestPermissions();
+                LocalNotifications.showSimpleNotification(
+                  title: l10n.notificationTestTitle,
+                  body: l10n.notificationTestBody,
+                  // payload: '/ca-scheduler/details/1-12',
+                  payload: ColonyActionNotificationPayload(
+                    caKey: '1-12',
+                    scheduledAt: DateTime.now(),
+                    scheduledFor: DateTime.now(),
+                  ).toJsonString(),
+                );
+              },
+              child: Text(l10n.notificationTestButtonLabel),
+            ),
+          ),
+        ),
+        ConstrainedSliverWidth(
+          maxWidth: 280,
+          child: SliverToBoxAdapter(
+            child: ElevatedButton(
+              onPressed: () async {
+                await LocalNotifications.requestPermissions();
+                LocalNotifications.scheduleNotification(
+                  title: 'scheduleNotification',
+                  body: 'scheduleNotification',
+                  // payload: '/ca-scheduler/details/1-12',
+                  payload: ColonyActionNotificationPayload(
+                    caKey: '1-12',
+                    scheduledAt: DateTime.now(),
+                    scheduledFor: DateTime.now(),
+                  ).toJsonString(),
+                );
+              },
+              child: Text('Schedule test'),
+            ),
+          ),
+        ),
         ConstrainedSliverWidth(
           maxWidth: 280,
           child: SliverToBoxAdapter(
             child: Text(l10n.colonyActionSchedulerDescription),
+          ),
+        ),
+        ConstrainedSliverWidth(
+          maxWidth: 280,
+          child: SliverPadding(
+            padding: EdgeInsets.symmetric(vertical: 8),
+            sliver: SliverToBoxAdapter(
+              child: ElevatedButton(
+                  onPressed: () {
+                    context.go('/ca-scheduler/pending');
+                  },
+                  child: Text('Monitoring: $checkedCount')),
+            ),
           ),
         ),
         ConstrainedSliverWidth(
@@ -148,7 +196,7 @@ class _ColonyActionSchedulerScreenState
 
                     return ListTile(
                       onTap: () {
-                        context.go('/ca-scheduler/${item.key}');
+                        context.go('/ca-scheduler/details/${item.key}');
                       },
                       leading: IconButton(
                         onPressed: () {
@@ -178,29 +226,15 @@ class _ColonyActionSchedulerScreenState
                       trailing: Checkbox(
                         value: item.notificationEnabled,
                         onChanged: (final v) async {
+                          await _colonyActions.updateColonyAction(
+                            item.copyWith(notificationEnabled: v),
+                            l10n,
+                          );
                           final canVibrate = await Haptics.canVibrate();
                           // Vibrate only if device is capable of haptic feedback
                           if (canVibrate) {
                             await Haptics.vibrate(HapticsType.success);
                           }
-                          if (v == true) {
-                            await LocalNotifications
-                                .scheduleColonyActionNotification(
-                              id: item.order,
-                              title: l10n.colonyAction,
-                              body: caName,
-                              payload: '/ca-scheduler/${item.key}',
-                              date: item.date,
-                              // date: DateTime.now().add(Duration(seconds: 5)),
-                            );
-                          } else {
-                            await LocalNotifications.cancelNotificationChannel(
-                              item.order,
-                            );
-                          }
-                          _colonyActions.updateColonyAction(item.copyWith(
-                            notificationEnabled: v,
-                          ));
                         },
                       ),
                     );

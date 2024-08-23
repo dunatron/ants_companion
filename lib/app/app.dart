@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:upgrader/upgrader.dart';
 
-final appGlobalKey = GlobalKey();
+// final appGlobalKey = GlobalKey();
 
 class App extends StatelessWidget {
   const App({

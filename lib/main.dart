@@ -6,14 +6,20 @@ import 'package:ants_companion/domain/notifications/local_notifications.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
-  await bootstrap();
-
-  final adsService = AdsService();
-  await adsService.initialize();
-
-  await LocalNotifications.init();
-
-  runApp(const AppLocaleProvider());
+  bootstrap();
 
   // runApp(AppLocaleProvider((locale) => App(currentLocale: locale)));
 }
+
+// void main() async {
+//   await bootstrap();
+
+//   final adsService = AdsService();
+//   await adsService.initialize();
+
+//   await LocalNotifications.init();
+
+//   runApp(const AppLocaleProvider());
+
+//   // runApp(AppLocaleProvider((locale) => App(currentLocale: locale)));
+// }

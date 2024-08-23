@@ -2,6 +2,7 @@ import 'package:ants_companion/ui/colony_action/details/colony_action_details_sc
 import 'package:ants_companion/ui/colony_action/scheduler/colony_action_scheduler_screen.dart';
 import 'package:ants_companion/ui/device_info/device_info_screen.dart';
 import 'package:ants_companion/ui/home/home_screen.dart';
+import 'package:ants_companion/ui/colony_action/pending_notifications/pending_notifications_screen.dart';
 import 'package:ants_companion/ui/route_not_found/route_not_found_screen.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tiers_screen.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_classifications_screen.dart';
@@ -23,6 +24,11 @@ final routes = <RouteBase>[
     path: '/',
     builder: (BuildContext context, GoRouterState state) => const HomeScreen(),
     routes: [
+      // GoRoute(
+      //   path: 'pending-notifications',
+      //   builder: (BuildContext context, GoRouterState state) =>
+      //       const ColonyActionPendingNotificationsScreen(),
+      // ),
       GoRoute(
         path: 'theme-picker',
         builder: (BuildContext context, GoRouterState state) =>
@@ -44,13 +50,19 @@ final routes = <RouteBase>[
             const ColonyActionSchedulerScreen(),
         routes: [
           GoRoute(
-              path: ':caKey',
-              builder: (BuildContext context, GoRouterState state) {
-                final caKey = state.pathParameters['caKey']!;
-                return ColonyActionDetailsScreen(
-                  caKey: caKey,
-                );
-              }),
+            path: 'pending',
+            builder: (BuildContext context, GoRouterState state) =>
+                ColonyActionPendingNotificationsScreen(),
+          ),
+          GoRoute(
+            path: 'details/:caKey',
+            builder: (BuildContext context, GoRouterState state) {
+              final caKey = state.pathParameters['caKey']!;
+              return ColonyActionDetailsScreen(
+                caKey: caKey,
+              );
+            },
+          ),
         ],
       ),
       GoRoute(

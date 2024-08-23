@@ -16,8 +16,6 @@ class AntCardTierRatings extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
 
-    final topPveTag = ant.topPveRating();
-
     return Container(
       margin: EdgeInsets.all(8),
       padding: EdgeInsets.all(6),
@@ -64,11 +62,6 @@ class TierRatingSection extends StatelessWidget {
         Row(
           children: [
             TierStarRating(starCount: tierRating.starCount),
-            const SizedBox(width: 8),
-            Text(
-              tierRating.displayText,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
           ],
         ),
         Text(

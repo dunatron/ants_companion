@@ -1,3 +1,4 @@
+import 'package:ants_companion/domain/ads/ad_units.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
@@ -57,8 +58,8 @@ class HomeScreen extends StatelessWidget {
           // _buildSpecialAntsTitle(l10n, context),
           // _buildSpace(),
           _buildCarousel(context, antsList),
-          _buildSingleAdCard(context),
-          // _buildAdsCarousel(),
+          // _buildSingleAdCard(context),
+          _buildAdsCarousel(),
           // _buildAppFeatureTitle(context, l10n),
           // _buildSpace(),
           _buildFeaturesMasonryGrid(),
@@ -157,7 +158,7 @@ class HomeScreen extends StatelessWidget {
               // color: Theme.of(context).colorScheme.surfaceContainerHigh,
               child: Center(
                 child: AdCard(
-                  adId: AdsService.homeAdUnitId,
+                  adId: AdUnits.homeAdUnitId,
                   selfLoad: AdCardSelfLoad(size: AdSize.mediumRectangle),
                 ),
               ),

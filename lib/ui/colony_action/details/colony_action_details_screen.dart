@@ -1,3 +1,4 @@
+import 'package:ants_companion/domain/ads/ad_units.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
@@ -40,7 +41,7 @@ class ColonyActionDetailsScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 16),
             sliver: SliverToBoxAdapter(
               child: AdCard(
-                adId: AdsService.colonyActionDetailsAdUnitId,
+                adId: AdUnits.colonyActionDetailsAdUnitId,
                 selfLoad: AdCardSelfLoad(size: AdSize.banner),
               ),
             ),
@@ -101,6 +102,7 @@ class ColonyActionNotificationDetails extends StatelessWidget {
                       colonyAction.copyWith(
                         notificationEnabled: !colonyAction.notificationEnabled,
                       ),
+                      l10n,
                     );
                   },
                   icon: Icon(
