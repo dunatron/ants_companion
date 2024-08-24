@@ -33,7 +33,15 @@ class ColonyActionsLocalDatasource {
 
   Future<ColonyAction> update(final ColonyAction item) async {
     logger.d('Updating $item in cache.');
-    await _box.put(item.key, item);
+    // await _box.put(item.key, item);
+    await _box.put(
+      item.key,
+      ColonyAction(
+        key: item.key,
+        notificationEnabled: item.notificationEnabled,
+        favourite: item.favourite,
+      ),
+    );
     logger.i('Cached $item');
     return item;
   }

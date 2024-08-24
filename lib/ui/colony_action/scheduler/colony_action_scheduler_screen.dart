@@ -116,67 +116,85 @@ class _ColonyActionSchedulerScreenState
     return SliverPageLayout(
       title: l10n.colonyActionSchedulerTitle,
       slivers: [
+        // ConstrainedSliverWidth(
+        //   maxWidth: 280,
+        //   child: SliverToBoxAdapter(
+        //     child: ElevatedButton(
+        //       onPressed: () async {
+        //         await LocalNotifications.requestPermissions();
+        //         LocalNotifications.showSimpleNotification(
+        //           title: l10n.notificationTestTitle,
+        //           body: l10n.notificationTestBody,
+        //           // payload: '/ca-scheduler/details/1-12',
+        //           payload: ColonyActionNotificationPayload(
+        //             caKey: '1-12',
+        //             scheduledAt: DateTime.now(),
+        //             scheduledFor: DateTime.now(),
+        //           ).toJsonString(),
+        //         );
+        //       },
+        //       child: Text(l10n.notificationTestButtonLabel),
+        //     ),
+        //   ),
+        // ),
+        // ConstrainedSliverWidth(
+        //   maxWidth: 280,
+        //   child: SliverToBoxAdapter(
+        //     child: ElevatedButton(
+        //       onPressed: () async {
+        //         await LocalNotifications.requestPermissions();
+        //         LocalNotifications.scheduleNotification(
+        //           title: 'scheduleNotification',
+        //           body: 'scheduleNotification',
+        //           // payload: '/ca-scheduler/details/1-12',
+        //           payload: ColonyActionNotificationPayload(
+        //             caKey: '1-12',
+        //             scheduledAt: DateTime.now(),
+        //             scheduledFor: DateTime.now(),
+        //           ).toJsonString(),
+        //         );
+        //       },
+        //       child: Text('Schedule test'),
+        //     ),
+        //   ),
+        // ),
         ConstrainedSliverWidth(
-          maxWidth: 280,
+          maxWidth: 400,
           child: SliverToBoxAdapter(
-            child: ElevatedButton(
-              onPressed: () async {
-                await LocalNotifications.requestPermissions();
-                LocalNotifications.showSimpleNotification(
-                  title: l10n.notificationTestTitle,
-                  body: l10n.notificationTestBody,
-                  // payload: '/ca-scheduler/details/1-12',
-                  payload: ColonyActionNotificationPayload(
-                    caKey: '1-12',
-                    scheduledAt: DateTime.now(),
-                    scheduledFor: DateTime.now(),
-                  ).toJsonString(),
-                );
-              },
-              child: Text(l10n.notificationTestButtonLabel),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Text(l10n.colonyActionSchedulerDescription),
             ),
           ),
         ),
-        ConstrainedSliverWidth(
-          maxWidth: 280,
-          child: SliverToBoxAdapter(
-            child: ElevatedButton(
-              onPressed: () async {
-                await LocalNotifications.requestPermissions();
-                LocalNotifications.scheduleNotification(
-                  title: 'scheduleNotification',
-                  body: 'scheduleNotification',
-                  // payload: '/ca-scheduler/details/1-12',
-                  payload: ColonyActionNotificationPayload(
-                    caKey: '1-12',
-                    scheduledAt: DateTime.now(),
-                    scheduledFor: DateTime.now(),
-                  ).toJsonString(),
-                );
-              },
-              child: Text('Schedule test'),
-            ),
-          ),
-        ),
-        ConstrainedSliverWidth(
-          maxWidth: 280,
-          child: SliverToBoxAdapter(
-            child: Text(l10n.colonyActionSchedulerDescription),
-          ),
-        ),
-        ConstrainedSliverWidth(
-          maxWidth: 280,
-          child: SliverPadding(
-            padding: EdgeInsets.symmetric(vertical: 8),
-            sliver: SliverToBoxAdapter(
-              child: ElevatedButton(
+        const SliverToBoxAdapter(child: SizedBox(height: 16)),
+        PinnedHeaderSliver(
+          child: Container(
+            color: Theme.of(context).colorScheme.surface,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton.icon(
                   onPressed: () {
                     context.go('/ca-scheduler/monitoring');
                   },
-                  child: Text('Monitoring: $checkedCount')),
+                  label: Text('Monitoring $checkedCount'),
+                  icon: Icon(Icons.notifications_active),
+                )
+                // Text('Monitoring $checkedCount'),
+                // TextButton.icon(
+                //   onPressed: () {
+                //     context.go('/ca-scheduler/monitoring');
+                //   },
+                //   label: Text('Edit'),
+                //   icon: Icon(Icons.edit),
+                // )
+              ],
             ),
           ),
         ),
+        const SliverToBoxAdapter(child: SizedBox(height: 16)),
         ConstrainedSliverWidth(
           maxWidth: 420,
           child: SliverList.builder(

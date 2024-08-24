@@ -14,6 +14,10 @@ the list of features and what we need to do
 dart run build_runner build
 ```
 
+```bash
+dart pub run build_runner build --delete-conflicting-outputs
+```
+
 ## Generate l10n file
 
 run this from the root of the project to generate the `l10n.yaml`  

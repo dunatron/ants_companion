@@ -96,7 +96,7 @@ class HomeScreen extends StatelessWidget {
             child: Container(
               height: 220,
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.surfaceContainer,
                 image: const DecorationImage(
                   image: AssetImage('assets/banners/ants_eager_to_teach_1.png'),
                   fit: BoxFit.cover,

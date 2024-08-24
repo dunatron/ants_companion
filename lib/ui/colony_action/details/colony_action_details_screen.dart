@@ -3,6 +3,7 @@ import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
+import 'package:ants_companion/ui/colony_action/details/colony_action_details_card.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
 import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
 import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
@@ -30,7 +31,7 @@ class ColonyActionDetailsScreen extends StatelessWidget {
     final tasks = CATask.colonyActionTaskList(caKey, l10n);
 
     return SliverPageLayout(
-      title: caName,
+      title: 'Details',
       slivers: [
         SliverToBoxAdapter(
           child: ColonyActionNotificationDetails(caKey: caKey),
@@ -78,6 +79,7 @@ class ColonyActionNotificationDetails extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
 
     final localDateFormatter = DateFormat('h:mm a');
+    final caName = caKey.colonyActionTypeFromKey().displayName(l10n);
 
     return StreamBuilder(
       stream: _colonyActions.byKey(caKey),
@@ -88,44 +90,20 @@ class ColonyActionNotificationDetails extends StatelessWidget {
           return Container();
         }
         final warzoneDayName = colonyAction.day.warzoneNameFromCa(l10n);
-        return Column(
-          children: [
-            Text(warzoneDayName),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('${colonyAction.hour} UTC'),
-                IconButton(
-                  onPressed: () {
-                    // ToDo: must schedule a notification
-                    _colonyActions.updateColonyAction(
-                      colonyAction.copyWith(
-                        notificationEnabled: !colonyAction.notificationEnabled,
-                      ),
-                      l10n,
-                    );
-                  },
-                  icon: Icon(
-                    colonyAction.notificationEnabled
-                        ? Icons.notifications_active
-                        : Icons.notifications_off,
-                    color: colonyAction.notificationEnabled
-                        ? Theme.of(context).colorScheme.primary
-                        : null,
-                  ),
-                ),
-              ],
-            ),
-            Wrap(
-              children: [
-                Text(
-                    '${localDateFormatter.format(colonyAction.date.toLocal())}'),
-                Text(' - '),
-                Text(
-                    '${localDateFormatter.format(colonyAction.date.add(Duration(minutes: 54)).toLocal())}'),
-              ],
-            )
-          ],
+
+        return ColonyActionDetailsCard(
+          warzoneName: warzoneDayName,
+          colonyActionName: caName,
+          dateUTC: colonyAction.date,
+          notificationEnabled: colonyAction.notificationEnabled,
+          onNotificationIconTap: () {
+            _colonyActions.updateColonyAction(
+              colonyAction.copyWith(
+                notificationEnabled: !colonyAction.notificationEnabled,
+              ),
+              l10n,
+            );
+          },
         );
       },
     );
