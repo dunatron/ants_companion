@@ -19,17 +19,20 @@ class ColonyActionAdapter extends TypeAdapter<ColonyAction> {
     return ColonyAction(
       key: fields[0] as String,
       notificationEnabled: fields[1] as bool,
+      favourite: fields[2] as bool?,
     );
   }
 
   @override
   void write(BinaryWriter writer, ColonyAction obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.key)
       ..writeByte(1)
-      ..write(obj.notificationEnabled);
+      ..write(obj.notificationEnabled)
+      ..writeByte(2)
+      ..write(obj.favourite);
   }
 
   @override

@@ -7,6 +7,7 @@ extension ColonyActionToStoreModel on ColonyAction {
     return store.ColonyAction(
       key: key,
       notificationEnabled: notificationEnabled,
+      favourite: favourite,
     );
   }
 }
@@ -26,6 +27,7 @@ extension ColonyActionToDomainModel on store.ColonyAction {
       day: day,
       hour: hour,
       notificationEnabled: notificationEnabled,
+      favourite: favourite ?? false,
     );
   }
 }

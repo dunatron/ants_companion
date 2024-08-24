@@ -20,6 +20,7 @@ class ColonyActionsGenerator {
             day: date.weekday,
             hour: hour,
             notificationEnabled: false,
+            favourite: false,
           ),
         );
 

@@ -21,7 +21,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final upgrader = Upgrader(debugDisplayAlways: false);
+    // final upgrader = Upgrader(debugDisplayAlways: true);
 
     final themes = GetIt.I<Themes>();
 
@@ -50,7 +50,7 @@ class App extends StatelessWidget {
           supportedLocales: AppLocalizations.supportedLocales,
           builder: (context, child) {
             return UpgradeAlert(
-              upgrader: upgrader,
+              // upgrader: upgrader,
               shouldPopScope: () => true,
               navigatorKey: routerConfig.routerDelegate.navigatorKey,
               child: child ?? const SizedBox(),

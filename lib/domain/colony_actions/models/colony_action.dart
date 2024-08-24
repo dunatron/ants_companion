@@ -8,6 +8,7 @@ class ColonyAction extends Equatable {
     required this.day,
     required this.hour,
     required this.notificationEnabled,
+    required this.favourite,
   });
 
   static String makeKey({required int day, required int hour}) {
@@ -26,8 +27,11 @@ class ColonyAction extends Equatable {
 
   final bool notificationEnabled;
 
+  final bool favourite;
+
   ColonyAction copyWith({
     bool? notificationEnabled,
+    bool? favourite,
   }) {
     return ColonyAction(
       key: key,
@@ -36,6 +40,7 @@ class ColonyAction extends Equatable {
       day: day,
       hour: hour,
       notificationEnabled: notificationEnabled ?? this.notificationEnabled,
+      favourite: favourite ?? this.favourite,
     );
   }
 

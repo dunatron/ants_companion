@@ -52,8 +52,11 @@ class _ColonyActionSchedulerScreenState
     super.dispose();
   }
 
-  viewColonyActionTasks(ColonyAction colonyAction, AppLocalizations l10n,
-      NumberFormat numberFormat) {
+  viewColonyActionTasks(
+    ColonyAction colonyAction,
+    AppLocalizations l10n,
+    NumberFormat numberFormat,
+  ) {
     final taskList = CATask.colonyActionTaskList(
       colonyAction.key,
       l10n,
@@ -168,7 +171,7 @@ class _ColonyActionSchedulerScreenState
             sliver: SliverToBoxAdapter(
               child: ElevatedButton(
                   onPressed: () {
-                    context.go('/ca-scheduler/pending');
+                    context.go('/ca-scheduler/monitoring');
                   },
                   child: Text('Monitoring: $checkedCount')),
             ),
@@ -249,7 +252,7 @@ class _ColonyActionSchedulerScreenState
   }
 }
 
-extension on int {
+extension WarzoneDayName on int {
   String warzoneDayName(AppLocalizations l10n) {
     final val = switch (this) {
       0 => l10n.warzoneAnthillDevelopment,
