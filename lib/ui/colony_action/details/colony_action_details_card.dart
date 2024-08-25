@@ -50,7 +50,7 @@ class ColonyActionDetailsCard extends StatelessWidget {
                       style: theme.textTheme.bodyLarge,
                     ),
                     Text(
-                      warzoneName,
+                      'warzone: ${warzoneName}',
                       style: theme.textTheme.labelSmall,
                     ),
                   ],

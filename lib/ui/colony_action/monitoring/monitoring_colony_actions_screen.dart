@@ -48,9 +48,6 @@ class MonitoringColonyActionsScreen extends StatelessWidget {
               }
             }
 
-            print('THE MAP');
-            print(warzoneDayColonyActions);
-
             return SliverList(
               delegate: SliverChildListDelegate(
                 warzoneDayColonyActions.entries.map((entry) {

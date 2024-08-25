@@ -8,6 +8,7 @@ import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart
 import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
 import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
 import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
+import 'package:collection/collection.dart';
 
 import 'package:flutter/material.dart';
 
@@ -195,76 +196,82 @@ class _ColonyActionSchedulerScreenState
           ),
         ),
         const SliverToBoxAdapter(child: SizedBox(height: 16)),
-        ConstrainedSliverWidth(
-          maxWidth: 420,
-          child: SliverList.builder(
-            itemCount: 7,
-            itemBuilder: (context, dayIndex) {
-              final warzoneName = dayIndex.warzoneDayName(l10n);
-              return ExpansionTile(
-                title: Text(warzoneName),
-                children: List.generate(
-                  24,
-                  (hourIndex) {
-                    final key =
-                        ColonyAction.makeKey(day: dayIndex, hour: hourIndex);
-                    final item = weeklySchedule.firstWhere(
-                      (it) => it.key == key,
-                    );
+        if (weeklySchedule.isNotEmpty)
+          ConstrainedSliverWidth(
+            maxWidth: 420,
+            child: SliverList.builder(
+              itemCount: 7,
+              itemBuilder: (context, dayIndex) {
+                final warzoneName = dayIndex.warzoneDayName(l10n);
+                return ExpansionTile(
+                  title: Text(warzoneName),
+                  children: List.generate(
+                    24,
+                    (hourIndex) {
+                      final key =
+                          ColonyAction.makeKey(day: dayIndex, hour: hourIndex);
 
-                    final caName =
-                        key.colonyActionTypeFromKey().displayName(l10n);
+                      final item = weeklySchedule.firstWhereOrNull(
+                        (it) => it.key == key,
+                      );
 
-                    return ListTile(
-                      onTap: () {
-                        context.go('/ca-scheduler/details/${item.key}');
-                      },
-                      leading: IconButton(
-                        onPressed: () {
-                          viewColonyActionTasks(item, l10n, numberFormat);
+                      final caName =
+                          key.colonyActionTypeFromKey().displayName(l10n);
+
+                      if (item == null) {
+                        return const SizedBox();
+                      }
+
+                      return ListTile(
+                        onTap: () {
+                          context.go('/ca-scheduler/details/${item.key}');
                         },
-                        icon: const Icon(Icons.info_outlined),
-                      ),
-                      subtitle: RichText(
-                        text: TextSpan(
-                          text: '$caName\n',
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge
-                              ?.copyWith(fontWeight: FontWeight.bold),
-                          children: <TextSpan>[
-                            TextSpan(
-                              // text:
-                              //     '${item.date.toUtc().hour} UTC - ${localDateFormatter.format(item.date)}',
-                              text:
-                                  '${item.date.toUtc().hour} UTC - ${localDateFormatter.format(item.date.toLocal())}',
-                              style:
-                                  const TextStyle(fontWeight: FontWeight.w400),
-                            ),
-                          ],
+                        leading: IconButton(
+                          onPressed: () {
+                            viewColonyActionTasks(item, l10n, numberFormat);
+                          },
+                          icon: const Icon(Icons.info_outlined),
                         ),
-                      ),
-                      trailing: Checkbox(
-                        value: item.notificationEnabled,
-                        onChanged: (final v) async {
-                          await _colonyActions.updateColonyAction(
-                            item.copyWith(notificationEnabled: v),
-                            l10n,
-                          );
-                          final canVibrate = await Haptics.canVibrate();
-                          // Vibrate only if device is capable of haptic feedback
-                          if (canVibrate) {
-                            await Haptics.vibrate(HapticsType.success);
-                          }
-                        },
-                      ),
-                    );
-                  },
-                ),
-              );
-            },
-          ),
-        )
+                        subtitle: RichText(
+                          text: TextSpan(
+                            text: '$caName\n',
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyLarge
+                                ?.copyWith(fontWeight: FontWeight.bold),
+                            children: <TextSpan>[
+                              TextSpan(
+                                // text:
+                                //     '${item.date.toUtc().hour} UTC - ${localDateFormatter.format(item.date)}',
+                                text:
+                                    '${item.date.toUtc().hour} UTC - ${localDateFormatter.format(item.date.toLocal())}',
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        ),
+                        trailing: Checkbox(
+                          value: item.notificationEnabled,
+                          onChanged: (final v) async {
+                            await _colonyActions.updateColonyAction(
+                              item.copyWith(notificationEnabled: v),
+                              l10n,
+                            );
+                            final canVibrate = await Haptics.canVibrate();
+                            // Vibrate only if device is capable of haptic feedback
+                            if (canVibrate) {
+                              await Haptics.vibrate(HapticsType.success);
+                            }
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                );
+              },
+            ),
+          )
       ],
     );
   }

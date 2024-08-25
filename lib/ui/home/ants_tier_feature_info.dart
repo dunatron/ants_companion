@@ -34,7 +34,7 @@ class AntsTierFeatureInfo extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ...TierRating.values.map(
+              ...TierRating.values.reversed.map(
                 (tierRating) => Container(
                   child: Text(
                     tierRating.displayText,
