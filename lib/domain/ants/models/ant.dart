@@ -38,6 +38,8 @@ class Ant extends Equatable {
 
   final List<AntSkill> skills;
 
+  List<AntSkill> antSkills() => [];
+
   TierRating topPveRating() =>
       tierTags.whereType<AntPveTierTag>().toList().topTierRating();
 

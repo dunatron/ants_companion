@@ -22,5 +22,5 @@ class ColonyAction extends Equatable {
   final bool? favourite;
 
   @override
-  List<Object?> get props => [key, notificationEnabled];
+  List<Object?> get props => [key, notificationEnabled, favourite];
 }

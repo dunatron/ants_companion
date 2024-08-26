@@ -34,17 +34,19 @@ const goldenCrystal = Ant(
     ),
   ],
   skills: [
-    CombatSkill(
-      name: 'Battle Fever',
-      description:
-          'Has a 80% chance to deal 380% damage to a random enemy squad '
-          'and increases its squad attack by 65% for 2 rounds',
-      range: 5,
-      chance: 0.80,
-      effects: [
-        DamageSkillEffect(380),
-      ],
-    )
+    DominanceThree(),
+    TertiaryAttack(percentage: 87),
+    TertiaryDefense(percentage: 87),
+    // AntSkillsData.dominanceThree()
+    // CommandSkill(id: AntSkillId.dominanceThree),
+    // CombatSkill(
+    //   id: AntSkillId.battleFever,
+    //   range: 5,
+    // ),
+    // CombatSkill(
+    //   id: AntSkillId.battleFever,
+    //   range: 5,
+    // ),
   ],
 );
 

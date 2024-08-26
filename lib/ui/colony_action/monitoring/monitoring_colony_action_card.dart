@@ -46,13 +46,19 @@ class MonitoringColonyActionCard extends StatelessWidget {
       child: Column(
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(width: 16),
-              Text(
-                caWarzoneDay,
-                style: theme.textTheme.bodyLarge,
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(top: 8),
+                  child: Text(
+                    caWarzoneDay,
+                    style: theme.textTheme.bodyLarge,
+                  ),
+                ),
               ),
-              const Expanded(child: SizedBox()),
+              // const Expanded(child: SizedBox()),
               IconButton(
                 onPressed: onFavouriteIconTap,
                 icon: Icon(
@@ -73,18 +79,19 @@ class MonitoringColonyActionCard extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 0, left: 0, right: 16),
+            padding:
+                const EdgeInsets.only(top: 0, left: 8, right: 16, bottom: 4),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextButton.icon(
+                TextButton(
                   onPressed: () {
                     // GoRoute
                     context.go('/ca-scheduler/monitoring/details/${ca.key}');
                   },
-                  label: Text('Details'),
-                  icon: const Icon(Icons.view_agenda),
+                  child: Text('Details'),
+                  // icon: const Icon(Icons.view_agenda),
                 ),
                 Wrap(
                   children: [

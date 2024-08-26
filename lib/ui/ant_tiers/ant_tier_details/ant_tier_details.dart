@@ -1,6 +1,7 @@
 import 'package:ants_companion/domain/ads/ad_units.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
+import 'package:ants_companion/domain/ants/models/ant_skill.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
@@ -136,6 +137,9 @@ class _AntTierDetailsState extends State<AntTierDetails> {
               style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
+          if (widget.ant.skills.isNotEmpty) ...[
+            ...widget.ant.skills.map((it) => Text(skillDescriptionLevel10(it))),
+          ],
           Section(
             child: Text(
               widget.ant.species.description(l10n),
@@ -144,5 +148,15 @@ class _AntTierDetailsState extends State<AntTierDetails> {
         ],
       ),
     );
+  }
+
+  String skillDescriptionLevel10(final AntSkill skill) {
+    final description = switch (skill) {
+      TertiaryDefense() => 'TertiaryDefense ${skill.percentage}',
+      DominanceThree() => 'DominanceThree',
+      TertiaryAttack() => 'TertiaryAttack ${skill.percentage}',
+      BattleFeverSkill() => 'BattleFeverSkill',
+    };
+    return description;
   }
 }
