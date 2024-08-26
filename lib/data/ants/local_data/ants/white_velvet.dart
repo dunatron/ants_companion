@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const whiteVelvet = Ant(
-  id: 'white_velvet',
+  id: AntId.whiteVelvet,
   name: 'White Velvet',
   scientificName: 'Dasymutilla gloriosa',
   species: ScientificSpecies.dasymutillaGloriosa,

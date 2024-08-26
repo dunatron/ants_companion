@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const jackJumper = Ant(
-  id: 'jack_jumper',
+  id: AntId.jackJumper,
   name: 'Jack Jumper',
   scientificName: 'Myrmecia pilosula',
   species: ScientificSpecies.myrmeciaPilosula,

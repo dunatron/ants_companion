@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const bloodGiant = Ant(
-  id: 'blood_giant',
+  id: AntId.darkGiant,
   name: 'Blood Giant',
   scientificName: 'Nomamyrmex esenbeckii',
   species: ScientificSpecies.nomamyrmexEsenbeckii,

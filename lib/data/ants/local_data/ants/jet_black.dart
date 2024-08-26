@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const jetBlack = Ant(
-  id: 'jet_black',
+  id: AntId.jetBlack,
   name: 'Jet Black',
   scientificName: 'Plectroctena cristata',
   species: ScientificSpecies.plectroctenaCristata,

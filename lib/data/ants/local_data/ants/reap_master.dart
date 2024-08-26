@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const reapMaster = Ant(
-  id: 'reap_master',
+  id: AntId.reapMaster,
   name: 'Reap Master',
   scientificName: 'Thaumatomyrmex Atrox',
   species: ScientificSpecies.thaumatomyrmexAtrox,

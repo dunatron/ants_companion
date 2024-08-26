@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const attaSexdens = Ant(
-  id: 'atta_sexdens',
+  id: AntId.attaSexdens,
   name: 'Atta Sexdens',
   scientificName: 'Atta Sexdens',
   species: ScientificSpecies.attaSexdens,

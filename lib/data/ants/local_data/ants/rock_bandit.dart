@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const rockBandit = Ant(
-  id: 'rock_bandit',
+  id: AntId.rockBandit,
   name: 'Rock Bandit',
   scientificName: 'Cyphomyrmex flavidus',
   species: ScientificSpecies.cyphomyrmexFlavidus,

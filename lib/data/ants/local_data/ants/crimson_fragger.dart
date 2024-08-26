@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const crimsonFragger = Ant(
-  id: 'crimson_fragger',
+  id: AntId.crimsonFragger,
   name: 'Crimson Fragger',
   scientificName: 'Camponotus chromaiodes',
   species: ScientificSpecies.camponotusChromaiodes,

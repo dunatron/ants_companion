@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const procryptocerusAdlerzi = Ant(
-  id: 'procryptocerus_adlerzi',
+  id: AntId.procryptocerusAdlerzi,
   name: 'Procryptocerus Adlerzi',
   scientificName: 'Procryptocerus Adlerzi',
   species: ScientificSpecies.procryptocerusAdlerzi,

@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const crimsonPearl = Ant(
-  id: 'crimson_pearl',
+  id: AntId.crimsonPearl,
   name: 'Crimson Pearl',
   scientificName: 'Myrmarachne sp',
   species: ScientificSpecies.myrmarachneSp,

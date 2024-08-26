@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const formicaClara = Ant(
-  id: 'formica_clara',
+  id: AntId.formicaClara,
   name: 'Formica Clara',
   scientificName: 'Formica Clara',
   species: ScientificSpecies.formicaClara,

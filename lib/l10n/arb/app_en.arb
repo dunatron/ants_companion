@@ -448,6 +448,64 @@
   "thaumatomyrmexAtrox": "Thaumatomyrmex Atrox",
   "thaumatomyrmexAtroxCommon": "Reap Master",
   "thaumatomyrmexAtroxDescription": "Found in Southern America. Usually, there are not many of them inside their community, perhaps only around 10 members. Its size is not that big either. However, they have the scariest appearance. They are the top-class killers hiding in Southern America. Most insects including centipedes are their prey.",
+  "dominance3SkillTitle": "Dominance Three",
+  "dominance3SkillDesc10": "Soldier cap in its squad +18,100 (+ Special Ant Level*100)",
+  "dominance3SkillDesc20": "Soldier cap in its squad +18,100 (+ Special Ant Level*100) \nIn its squad, Normal attack damage + 50%",
+  "tertiaryDefenseSkillTitle": "Tertiary Defense",
+  "tertiaryDefenseSkillDescription": "In its squad ant defense {percentage}%",
+  "@tertiaryDefenseSkill": {
+    "placeholders": {
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "tertiaryAttackSkillTitle": "Tertiary Attack",
+  "tertiaryAttackSkillDescription": "In its squad ant attack {percentage}%",
+  "@tertiaryAttackSkill": {
+    "placeholders": {
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "colonyLeaderSkillTitle": "Colony Leader",
+  "antSkillSevenTitle": "Troop Stat Boost",
+  "antSkillSevenDescription": "In it's Troop {antType} Ant {statType} +{statPercent}%",
+  "@antSkillSevenDescription": {
+    "placeholders": {
+      "antType": {
+        "type": "String"
+      },
+      "statType": {
+        "type": "String"
+      },
+      "statPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "acidGeneralWeaknessRaidSkillTitle": "Weakness Raid",
+  "acidGeneralWeaknessRaidSkillDescription10": "Prepares for 1 round, and has a 50% chance to deal 441% (+Special Ant Level*4%) damage to the enemy squad with the lowest power within effective range",
+  "acidGeneralWeaknessRaidSkillDescription20": "Prepares for 1 round, and has a 55% chance to deal 441% (+Special Ant Level*4%) damage to the enemy squad with the lowest power within effective range",
+  "acidGeneralHyperAttackSkillTitle": "Hyper Attack",
+  "acidGeneralHyperAttackSkillDescription10": "Has a 50% chance to deal 86% (+Special Ant Level*1%) damage to 2 random enemy squads within effective range, and increases its squad damage by 30% for 2 rounds",
+  "acidGeneralHyperAttackSkillDescription20": "Has a 50% chance to deal 126% (+Special Ant Level*1%) damage to 2 random enemy squads within effective range, and increases its squad damage by 50% for 2 rounds",
+  "acidGeneralDeadlyStrikeSkillTitle": "Deadly Strike",
+  "acidGeneralDeadlyStrikeSkillDescription10": "Has a 40% chance to deal 269% (+Special Ant Level*2.5%) damage to the enemy squad with the lowest power within effective range, and increases their damage taken by 18% for 2 rounds",
+  "acidGeneralDeadlyStrikeSkillDescription20": "Has a 50% chance to deal 269% (+Special Ant Level*2.5%) damage to the enemy squad with the lowest power within effective range, and increases their damage taken by 28% for 2 rounds",
+  "goldenCrystalBattleFeverSkillTitle": "Battle Fever",
+  "goldenCrystalBattleFeverSkillDescription10": "Has a 60% chance to deal 280% damage to a random enemy squad, and increases its squad attack by 50% for 2 rounds",
+  "goldenCrystalBattleFeverSkillDescription20": "Has a 60% chance to deal 380% damage to a random enemy squad, and increases its squad attack by 65% for 2 rounds",
+  "goldenCrystalViolentlyPoisonousSkillTitle": "Violently Poisonous",
+  "goldenCrystalViolentlyPoisonousSkillDescription10": "Prepares for 1 round, and has a 80% chance to deal 200% (+Special ant level*1%) damage to all enemy squads and poison them, dealing 150% damage for 1 round",
+  "goldenCrystalViolentlyPoisonousSkillDescription20": "Prepares for 1 round, and has a 80% chance to deal 330% (+Special ant level*1%) damage to all enemy squads and poison them, dealing 220% damage for 1 round",
+  "goldenCrystalMasterHunterSkillTitle": "Master Hunter",
+  "goldenCrystalMasterHunterSkillDescription10": "In it's Troop, Carrier ant attack +43%",
+  "goldenCrystalMasterHunterSkillDescription20": "In it's Troop, Carrier ant attack +73%",
+  "goldenCrystalSwoopSkillTitle": "Swoop",
+  "goldenCrystalSwoopSkillDescription10": "Has a 50% chance to deal 130% (+Special Ant Level*1%) damage to all enemy squads. If the target is Poisoned, increase the damage this time by 50%",
+  "goldenCrystalSwoopSkillDescription20": "Has a 50% chance to deal 240% (+Special Ant Level*1%) damage to all enemy squads. If the target is Poisoned, increase the damage this time by 50%",
   "english": "English",
   "filipino": "Filipino",
   "spanish": "Spanish",

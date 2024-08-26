@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const weaverAnt = Ant(
-  id: 'weaver_ant',
+  id: AntId.weaverAnt,
   name: 'Weaver Ant',
   scientificName: 'Oecophylla longinoda',
   species: ScientificSpecies.oecophyllaLonginoda,

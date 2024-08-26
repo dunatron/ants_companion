@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const brownRogue = Ant(
-  id: 'brown_rogue',
+  id: AntId.brownRogue,
   name: 'Brown Rogue',
   scientificName: 'Myrmarachne plataleoides',
   species: ScientificSpecies.myrmarachnePlataleoides,

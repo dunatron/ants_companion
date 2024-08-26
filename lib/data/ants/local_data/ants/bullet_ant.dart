@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const bulletAnt = Ant(
-  id: 'bullet_ant',
+  id: AntId.bulletAnt,
   name: 'Bullet Ant',
   scientificName: 'Paraponera clavata',
   species: ScientificSpecies.paraponeraClavata,

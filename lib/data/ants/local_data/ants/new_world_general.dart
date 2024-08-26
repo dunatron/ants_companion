@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const newWorldGeneral = Ant(
-  id: 'new_world_general',
+  id: AntId.newWorldGeneral,
   name: 'New World General',
   scientificName: 'Echiton burchellii',
   species: ScientificSpecies.echitonBurchellii,

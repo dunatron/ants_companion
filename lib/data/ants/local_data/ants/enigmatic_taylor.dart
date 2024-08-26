@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const enigmaticTaylor = Ant(
-  id: 'enigmatic_taylor',
+  id: AntId.enigmaticTaylor,
   name: 'Enigmatic Taylor',
   scientificName: 'Tetramorium pulcherrimum',
   species: ScientificSpecies.tetramoriumPulcherrimum,

@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const darkHercules = Ant(
-  id: 'dark_hercules',
+  id: AntId.darkHercules,
   name: 'Dark Hercules',
   species: ScientificSpecies.myrmarachneGisti,
   scientificName: 'Myrmarachne Gisti',

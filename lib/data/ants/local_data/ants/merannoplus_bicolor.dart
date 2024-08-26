@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const merannoplusBicolor = Ant(
-  id: 'merannoplus_bicolor',
+  id: AntId.merannoplusBicolor,
   name: 'Merannoplus Bicolor',
   scientificName: 'Merannoplus bicolor',
   species: ScientificSpecies.merannoplusBicolor,

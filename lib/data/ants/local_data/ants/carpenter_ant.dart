@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const carpenterAnt = Ant(
-  id: 'carpenter_ant',
+  id: AntId.carpenterAnt,
   name: 'Carpenter Ant',
   species: ScientificSpecies.camponotusColoratus,
   scientificName: 'Camponotus coloratus',

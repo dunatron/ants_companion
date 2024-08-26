@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const mimicryMaster = Ant(
-  id: 'mimicry_master',
+  id: AntId.mimicryMaster,
   name: 'Mimicry Master',
   species: ScientificSpecies.mimicryMaster,
   scientificName: 'Unknown',

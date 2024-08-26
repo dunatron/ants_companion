@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const rubySlender = Ant(
-  id: 'ruby_slender',
+  id: AntId.rubySlender,
   name: 'Ruby Slender',
   scientificName: 'Gnamptogenys mordax',
   species: ScientificSpecies.gnamptogenysMordax,

@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const hairyPanther = Ant(
-  id: 'hairy_panther',
+  id: AntId.hairyPanther,
   name: 'Hairy Panther',
   species: ScientificSpecies.neoponeraVillosa,
   scientificName: 'Neoponera villosa',

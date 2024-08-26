@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const leafDevourer = Ant(
-  id: 'leaf_devourer',
+  id: AntId.leafDevourer,
   name: 'Leaf Devourer',
   scientificName: 'Atta laevigata',
   species: ScientificSpecies.attaLaevigata,

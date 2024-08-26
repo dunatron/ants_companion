@@ -1,1 +1,225 @@
-{}
+{
+  "ar": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "bg": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "de": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "es": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "fil": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "hu": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "it": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "ja": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "mk": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "nl": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "pl": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "ru": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "tr": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "uk": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "vi": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ],
+
+  "zh": [
+    "antSkillSevenTitle",
+    "antSkillSevenDescription",
+    "acidGeneralWeaknessRaidSkillTitle",
+    "acidGeneralWeaknessRaidSkillDescription10",
+    "acidGeneralWeaknessRaidSkillDescription20",
+    "acidGeneralHyperAttackSkillTitle",
+    "acidGeneralHyperAttackSkillDescription10",
+    "acidGeneralHyperAttackSkillDescription20",
+    "acidGeneralDeadlyStrikeSkillTitle",
+    "acidGeneralDeadlyStrikeSkillDescription10",
+    "acidGeneralDeadlyStrikeSkillDescription20"
+  ]
+}

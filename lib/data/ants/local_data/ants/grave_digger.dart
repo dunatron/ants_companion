@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const graveDigger = Ant(
-  id: 'grave_digger',
+  id: AntId.graveDigger,
   name: 'Grave Digger',
   scientificName: 'Prionopelta humicola',
   species: ScientificSpecies.prionopeltaHumicola,

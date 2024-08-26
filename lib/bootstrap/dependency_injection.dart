@@ -2,6 +2,7 @@ import 'package:ants_companion/bootstrap/di/register_datasources.dart';
 import 'package:ants_companion/data/colony_actions/colony_actions_repository.dart';
 import 'package:ants_companion/data/locales/locales_repository.dart';
 import 'package:ants_companion/data/themes/themes_repository.dart';
+import 'package:ants_companion/domain/ant_skills/ant_skills.dart';
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/domain/locales/locales.dart';
 import 'package:ants_companion/domain/themes/themes.dart';
@@ -17,4 +18,6 @@ Future<void> setupDI() async {
   GetIt.I.registerLazySingleton(
     () => ColonyActions(ColonyActionsRepository(GetIt.I())),
   );
+
+  GetIt.I.registerLazySingleton(() => AntSkills());
 }

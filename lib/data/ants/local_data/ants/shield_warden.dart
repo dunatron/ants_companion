@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const shieldWarden = Ant(
-  id: 'shield_warden',
+  id: AntId.shieldWarden,
   name: 'Shield Warden',
   scientificName: 'Cataulacus huberi',
   species: ScientificSpecies.cataulacusHuberi,

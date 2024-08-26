@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const acidGeneral = Ant(
-  id: 'acid_general',
+  id: AntId.acidGeneral,
   name: 'Acid General',
   scientificName: 'Mystrium oberthueri',
   species: ScientificSpecies.mystriumOberthueri,

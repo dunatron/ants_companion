@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const myrmarachneFormicaria = Ant(
-  id: 'myrmarachne_formicaria',
+  id: AntId.myrmarachneFormicaria,
   name: 'Myrmarachne Formicaria',
   scientificName: 'Myrmarachne Formicaria',
   species: ScientificSpecies.myrmarachneFormicaria,
