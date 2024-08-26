@@ -9,8 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:upgrader/upgrader.dart';
 
-// final appGlobalKey = GlobalKey();
-
 class App extends StatelessWidget {
   const App({
     super.key,
@@ -21,7 +19,11 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final upgrader = Upgrader(debugDisplayAlways: true);
+    final upgrader = Upgrader(
+      debugDisplayAlways: false,
+      // minAppVersion: '1.1.5',
+      debugLogging: false,
+    );
 
     final themes = GetIt.I<Themes>();
 
@@ -50,7 +52,7 @@ class App extends StatelessWidget {
           supportedLocales: AppLocalizations.supportedLocales,
           builder: (context, child) {
             return UpgradeAlert(
-              // upgrader: upgrader,
+              upgrader: upgrader,
               shouldPopScope: () => true,
               navigatorKey: routerConfig.routerDelegate.navigatorKey,
               child: child ?? const SizedBox(),
