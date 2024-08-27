@@ -1241,3 +1241,157 @@ class NimbleTreeAntDeftFootworkSkill extends AntSkill {
 }
 
 // PheidoleNietneri
+class PheidoleNietneriBounceBackSkill extends AntSkill {
+  const PheidoleNietneriBounceBackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 3,
+  });
+}
+
+class PheidoleNietneriGladiatorSkillsSkill extends AntSkill {
+  const PheidoleNietneriGladiatorSkillsSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 3,
+  });
+}
+
+class PheidoleNietneriStrongShellSkill extends AntSkill {
+  const PheidoleNietneriStrongShellSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+// Predator
+class PredatorBloodyBattleSkill extends AntSkill {
+  const PredatorBloodyBattleSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+class PredatorMenaceSkill extends AntSkill {
+  const PredatorMenaceSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class PredatorFlexibleRobberySkill extends AntSkill {
+  const PredatorFlexibleRobberySkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+// Proatta
+class ProattaKnockbackSkill extends AntSkill {
+  const ProattaKnockbackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class ProattaDisablingCombosSkill extends AntSkill {
+  const ProattaDisablingCombosSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class ProattaHorrorHunterSkill extends AntSkill {
+  const ProattaHorrorHunterSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// ProcryptocerusAdlerzi
+class ProcryptocerusAdlerziComprehensiveDefenseSkill extends AntSkill {
+  const ProcryptocerusAdlerziComprehensiveDefenseSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+    super.effectiveRange = 1,
+  });
+}
+
+class ProcryptocerusAdlerziSavageChargeSkill extends AntSkill {
+  const ProcryptocerusAdlerziSavageChargeSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 3,
+  });
+}
+
+class ProcryptocerusAdlerziBigBiteSkill extends AntSkill {
+  const ProcryptocerusAdlerziBigBiteSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 3,
+  });
+}
+
+// ReapMaster
+class ReapMasterBigBiteSkill extends AntSkill {
+  const ReapMasterBigBiteSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class ReapMasterThrillOfTheHuntSkill extends AntSkill {
+  const ReapMasterThrillOfTheHuntSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class ReapMasterGrievousBiteSkill extends AntSkill {
+  const ReapMasterGrievousBiteSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// RockBandit
+class RockBanditRageRushSkill extends AntSkill {
+  const RockBanditRageRushSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class RockBanditHuggerBiteSkill extends AntSkill {
+  const RockBanditHuggerBiteSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class RockBanditWarfareLeadershipSkill extends AntSkill {
+  const RockBanditWarfareLeadershipSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+  });
+}
+
+// RubySlender
+class TTSkill extends AntSkill {
+  const TTSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}

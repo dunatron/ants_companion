@@ -646,18 +646,92 @@ class AntSkillSets {
     ),
     skill8: NimbleTreeAntDeftFootworkSkill(),
   );
-// ToDo
-  static const pheidoleNietneriSkillSet = AntSkillSet();
-// ToDo
-  static const predatorSkillSet = AntSkillSet();
-// ToDo
-  static const proattaSkillSet = AntSkillSet();
-// ToDo
-  static const procryptocerusAdlerziSkillSet = AntSkillSet();
-// ToDo
-  static const reapMasterSkillSet = AntSkillSet();
-// ToDo
-  static const rockBanditSkillSet = AntSkillSet();
+
+  static const pheidoleNietneriSkillSet = AntSkillSet(
+    skill2: PheidoleNietneriBounceBackSkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: PheidoleNietneriGladiatorSkillsSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.health,
+      statPercent10: 18,
+      statPercent20: 30,
+    ),
+    skill8: PheidoleNietneriStrongShellSkill(),
+  );
+
+  static const predatorSkillSet = AntSkillSet(
+    skill2: PredatorBloodyBattleSkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: PredatorMenaceSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.health,
+      statPercent10: 18,
+      statPercent20: 30,
+    ),
+    skill8: PredatorFlexibleRobberySkill(),
+  );
+
+  static const proattaSkillSet = AntSkillSet(
+    skill2: ProattaKnockbackSkill(),
+    skill3: TertiaryDefense(percentage10: 35, percentage20: 65),
+    skill4: TertiaryAttack(percentage10: 35, percentage20: 65),
+    skill5: ProattaDisablingCombosSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.health,
+      statPercent10: 15,
+      statPercent20: 25,
+    ),
+    skill8: ProattaHorrorHunterSkill(),
+  );
+
+  static const procryptocerusAdlerziSkillSet = AntSkillSet(
+    skill2: ProcryptocerusAdlerziComprehensiveDefenseSkill(),
+    skill3: TertiaryDefense(percentage10: 48, percentage20: 96),
+    skill4: TertiaryAttack(percentage10: 48, percentage20: 96),
+    skill5: ProcryptocerusAdlerziSavageChargeSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.health,
+      statPercent10: 20,
+      statPercent20: 35,
+    ),
+    skill8: ProcryptocerusAdlerziBigBiteSkill(),
+  );
+
+  static const reapMasterSkillSet = AntSkillSet(
+    skill2: ReapMasterBigBiteSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: ReapMasterThrillOfTheHuntSkill(),
+    skill7: AntSkillSevenMarchSpeed(
+      antType: AntType.shooter,
+      statType: StatType.attack,
+      statPercent10: 30,
+      statPercent20: 50,
+      speedPercent10: 50,
+      speedPercent20: 80,
+    ),
+    skill8: ReapMasterGrievousBiteSkill(),
+  );
+
+  static const rockBanditSkillSet = AntSkillSet(
+    skill2: RockBanditRageRushSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: RockBanditHuggerBiteSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.attack,
+      statPercent10: 38,
+      statPercent20: 66,
+    ),
+    skill8: RockBanditWarfareLeadershipSkill(),
+  );
 // ToDo
   static const rubySlenderSkillSet = AntSkillSet();
 // ToDo
