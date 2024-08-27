@@ -4,7 +4,10 @@ enum AntSkillTargetType {
   oneRandomEnemyWithinRange,
   twoRandomEnemyWithinRange,
   threeRandomEnemyWithinRange,
-  twoRandomFriendlyWithinRange;
+  twoRandomFriendlyWithinRange,
+  twoOtherFriendlyWithinRange,
+  enemyFrontline,
+  enemySquadInLastRow;
 
   String displayName() => switch (this) {
         AntSkillTargetType.itsSquad => 'Its squad',
@@ -17,5 +20,10 @@ enum AntSkillTargetType {
           'Three random enemy squads within effective range',
         AntSkillTargetType.twoRandomFriendlyWithinRange =>
           'Two random friendly squads within effective range',
+        AntSkillTargetType.twoOtherFriendlyWithinRange =>
+          '2 other friendly squads within effective range',
+        AntSkillTargetType.enemyFrontline => 'Enemys Front Line',
+        AntSkillTargetType.enemySquadInLastRow =>
+          'The enemy squad in the last row',
       };
 }

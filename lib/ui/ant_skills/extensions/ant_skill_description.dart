@@ -31,6 +31,7 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.acidGeneralHyperAttackSkillDescription10,
         AcidGeneralDeadlyStrikeSkill() =>
           l10n.acidGeneralDeadlyStrikeSkillDescription10,
+        _ => '',
       };
 
   String skillDescriptionLevel20(AppLocalizations l10n) => switch (this) {
@@ -43,7 +44,7 @@ extension AntSkillDescriptionExtension on AntSkill {
         AntSkillSeven(
           antType: final antType,
           statType: final statType,
-          statPercent10: final statPercent
+          statPercent20: final statPercent
         ) =>
           l10n.antSkillSevenDescription(
               antType.name, statType.name, statPercent),
@@ -61,5 +62,6 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.acidGeneralHyperAttackSkillDescription20,
         AcidGeneralDeadlyStrikeSkill() =>
           l10n.acidGeneralDeadlyStrikeSkillDescription20,
+        _ => '',
       };
 }

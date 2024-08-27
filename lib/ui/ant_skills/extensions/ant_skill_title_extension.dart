@@ -21,5 +21,6 @@ extension AntSkillTitleExtension on AntSkill {
         GoldenCrystalMasterHunterSkill() =>
           l10n.goldenCrystalMasterHunterSkillTitle,
         GoldenCrystalSwoopSkill() => l10n.goldenCrystalSwoopSkillTitle,
+        _ => '',
       };
 }

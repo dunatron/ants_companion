@@ -4,7 +4,6 @@ import 'package:ants_companion/domain/ant_skills/models/ant_skill_set.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
 
 class AntSkillSets {
-  // ToDo
   static const acidGeneralSkillSet = AntSkillSet(
     skill2: AcidGeneralWeaknessRaidSkill(),
     skill3: TertiaryDefense(percentage10: 35, percentage20: 70),
@@ -18,6 +17,7 @@ class AntSkillSets {
     ),
     skill8: AcidGeneralDeadlyStrikeSkill(),
   );
+
   static const attaSexdensSkillSet = AntSkillSet(
     skill2: AttaSexdensDefensiveOffenceSkill(),
     skill3: TertiaryDefense(percentage10: 48, percentage20: 96),
@@ -29,7 +29,7 @@ class AntSkillSets {
       statPercent10: 20,
       statPercent20: 35,
     ),
-    skill8: AcidGeneralDeadlyStrikeSkill(),
+    skill8: AttaSexdensThornAssaultSkill(),
   );
 
   static const bansheePandaSkillSet = AntSkillSet(
@@ -45,6 +45,7 @@ class AntSkillSets {
     ),
     skill8: BansheePandaWarfareLeadershipSkill(),
   );
+
   static const bansheeVelvetSkillSet = AntSkillSet(
     skill2: BansheeVelvetSuperToxinSkill(),
     skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
@@ -58,20 +59,104 @@ class AntSkillSets {
     ),
     skill8: BansheeVelvetWarfareLeadershipSkill(),
   );
-// ToDo
-  static const blackCancerSkillSet = AntSkillSet();
-// ToDo
-  static const blackKnightSkillSet = AntSkillSet();
-// ToDo
-  static const bloodGiantSkillSet = AntSkillSet();
-// ToDo
-  static const brownRogueSkillSet = AntSkillSet();
-// ToDo
-  static const bulletAntSkillSet = AntSkillSet();
-// ToDo
-  static const carpenterAntSkillSet = AntSkillSet();
-// ToDo
-  static const crematogasterInflataSkillSet = AntSkillSet();
+
+  static const blackCancerSkillSet = AntSkillSet(
+    skill2: BlackCancerFluidLeachSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: BlackCancerAdamantArmorSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.attack,
+      statPercent10: 38,
+      statPercent20: 66,
+    ),
+    skill8: BlackCancerWarfareLeadershipSkill(),
+  );
+
+  static const blackKnightSkillSet = AntSkillSet(
+    skill2: BlackKnightVengefulCounterattackSkill(),
+    skill3: TertiaryDefense(percentage10: 60, percentage20: 120),
+    skill4: TertiaryAttack(percentage10: 60, percentage20: 120),
+    skill5: BlackKnightBlackArmorMarsSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.health,
+      statPercent10: 26,
+      statPercent20: 45,
+    ),
+    skill8: BlackKnightDarkSpikeAssaultSkill(),
+  );
+
+  static const bloodGiantSkillSet = AntSkillSet(
+    skill2: BloodGiantSupportTeammatesSkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: BloodGiantImproveLineupSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.health,
+      statPercent10: 18,
+      statPercent20: 30,
+    ),
+    skill8: BloodGiantKillingStrikeSkill(),
+  );
+
+  static const brownRogueSkillSet = AntSkillSet(
+    skill2: BrownRogueSurpriseStrikeSkill(),
+    skill3: TertiaryDefense(percentage10: 35, percentage20: 65),
+    skill4: TertiaryAttack(percentage10: 35, percentage20: 65),
+    skill5: BrownRogueCheapShotSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.attack,
+      statPercent10: 35,
+      statPercent20: 60,
+    ),
+    skill8: BrownRogueFindWeaknessSkill(),
+  );
+
+  static const bulletAntSkillSet = AntSkillSet(
+    skill2: BulletAntRampantAttackSkill(),
+    skill3: TertiaryDefense(percentage10: 30, percentage20: 55),
+    skill4: TertiaryAttack(percentage10: 30, percentage20: 55),
+    skill5: BulletAntBlitzkriegSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.defense,
+      statPercent10: 30,
+      statPercent20: 50,
+    ),
+    skill8: BulletAntSuppressingAttackSkill(),
+  );
+
+  static const carpenterAntSkillSet = AntSkillSet(
+    skill2: CarpenterAntSteadyPaceSkill(),
+    skill3: TertiaryDefense(percentage10: 60, percentage20: 120),
+    skill4: TertiaryAttack(percentage10: 60, percentage20: 120),
+    skill5: CarpenterAntDistendedBellySkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.defense,
+      statPercent10: 60,
+      statPercent20: 100,
+    ),
+    skill8: CarpenterAntPowerfulGazeSkill(),
+  );
+
+  static const crematogasterInflataSkillSet = AntSkillSet(
+    skill2: CrematogasterInflataWinningStrategySkill(),
+    skill3: TertiaryDefense(percentage10: 60, percentage20: 120),
+    skill4: TertiaryAttack(percentage10: 60, percentage20: 120),
+    skill5: CrematogasterInflataMasterMimicSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.defense,
+      statPercent10: 60,
+      statPercent20: 100,
+    ),
+    skill8: CrematogasterInflataHealingMucusSkill(),
+  );
 // ToDo
   static const crimsonFraggerSkillSet = AntSkillSet();
 // ToDo
