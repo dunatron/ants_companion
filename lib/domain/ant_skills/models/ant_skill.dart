@@ -729,3 +729,76 @@ class GoldenCrystalSwoopSkill extends AntSkill {
     super.effectiveRange = 5,
   });
 }
+
+// GoldenSpiny
+class GoldenSpinyBigBiteSkill extends AntSkill {
+  const GoldenSpinyBigBiteSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class GoldenSpinyPiercingAttackSkill extends AntSkill {
+  const GoldenSpinyPiercingAttackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class GoldenSpinyAmbushSkill extends AntSkill {
+  const GoldenSpinyAmbushSkill({
+    super.type = AntSkillType.statusSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+// GoldenSugar
+class GoldenSugarBigBiteSkill extends AntSkill {
+  const GoldenSugarBigBiteSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class GoldenSugarPiercingStrikeSkill extends AntSkill {
+  const GoldenSugarPiercingStrikeSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class GoldenSugarComboStrikesSkill extends AntSkill {
+  const GoldenSugarComboStrikesSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// GoldenVenom
+class GoldenVenomRampantAttackSkill extends AntSkill {
+  const GoldenVenomRampantAttackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class GoldenVenomParalysisToxinSkill extends AntSkill {
+  const GoldenVenomParalysisToxinSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class GoldenVenomBladePincerSkill extends AntSkill {
+  const GoldenVenomBladePincerSkill({
+    super.type = AntSkillType.statusSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}

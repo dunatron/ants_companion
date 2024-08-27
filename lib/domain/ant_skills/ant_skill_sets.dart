@@ -364,12 +364,48 @@ class AntSkillSets {
     skill7: GoldenCrystalMasterHunterSkill(),
     skill8: GoldenCrystalSwoopSkill(),
   );
-// ToDo
-  static const goldenSpinySkillSet = AntSkillSet();
-// ToDo
-  static const goldenSugarSkillSet = AntSkillSet();
-// ToDo
-  static const goldenVenomSkillSet = AntSkillSet();
+
+  static const goldenSpinySkillSet = AntSkillSet(
+    skill2: GoldenSpinyBigBiteSkill(),
+    skill3: TertiaryDefense(percentage10: 30, percentage20: 55),
+    skill4: TertiaryAttack(percentage10: 30, percentage20: 55),
+    skill5: GoldenSpinyPiercingAttackSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.defense,
+      statPercent10: 30,
+      statPercent20: 50,
+    ),
+    skill8: GoldenSpinyAmbushSkill(),
+  );
+
+  static const goldenSugarSkillSet = AntSkillSet(
+    skill2: GoldenSugarBigBiteSkill(),
+    skill3: TertiaryDefense(percentage10: 30, percentage20: 55),
+    skill4: TertiaryAttack(percentage10: 30, percentage20: 55),
+    skill5: GoldenSugarPiercingStrikeSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.attack,
+      statPercent10: 30,
+      statPercent20: 50,
+    ),
+    skill8: GoldenSugarComboStrikesSkill(),
+  );
+
+  static const goldenVenomSkillSet = AntSkillSet(
+    skill2: GoldenVenomRampantAttackSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: GoldenVenomParalysisToxinSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.attack,
+      statPercent10: 38,
+      statPercent20: 66,
+    ),
+    skill8: GoldenVenomBladePincerSkill(),
+  );
 // ToDo
   static const gracefulTwigAntSkillSet = AntSkillSet();
 // ToDo
