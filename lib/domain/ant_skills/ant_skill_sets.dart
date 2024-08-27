@@ -732,12 +732,48 @@ class AntSkillSets {
     ),
     skill8: RockBanditWarfareLeadershipSkill(),
   );
-// ToDo
-  static const rubySlenderSkillSet = AntSkillSet();
-// ToDo
-  static const saharanSilverAntSkillSet = AntSkillSet();
-// ToDo
-  static const shieldWardenSkillSet = AntSkillSet();
+
+  static const rubySlenderSkillSet = AntSkillSet(
+    skill2: RubySlenderRevengeSkill(),
+    skill3: TertiaryDefense(percentage10: 35, percentage20: 65),
+    skill4: TertiaryAttack(percentage10: 35, percentage20: 65),
+    skill5: RubySlenderSelfAdjustingSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.health,
+      statPercent10: 18,
+      statPercent20: 30,
+    ),
+    skill8: RubySlenderWarfareLeadershipSkill(),
+  );
+
+  static const saharanSilverAntSkillSet = AntSkillSet(
+    skill2: SaharanSilverAntRapidMomentumSkill(),
+    skill3: TertiaryDefense(percentage10: 60, percentage20: 120),
+    skill4: TertiaryAttack(percentage10: 60, percentage20: 120),
+    skill5: SaharanSilverAntSilverGleamSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.attack,
+      statPercent10: 60,
+      statPercent20: 100,
+    ),
+    skill8: SaharanSilverAntPrecisionLongshotSkill(),
+  );
+
+  static const shieldWardenSkillSet = AntSkillSet(
+    skill2: ShieldWardenHealingPowerSkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: ShieldWardenFightToDeathSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.health,
+      statPercent10: 18,
+      statPercent20: 30,
+    ),
+    skill8: ShieldWardenProtectionPostureSkill(),
+  );
 // ToDo
   static const shikareeMasterSkillSet = AntSkillSet();
 // ToDo

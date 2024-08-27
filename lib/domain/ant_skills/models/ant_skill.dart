@@ -1388,10 +1388,74 @@ class RockBanditWarfareLeadershipSkill extends AntSkill {
 }
 
 // RubySlender
-class TTSkill extends AntSkill {
-  const TTSkill({
+class RubySlenderRevengeSkill extends AntSkill {
+  const RubySlenderRevengeSkill({
     super.type = AntSkillType.combatSkill,
     super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
-    super.effectiveRange = 5,
+    super.effectiveRange = 3,
   });
 }
+
+class RubySlenderSelfAdjustingSkill extends AntSkill {
+  const RubySlenderSelfAdjustingSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+class RubySlenderWarfareLeadershipSkill extends AntSkill {
+  const RubySlenderWarfareLeadershipSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+  });
+}
+
+// SaharanSilverAnt
+class SaharanSilverAntRapidMomentumSkill extends AntSkill {
+  const SaharanSilverAntRapidMomentumSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 6,
+  });
+}
+
+class SaharanSilverAntSilverGleamSkill extends AntSkill {
+  const SaharanSilverAntSilverGleamSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 6,
+  });
+}
+
+class SaharanSilverAntPrecisionLongshotSkill extends AntSkill {
+  const SaharanSilverAntPrecisionLongshotSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+// ShieldWarden
+class ShieldWardenHealingPowerSkill extends AntSkill {
+  const ShieldWardenHealingPowerSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class ShieldWardenFightToDeathSkill extends AntSkill {
+  const ShieldWardenFightToDeathSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class ShieldWardenProtectionPostureSkill extends AntSkill {
+  const ShieldWardenProtectionPostureSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+  });
+}
+
+// ShikareeMaster
