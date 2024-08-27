@@ -406,32 +406,190 @@ class AntSkillSets {
     ),
     skill8: GoldenVenomBladePincerSkill(),
   );
-// ToDo
-  static const gracefulTwigAntSkillSet = AntSkillSet();
-// ToDo
-  static const graveDiggerSkillSet = AntSkillSet();
-// ToDo
-  static const guardGeneralSkillSet = AntSkillSet();
-// ToDo
-  static const hairyPantherSkillSet = AntSkillSet();
-// ToDo
-  static const jackJumperSkillSet = AntSkillSet();
-// ToDo
-  static const jetBlackSkillSet = AntSkillSet();
-// ToDo
-  static const lathySnifferSkillSet = AntSkillSet();
-// ToDo
-  static const leafDevourerSkillSet = AntSkillSet();
-// ToDo
-  static const leptoglossusPhyllopusSkillSet = AntSkillSet();
-// ToDo
-  static const leptomyrmexBurwelliSkillSet = AntSkillSet();
-// ToDo
-  static const merannoplusBicolorSkillSet = AntSkillSet();
-// ToDo
-  static const merannoplusCastaneusSkillSet = AntSkillSet();
-// ToDo
-  static const mimicryMasterSkillSet = AntSkillSet();
+
+  static const gracefulTwigAntSkillSet = AntSkillSet(
+    skill2: GracefulTwigAntAcidicSpraySkill(),
+    skill3: TertiaryDefense(percentage10: 48, percentage20: 96),
+    skill4: TertiaryAttack(percentage10: 48, percentage20: 96),
+    skill5: GracefulTwigAntHuntingInstinctSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.defense,
+      statPercent10: 48,
+      statPercent20: 80,
+    ),
+    skill8: GracefulTwigAntUnyieldingDeterminationSkill(),
+  );
+
+  static const graveDiggerSkillSet = AntSkillSet(
+    skill2: GraveDiggerToxicSpraySkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: GraveDiggerNervePoisonSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.health,
+      statPercent10: 18,
+      statPercent20: 30,
+    ),
+    skill8: GraveDiggerWarfareLeadershipSkill(),
+  );
+
+  static const guardGeneralSkillSet = AntSkillSet(
+    skill2: GuardGeneralLightningBlitzkriegSkill(),
+    skill3: TertiaryDefense(percentage10: 35, percentage20: 70),
+    skill4: TertiaryAttack(percentage10: 35, percentage20: 70),
+    skill5: GuardGeneralAgileMovementSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.defense,
+      statPercent10: 35,
+      statPercent20: 70,
+    ),
+    skill8: GuardGeneralDisablingCombosSkill(),
+  );
+
+  static const hairyPantherSkillSet = AntSkillSet(
+    skill2: HairyPantherRampageStrikeSkill(),
+    skill3: TertiaryDefense(percentage10: 48, percentage20: 96),
+    skill4: TertiaryAttack(percentage10: 48, percentage20: 96),
+    skill5: HairyPantherFurySwipeSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.attack,
+      statPercent10: 48,
+      statPercent20: 80,
+    ),
+    skill8: HairyPantherFierceNatureSkill(),
+  );
+
+  static const jackJumperSkillSet = AntSkillSet(
+    skill2: JackJumperRampantAttackSkill(),
+    skill3: TertiaryDefense(percentage10: 30, percentage20: 55),
+    skill4: TertiaryAttack(percentage10: 30, percentage20: 55),
+    skill5: JackJumperJumpingAttackSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.attack,
+      statPercent10: 30,
+      statPercent20: 50,
+    ),
+    skill8: JackJumperBlitzkriegSkill(),
+  );
+
+  static const jetBlackSkillSet = AntSkillSet(
+    skill2: JetBlackCounterAttackSkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: JetBlackSelfAdjustingSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.attack,
+      statPercent10: 43,
+      statPercent20: 73,
+    ),
+    skill8: JetBlackCarvedSkinSkill(),
+  );
+
+  static const lathySnifferSkillSet = AntSkillSet(
+    skill2: LathySnifferDoublePowerSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: LathySnifferTailAssaultSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.attack,
+      statPercent10: 38,
+      statPercent20: 66,
+    ),
+    skill8: LathySnifferFrequentlyStrengthenSkill(),
+  );
+
+  static const leafDevourerSkillSet = AntSkillSet(
+    skill2: LeafDevourerKillingDoubleHitSkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: LeafDevourerBurningCourageSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.attack,
+      statPercent10: 43,
+      statPercent20: 73,
+    ),
+    skill8: LeafDevourerWarfareLeadershipSkill(),
+  );
+
+  static const leptoglossusPhyllopusSkillSet = AntSkillSet(
+    skill2: LeptoglossusPhyllopusAmberBarrierSkill(),
+    skill3: TertiaryDefense(percentage10: 60, percentage20: 120),
+    skill4: TertiaryAttack(percentage10: 60, percentage20: 120),
+    skill5: LeptoglossusPhyllopusLongAntennaeSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.attack,
+      statPercent10: 60,
+      statPercent20: 100,
+    ),
+    skill8: LeptoglossusPhyllopusVenomousStingSkill(),
+  );
+
+  static const leptomyrmexBurwelliSkillSet = AntSkillSet(
+    skill2: LeptomyrmexBurwelliFatalAssaultSkill(),
+    skill3: TertiaryDefense(percentage10: 48, percentage20: 96),
+    skill4: TertiaryAttack(percentage10: 48, percentage20: 96),
+    skill5: LeptomyrmexBurwelliAdaptiveAssaultSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.attack,
+      statPercent10: 48,
+      statPercent20: 80,
+    ),
+    skill8: LeptomyrmexBurwelliSweepingStrengthSkill(),
+  );
+
+  static const merannoplusBicolorSkillSet = AntSkillSet(
+    skill2: MerannoplusBicolorPlushBackArmorSkill(),
+    skill3: TertiaryDefense(percentage10: 60, percentage20: 120),
+    skill4: TertiaryAttack(percentage10: 60, percentage20: 120),
+    skill5: MerannoplusBicolorToxicThornSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.health,
+      statPercent10: 30,
+      statPercent20: 45,
+    ),
+    skill8: MerannoplusBicolorBufferBarrierSkill(),
+  );
+
+  static const merannoplusCastaneusSkillSet = AntSkillSet(
+    skill2: MerannoplusCastaneusScarletFurySkill(),
+    skill3: TertiaryDefense(percentage10: 60, percentage20: 120),
+    skill4: TertiaryAttack(percentage10: 60, percentage20: 120),
+    skill5: MerannoplusCastaneusBloodyShieldSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.defense,
+      statPercent10: 60,
+      statPercent20: 100,
+    ),
+    skill8: MerannoplusCastaneusHealingWithLoveSkill(),
+  );
+
+  static const mimicryMasterSkillSet = AntSkillSet(
+    skill2: MimicryMasterMouthPieceAttackSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: MimicryMasterSupressingAttackSkill(),
+    skill7: AntSkillSevenMarchSpeed(
+      antType: AntType.guardian,
+      statType: StatType.attack,
+      statPercent10: 30,
+      statPercent20: 50,
+      speedPercent10: 50,
+      speedPercent20: 80,
+    ),
+    skill8: MimicryMasterSwipeSkill(),
+  );
 // ToDo
   static const myrmarachneFormicariaSkillSet = AntSkillSet();
 // ToDo

@@ -73,6 +73,27 @@ class AntSkillSeven extends AntSkill {
   final AntType antType;
 }
 
+class AntSkillSevenMarchSpeed extends AntSkill {
+  const AntSkillSevenMarchSpeed({
+    required this.antType,
+    required this.statType,
+    required this.statPercent10,
+    required this.statPercent20,
+    required this.speedPercent10,
+    required this.speedPercent20,
+    super.type = AntSkillType.commandSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+  });
+
+  final StatType statType;
+  final int statPercent10;
+  final int statPercent20;
+  final AntType antType;
+
+  final int speedPercent10;
+  final int speedPercent20;
+}
+
 class ColonyLeaderSkill extends AntSkill {
   const ColonyLeaderSkill({
     super.type = AntSkillType.commandSkill,
@@ -802,3 +823,324 @@ class GoldenVenomBladePincerSkill extends AntSkill {
     super.targetType = AntSkillTargetType.itsSquad,
   });
 }
+
+// GracefulTwigAnt
+class GracefulTwigAntAcidicSpraySkill extends AntSkill {
+  const GracefulTwigAntAcidicSpraySkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class GracefulTwigAntHuntingInstinctSkill extends AntSkill {
+  const GracefulTwigAntHuntingInstinctSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class GracefulTwigAntUnyieldingDeterminationSkill extends AntSkill {
+  const GracefulTwigAntUnyieldingDeterminationSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+    super.effectiveRange = 2,
+  });
+}
+
+// GraveDigger
+class GraveDiggerToxicSpraySkill extends AntSkill {
+  const GraveDiggerToxicSpraySkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class GraveDiggerNervePoisonSkill extends AntSkill {
+  const GraveDiggerNervePoisonSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class GraveDiggerWarfareLeadershipSkill extends AntSkill {
+  const GraveDiggerWarfareLeadershipSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+  });
+}
+
+// GuardGeneral
+class GuardGeneralLightningBlitzkriegSkill extends AntSkill {
+  const GuardGeneralLightningBlitzkriegSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class GuardGeneralAgileMovementSkill extends AntSkill {
+  const GuardGeneralAgileMovementSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class GuardGeneralDisablingCombosSkill extends AntSkill {
+  const GuardGeneralDisablingCombosSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+// HairyPanther
+
+class HairyPantherRampageStrikeSkill extends AntSkill {
+  const HairyPantherRampageStrikeSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.enemySquadWithHighestPower,
+    super.effectiveRange = 5,
+  });
+}
+
+class HairyPantherFurySwipeSkill extends AntSkill {
+  const HairyPantherFurySwipeSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class HairyPantherFierceNatureSkill extends AntSkill {
+  const HairyPantherFierceNatureSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// JackJumper
+class JackJumperRampantAttackSkill extends AntSkill {
+  const JackJumperRampantAttackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class JackJumperJumpingAttackSkill extends AntSkill {
+  const JackJumperJumpingAttackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class JackJumperBlitzkriegSkill extends AntSkill {
+  const JackJumperBlitzkriegSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// JetBlack
+class JetBlackCounterAttackSkill extends AntSkill {
+  const JetBlackCounterAttackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+class JetBlackSelfAdjustingSkill extends AntSkill {
+  const JetBlackSelfAdjustingSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+class JetBlackCarvedSkinSkill extends AntSkill {
+  const JetBlackCarvedSkinSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+  });
+}
+
+// LathySniffer
+class LathySnifferDoublePowerSkill extends AntSkill {
+  const LathySnifferDoublePowerSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class LathySnifferTailAssaultSkill extends AntSkill {
+  const LathySnifferTailAssaultSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class LathySnifferFrequentlyStrengthenSkill extends AntSkill {
+  const LathySnifferFrequentlyStrengthenSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+// LeafDevourer
+class LeafDevourerKillingDoubleHitSkill extends AntSkill {
+  const LeafDevourerKillingDoubleHitSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class LeafDevourerBurningCourageSkill extends AntSkill {
+  const LeafDevourerBurningCourageSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+  });
+}
+
+class LeafDevourerWarfareLeadershipSkill extends AntSkill {
+  const LeafDevourerWarfareLeadershipSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// LeptoglossusPhyllopus
+class LeptoglossusPhyllopusAmberBarrierSkill extends AntSkill {
+  const LeptoglossusPhyllopusAmberBarrierSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class LeptoglossusPhyllopusLongAntennaeSkill extends AntSkill {
+  const LeptoglossusPhyllopusLongAntennaeSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquadAndOneFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class LeptoglossusPhyllopusVenomousStingSkill extends AntSkill {
+  const LeptoglossusPhyllopusVenomousStingSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// LeptomyrmexBurwelli
+class LeptomyrmexBurwelliFatalAssaultSkill extends AntSkill {
+  const LeptomyrmexBurwelliFatalAssaultSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class LeptomyrmexBurwelliAdaptiveAssaultSkill extends AntSkill {
+  const LeptomyrmexBurwelliAdaptiveAssaultSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class LeptomyrmexBurwelliSweepingStrengthSkill extends AntSkill {
+  const LeptomyrmexBurwelliSweepingStrengthSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// MerannoplusBicolor
+class MerannoplusBicolorPlushBackArmorSkill extends AntSkill {
+  const MerannoplusBicolorPlushBackArmorSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+class MerannoplusBicolorToxicThornSkill extends AntSkill {
+  const MerannoplusBicolorToxicThornSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class MerannoplusBicolorBufferBarrierSkill extends AntSkill {
+  const MerannoplusBicolorBufferBarrierSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+    super.effectiveRange = 2,
+  });
+}
+
+// MerannoplusCastaneus
+class MerannoplusCastaneusScarletFurySkill extends AntSkill {
+  const MerannoplusCastaneusScarletFurySkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInCombat,
+    super.effectiveRange = 5,
+  });
+}
+
+class MerannoplusCastaneusBloodyShieldSkill extends AntSkill {
+  const MerannoplusCastaneusBloodyShieldSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomFriendlyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class MerannoplusCastaneusHealingWithLoveSkill extends AntSkill {
+  const MerannoplusCastaneusHealingWithLoveSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+// MimicryMaster
+class MimicryMasterMouthPieceAttackSkill extends AntSkill {
+  const MimicryMasterMouthPieceAttackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class MimicryMasterSupressingAttackSkill extends AntSkill {
+  const MimicryMasterSupressingAttackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class MimicryMasterSwipeSkill extends AntSkill {
+  const MimicryMasterSwipeSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// myrmarachneFormicaria
