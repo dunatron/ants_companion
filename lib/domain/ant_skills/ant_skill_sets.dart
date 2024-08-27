@@ -157,34 +157,202 @@ class AntSkillSets {
     ),
     skill8: CrematogasterInflataHealingMucusSkill(),
   );
-// ToDo
-  static const crimsonFraggerSkillSet = AntSkillSet();
-// ToDo
-  static const crimsonPearlSkillSet = AntSkillSet();
-// ToDo
-  static const cyphomyrmexRimosusSkillSet = AntSkillSet();
-// ToDo
-  static const darkGiantSkillSet = AntSkillSet();
-// ToDo
-  static const darkHerculesSkillSet = AntSkillSet();
-// ToDo
-  static const dolichoderusBispinosusSkillSet = AntSkillSet();
-// ToDo
-  static const driverAntSkillSet = AntSkillSet();
-// ToDo
-  static const duskyLurkerSkillSet = AntSkillSet();
-// ToDo
-  static const emeraldJewelAntSkillSet = AntSkillSet();
-// ToDo
-  static const enigmaticTaylorSkillSet = AntSkillSet();
-// ToDo
-  static const formicaClaraSkillSet = AntSkillSet();
-// ToDo
-  static const ghostAntSkillSet = AntSkillSet();
-// ToDo
-  static const giantToothSkillSet = AntSkillSet();
-// ToDo
-  static const goldArmorSkillSet = AntSkillSet();
+
+  static const crimsonFraggerSkillSet = AntSkillSet(
+    skill2: CrimsonFraggerPiercingAttackSkill(),
+    skill3: TertiaryDefense(percentage10: 35, percentage20: 65),
+    skill4: TertiaryAttack(percentage10: 35, percentage20: 65),
+    skill5: CrimsonFraggerDoubleHitSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.defense,
+      statPercent10: 35,
+      statPercent20: 57,
+    ),
+    skill8: CrimsonFraggerAdequatePreparationSkill(),
+  );
+
+  static const crimsonPearlSkillSet = AntSkillSet(
+    skill2: CrimsonPearlBrutalCombosSkill(),
+    skill3: TertiaryDefense(percentage10: 35, percentage20: 65),
+    skill4: TertiaryAttack(percentage10: 35, percentage20: 65),
+    skill5: CrimsonPearlParasiticStingerSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.attack,
+      statPercent10: 35,
+      statPercent20: 57,
+    ),
+    skill8: CrimsonPearlVariableMimicsSkill(),
+  );
+
+  static const cyphomyrmexRimosusSkillSet = AntSkillSet(
+    skill2: CyphomyrmexRimosusPowerfulHeadbuttSkill(),
+    skill3: TertiaryDefense(percentage10: 60, percentage20: 120),
+    skill4: TertiaryAttack(percentage10: 60, percentage20: 120),
+    skill5: CyphomyrmexRimosusGermPropagationSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.attack,
+      statPercent10: 60,
+      statPercent20: 100,
+    ),
+    skill8: CyphomyrmexRimosusBeneficialBacteriaSkill(),
+  );
+
+  static const darkGiantSkillSet = AntSkillSet(
+    skill2: DarkGiantCounterStrikeSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: DarkGiantMenaceSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.attack,
+      statPercent10: 38,
+      statPercent20: 66,
+    ),
+    skill8: DarkGiantWarfareLeadershipSkill(),
+  );
+
+  static const darkHerculesSkillSet = AntSkillSet(
+    skill2: DarkHerculesFatalBiteSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: DarkHerculesStrongGuardSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.attack,
+      statPercent10: 38,
+      statPercent20: 66,
+    ),
+    skill8: DarkHerculesBurningCourageSkill(),
+  );
+
+  static const dolichoderusBispinosusSkillSet = AntSkillSet(
+    skill2: DolichoderusBispinosusImmediateSupportSkill(),
+    skill3: TertiaryDefense(percentage10: 48, percentage20: 96),
+    skill4: TertiaryAttack(percentage10: 48, percentage20: 96),
+    skill5: DolichoderusBispinosusAgileAttackSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.health,
+      statPercent10: 30,
+      statPercent20: 35,
+    ),
+    skill8: DolichoderusBispinosusExtraDamageSkill(),
+  );
+
+  static const driverAntSkillSet = AntSkillSet(
+    skill2: DriverAntBlitzkriegSkill(),
+    skill3: TertiaryDefense(percentage10: 30, percentage20: 55),
+    skill4: TertiaryAttack(percentage10: 30, percentage20: 55),
+    skill5: DriverAntSharpTearingSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.defense,
+      statPercent10: 30,
+      statPercent20: 50,
+    ),
+    skill8: DriverAntWeaknessStrikeSkill(),
+  );
+
+  static const duskyLurkerSkillSet = AntSkillSet(
+    skill2: DuskyLurkerSneakAttackSkill(),
+    skill3: TertiaryDefense(percentage10: 35, percentage20: 65),
+    skill4: TertiaryAttack(percentage10: 35, percentage20: 65),
+    skill5: DuskyLurkerApplyingTacticsSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.attack,
+      statPercent10: 35,
+      statPercent20: 57,
+    ),
+    skill8: DuskyLurkerTrueLeaderSkill(),
+  );
+
+  static const emeraldJewelAntSkillSet = AntSkillSet(
+    skill2: EmeraldJewelAntStealthAssassinateSkill(),
+    skill3: TertiaryDefense(percentage10: 60, percentage20: 120),
+    skill4: TertiaryAttack(percentage10: 60, percentage20: 120),
+    skill5: EmeraldJewelAntCruelParasitismSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.attack,
+      statPercent10: 60,
+      statPercent20: 100,
+    ),
+    skill8: EmeraldJewelAntParasiticDevourSkill(),
+  );
+
+  static const enigmaticTaylorSkillSet = AntSkillSet(
+    skill2: EnigmaticTaylorSneakAttackSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: EnigmaticTaylorFootRendSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.attack,
+      statPercent10: 38,
+      statPercent20: 66,
+    ),
+    skill8: EnigmaticTaylorWarfareLeadershipSkill(),
+  );
+
+  static const formicaClaraSkillSet = AntSkillSet(
+    skill2: FormicaClaraSleekChitinSkill(),
+    skill3: TertiaryDefense(percentage10: 48, percentage20: 96),
+    skill4: TertiaryAttack(percentage10: 48, percentage20: 86),
+    skill5: FormicaClaraAgileDashSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.defense,
+      statPercent10: 48,
+      statPercent20: 80,
+    ),
+    skill8: FormicaClaraDazzlingSwashSkill(),
+  );
+
+  static const ghostAntSkillSet = AntSkillSet(
+    skill2: GhostAntClearHeadSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: GhostAntGhostStrikeSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.health,
+      statPercent10: 15,
+      statPercent20: 25,
+    ),
+    skill8: GhostAntDeliberateAttackSkill(),
+  );
+
+  static const giantToothSkillSet = AntSkillSet(
+    skill2: GiantToothWeaknessStrikeSkill(),
+    skill3: TertiaryDefense(percentage10: 30, percentage20: 55),
+    skill4: TertiaryAttack(percentage10: 30, percentage20: 55),
+    skill5: GiantToothDisablingAttackSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.health,
+      statPercent10: 15,
+      statPercent20: 25,
+    ),
+    skill8: GiantToothBigBiteSkill(),
+  );
+
+  static const goldArmorSkillSet = AntSkillSet(
+    skill2: GoldArmorBigBiteSkill(),
+    skill3: TertiaryDefense(percentage10: 30, percentage20: 55),
+    skill4: TertiaryAttack(percentage10: 30, percentage20: 55),
+    skill5: GoldArmorRampantAttackSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.attack,
+      statPercent10: 30,
+      statPercent20: 50,
+    ),
+    skill8: GoldArmorBlitzkriegSkill(),
+  );
 
   static const goldenCrystalSkillSet = AntSkillSet(
     skill1: DominanceThree(),
