@@ -1143,4 +1143,101 @@ class MimicryMasterSwipeSkill extends AntSkill {
   });
 }
 
-// myrmarachneFormicaria
+// MyrmarachneFormicaria
+class MyrmarachneFormicariaPrettyShellSkill extends AntSkill {
+  const MyrmarachneFormicariaPrettyShellSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class MyrmarachneFormicariaDisguiseStealSkill extends AntSkill {
+  const MyrmarachneFormicariaDisguiseStealSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.enemyFrontline,
+    super.effectiveRange = 2,
+  });
+}
+
+class MyrmarachneFormicariaJumpingImpactSkill extends AntSkill {
+  const MyrmarachneFormicariaJumpingImpactSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// MyrmecotypusRettenmeyeri
+class MyrmecotypusRettenmeyeriNimblePostureSkill extends AntSkill {
+  const MyrmecotypusRettenmeyeriNimblePostureSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
+
+class MyrmecotypusRettenmeyeriPowerOfAwakeningSkill extends AntSkill {
+  const MyrmecotypusRettenmeyeriPowerOfAwakeningSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.enemySquadInLastRow,
+    super.effectiveRange = 3,
+  });
+}
+
+class MyrmecotypusRettenmeyeriHealthFieldSkill extends AntSkill {
+  const MyrmecotypusRettenmeyeriHealthFieldSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+  });
+}
+
+//  NewWorldGeneral
+class NewWorldGeneralRageBiteSkill extends AntSkill {
+  const NewWorldGeneralRageBiteSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class NewWorldGeneralDeterenceSkill extends AntSkill {
+  const NewWorldGeneralDeterenceSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class NewWorldGeneralBlitzkriegSkill extends AntSkill {
+  const NewWorldGeneralBlitzkriegSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 3,
+  });
+}
+
+// NimbleTreeAnt
+class NimbleTreeAntAgilitySkill extends AntSkill {
+  const NimbleTreeAntAgilitySkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+  });
+}
+
+class NimbleTreeAntPiercingChaseSkill extends AntSkill {
+  const NimbleTreeAntPiercingChaseSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.enemyFrontline,
+    super.effectiveRange = 4,
+  });
+}
+
+class NimbleTreeAntDeftFootworkSkill extends AntSkill {
+  const NimbleTreeAntDeftFootworkSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+// PheidoleNietneri

@@ -590,14 +590,62 @@ class AntSkillSets {
     ),
     skill8: MimicryMasterSwipeSkill(),
   );
-// ToDo
-  static const myrmarachneFormicariaSkillSet = AntSkillSet();
-// ToDo
-  static const myrmecotypusRettenmeyeriSkillSet = AntSkillSet();
-// ToDo
-  static const newWorldGeneralSkillSet = AntSkillSet();
-// ToDo
-  static const nimbleTreeAntSkillSet = AntSkillSet();
+
+  static const myrmarachneFormicariaSkillSet = AntSkillSet(
+    skill2: MyrmarachneFormicariaPrettyShellSkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: MyrmarachneFormicariaDisguiseStealSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.guardian,
+      statType: StatType.defense,
+      statPercent10: 43,
+      statPercent20: 73,
+    ),
+    skill8: MyrmarachneFormicariaJumpingImpactSkill(),
+  );
+
+  static const myrmecotypusRettenmeyeriSkillSet = AntSkillSet(
+    skill2: MyrmecotypusRettenmeyeriNimblePostureSkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: MyrmecotypusRettenmeyeriPowerOfAwakeningSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.health,
+      statPercent10: 18,
+      statPercent20: 30,
+    ),
+    skill8: MyrmecotypusRettenmeyeriHealthFieldSkill(),
+  );
+
+  static const newWorldGeneralSkillSet = AntSkillSet(
+    skill2: NewWorldGeneralRageBiteSkill(),
+    skill3: TertiaryDefense(percentage10: 35, percentage20: 70),
+    skill4: TertiaryAttack(percentage10: 35, percentage20: 70),
+    skill5: NewWorldGeneralDeterenceSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.attack,
+      statPercent10: 35,
+      statPercent20: 70,
+    ),
+    skill8: NewWorldGeneralBlitzkriegSkill(),
+  );
+
+  static const nimbleTreeAntSkillSet = AntSkillSet(
+    skill2: NimbleTreeAntAgilitySkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: NimbleTreeAntPiercingChaseSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.health,
+      statPercent10: 18,
+      statPercent20: 30,
+    ),
+    skill8: NimbleTreeAntDeftFootworkSkill(),
+  );
 // ToDo
   static const pheidoleNietneriSkillSet = AntSkillSet();
 // ToDo
