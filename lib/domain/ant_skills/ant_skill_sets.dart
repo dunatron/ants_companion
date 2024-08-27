@@ -774,16 +774,90 @@ class AntSkillSets {
     ),
     skill8: ShieldWardenProtectionPostureSkill(),
   );
-// ToDo
-  static const shikareeMasterSkillSet = AntSkillSet();
-// ToDo
-  static const slimArchedSkillSet = AntSkillSet();
-// ToDo
-  static const strumigenysEggersiSkillSet = AntSkillSet();
-// ToDo
-  static const weaverAntSkillSet = AntSkillSet();
-// ToDo
-  static const whiteVelvetSkillSet = AntSkillSet();
-// ToDo
-  static const wiseBerserkerSkillSet = AntSkillSet();
+
+  static const shikareeMasterSkillSet = AntSkillSet(
+    skill2: ShikareeMasterInfiniteDeadhuntSkill(),
+    skill3: TertiaryDefense(percentage10: 38, percentage20: 76),
+    skill4: TertiaryAttack(percentage10: 38, percentage20: 76),
+    skill5: ShikareeMasterRampantAttackSkill(),
+    skill7: AntSkillSevenMarchSpeed(
+      antType: AntType.carrier,
+      statType: StatType.attack,
+      statPercent10: 30,
+      statPercent20: 50,
+      speedPercent10: 50,
+      speedPercent20: 80,
+    ),
+    skill8: ShikareeMasterAudaciousChargeSkill(),
+  );
+
+  static const slimArchedSkillSet = AntSkillSet(
+    skill2: SlimArchedBigBiteSkill(),
+    skill3: TertiaryDefense(percentage10: 30, percentage20: 55),
+    skill4: TertiaryAttack(percentage10: 30, percentage20: 55),
+    skill5: SlimArchedBlitzkriegSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.health,
+      statPercent10: 15,
+      statPercent20: 25,
+    ),
+    skill8: SlimArchedSuppressingAttackSkill(),
+  );
+
+  static const strumigenysEggersiSkillSet = AntSkillSet(
+    skill2: StrumigenysEggersiStablePostureSkill(),
+    skill3: TertiaryDefense(percentage10: 48, percentage20: 96),
+    skill4: TertiaryAttack(percentage10: 48, percentage20: 86),
+    skill5: StrumigenysEggersiDeceptiveFormSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.health,
+      statPercent10: 20,
+      statPercent20: 35,
+    ),
+    skill8: StrumigenysEggersiKeenIntuitionSkill(),
+  );
+
+  static const weaverAntSkillSet = AntSkillSet(
+    skill2: WeaverAntAcidAssaultSkill(),
+    skill3: TertiaryDefense(percentage10: 48, percentage20: 96),
+    skill4: TertiaryAttack(percentage10: 48, percentage20: 86),
+    skill5: WeaverAntFieryThrashSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.defense,
+      statPercent10: 48,
+      statPercent20: 80,
+    ),
+    skill8: WeaverAntTacticalCounterAttackSkill(),
+  );
+
+  static const whiteVelvetSkillSet = AntSkillSet(
+    skill2: WhiteVelvetMasterOfDisguiseSkill(),
+    skill3: TertiaryDefense(percentage10: 35, percentage20: 65),
+    skill4: TertiaryAttack(percentage10: 35, percentage20: 65),
+    skill5: WhiteVelvetHealingPowerSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.universal,
+      statType: StatType.attack,
+      statPercent10: 35,
+      statPercent20: 60,
+    ),
+    skill8: WhiteVelvetWhiteGuardianSkill(),
+  );
+
+  static const wiseBerserkerSkillSet = AntSkillSet(
+    skill2: WiseBerserkerCruelStrikeSkill(),
+    skill3: TertiaryDefense(percentage10: 43, percentage20: 86),
+    skill4: TertiaryAttack(percentage10: 43, percentage20: 86),
+    skill5: WiseBerserkerContinuousBiteSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.shooter,
+      statType: StatType.attack,
+      statPercent10: 43,
+      statPercent20: 73,
+    ),
+    skill8: WiseBerserkerBattleMemorySkill(),
+  );
 }

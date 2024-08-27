@@ -1459,3 +1459,149 @@ class ShieldWardenProtectionPostureSkill extends AntSkill {
 }
 
 // ShikareeMaster
+class ShikareeMasterInfiniteDeadhuntSkill extends AntSkill {
+  const ShikareeMasterInfiniteDeadhuntSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+class ShikareeMasterRampantAttackSkill extends AntSkill {
+  const ShikareeMasterRampantAttackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class ShikareeMasterAudaciousChargeSkill extends AntSkill {
+  const ShikareeMasterAudaciousChargeSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.threeRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+// SlimArched
+class SlimArchedBigBiteSkill extends AntSkill {
+  const SlimArchedBigBiteSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class SlimArchedBlitzkriegSkill extends AntSkill {
+  const SlimArchedBlitzkriegSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 3,
+  });
+}
+
+class SlimArchedSuppressingAttackSkill extends AntSkill {
+  const SlimArchedSuppressingAttackSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+// StrumigenysEggersi
+class StrumigenysEggersiStablePostureSkill extends AntSkill {
+  const StrumigenysEggersiStablePostureSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+    super.effectiveRange = 2,
+  });
+}
+
+class StrumigenysEggersiDeceptiveFormSkill extends AntSkill {
+  const StrumigenysEggersiDeceptiveFormSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+    super.effectiveRange = 1,
+  });
+}
+
+class StrumigenysEggersiKeenIntuitionSkill extends AntSkill {
+  const StrumigenysEggersiKeenIntuitionSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+// WeaverAnt
+class WeaverAntAcidAssaultSkill extends AntSkill {
+  const WeaverAntAcidAssaultSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class WeaverAntFieryThrashSkill extends AntSkill {
+  const WeaverAntFieryThrashSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class WeaverAntTacticalCounterAttackSkill extends AntSkill {
+  const WeaverAntTacticalCounterAttackSkill({
+    super.type = AntSkillType.preCombatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 4,
+  });
+}
+
+//  WhiteVelvet
+class WhiteVelvetMasterOfDisguiseSkill extends AntSkill {
+  const WhiteVelvetMasterOfDisguiseSkill({
+    super.type = AntSkillType.commandSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+  });
+}
+
+class WhiteVelvetHealingPowerSkill extends AntSkill {
+  const WhiteVelvetHealingPowerSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.oneRandomFriendlyWithinRange,
+    super.effectiveRange = 3,
+  });
+}
+
+class WhiteVelvetWhiteGuardianSkill extends AntSkill {
+  const WhiteVelvetWhiteGuardianSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 3,
+  });
+}
+
+// WiseBerserker
+class WiseBerserkerCruelStrikeSkill extends AntSkill {
+  const WiseBerserkerCruelStrikeSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.enemyFrontline,
+    super.effectiveRange = 5,
+  });
+}
+
+class WiseBerserkerContinuousBiteSkill extends AntSkill {
+  const WiseBerserkerContinuousBiteSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
+    super.effectiveRange = 5,
+  });
+}
+
+class WiseBerserkerBattleMemorySkill extends AntSkill {
+  const WiseBerserkerBattleMemorySkill({
+    super.type = AntSkillType.statusSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+  });
+}
