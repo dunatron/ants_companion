@@ -21,7 +21,7 @@ extension AntSkillTitleExtension on AntSkill {
         GoldenCrystalMasterHunterSkill() =>
           l10n.goldenCrystalMasterHunterSkillTitle,
         GoldenCrystalSwoopSkill() => l10n.goldenCrystalSwoopSkillTitle,
-        AntSkillSevenMarchSpeed() => throw UnimplementedError(),
+        AntSkillSevenMarchSpeed() => 'l10n.',
         AttaSexdensDefensiveOffenceSkill() =>
           l10n.attaSexdensDefensiveOffenceSkillTitle,
         AttaSexdensJawRaidSkill() => l10n.attaSexdensJawRaidSkillTitle,
@@ -87,155 +87,246 @@ extension AntSkillTitleExtension on AntSkill {
           l10n.crimsonPearlParasiticStingerSkillTitle,
         CrimsonPearlVariableMimicsSkill() =>
           l10n.crimsonPearlVariableMimicsSkillTitle,
-        CyphomyrmexRimosusPowerfulHeadbuttSkill() => throw UnimplementedError(),
-        CyphomyrmexRimosusGermPropagationSkill() => throw UnimplementedError(),
+        CyphomyrmexRimosusPowerfulHeadbuttSkill() =>
+          l10n.cyphomyrmexRimosusPowerfulHeadbuttSkillTitle,
+        CyphomyrmexRimosusGermPropagationSkill() =>
+          l10n.cyphomyrmexRimosusGermPropagationSkillTitle,
         CyphomyrmexRimosusBeneficialBacteriaSkill() =>
-          throw UnimplementedError(),
-        DarkGiantCounterStrikeSkill() => throw UnimplementedError(),
-        DarkGiantMenaceSkill() => throw UnimplementedError(),
-        DarkGiantWarfareLeadershipSkill() => throw UnimplementedError(),
-        DarkHerculesFatalBiteSkill() => throw UnimplementedError(),
-        DarkHerculesStrongGuardSkill() => throw UnimplementedError(),
-        DarkHerculesBurningCourageSkill() => throw UnimplementedError(),
+          l10n.cyphomyrmexRimosusBeneficialBacteriaSkillTitle,
+        DarkGiantCounterStrikeSkill() => l10n.darkGiantCounterStrikeSkillTitle,
+        DarkGiantMenaceSkill() => l10n.darkGiantMenaceSkillTitle,
+        DarkGiantWarfareLeadershipSkill() =>
+          l10n.darkGiantWarfareLeadershipSkillTitle,
+        DarkHerculesFatalBiteSkill() => l10n.darkHerculesFatalBiteSkillTitle,
+        DarkHerculesStrongGuardSkill() =>
+          l10n.darkHerculesStrongGuardSkillTitle,
+        DarkHerculesBurningCourageSkill() =>
+          l10n.darkHerculesBurningCourageSkillTitle,
         DolichoderusBispinosusImmediateSupportSkill() =>
-          throw UnimplementedError(),
-        DolichoderusBispinosusAgileAttackSkill() => throw UnimplementedError(),
-        DolichoderusBispinosusExtraDamageSkill() => throw UnimplementedError(),
-        DriverAntBlitzkriegSkill() => throw UnimplementedError(),
-        DriverAntSharpTearingSkill() => throw UnimplementedError(),
-        DriverAntWeaknessStrikeSkill() => throw UnimplementedError(),
-        DuskyLurkerSneakAttackSkill() => throw UnimplementedError(),
-        DuskyLurkerApplyingTacticsSkill() => throw UnimplementedError(),
-        DuskyLurkerTrueLeaderSkill() => throw UnimplementedError(),
-        EmeraldJewelAntStealthAssassinateSkill() => throw UnimplementedError(),
-        EmeraldJewelAntCruelParasitismSkill() => throw UnimplementedError(),
-        EmeraldJewelAntParasiticDevourSkill() => throw UnimplementedError(),
-        EnigmaticTaylorSneakAttackSkill() => throw UnimplementedError(),
-        EnigmaticTaylorFootRendSkill() => throw UnimplementedError(),
-        EnigmaticTaylorWarfareLeadershipSkill() => throw UnimplementedError(),
-        FormicaClaraSleekChitinSkill() => throw UnimplementedError(),
-        FormicaClaraAgileDashSkill() => throw UnimplementedError(),
-        FormicaClaraDazzlingSwashSkill() => throw UnimplementedError(),
-        GhostAntClearHeadSkill() => throw UnimplementedError(),
-        GhostAntGhostStrikeSkill() => throw UnimplementedError(),
-        GhostAntDeliberateAttackSkill() => throw UnimplementedError(),
-        GiantToothWeaknessStrikeSkill() => throw UnimplementedError(),
-        GiantToothDisablingAttackSkill() => throw UnimplementedError(),
-        GiantToothBigBiteSkill() => throw UnimplementedError(),
-        GoldArmorBigBiteSkill() => throw UnimplementedError(),
-        GoldArmorRampantAttackSkill() => throw UnimplementedError(),
-        GoldArmorBlitzkriegSkill() => throw UnimplementedError(),
-        GoldenSpinyBigBiteSkill() => throw UnimplementedError(),
-        GoldenSpinyPiercingAttackSkill() => throw UnimplementedError(),
-        GoldenSpinyAmbushSkill() => throw UnimplementedError(),
-        GoldenSugarBigBiteSkill() => throw UnimplementedError(),
-        GoldenSugarPiercingStrikeSkill() => throw UnimplementedError(),
-        GoldenSugarComboStrikesSkill() => throw UnimplementedError(),
-        GoldenVenomRampantAttackSkill() => throw UnimplementedError(),
-        GoldenVenomParalysisToxinSkill() => throw UnimplementedError(),
-        GoldenVenomBladePincerSkill() => throw UnimplementedError(),
-        GracefulTwigAntAcidicSpraySkill() => throw UnimplementedError(),
-        GracefulTwigAntHuntingInstinctSkill() => throw UnimplementedError(),
+          l10n.dolichoderusBispinosusImmediateSupportSkillTitle,
+        DolichoderusBispinosusAgileAttackSkill() =>
+          l10n.dolichoderusBispinosusAgileAttackSkillTitle,
+        DolichoderusBispinosusExtraDamageSkill() =>
+          l10n.dolichoderusBispinosusExtraDamageSkillTitle,
+        DriverAntBlitzkriegSkill() => l10n.driverAntBlitzkriegSkillTitle,
+        DriverAntSharpTearingSkill() => l10n.driverAntSharpTearingSkillTitle,
+        DriverAntWeaknessStrikeSkill() =>
+          l10n.driverAntWeaknessStrikeSkillTitle,
+        DuskyLurkerSneakAttackSkill() => l10n.duskyLurkerSneakAttackSkillTitle,
+        DuskyLurkerApplyingTacticsSkill() =>
+          l10n.duskyLurkerApplyingTacticsSkillTitle,
+        DuskyLurkerTrueLeaderSkill() => l10n.duskyLurkerTrueLeaderSkillTitle,
+        EmeraldJewelAntStealthAssassinateSkill() =>
+          l10n.emeraldJewelAntStealthAssassinateSkillTitle,
+        EmeraldJewelAntCruelParasitismSkill() =>
+          l10n.emeraldJewelAntCruelParasitismSkillTitle,
+        EmeraldJewelAntParasiticDevourSkill() =>
+          l10n.emeraldJewelAntParasiticDevourSkillTitle,
+        EnigmaticTaylorSneakAttackSkill() =>
+          l10n.enigmaticTaylorSneakAttackSkillTitle,
+        EnigmaticTaylorFootRendSkill() =>
+          l10n.enigmaticTaylorFootRendSkillTitle,
+        EnigmaticTaylorWarfareLeadershipSkill() =>
+          l10n.enigmaticTaylorWarfareLeadershipSkillTitle,
+        FormicaClaraSleekChitinSkill() =>
+          l10n.formicaClaraSleekChitinSkillTitle,
+        FormicaClaraAgileDashSkill() => l10n.formicaClaraAgileDashSkillTitle,
+        FormicaClaraDazzlingSwashSkill() =>
+          l10n.formicaClaraDazzlingSwashSkillTitle,
+        GhostAntClearHeadSkill() => l10n.ghostAntClearHeadSkillTitle,
+        GhostAntGhostStrikeSkill() => l10n.ghostAntGhostStrikeSkillTitle,
+        GhostAntDeliberateAttackSkill() =>
+          l10n.ghostAntDeliberateAttackSkillTitle,
+        GiantToothWeaknessStrikeSkill() =>
+          l10n.giantToothWeaknessStrikeSkillTitle,
+        GiantToothDisablingAttackSkill() =>
+          l10n.giantToothDisablingAttackSkillTitle,
+        GiantToothBigBiteSkill() => l10n.giantToothBigBiteSkillTitle,
+        GoldArmorBigBiteSkill() => l10n.goldArmorBigBiteSkillTitle,
+        GoldArmorRampantAttackSkill() => l10n.goldArmorRampantAttackSkillTitle,
+        GoldArmorBlitzkriegSkill() => l10n.goldArmorBlitzkriegSkillTitle,
+        GoldenSpinyBigBiteSkill() => l10n.goldenSpinyBigBiteSkillTitle,
+        GoldenSpinyPiercingAttackSkill() =>
+          l10n.goldenSpinyPiercingAttackSkillTitle,
+        GoldenSpinyAmbushSkill() => l10n.goldenSpinyAmbushSkillTitle,
+        GoldenSugarBigBiteSkill() => l10n.goldenSugarBigBiteSkillTitle,
+        GoldenSugarPiercingStrikeSkill() =>
+          l10n.goldenSugarPiercingStrikeSkillTitle,
+        GoldenSugarComboStrikesSkill() =>
+          l10n.goldenSugarComboStrikesSkillTitle,
+        GoldenVenomRampantAttackSkill() =>
+          l10n.goldenVenomRampantAttackSkillTitle,
+        GoldenVenomParalysisToxinSkill() =>
+          l10n.goldenVenomParalysisToxinSkillTitle,
+        GoldenVenomBladePincerSkill() => l10n.goldenVenomBladePincerSkillTitle,
+        GracefulTwigAntAcidicSpraySkill() =>
+          l10n.gracefulTwigAntAcidicSpraySkillTitle,
+        GracefulTwigAntHuntingInstinctSkill() =>
+          l10n.gracefulTwigAntHuntingInstinctSkillTitle,
         GracefulTwigAntUnyieldingDeterminationSkill() =>
-          throw UnimplementedError(),
-        GraveDiggerToxicSpraySkill() => throw UnimplementedError(),
-        GraveDiggerNervePoisonSkill() => throw UnimplementedError(),
-        GraveDiggerWarfareLeadershipSkill() => throw UnimplementedError(),
-        GuardGeneralLightningBlitzkriegSkill() => throw UnimplementedError(),
-        GuardGeneralAgileMovementSkill() => throw UnimplementedError(),
-        GuardGeneralDisablingCombosSkill() => throw UnimplementedError(),
-        HairyPantherRampageStrikeSkill() => throw UnimplementedError(),
-        HairyPantherFurySwipeSkill() => throw UnimplementedError(),
-        HairyPantherFierceNatureSkill() => throw UnimplementedError(),
-        JackJumperRampantAttackSkill() => throw UnimplementedError(),
-        JackJumperJumpingAttackSkill() => throw UnimplementedError(),
-        JackJumperBlitzkriegSkill() => throw UnimplementedError(),
-        JetBlackCounterAttackSkill() => throw UnimplementedError(),
-        JetBlackSelfAdjustingSkill() => throw UnimplementedError(),
-        JetBlackCarvedSkinSkill() => throw UnimplementedError(),
-        LathySnifferDoublePowerSkill() => throw UnimplementedError(),
-        LathySnifferTailAssaultSkill() => throw UnimplementedError(),
-        LathySnifferFrequentlyStrengthenSkill() => throw UnimplementedError(),
-        LeafDevourerKillingDoubleHitSkill() => throw UnimplementedError(),
-        LeafDevourerBurningCourageSkill() => throw UnimplementedError(),
-        LeafDevourerWarfareLeadershipSkill() => throw UnimplementedError(),
-        LeptoglossusPhyllopusAmberBarrierSkill() => throw UnimplementedError(),
-        LeptoglossusPhyllopusLongAntennaeSkill() => throw UnimplementedError(),
-        LeptoglossusPhyllopusVenomousStingSkill() => throw UnimplementedError(),
-        LeptomyrmexBurwelliFatalAssaultSkill() => throw UnimplementedError(),
-        LeptomyrmexBurwelliAdaptiveAssaultSkill() => throw UnimplementedError(),
+          l10n.gracefulTwigAntUnyieldingDeterminationSkillTitle,
+        GraveDiggerToxicSpraySkill() => l10n.graveDiggerToxicSpraySkillTitle,
+        GraveDiggerNervePoisonSkill() => l10n.graveDiggerNervePoisonSkillTitle,
+        GraveDiggerWarfareLeadershipSkill() =>
+          l10n.graveDiggerWarfareLeadershipSkillTitle,
+        GuardGeneralLightningBlitzkriegSkill() =>
+          l10n.guardGeneralLightningBlitzkriegSkillTitle,
+        GuardGeneralAgileMovementSkill() =>
+          l10n.guardGeneralAgileMovementSkillTitle,
+        GuardGeneralDisablingCombosSkill() =>
+          l10n.guardGeneralDisablingCombosSkillTitle,
+        HairyPantherRampageStrikeSkill() =>
+          l10n.hairyPantherRampageStrikeSkillTitle,
+        HairyPantherFurySwipeSkill() => l10n.hairyPantherFurySwipeSkillTitle,
+        HairyPantherFierceNatureSkill() =>
+          l10n.hairyPantherFierceNatureSkillTitle,
+        JackJumperRampantAttackSkill() =>
+          l10n.jackJumperRampantAttackSkillTitle,
+        JackJumperJumpingAttackSkill() =>
+          l10n.jackJumperJumpingAttackSkillTitle,
+        JackJumperBlitzkriegSkill() => l10n.jackJumperBlitzkriegSkillTitle,
+        JetBlackCounterAttackSkill() => l10n.jetBlackCounterAttackSkillTitle,
+        JetBlackSelfAdjustingSkill() => l10n.jetBlackSelfAdjustingSkillTitle,
+        JetBlackCarvedSkinSkill() => l10n.jetBlackCarvedSkinSkillTitle,
+        LathySnifferDoublePowerSkill() =>
+          l10n.lathySnifferDoublePowerSkillTitle,
+        LathySnifferTailAssaultSkill() =>
+          l10n.lathySnifferTailAssaultSkillTitle,
+        LathySnifferFrequentlyStrengthenSkill() =>
+          l10n.lathySnifferFrequentlyStrengthenSkillTitle,
+        LeafDevourerKillingDoubleHitSkill() =>
+          l10n.leafDevourerKillingDoubleHitSkillTitle,
+        LeafDevourerBurningCourageSkill() =>
+          l10n.leafDevourerBurningCourageSkillTitle,
+        LeafDevourerWarfareLeadershipSkill() =>
+          l10n.leafDevourerWarfareLeadershipSkillTitle,
+        LeptoglossusPhyllopusAmberBarrierSkill() =>
+          l10n.leptoglossusPhyllopusAmberBarrierSkillTitle,
+        LeptoglossusPhyllopusLongAntennaeSkill() =>
+          l10n.leptoglossusPhyllopusLongAntennaeSkillTitle,
+        LeptoglossusPhyllopusVenomousStingSkill() =>
+          l10n.leptoglossusPhyllopusVenomousStingSkillTitle,
+        LeptomyrmexBurwelliFatalAssaultSkill() =>
+          l10n.leptomyrmexBurwelliFatalAssaultSkillTitle,
+        LeptomyrmexBurwelliAdaptiveAssaultSkill() =>
+          l10n.leptomyrmexBurwelliAdaptiveAssaultSkillTitle,
         LeptomyrmexBurwelliSweepingStrengthSkill() =>
-          throw UnimplementedError(),
-        MerannoplusBicolorPlushBackArmorSkill() => throw UnimplementedError(),
-        MerannoplusBicolorToxicThornSkill() => throw UnimplementedError(),
-        MerannoplusBicolorBufferBarrierSkill() => throw UnimplementedError(),
-        MerannoplusCastaneusScarletFurySkill() => throw UnimplementedError(),
-        MerannoplusCastaneusBloodyShieldSkill() => throw UnimplementedError(),
+          l10n.leptomyrmexBurwelliSweepingStrengthSkillTitle,
+        MerannoplusBicolorPlushBackArmorSkill() =>
+          l10n.merannoplusBicolorPlushBackArmorSkillTitle,
+        MerannoplusBicolorToxicThornSkill() =>
+          l10n.merannoplusBicolorToxicThornSkillTitle,
+        MerannoplusBicolorBufferBarrierSkill() =>
+          l10n.merannoplusBicolorBufferBarrierSkillTitle,
+        MerannoplusCastaneusScarletFurySkill() =>
+          l10n.merannoplusCastaneusScarletFurySkillTitle,
+        MerannoplusCastaneusBloodyShieldSkill() =>
+          l10n.merannoplusCastaneusBloodyShieldSkillTitle,
         MerannoplusCastaneusHealingWithLoveSkill() =>
-          throw UnimplementedError(),
-        MimicryMasterMouthPieceAttackSkill() => throw UnimplementedError(),
-        MimicryMasterSupressingAttackSkill() => throw UnimplementedError(),
-        MimicryMasterSwipeSkill() => throw UnimplementedError(),
-        MyrmarachneFormicariaPrettyShellSkill() => throw UnimplementedError(),
-        MyrmarachneFormicariaDisguiseStealSkill() => throw UnimplementedError(),
-        MyrmarachneFormicariaJumpingImpactSkill() => throw UnimplementedError(),
+          l10n.merannoplusCastaneusHealingWithLoveSkillTitle,
+        MimicryMasterMouthPieceAttackSkill() =>
+          l10n.mimicryMasterMouthPieceAttackSkillTitle,
+        MimicryMasterSupressingAttackSkill() =>
+          l10n.mimicryMasterSupressingAttackSkillTitle,
+        MimicryMasterSwipeSkill() => l10n.mimicryMasterSwipeSkillTitle,
+        MyrmarachneFormicariaPrettyShellSkill() =>
+          l10n.myrmarachneFormicariaPrettyShellSkillTitle,
+        MyrmarachneFormicariaDisguiseStealSkill() =>
+          l10n.myrmarachneFormicariaDisguiseStealSkillTitle,
+        MyrmarachneFormicariaJumpingImpactSkill() =>
+          l10n.myrmarachneFormicariaJumpingImpactSkillTitle,
         MyrmecotypusRettenmeyeriNimblePostureSkill() =>
-          throw UnimplementedError(),
+          l10n.myrmecotypusRettenmeyeriNimblePostureSkillTitle,
         MyrmecotypusRettenmeyeriPowerOfAwakeningSkill() =>
-          throw UnimplementedError(),
+          l10n.myrmecotypusRettenmeyeriPowerOfAwakeningSkillTitle,
         MyrmecotypusRettenmeyeriHealthFieldSkill() =>
-          throw UnimplementedError(),
-        NewWorldGeneralRageBiteSkill() => throw UnimplementedError(),
-        NewWorldGeneralDeterenceSkill() => throw UnimplementedError(),
-        NewWorldGeneralBlitzkriegSkill() => throw UnimplementedError(),
-        NimbleTreeAntAgilitySkill() => throw UnimplementedError(),
-        NimbleTreeAntPiercingChaseSkill() => throw UnimplementedError(),
-        NimbleTreeAntDeftFootworkSkill() => throw UnimplementedError(),
-        PheidoleNietneriBounceBackSkill() => throw UnimplementedError(),
-        PheidoleNietneriGladiatorSkillsSkill() => throw UnimplementedError(),
-        PheidoleNietneriStrongShellSkill() => throw UnimplementedError(),
-        PredatorBloodyBattleSkill() => throw UnimplementedError(),
-        PredatorMenaceSkill() => throw UnimplementedError(),
-        PredatorFlexibleRobberySkill() => throw UnimplementedError(),
-        ProattaKnockbackSkill() => throw UnimplementedError(),
-        ProattaDisablingCombosSkill() => throw UnimplementedError(),
-        ProattaHorrorHunterSkill() => throw UnimplementedError(),
+          l10n.myrmecotypusRettenmeyeriHealthFieldSkillTitle,
+        NewWorldGeneralRageBiteSkill() =>
+          l10n.newWorldGeneralRageBiteSkillTitle,
+        NewWorldGeneralDeterenceSkill() =>
+          l10n.newWorldGeneralDeterenceSkillTitle,
+        NewWorldGeneralBlitzkriegSkill() =>
+          l10n.newWorldGeneralBlitzkriegSkillTitle,
+        NimbleTreeAntAgilitySkill() => l10n.nimbleTreeAntAgilitySkillTitle,
+        NimbleTreeAntPiercingChaseSkill() =>
+          l10n.nimbleTreeAntPiercingChaseSkillTitle,
+        NimbleTreeAntDeftFootworkSkill() =>
+          l10n.nimbleTreeAntDeftFootworkSkillTitle,
+        PheidoleNietneriBounceBackSkill() =>
+          l10n.pheidoleNietneriBounceBackSkillTitle,
+        PheidoleNietneriGladiatorSkillsSkill() =>
+          l10n.pheidoleNietneriGladiatorSkillsSkillTitle,
+        PheidoleNietneriStrongShellSkill() =>
+          l10n.pheidoleNietneriStrongShellSkillTitle,
+        PredatorBloodyBattleSkill() => l10n.predatorBloodyBattleSkillTitle,
+        PredatorMenaceSkill() => l10n.predatorMenaceSkillTitle,
+        PredatorFlexibleRobberySkill() =>
+          l10n.predatorFlexibleRobberySkillTitle,
+        ProattaKnockbackSkill() => l10n.proattaKnockbackSkillTitle,
+        ProattaDisablingCombosSkill() => l10n.proattaDisablingCombosSkillTitle,
+        ProattaHorrorHunterSkill() => l10n.proattaHorrorHunterSkillTitle,
         ProcryptocerusAdlerziComprehensiveDefenseSkill() =>
-          throw UnimplementedError(),
-        ProcryptocerusAdlerziSavageChargeSkill() => throw UnimplementedError(),
-        ProcryptocerusAdlerziBigBiteSkill() => throw UnimplementedError(),
-        ReapMasterBigBiteSkill() => throw UnimplementedError(),
-        ReapMasterThrillOfTheHuntSkill() => throw UnimplementedError(),
-        ReapMasterGrievousBiteSkill() => throw UnimplementedError(),
-        RockBanditRageRushSkill() => throw UnimplementedError(),
-        RockBanditHuggerBiteSkill() => throw UnimplementedError(),
-        RockBanditWarfareLeadershipSkill() => throw UnimplementedError(),
-        RubySlenderRevengeSkill() => throw UnimplementedError(),
-        RubySlenderSelfAdjustingSkill() => throw UnimplementedError(),
-        RubySlenderWarfareLeadershipSkill() => throw UnimplementedError(),
-        SaharanSilverAntRapidMomentumSkill() => throw UnimplementedError(),
-        SaharanSilverAntSilverGleamSkill() => throw UnimplementedError(),
-        SaharanSilverAntPrecisionLongshotSkill() => throw UnimplementedError(),
-        ShieldWardenHealingPowerSkill() => throw UnimplementedError(),
-        ShieldWardenFightToDeathSkill() => throw UnimplementedError(),
-        ShieldWardenProtectionPostureSkill() => throw UnimplementedError(),
-        ShikareeMasterInfiniteDeadhuntSkill() => throw UnimplementedError(),
-        ShikareeMasterRampantAttackSkill() => throw UnimplementedError(),
-        ShikareeMasterAudaciousChargeSkill() => throw UnimplementedError(),
-        SlimArchedBigBiteSkill() => throw UnimplementedError(),
-        SlimArchedBlitzkriegSkill() => throw UnimplementedError(),
-        SlimArchedSuppressingAttackSkill() => throw UnimplementedError(),
-        StrumigenysEggersiStablePostureSkill() => throw UnimplementedError(),
-        StrumigenysEggersiDeceptiveFormSkill() => throw UnimplementedError(),
-        StrumigenysEggersiKeenIntuitionSkill() => throw UnimplementedError(),
-        WeaverAntAcidAssaultSkill() => throw UnimplementedError(),
-        WeaverAntFieryThrashSkill() => throw UnimplementedError(),
-        WeaverAntTacticalCounterAttackSkill() => throw UnimplementedError(),
-        WhiteVelvetMasterOfDisguiseSkill() => throw UnimplementedError(),
-        WhiteVelvetHealingPowerSkill() => throw UnimplementedError(),
-        WhiteVelvetWhiteGuardianSkill() => throw UnimplementedError(),
-        WiseBerserkerCruelStrikeSkill() => throw UnimplementedError(),
-        WiseBerserkerContinuousBiteSkill() => throw UnimplementedError(),
-        WiseBerserkerBattleMemorySkill() => throw UnimplementedError(),
+          l10n.procryptocerusAdlerziComprehensiveDefenseSkillTitle,
+        ProcryptocerusAdlerziSavageChargeSkill() =>
+          l10n.procryptocerusAdlerziSavageChargeSkillTitle,
+        ProcryptocerusAdlerziBigBiteSkill() =>
+          l10n.procryptocerusAdlerziBigBiteSkillTitle,
+        ReapMasterBigBiteSkill() => l10n.reapMasterBigBiteSkillTitle,
+        ReapMasterThrillOfTheHuntSkill() =>
+          l10n.reapMasterThrillOfTheHuntSkillTitle,
+        ReapMasterGrievousBiteSkill() => l10n.reapMasterGrievousBiteSkillTitle,
+        RockBanditRageRushSkill() => l10n.rockBanditRageRushSkillTitle,
+        RockBanditHuggerBiteSkill() => l10n.rockBanditHuggerBiteSkillTitle,
+        RockBanditWarfareLeadershipSkill() =>
+          l10n.rockBanditWarfareLeadershipSkillTitle,
+        RubySlenderRevengeSkill() => l10n.rubySlenderRevengeSkillTitle,
+        RubySlenderSelfAdjustingSkill() =>
+          l10n.rubySlenderSelfAdjustingSkillTitle,
+        RubySlenderWarfareLeadershipSkill() =>
+          l10n.rubySlenderWarfareLeadershipSkillTitle,
+        SaharanSilverAntRapidMomentumSkill() =>
+          l10n.saharanSilverAntRapidMomentumSkillTitle,
+        SaharanSilverAntSilverGleamSkill() =>
+          l10n.saharanSilverAntSilverGleamSkillTitle,
+        SaharanSilverAntPrecisionLongshotSkill() =>
+          l10n.saharanSilverAntPrecisionLongshotSkillTitle,
+        ShieldWardenHealingPowerSkill() =>
+          l10n.shieldWardenHealingPowerSkillTitle,
+        ShieldWardenFightToDeathSkill() =>
+          l10n.shieldWardenFightToDeathSkillTitle,
+        ShieldWardenProtectionPostureSkill() =>
+          l10n.shieldWardenProtectionPostureSkillTitle,
+        ShikareeMasterInfiniteDeadhuntSkill() =>
+          l10n.shikareeMasterInfiniteDeadhuntSkillTitle,
+        ShikareeMasterRampantAttackSkill() =>
+          l10n.shikareeMasterRampantAttackSkillTitle,
+        ShikareeMasterAudaciousChargeSkill() =>
+          l10n.shikareeMasterAudaciousChargeSkillTitle,
+        SlimArchedBigBiteSkill() => l10n.slimArchedBigBiteSkillTitle,
+        SlimArchedBlitzkriegSkill() => l10n.slimArchedBlitzkriegSkillTitle,
+        SlimArchedSuppressingAttackSkill() =>
+          l10n.slimArchedSuppressingAttackSkillTitle,
+        StrumigenysEggersiStablePostureSkill() =>
+          l10n.strumigenysEggersiStablePostureSkillTitle,
+        StrumigenysEggersiDeceptiveFormSkill() =>
+          l10n.strumigenysEggersiDeceptiveFormSkillTitle,
+        StrumigenysEggersiKeenIntuitionSkill() =>
+          l10n.strumigenysEggersiKeenIntuitionSkillTitle,
+        WeaverAntAcidAssaultSkill() => l10n.weaverAntAcidAssaultSkillTitle,
+        WeaverAntFieryThrashSkill() => l10n.weaverAntFieryThrashSkillTitle,
+        WeaverAntTacticalCounterAttackSkill() =>
+          l10n.weaverAntTacticalCounterAttackSkillTitle,
+        WhiteVelvetMasterOfDisguiseSkill() =>
+          l10n.whiteVelvetMasterOfDisguiseSkillTitle,
+        WhiteVelvetHealingPowerSkill() =>
+          l10n.whiteVelvetHealingPowerSkillTitle,
+        WhiteVelvetWhiteGuardianSkill() =>
+          l10n.whiteVelvetWhiteGuardianSkillTitle,
+        WiseBerserkerCruelStrikeSkill() =>
+          l10n.wiseBerserkerCruelStrikeSkillTitle,
+        WiseBerserkerContinuousBiteSkill() =>
+          l10n.wiseBerserkerContinuousBiteSkillTitle,
+        WiseBerserkerBattleMemorySkill() =>
+          l10n.wiseBerserkerBattleMemorySkillTitle,
       };
 }
