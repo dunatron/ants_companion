@@ -33,37 +33,60 @@ extension AntSkillTitleExtension on AntSkill {
           l10n.bansheePandaAllureAttackSkillTitle,
         BansheePandaWarfareLeadershipSkill() =>
           l10n.bansheePandaWarfareLeadershipSkillTitle,
-        BansheeVelvetSuperToxinSkill() => throw UnimplementedError(),
-        BansheeVelvetVividColorSkill() => throw UnimplementedError(),
-        BansheeVelvetWarfareLeadershipSkill() => throw UnimplementedError(),
-        BlackCancerFluidLeachSkill() => throw UnimplementedError(),
-        BlackCancerAdamantArmorSkill() => throw UnimplementedError(),
-        BlackCancerWarfareLeadershipSkill() => throw UnimplementedError(),
-        BlackKnightVengefulCounterattackSkill() => throw UnimplementedError(),
-        BlackKnightBlackArmorMarsSkill() => throw UnimplementedError(),
-        BlackKnightDarkSpikeAssaultSkill() => throw UnimplementedError(),
-        BloodGiantSupportTeammatesSkill() => throw UnimplementedError(),
-        BloodGiantImproveLineupSkill() => throw UnimplementedError(),
-        BloodGiantKillingStrikeSkill() => throw UnimplementedError(),
-        BrownRogueSurpriseStrikeSkill() => throw UnimplementedError(),
-        BrownRogueCheapShotSkill() => throw UnimplementedError(),
-        BrownRogueFindWeaknessSkill() => throw UnimplementedError(),
-        BulletAntRampantAttackSkill() => throw UnimplementedError(),
-        BulletAntBlitzkriegSkill() => throw UnimplementedError(),
-        BulletAntSuppressingAttackSkill() => throw UnimplementedError(),
-        CarpenterAntSteadyPaceSkill() => throw UnimplementedError(),
-        CarpenterAntDistendedBellySkill() => throw UnimplementedError(),
-        CarpenterAntPowerfulGazeSkill() => throw UnimplementedError(),
+        BansheeVelvetSuperToxinSkill() =>
+          l10n.bansheeVelvetSuperToxinSkillTitle,
+        BansheeVelvetVividColorSkill() =>
+          l10n.bansheeVelvetVividColorSkillTitle,
+        BansheeVelvetWarfareLeadershipSkill() =>
+          l10n.bansheeVelvetWarfareLeadershipSkillTitle,
+        BlackCancerFluidLeachSkill() => l10n.blackCancerFluidLeachSkillTitle,
+        BlackCancerAdamantArmorSkill() =>
+          l10n.blackCancerAdamantArmorSkillTitle,
+        BlackCancerWarfareLeadershipSkill() =>
+          l10n.blackCancerWarfareLeadershipSkillTitle,
+        BlackKnightVengefulCounterattackSkill() =>
+          l10n.blackKnightVengefulCounterattackSkillTitle,
+        BlackKnightBlackArmorMarsSkill() =>
+          l10n.blackKnightBlackArmorMarsSkillTitle,
+        BlackKnightDarkSpikeAssaultSkill() =>
+          l10n.blackKnightDarkSpikeAssaultSkillTitle,
+        BloodGiantSupportTeammatesSkill() =>
+          l10n.bloodGiantSupportTeammatesSkillTitle,
+        BloodGiantImproveLineupSkill() =>
+          l10n.bloodGiantImproveLineupSkillTitle,
+        BloodGiantKillingStrikeSkill() =>
+          l10n.bloodGiantKillingStrikeSkillTitle,
+        BrownRogueSurpriseStrikeSkill() =>
+          l10n.brownRogueSurpriseStrikeSkillTitle,
+        BrownRogueCheapShotSkill() => l10n.brownRogueCheapShotSkillTitle,
+        BrownRogueFindWeaknessSkill() => l10n.brownRogueFindWeaknessSkillTitle,
+        BulletAntRampantAttackSkill() => l10n.bulletAntRampantAttackSkillTitle,
+        BulletAntBlitzkriegSkill() => l10n.bulletAntBlitzkriegSkillTitle,
+        BulletAntSuppressingAttackSkill() =>
+          l10n.bulletAntSuppressingAttackSkillTitle,
+        CarpenterAntSteadyPaceSkill() => l10n.carpenterAntSteadyPaceSkillTitle,
+        CarpenterAntDistendedBellySkill() =>
+          l10n.carpenterAntDistendedBellySkillTitle,
+        CarpenterAntPowerfulGazeSkill() =>
+          l10n.carpenterAntPowerfulGazeSkillTitle,
         CrematogasterInflataWinningStrategySkill() =>
-          throw UnimplementedError(),
-        CrematogasterInflataMasterMimicSkill() => throw UnimplementedError(),
-        CrematogasterInflataHealingMucusSkill() => throw UnimplementedError(),
-        CrimsonFraggerPiercingAttackSkill() => throw UnimplementedError(),
-        CrimsonFraggerDoubleHitSkill() => throw UnimplementedError(),
-        CrimsonFraggerAdequatePreparationSkill() => throw UnimplementedError(),
-        CrimsonPearlBrutalCombosSkill() => throw UnimplementedError(),
-        CrimsonPearlParasiticStingerSkill() => throw UnimplementedError(),
-        CrimsonPearlVariableMimicsSkill() => throw UnimplementedError(),
+          l10n.crematogasterInflataWinningStrategySkillTitle,
+        CrematogasterInflataMasterMimicSkill() =>
+          l10n.crematogasterInflataMasterMimicSkillTitle,
+        CrematogasterInflataHealingMucusSkill() =>
+          l10n.crematogasterInflataHealingMucusSkillTitle,
+        CrimsonFraggerPiercingAttackSkill() =>
+          l10n.crimsonFraggerPiercingAttackSkillTitle,
+        CrimsonFraggerDoubleHitSkill() =>
+          l10n.crimsonFraggerDoubleHitSkillTitle,
+        CrimsonFraggerAdequatePreparationSkill() =>
+          l10n.crimsonFraggerAdequatePreparationSkillTitle,
+        CrimsonPearlBrutalCombosSkill() =>
+          l10n.crimsonPearlBrutalCombosSkillTitle,
+        CrimsonPearlParasiticStingerSkill() =>
+          l10n.crimsonPearlParasiticStingerSkillTitle,
+        CrimsonPearlVariableMimicsSkill() =>
+          l10n.crimsonPearlVariableMimicsSkillTitle,
         CyphomyrmexRimosusPowerfulHeadbuttSkill() => throw UnimplementedError(),
         CyphomyrmexRimosusGermPropagationSkill() => throw UnimplementedError(),
         CyphomyrmexRimosusBeneficialBacteriaSkill() =>
