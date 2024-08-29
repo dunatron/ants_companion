@@ -18,7 +18,7 @@ class AntSkillsViewer extends StatefulWidget {
 }
 
 class _AntSkillsViewerState extends State<AntSkillsViewer> {
-  int selectedSkillMapKey = 1;
+  int selectedSkillMapKey = 2;
   @override
   Widget build(BuildContext context) {
     final AntSkills antSkills = GetIt.I();

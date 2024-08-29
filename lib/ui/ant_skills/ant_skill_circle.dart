@@ -20,7 +20,7 @@ class AntSkillCircle extends StatelessWidget {
 
     final circleColor = selected
         ? theme.colorScheme.primary
-        : theme.colorScheme.surfaceContainerHighest;
+        : theme.colorScheme.surfaceContainerHigh;
 
     final textColor =
         selected ? theme.colorScheme.onPrimary : theme.colorScheme.onSurface;

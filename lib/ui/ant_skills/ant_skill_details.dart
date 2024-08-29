@@ -14,44 +14,50 @@ class AntSkillDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final l10n = AppLocalizations.of(context);
-    return Container(
-      width: double.infinity,
-      constraints: const BoxConstraints(maxWidth: 400),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            skill.type.displayName(),
-            style: theme.textTheme.labelSmall,
-          ),
-          Text(
-            skill.skillTitle(l10n),
-            style: theme.textTheme.bodyLarge,
-          ),
-          Text(
-            skill.targetType.displayName(),
-            style: theme.textTheme.bodySmall,
-          ),
-          const SizedBox(height: 8),
-          if (skill.effectiveRange != null) ...[
+    return Card(
+      elevation: 0,
+      // color: theme.colorScheme.surfaceContainerHighest,
+      color: theme.colorScheme.surfaceContainerHigh,
+      child: Container(
+        margin: const EdgeInsets.all(16),
+        width: double.infinity,
+        constraints: const BoxConstraints(maxWidth: 400),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
             Text(
-              'Effective Range: ${skill.effectiveRange}',
-              style: theme.textTheme.bodyMedium,
+              skill.type.displayName(),
+              style: theme.textTheme.labelSmall,
+            ),
+            Text(
+              skill.skillTitle(l10n),
+              style: theme.textTheme.bodyLarge,
+            ),
+            Text(
+              skill.targetType.displayName(),
+              style: theme.textTheme.bodySmall,
             ),
             const SizedBox(height: 8),
+            if (skill.effectiveRange != null) ...[
+              Text(
+                'Effective Range: ${skill.effectiveRange}',
+                style: theme.textTheme.bodyMedium,
+              ),
+              const SizedBox(height: 8),
+            ],
+            Text(
+              'Level 10',
+              style: theme.textTheme.labelSmall,
+            ),
+            Text(skill.skillDescriptionLevel10(l10n)),
+            const SizedBox(height: 16),
+            Text(
+              'Level 20',
+              style: theme.textTheme.labelSmall,
+            ),
+            Text(skill.skillDescriptionLevel20(l10n)),
           ],
-          Text(
-            'Level 10',
-            style: theme.textTheme.labelSmall,
-          ),
-          Text(skill.skillDescriptionLevel10(l10n)),
-          const SizedBox(height: 16),
-          Text(
-            'Level 20',
-            style: theme.textTheme.labelSmall,
-          ),
-          Text(skill.skillDescriptionLevel20(l10n)),
-        ],
+        ),
       ),
     );
   }
