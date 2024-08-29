@@ -174,6 +174,15 @@
   "@antTypeGSS": {
     "description": "Abbreviation for Guardian Shooter Shooter(GSS) in english"
   },
+  "antType": "{antType, select, guardian{Guardian} shooter{Shooter} carrier{Carrier} other{Universal}}",
+  "@antType": {
+    "description": "The Ant Type Name",
+    "placeholders": {
+      "antType": {
+        "type": "String"
+      }
+    }
+  },
   "utcTime": "UTC",
   "localeSelectorError": "Error loading locales",
   "warzoneAnthillDevelopment": "Anthill development",
@@ -200,6 +209,15 @@
   "defense": "Defense",
   "health": "Health",
   "power": "Power",
+  "statType": "{statType, select, health{Health} attack{Attack} defense{Defense} other{Unknown}}",
+  "@statType": {
+    "description": "The stat type: health, attack, defense",
+    "placeholders": {
+      "statType": {
+        "type": "String"
+      }
+    }
+  },
   "launchGame": "Launching Game",
   "scientificClassificationsTitle": "Classifications",
   "scientificDomain": "Domain",
@@ -448,6 +466,8 @@
   "thaumatomyrmexAtrox": "Thaumatomyrmex Atrox",
   "thaumatomyrmexAtroxCommon": "Reap Master",
   "thaumatomyrmexAtroxDescription": "Found in Southern America. Usually, there are not many of them inside their community, perhaps only around 10 members. Its size is not that big either. However, they have the scariest appearance. They are the top-class killers hiding in Southern America. Most insects including centipedes are their prey.",
+  "antSkillNotImplementedTitle": "Skill Title Not Implemented",
+  "antSkillNotImplementedDescription": "Skill Description Not Implemented",
   "dominance3SkillTitle": "Dominance Three",
   "dominance3SkillDesc10": "Soldier cap in its squad +18,100 (+ Special Ant Level*100)",
   "dominance3SkillDesc20": "Soldier cap in its squad +18,100 (+ Special Ant Level*100) \nIn its squad, Normal attack damage + 50%",
@@ -470,9 +490,16 @@
     }
   },
   "colonyLeaderSkillTitle": "Colony Leader",
-  "antSkillSevenTitle": "Troop Stat Boost",
-  "antSkillSevenDescription": "In it's Troop {antType} Ant {statType} +{statPercent}%",
-  "@antSkillSevenDescription": {
+  "colonyLeaderSkillDescription": "In Its squad, Carrier Ant Attack and Defense + 15%, Carrier Ant Combat Speed +60%, and the soldier cap bonus of 'Dominance Three' + 250%",
+  "@colonyLeaderSkillDescription10": {
+    "placeholders": {
+      "percentage": {
+        "type": "String"
+      }
+    }
+  },
+  "antSkillStatBoost": "{antType, select, guardian{Guardian Ant} shooter{Shooter Ant} carrier{Carrier Ant} other{}} {statType, select, attack{Attack} defense{Defense} health{Health} other{Unknown Stat}} +{statPercent}%",
+  "@antSkillStatBoost": {
     "placeholders": {
       "antType": {
         "type": "String"
@@ -482,6 +509,28 @@
       },
       "statPercent": {
         "type": "int"
+      }
+    }
+  },
+  "antSkillSevenLabel": "Troop Stat Boost",
+  "antSkillSeven": "In it's Troop, {antSkillStatBoost}",
+  "@antSkillSeven": {
+    "placeholders": {
+      "antSkillStatBoost": {
+        "type": "String",
+        "description": "is another translated string"
+      }
+    }
+  },
+  "antSkillSevenMarchSpeedTitle": "March Speed and Stat Boost",
+  "antSkillSevenMarchSpeedDescription": "In it's Troop, March Speed +{speed}, and {antSkillStatBoost}",
+  "@antSkillSevenMarchSpeedDescription": {
+    "placeholders": {
+      "speed": {
+        "type": "int"
+      },
+      "antSkillStatBoost": {
+        "type": "String"
       }
     }
   },

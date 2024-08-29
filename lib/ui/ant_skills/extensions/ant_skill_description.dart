@@ -3,19 +3,31 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 extension AntSkillDescriptionExtension on AntSkill {
   String skillDescriptionLevel10(AppLocalizations l10n) => switch (this) {
-        AntSkillNotImplemented() => 'Description Unknown',
+        AntSkillNotImplemented() => l10n.antSkillNotImplementedDescription,
         DominanceThree() => l10n.dominance3SkillDesc10,
         TertiaryDefense(percentage10: final percentage) =>
           l10n.tertiaryDefenseSkillDescription(percentage),
         TertiaryAttack(percentage10: final percentage) =>
           l10n.tertiaryAttackSkillDescription(percentage),
+        // AntSkillSeven(
+        //   antType: final antType,
+        //   statType: final statType,
+        //   statPercent10: final statPercent,
+        // ) =>
+        //   l10n.antSkillSevenDescription(
+        //     antType.name,
+        //     statType.name,
+        //     statPercent,
+        //     l10n.antSkillStatBoost(antType.name, statType.name, statPercent),
+        //   ),
         AntSkillSeven(
           antType: final antType,
           statType: final statType,
           statPercent10: final statPercent,
         ) =>
-          l10n.antSkillSevenDescription(
-              antType.name, statType.name, statPercent),
+          l10n.antSkillSeven(
+            l10n.antSkillStatBoost(antType.name, statType.name, statPercent),
+          ),
         ColonyLeaderSkill() =>
           'In Its sqaud, {type} Ant attack and defense +15%',
         GoldenCrystalBattleFeverSkill() =>
@@ -31,7 +43,36 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.acidGeneralHyperAttackSkillDescription10,
         AcidGeneralDeadlyStrikeSkill() =>
           l10n.acidGeneralDeadlyStrikeSkillDescription10,
-        AntSkillSevenMarchSpeed() => 'TODO',
+        //        required this.antType,
+        // required this.statType,
+        // required this.statPercent10,
+        // required this.statPercent20,
+        // required this.speedPercent10,
+        // required this.speedPercent20,
+        // super.type = AntSkillType.commandSkill,
+        // super.targetType = AntSkillTargetType.allSquadsInTroop,
+        // AntSkillSevenMarchSpeed(
+        //   speedPercent10: final speed,
+        //   antType: final antType,
+        //   statType: final statType,
+        //   statPercent10: final statPercent
+        // ) =>
+        //   l10n.antSkillSevenMarchSpeedDescription(
+        //     speed,
+        //     l10n.antType(antType.name),
+        //     l10n.statType(statType.name),
+        //     statPercent,
+        //   ),
+        AntSkillSevenMarchSpeed(
+          speedPercent10: final speed,
+          antType: final antType,
+          statType: final statType,
+          statPercent10: final statPercent
+        ) =>
+          l10n.antSkillSevenMarchSpeedDescription(
+            speed,
+            l10n.antSkillStatBoost(antType.name, statType.name, statPercent),
+          ),
         AttaSexdensDefensiveOffenceSkill() =>
           l10n.attaSexdensDefensiveOffenceSkillDescription10,
         AttaSexdensJawRaidSkill() => l10n.attaSexdensJawRaidSkillDescription10,
@@ -259,7 +300,7 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.merannoplusCastaneusHealingWithLoveSkillDescription10,
         MimicryMasterMouthPieceAttackSkill() =>
           l10n.mimicryMasterMouthPieceAttackSkillDescription10,
-        MimicryMasterSupressingAttackSkill() =>
+        MimicryMasterSuppressingAttackSkill() =>
           l10n.mimicryMasterSupressingAttackSkillDescription10,
         MimicryMasterSwipeSkill() => l10n.mimicryMasterSwipeSkillDescription10,
         MyrmarachneFormicariaPrettyShellSkill() =>
@@ -276,7 +317,7 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.myrmecotypusRettenmeyeriHealthFieldSkillDescription10,
         NewWorldGeneralRageBiteSkill() =>
           l10n.newWorldGeneralRageBiteSkillDescription10,
-        NewWorldGeneralDeterenceSkill() =>
+        NewWorldGeneralDeterrenceSkill() =>
           l10n.newWorldGeneralDeterenceSkillDescription10,
         NewWorldGeneralBlitzkriegSkill() =>
           l10n.newWorldGeneralBlitzkriegSkillDescription10,
@@ -297,7 +338,7 @@ extension AntSkillDescriptionExtension on AntSkill {
         PredatorMenaceSkill() => l10n.predatorMenaceSkillDescription10,
         PredatorFlexibleRobberySkill() =>
           l10n.predatorFlexibleRobberySkillDescription10,
-        ProattaKnockbackSkill() => l10n.proattaKnockbackSkillDescription10,
+        ProattaKnockBackSkill() => l10n.proattaKnockbackSkillDescription10,
         ProattaDisablingCombosSkill() =>
           l10n.proattaDisablingCombosSkillDescription10,
         ProattaHorrorHunterSkill() =>
@@ -335,7 +376,7 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.shieldWardenFightToDeathSkillDescription10,
         ShieldWardenProtectionPostureSkill() =>
           l10n.shieldWardenProtectionPostureSkillDescription10,
-        ShikareeMasterInfiniteDeadhuntSkill() =>
+        ShikareeMasterInfiniteDeadHuntSkill() =>
           l10n.shikareeMasterInfiniteDeadhuntSkillDescription10,
         ShikareeMasterRampantAttackSkill() =>
           l10n.shikareeMasterRampantAttackSkillDescription10,
@@ -379,13 +420,25 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.tertiaryDefenseSkillDescription(percentage),
         TertiaryAttack(percentage20: final percentage) =>
           'In its squad ant attack $percentage%',
+        // AntSkillSeven(
+        //   antType: final antType,
+        //   statType: final statType,
+        //   statPercent20: final statPercent
+        // ) =>
+        //   l10n.antSkillSevenDescription(
+        //     antType.name,
+        //     statType.name,
+        //     statPercent,
+        //     l10n.antSkillStatBoost(antType.name, statType.name, statPercent),
+        //   ),
         AntSkillSeven(
           antType: final antType,
           statType: final statType,
           statPercent20: final statPercent
         ) =>
-          l10n.antSkillSevenDescription(
-              antType.name, statType.name, statPercent),
+          l10n.antSkillSeven(
+            l10n.antSkillStatBoost(antType.name, statType.name, statPercent),
+          ),
         GoldenCrystalBattleFeverSkill() =>
           l10n.goldenCrystalBattleFeverSkillDescription20,
         ColonyLeaderSkill() => 'ToDo',
@@ -400,7 +453,16 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.acidGeneralHyperAttackSkillDescription20,
         AcidGeneralDeadlyStrikeSkill() =>
           l10n.acidGeneralDeadlyStrikeSkillDescription20,
-        AntSkillSevenMarchSpeed() => 'l10n.',
+        AntSkillSevenMarchSpeed(
+          speedPercent20: final speed,
+          antType: final antType,
+          statType: final statType,
+          statPercent20: final statPercent
+        ) =>
+          l10n.antSkillSevenMarchSpeedDescription(
+            speed,
+            l10n.antSkillStatBoost(antType.name, statType.name, statPercent),
+          ),
         AttaSexdensDefensiveOffenceSkill() =>
           l10n.attaSexdensDefensiveOffenceSkillDescription20,
         AttaSexdensJawRaidSkill() => l10n.attaSexdensJawRaidSkillDescription20,
@@ -628,7 +690,7 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.merannoplusCastaneusHealingWithLoveSkillDescription20,
         MimicryMasterMouthPieceAttackSkill() =>
           l10n.mimicryMasterMouthPieceAttackSkillDescription20,
-        MimicryMasterSupressingAttackSkill() =>
+        MimicryMasterSuppressingAttackSkill() =>
           l10n.mimicryMasterSupressingAttackSkillDescription20,
         MimicryMasterSwipeSkill() => l10n.mimicryMasterSwipeSkillDescription20,
         MyrmarachneFormicariaPrettyShellSkill() =>
@@ -645,7 +707,7 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.myrmecotypusRettenmeyeriHealthFieldSkillDescription20,
         NewWorldGeneralRageBiteSkill() =>
           l10n.newWorldGeneralRageBiteSkillDescription20,
-        NewWorldGeneralDeterenceSkill() =>
+        NewWorldGeneralDeterrenceSkill() =>
           l10n.newWorldGeneralDeterenceSkillDescription20,
         NewWorldGeneralBlitzkriegSkill() =>
           l10n.newWorldGeneralBlitzkriegSkillDescription20,
@@ -666,7 +728,7 @@ extension AntSkillDescriptionExtension on AntSkill {
         PredatorMenaceSkill() => l10n.predatorMenaceSkillDescription20,
         PredatorFlexibleRobberySkill() =>
           l10n.predatorFlexibleRobberySkillDescription20,
-        ProattaKnockbackSkill() => l10n.proattaKnockbackSkillDescription20,
+        ProattaKnockBackSkill() => l10n.proattaKnockbackSkillDescription20,
         ProattaDisablingCombosSkill() =>
           l10n.proattaDisablingCombosSkillDescription20,
         ProattaHorrorHunterSkill() =>
@@ -704,7 +766,7 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.shieldWardenFightToDeathSkillDescription20,
         ShieldWardenProtectionPostureSkill() =>
           l10n.shieldWardenProtectionPostureSkillDescription20,
-        ShikareeMasterInfiniteDeadhuntSkill() =>
+        ShikareeMasterInfiniteDeadHuntSkill() =>
           l10n.shikareeMasterInfiniteDeadhuntSkillDescription20,
         ShikareeMasterRampantAttackSkill() =>
           l10n.shikareeMasterRampantAttackSkillDescription20,

@@ -614,7 +614,7 @@ class AntSkillSetRefs {
     skill2: MimicryMasterMouthPieceAttackSkill(),
     skill3: _tertiaryDefense_38_76,
     skill4: _tertiaryAttack_38_76,
-    skill5: MimicryMasterSupressingAttackSkill(),
+    skill5: MimicryMasterSuppressingAttackSkill(),
     skill7: AntSkillSevenMarchSpeed(
       antType: AntType.guardian,
       statType: StatType.attack,
@@ -658,7 +658,7 @@ class AntSkillSetRefs {
     skill2: NewWorldGeneralRageBiteSkill(),
     skill3: _tertiaryDefense_35_70,
     skill4: _tertiaryAttack_35_70,
-    skill5: NewWorldGeneralDeterenceSkill(),
+    skill5: NewWorldGeneralDeterrenceSkill(),
     skill7: AntSkillSeven(
       antType: AntType.carrier,
       statType: StatType.attack,
@@ -711,7 +711,7 @@ class AntSkillSetRefs {
   );
 
   static const proattaSkillSet = AntSkillSet(
-    skill2: ProattaKnockbackSkill(),
+    skill2: ProattaKnockBackSkill(),
     skill3: _tertiaryDefense_35_65,
     skill4: _tertiaryAttack_35_65,
     skill5: ProattaDisablingCombosSkill(),
@@ -811,7 +811,7 @@ class AntSkillSetRefs {
   );
 
   static const shikareeMasterSkillSet = AntSkillSet(
-    skill2: ShikareeMasterInfiniteDeadhuntSkill(),
+    skill2: ShikareeMasterInfiniteDeadHuntSkill(),
     skill3: _tertiaryDefense_38_76,
     skill4: _tertiaryAttack_38_76,
     skill5: ShikareeMasterRampantAttackSkill(),

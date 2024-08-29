@@ -3,11 +3,11 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 extension AntSkillTitleExtension on AntSkill {
   String skillTitle(AppLocalizations l10n) => switch (this) {
-        AntSkillNotImplemented() => 'Name Unknown',
+        AntSkillNotImplemented() => l10n.antSkillNotImplementedTitle,
         DominanceThree() => l10n.dominance3SkillTitle,
         TertiaryDefense() => l10n.tertiaryDefenseSkillTitle,
         TertiaryAttack() => l10n.tertiaryAttackSkillTitle,
-        AntSkillSeven() => l10n.antSkillSevenTitle(l10n),
+        AntSkillSeven() => l10n.antSkillSevenLabel,
         AcidGeneralWeaknessRaidSkill() =>
           l10n.acidGeneralWeaknessRaidSkillTitle,
         AcidGeneralHyperAttackSkill() => l10n.acidGeneralHyperAttackSkillTitle,
@@ -21,7 +21,7 @@ extension AntSkillTitleExtension on AntSkill {
         GoldenCrystalMasterHunterSkill() =>
           l10n.goldenCrystalMasterHunterSkillTitle,
         GoldenCrystalSwoopSkill() => l10n.goldenCrystalSwoopSkillTitle,
-        AntSkillSevenMarchSpeed() => 'l10n.',
+        AntSkillSevenMarchSpeed() => l10n.antSkillSevenMarchSpeedTitle,
         AttaSexdensDefensiveOffenceSkill() =>
           l10n.attaSexdensDefensiveOffenceSkillTitle,
         AttaSexdensJawRaidSkill() => l10n.attaSexdensJawRaidSkillTitle,
@@ -226,7 +226,7 @@ extension AntSkillTitleExtension on AntSkill {
           l10n.merannoplusCastaneusHealingWithLoveSkillTitle,
         MimicryMasterMouthPieceAttackSkill() =>
           l10n.mimicryMasterMouthPieceAttackSkillTitle,
-        MimicryMasterSupressingAttackSkill() =>
+        MimicryMasterSuppressingAttackSkill() =>
           l10n.mimicryMasterSupressingAttackSkillTitle,
         MimicryMasterSwipeSkill() => l10n.mimicryMasterSwipeSkillTitle,
         MyrmarachneFormicariaPrettyShellSkill() =>
@@ -243,7 +243,7 @@ extension AntSkillTitleExtension on AntSkill {
           l10n.myrmecotypusRettenmeyeriHealthFieldSkillTitle,
         NewWorldGeneralRageBiteSkill() =>
           l10n.newWorldGeneralRageBiteSkillTitle,
-        NewWorldGeneralDeterenceSkill() =>
+        NewWorldGeneralDeterrenceSkill() =>
           l10n.newWorldGeneralDeterenceSkillTitle,
         NewWorldGeneralBlitzkriegSkill() =>
           l10n.newWorldGeneralBlitzkriegSkillTitle,
@@ -262,7 +262,7 @@ extension AntSkillTitleExtension on AntSkill {
         PredatorMenaceSkill() => l10n.predatorMenaceSkillTitle,
         PredatorFlexibleRobberySkill() =>
           l10n.predatorFlexibleRobberySkillTitle,
-        ProattaKnockbackSkill() => l10n.proattaKnockbackSkillTitle,
+        ProattaKnockBackSkill() => l10n.proattaKnockbackSkillTitle,
         ProattaDisablingCombosSkill() => l10n.proattaDisablingCombosSkillTitle,
         ProattaHorrorHunterSkill() => l10n.proattaHorrorHunterSkillTitle,
         ProcryptocerusAdlerziComprehensiveDefenseSkill() =>
@@ -296,7 +296,7 @@ extension AntSkillTitleExtension on AntSkill {
           l10n.shieldWardenFightToDeathSkillTitle,
         ShieldWardenProtectionPostureSkill() =>
           l10n.shieldWardenProtectionPostureSkillTitle,
-        ShikareeMasterInfiniteDeadhuntSkill() =>
+        ShikareeMasterInfiniteDeadHuntSkill() =>
           l10n.shikareeMasterInfiniteDeadhuntSkillTitle,
         ShikareeMasterRampantAttackSkill() =>
           l10n.shikareeMasterRampantAttackSkillTitle,

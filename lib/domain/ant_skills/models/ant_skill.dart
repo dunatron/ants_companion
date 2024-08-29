@@ -1127,8 +1127,8 @@ class MimicryMasterMouthPieceAttackSkill extends AntSkill {
   });
 }
 
-class MimicryMasterSupressingAttackSkill extends AntSkill {
-  const MimicryMasterSupressingAttackSkill({
+class MimicryMasterSuppressingAttackSkill extends AntSkill {
+  const MimicryMasterSuppressingAttackSkill({
     super.type = AntSkillType.combatSkill,
     super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
     super.effectiveRange = 4,
@@ -1200,8 +1200,8 @@ class NewWorldGeneralRageBiteSkill extends AntSkill {
   });
 }
 
-class NewWorldGeneralDeterenceSkill extends AntSkill {
-  const NewWorldGeneralDeterenceSkill({
+class NewWorldGeneralDeterrenceSkill extends AntSkill {
+  const NewWorldGeneralDeterrenceSkill({
     super.type = AntSkillType.combatSkill,
     super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
     super.effectiveRange = 4,
@@ -1289,8 +1289,8 @@ class PredatorFlexibleRobberySkill extends AntSkill {
 }
 
 // Proatta
-class ProattaKnockbackSkill extends AntSkill {
-  const ProattaKnockbackSkill({
+class ProattaKnockBackSkill extends AntSkill {
+  const ProattaKnockBackSkill({
     super.type = AntSkillType.combatSkill,
     super.targetType = AntSkillTargetType.twoRandomEnemyWithinRange,
     super.effectiveRange = 4,
@@ -1459,8 +1459,8 @@ class ShieldWardenProtectionPostureSkill extends AntSkill {
 }
 
 // ShikareeMaster
-class ShikareeMasterInfiniteDeadhuntSkill extends AntSkill {
-  const ShikareeMasterInfiniteDeadhuntSkill({
+class ShikareeMasterInfiniteDeadHuntSkill extends AntSkill {
+  const ShikareeMasterInfiniteDeadHuntSkill({
     super.type = AntSkillType.combatSkill,
     super.targetType = AntSkillTargetType.oneRandomEnemyWithinRange,
     super.effectiveRange = 4,

@@ -72,7 +72,7 @@ extension on AntId {
         AntId.rubySlender => AntSkillSetRefs.rubySlenderSkillSet,
         AntId.saharanSilverAnt => AntSkillSetRefs.saharanSilverAntSkillSet,
         AntId.shieldWarden => AntSkillSetRefs.shieldWardenSkillSet,
-        AntId.shikareeMaster => AntSkillSetRefs.shieldWardenSkillSet,
+        AntId.shikareeMaster => AntSkillSetRefs.shikareeMasterSkillSet,
         AntId.slimArched => AntSkillSetRefs.slimArchedSkillSet,
         AntId.strumigenysEggersi => AntSkillSetRefs.strumigenysEggersiSkillSet,
         AntId.weaverAnt => AntSkillSetRefs.weaverAntSkillSet,
