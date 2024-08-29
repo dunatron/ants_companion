@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const bansheePanda = Ant(
-  id: 'banshee_panda',
+  id: AntId.bansheePanda,
   name: 'Banshee Panda',
   scientificName: 'Euspinolia militaris',
   species: ScientificSpecies.euspinoliaMilitaris,

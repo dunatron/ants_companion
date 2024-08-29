@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const leptomyrmexBurwelli = Ant(
-  id: 'leptomyrmex_burwelli',
+  id: AntId.leptomyrmexBurwelli,
   name: 'Leptomyrmex Burwelli',
   scientificName: 'Leptomyrmex Burwelli',
   species: ScientificSpecies.leptomyrmexBurwelli,

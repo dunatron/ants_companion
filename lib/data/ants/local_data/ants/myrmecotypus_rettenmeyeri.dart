@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const myrmecotypusRettenmeyeri = Ant(
-  id: 'myrmecotypus_rettenmeyeri',
+  id: AntId.myrmecotypusRettenmeyeri,
   name: 'Myrmecotypus Rettenmeyeri',
   scientificName: 'Myrmecotypus Rettenmeyeri',
   species: ScientificSpecies.myrmecotypusRettenmeyeri,

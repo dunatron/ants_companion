@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const slimArched = Ant(
-  id: 'slim_arched',
+  id: AntId.slimArched,
   name: 'Slim Arched',
   scientificName: 'Camponotus mirabilis',
   species: ScientificSpecies.camponotusMirabilis,

@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const goldenVenom = Ant(
-  id: 'golden_venom',
+  id: AntId.goldenVenom,
   name: 'Golden Venom',
   scientificName: 'Telamonia dimidiata',
   species: ScientificSpecies.telamoniaDimidiata,

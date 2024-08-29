@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const bansheeVelvet = Ant(
-  id: 'banshee_velvet',
+  id: AntId.bansheeVelvet,
   name: 'Banshee Velvet',
   scientificName: 'Dasymutilla occidentalis',
   species: ScientificSpecies.dasymutillaOccidentalis,

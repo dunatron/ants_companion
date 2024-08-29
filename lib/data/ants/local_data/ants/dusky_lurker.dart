@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const duskyLurker = Ant(
-  id: 'dusky_lurker',
+  id: AntId.duskyLurker,
   name: 'Dusky Lurker',
   species: ScientificSpecies.duskyLurker, // Not its actual species
   scientificName: 'Unknown',

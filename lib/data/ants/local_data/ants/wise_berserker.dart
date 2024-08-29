@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const wiseBerserker = Ant(
-  id: 'wise_berserker',
+  id: AntId.wiseBerserker,
   name: 'Wise Berserker',
   scientificName: 'Mystrium camillae',
   species: ScientificSpecies.mystriumCamillae,

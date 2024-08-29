@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const lathySniffer = Ant(
-  id: 'lathy_sniffer',
+  id: AntId.lathySniffer,
   name: 'Lathy Sniffer',
   scientificName: 'Tetraponera rufonigra',
   species: ScientificSpecies.tetraponeraRufonigra,

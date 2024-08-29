@@ -1,10 +1,11 @@
 import 'package:ants_companion/domain/ads/ad_units.dart';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
-import 'package:ants_companion/domain/ants/models/ant_skill.dart';
+
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
+import 'package:ants_companion/ui/ant_skills/ant_skills_viewer.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_reason.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_tags_list.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/view_model/ant_tier_details_view_model.dart';
@@ -131,15 +132,24 @@ class _AntTierDetailsState extends State<AntTierDetails> {
           // Section(
           //   child: Divider(color: Theme.of(context).colorScheme.primary),
           // ),
+
+          // if (widget.ant.skills.isNotEmpty) ...[
+          //   ...widget.ant.skills.map((it) => Text(skillDescriptionLevel10(it))),
+          // ],
+          Padding(
+            padding: EdgeInsetsDirectional.symmetric(horizontal: 16),
+            child: AntSkillsViewer(antId: widget.ant.id),
+          ),
+          SizedBox(
+            height: 24,
+          ),
+
           Section(
             child: Text(
               widget.ant.species.scientificName(l10n),
               style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
-          if (widget.ant.skills.isNotEmpty) ...[
-            ...widget.ant.skills.map((it) => Text(skillDescriptionLevel10(it))),
-          ],
           Section(
             child: Text(
               widget.ant.species.description(l10n),
@@ -150,13 +160,13 @@ class _AntTierDetailsState extends State<AntTierDetails> {
     );
   }
 
-  String skillDescriptionLevel10(final AntSkill skill) {
-    final description = switch (skill) {
-      TertiaryDefense() => 'TertiaryDefense ${skill.percentage}',
-      DominanceThree() => 'DominanceThree',
-      TertiaryAttack() => 'TertiaryAttack ${skill.percentage}',
-      BattleFeverSkill() => 'BattleFeverSkill',
-    };
-    return description;
-  }
+  // String skillDescriptionLevel10(final AntSkill skill) {
+  //   final description = switch (skill) {
+  //     TertiaryDefense() => 'TertiaryDefense ${skill.percentage}',
+  //     DominanceThree() => 'DominanceThree',
+  //     TertiaryAttack() => 'TertiaryAttack ${skill.percentage}',
+  //     BattleFeverSkill() => 'BattleFeverSkill',
+  //   };
+  //   return description;
+  // }
 }

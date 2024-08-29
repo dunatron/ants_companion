@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const goldenCrystal = Ant(
-  id: 'golden_crystal',
+  id: AntId.goldenCrystal,
   name: 'Golden Crystal',
   scientificName: 'Leptogenys elongata',
   species: ScientificSpecies.leptogenysElongata,
@@ -32,21 +32,6 @@ const goldenCrystal = Ant(
       type: AntExternalLinkType.antWiki,
       subUrl: 'Leptogenys_elongata',
     ),
-  ],
-  skills: [
-    DominanceThree(),
-    TertiaryAttack(percentage: 87),
-    TertiaryDefense(percentage: 87),
-    // AntSkillsData.dominanceThree()
-    // CommandSkill(id: AntSkillId.dominanceThree),
-    // CombatSkill(
-    //   id: AntSkillId.battleFever,
-    //   range: 5,
-    // ),
-    // CombatSkill(
-    //   id: AntSkillId.battleFever,
-    //   range: 5,
-    // ),
   ],
 );
 

@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const ghostAnt = Ant(
-  id: 'ghost_ant',
+  id: AntId.ghostAnt,
   name: 'Ghost Ant',
   scientificName: 'Tapinoma melanocephalum',
   species: ScientificSpecies.tapinomaMelanocephalum,

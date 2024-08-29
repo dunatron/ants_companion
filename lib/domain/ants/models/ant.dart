@@ -1,7 +1,7 @@
 import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant_external_link.dart';
+import 'package:ants_companion/domain/ants/models/ant_id.dart';
 import 'package:ants_companion/domain/ants/models/ant_scientific_classification.dart';
-import 'package:ants_companion/domain/ants/models/ant_skill.dart';
 import 'package:ants_companion/domain/ants/models/ant_role.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
@@ -19,26 +19,22 @@ class Ant extends Equatable {
     required this.type,
     required this.role,
     required this.tierTags,
-    this.skills = const [],
   });
 
-  final String id;
+  final AntId id;
   final String name;
   final String scientificName;
   final ScientificSpecies species;
   final AntScientificClassification? scientificClassification;
   final List<AntExternalLink> externalLinks;
 
-  String get profilePath => 'assets/ant_profile_images/$id.jpg';
+  String get profilePath =>
+      'assets/ant_profile_images/${id.profilePathKey()}.jpg';
 
   final AntType type;
   final AntRole role;
 
   final List<AntTierTag> tierTags;
-
-  final List<AntSkill> skills;
-
-  List<AntSkill> antSkills() => [];
 
   TierRating topPveRating() =>
       tierTags.whereType<AntPveTierTag>().toList().topTierRating();

@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const blackCancer = Ant(
-  id: 'black_cancer',
+  id: AntId.blackCancer,
   name: 'Black Cancer',
   scientificName: 'Aphantochilus rogersi',
   species: ScientificSpecies.aphantochilusRogersi,

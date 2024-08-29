@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const blackKnight = Ant(
-  id: 'black_knight',
+  id: AntId.blackKnight,
   name: 'Black Knight',
   scientificName: 'Cephalotes alfaroi',
   species: ScientificSpecies.cephalotesAlfaroi,

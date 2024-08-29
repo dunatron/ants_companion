@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const goldArmor = Ant(
-  id: 'gold_armor',
+  id: AntId.goldArmor,
   name: 'Gold Armor',
   scientificName: 'Daceton armigerum',
   species: ScientificSpecies.dacetonArmigerum,

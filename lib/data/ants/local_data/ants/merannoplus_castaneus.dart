@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const merannoplusCastaneus = Ant(
-  id: 'merannoplus_castaneus',
+  id: AntId.merannoplusCastaneus,
   name: 'Merannoplus Castaneus',
   scientificName: 'Merannoplus castaneus',
   species: ScientificSpecies.merannoplusCastaneus,

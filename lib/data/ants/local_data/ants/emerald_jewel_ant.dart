@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const emeraldJewelAnt = Ant(
-  id: 'emerald_jewel_ant',
+  id: AntId.emeraldJewelAnt,
   name: 'Emerald Jewel Ant',
   species: ScientificSpecies.ampulexCompressa,
   scientificName: 'Ampulex compressa',

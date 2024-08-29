@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const proatta = Ant(
-  id: 'proatta',
+  id: AntId.proatta,
   name: 'Proatta',
   scientificName: 'Proatta butteli',
   species: ScientificSpecies.proattaButteli,

@@ -1,7 +1,7 @@
 part of '../local_ants_list.dart';
 
 const leptoglossusPhyllopus = Ant(
-  id: 'leptoglossus_phyllopus',
+  id: AntId.leptoglossusPhyllopus,
   name: 'Leptoglossus Phyllopus',
   scientificName: 'Leptoglossus Phyllopus',
   species: ScientificSpecies.leptoglossusPhyllopus,
