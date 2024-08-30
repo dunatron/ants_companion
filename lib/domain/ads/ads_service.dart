@@ -27,7 +27,7 @@ const List<String> testDeviceIds = [
   heathIPadId2,
 ];
 
-const _enableAds = false;
+const _enableAds = true;
 
 const heathIOSDeviceId = '8E2F56FB-27E9-45FD-A91B-FA79D37FFC44';
 const heathIPadDeviceId = 'EB1855A1-3F23-4580-AFCE-B0FE7946EB8C';
@@ -37,7 +37,7 @@ const ninaAndroidDeviceId = 'SP1A.210812.016';
 const disableAdsWhiteList = [
   heathIOSDeviceId,
   heathIPadDeviceId,
-  // heathAndroidDeviceId,
+  heathAndroidDeviceId,
   ninaAndroidDeviceId,
 ];
 
@@ -65,7 +65,6 @@ class AdsService {
   static Future<bool> enabled() async {
     final deviceId = await DeviceInfo.getDeviceId();
 
-    print('DEVICE_ID: $deviceId');
     if (platformSupportsAds == false) return false;
     if (_enableAds == false) return false;
 
