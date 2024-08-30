@@ -1,3 +1,4 @@
+import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/domain/ant_skills/ant_skills.dart';
 import 'package:ants_companion/domain/ants/models/ant_id.dart';
 import 'package:ants_companion/ui/ant_skills/ant_skill_circle.dart';
@@ -62,9 +63,7 @@ class _AntSkillsViewerState extends State<AntSkillsViewer> {
           }).toList(),
         ),
         if (selectedSkill != null) ...[
-          SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: Spacing.m),
           AntSkillDetails(skill: selectedSkill),
         ],
       ],

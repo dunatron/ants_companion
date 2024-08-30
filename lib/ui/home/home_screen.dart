@@ -1,30 +1,25 @@
-import 'package:ants_companion/domain/ads/ad_units.dart';
-import 'package:ants_companion/ui/ads/ad_card.dart';
-import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
-import 'package:ants_companion/ui/home/theme_picker_feature_info.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:ants_companion/common/spacing.dart';
+
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/ants/ants.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
-import 'package:ants_companion/ui/ads/ads_carousel.dart';
 
+import 'package:ants_companion/ui/ads/ads_carousel.dart';
+import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
+import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
+import 'package:ants_companion/ui/home/theme_picker_feature_info.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/home/ants_tier_feature_info.dart';
 import 'package:ants_companion/ui/home/feature_masonry_grid.dart';
 import 'package:ants_companion/ui/home/notifications_feature_info.dart';
 import 'package:ants_companion/ui/home/scientific_classifications_feature_info.dart';
-import 'package:ants_companion/ui/home/soldier_ants_comparison_feature_info.dart';
 import 'package:ants_companion/ui/home/welcome_info.dart';
 import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
-
 import 'package:ants_companion/ui/notification_tapped_provider.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -116,21 +111,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  SliverPadding _buildSpecialAntsTitle(
-    AppLocalizations l10n,
-    BuildContext context,
-  ) {
-    final theme = Theme.of(context);
-    return SliverPadding(
-      padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
-      sliver: SliverToBoxAdapter(
-        child: Center(
-          child: Text(l10n.specialAnts, style: theme.textTheme.headlineMedium),
-        ),
-      ),
-    );
-  }
-
   Widget _buildCarousel(BuildContext context, List<Ant> ants) =>
       SliverToBoxAdapter(
         // key: antsCarouselKey,
@@ -143,32 +123,6 @@ class HomeScreen extends StatelessWidget {
         ),
       );
 
-  Widget _buildSingleAdCard(BuildContext context) {
-    return AdWidgetBuilder(
-      isSliver: true,
-      child: SliverPadding(
-        padding: const EdgeInsets.only(bottom: Spacing.vl),
-        sliver: SliverToBoxAdapter(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(
-              maxWidth: 300,
-              maxHeight: 250,
-            ),
-            child: Container(
-              // color: Theme.of(context).colorScheme.surfaceContainerHigh,
-              child: Center(
-                child: AdCard(
-                  adId: AdUnits.homeAdUnitId,
-                  selfLoad: AdCardSelfLoad(size: AdSize.mediumRectangle),
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
   Widget _buildAdsCarousel() {
     return AdWidgetBuilder(
       isSliver: true,
@@ -179,24 +133,6 @@ class HomeScreen extends StatelessWidget {
             id: 'home-ads-carousel',
             adIds: AdsService.carouselOneIds,
             ads: AdsService(),
-          ),
-        ),
-      ),
-    );
-  }
-
-  SliverPadding _buildAppFeatureTitle(
-    BuildContext context,
-    AppLocalizations l10n,
-  ) {
-    final theme = Theme.of(context);
-    return SliverPadding(
-      padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
-      sliver: SliverToBoxAdapter(
-        child: Center(
-          child: Text(
-            l10n.appFeaturesLabel,
-            style: theme.textTheme.headlineMedium,
           ),
         ),
       ),

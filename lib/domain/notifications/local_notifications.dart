@@ -1,30 +1,24 @@
 import 'dart:io';
-
-import 'package:ants_companion/core/log/loggers.dart';
-import 'package:ants_companion/domain/external_app_launcher/external_app_launcher.dart';
-import 'package:ants_companion/domain/notifications/models/notification_payload.dart';
-import 'package:ants_companion/domain/notifications/notification_channels.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
 import 'package:rxdart/subjects.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
-final notificationsLogger = appLogger(LocalNotifications);
+import 'package:ants_companion/core/log/loggers.dart';
+import 'package:ants_companion/domain/notifications/models/notification_payload.dart';
+import 'package:ants_companion/domain/notifications/notification_channels.dart';
 
-// import 'package:flutter_timezone/flutter_timezone.dart';
+final notificationsLogger = appLogger(LocalNotifications);
 
 @pragma('vm:entry-point')
 void notificationTapBackground(NotificationResponse notificationResponse) {
-  // ignore: avoid_print
   notificationsLogger
       .d('notification(${notificationResponse.id}) action tapped: '
           '${notificationResponse.actionId} with'
           ' payload: ${notificationResponse.payload}');
   if (notificationResponse.input?.isNotEmpty ?? false) {
-    // ignore: avoid_print
     notificationsLogger.d(
         'notification action tapped with input: ${notificationResponse.input}');
   }
@@ -35,11 +29,8 @@ Future<void> _configureLocalTimeZone() async {
     return;
   }
   tz.initializeTimeZones();
-  // final String timeZoneName = await FlutterTimezone.getLocalTimezone();
-  // tz.setLocalLocation(tz.getLocation(timeZoneName));
   final localLocation = tz.local;
   tz.setLocalLocation(localLocation);
-  // tz.setLocalLocation(tz.getLocation(timeZoneName));
 }
 
 class LocalNotifications {
@@ -203,8 +194,6 @@ class LocalNotifications {
     await requestPermissions();
     final scheduledDate = tz.TZDateTime.from(date, tz.local);
 
-    // final scheduledDate.
-
     await _flutterLocalNotificationsPlugin.zonedSchedule(
       id,
       title,
@@ -256,7 +245,7 @@ class LocalNotifications {
   }
 
   static Future<void> _requestAndroidPermissions() async {
-    notificationsLogger.d('Requetsing notification permissions');
+    notificationsLogger.d('Requesting notification permissions');
     final androidNotificationsPlugin =
         _flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
             AndroidFlutterLocalNotificationsPlugin>();
@@ -276,13 +265,13 @@ class LocalNotifications {
       notificationsLogger.d('requestExactAlarmsPermission');
       final exactAlarmPermission =
           await androidNotificationsPlugin.requestExactAlarmsPermission();
-      notificationsLogger.d('exactAlarmPermission: ${exactAlarmPermission}');
+      notificationsLogger.d('exactAlarmPermission: $exactAlarmPermission');
     }
 
-    final fullScreenIntentPermssion =
+    final fullScreenIntentPermission =
         await androidNotificationsPlugin.requestFullScreenIntentPermission();
     notificationsLogger
-        .d('fullScreenIntentPermssion: ${fullScreenIntentPermssion}');
+        .d('fullScreenIntentPermission: $fullScreenIntentPermission');
   }
 
   static Future<bool> areNotificationsEnabled() async {
@@ -341,9 +330,6 @@ class LocalNotifications {
     if (details != null) {
       final didNotificationLaunchApp = details.didNotificationLaunchApp;
       if (didNotificationLaunchApp) {
-        // ExternalAppLauncher.launchAntsUndergroundKingdom();
-        // onClickNotification.add(details.notificationResponse!.payload!);
-
         final payload =
             _payloadOrNullFromString(details.notificationResponse?.payload);
 

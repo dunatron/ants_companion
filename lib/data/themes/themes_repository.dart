@@ -41,11 +41,6 @@ class ThemesRepository implements ThemesProvider {
   Stream<ColorSeed> currentThemeData() => subject.stream.asBroadcastStream();
 
   @override
-  void addCustomUserColorScheme(ColorSeed colorScheme) {
-    // TODO: implement addCustomUserColorScheme
-  }
-
-  @override
   void applyColorScheme(ColorSeed colorSeed) {
     logger.d('applying color seed: $colorSeed');
     _datasource.putColorSeed(colorSeed.toStoreModel());

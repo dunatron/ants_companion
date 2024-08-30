@@ -1,14 +1,12 @@
 import 'dart:math' as math;
 import 'package:ants_companion/common/spacing.dart';
-import 'package:ants_companion/domain/soldier_ants/models/soldier_ant.dart';
-import 'package:ants_companion/ui/draggable_scroll_configuration.dart';
-import 'package:ants_companion/ui/layouts/page_layout.dart';
 import 'package:ants_companion/ui/soldier_ants/soldier_card_details.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 
-import 'package:flutter/material.dart';
-
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:ants_companion/domain/soldier_ants/models/soldier_ant.dart';
+import 'package:ants_companion/ui/layouts/page_layout.dart';
 
 class SoldierAntsComparisonScreen extends StatefulWidget {
   const SoldierAntsComparisonScreen({super.key});
@@ -66,77 +64,77 @@ class _SoldierAntsComparisonScreenState
               style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),
-        )
-        // SizedBox(
-        //   height: 50,
-        //   child: ListView.builder(
-        //     scrollDirection: Axis.horizontal,
-        //     itemCount: tiers.length,
-        //     itemBuilder: (context, index) {
-        //       final tier = tiers[index];
-        //       final isSelected = _selectedTier == tier;
-        //       return Padding(
-        //         padding: const EdgeInsets.all(Spacing.s),
-        //         child: ElevatedButton(
-        //           onPressed: () {
-        //             setState(() {
-        //               _selectedTier = tier;
-        //             });
-        //           },
-        //           style: ElevatedButton.styleFrom(
-        //             backgroundColor: isSelected
-        //                 ? Theme.of(context).colorScheme.primary
-        //                 : null,
-        //           ),
-        //           child: Text(
-        //             tier.toString(),
-        //             style: TextStyle(
-        //               color: isSelected
-        //                   ? Theme.of(context).colorScheme.onPrimary
-        //                   : null,
-        //             ),
-        //           ),
-        //         ),
-        //       );
-        //     },
-        //   ),
-        // ),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //   children: [
-        //     SoldierCardDetails(soldier: guard),
-        //     SoldierCardDetails(soldier: shooter),
-        //     SoldierCardDetails(soldier: carrier),
-        //   ],
-        // ),
-        // Column(
-        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //   children: [
-        //     // Text(numberFormat.format(
-        //     //     SoldierAnt.calculateDamage(5, guard.attack, guard.defense))),
-        //     Text(typeOnTypeText(
-        //         SoldierType.guardian, SoldierType.guardian, guard, guard)),
-        //     Text(typeOnTypeText(
-        //         SoldierType.guardian, SoldierType.shooter, guard, shooter)),
-        //     Text(typeOnTypeText(
-        //         SoldierType.guardian, SoldierType.carrier, guard, carrier)),
-        //     Text(typeOnTypeText(
-        //         SoldierType.shooter, SoldierType.guardian, shooter, guard)),
-        //     Text(typeOnTypeText(
-        //         SoldierType.shooter, SoldierType.shooter, shooter, shooter)),
-        //     Text(typeOnTypeText(
-        //         SoldierType.shooter, SoldierType.carrier, shooter, carrier)),
-        //     Text(typeOnTypeText(
-        //         SoldierType.carrier, SoldierType.guardian, carrier, guard)),
-        //     Text(typeOnTypeText(
-        //         SoldierType.carrier, SoldierType.shooter, carrier, shooter)),
-        //     Text(typeOnTypeText(
-        //         SoldierType.carrier, SoldierType.carrier, carrier, carrier)),
-        //     const SizedBox(height: 60),
-        //     Text(l10n.damageFromSquadLabel),
-        //     Text(numberFormat.format(attackPower)),
-        //   ],
-        // ),
+        ),
+        SizedBox(
+          height: 50,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: tiers.length,
+            itemBuilder: (context, index) {
+              final tier = tiers[index];
+              final isSelected = _selectedTier == tier;
+              return Padding(
+                padding: const EdgeInsets.all(Spacing.s),
+                child: ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      _selectedTier = tier;
+                    });
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: isSelected
+                        ? Theme.of(context).colorScheme.primary
+                        : null,
+                  ),
+                  child: Text(
+                    tier.toString(),
+                    style: TextStyle(
+                      color: isSelected
+                          ? Theme.of(context).colorScheme.onPrimary
+                          : null,
+                    ),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SoldierCardDetails(soldier: guard),
+            SoldierCardDetails(soldier: shooter),
+            SoldierCardDetails(soldier: carrier),
+          ],
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // Text(numberFormat.format(
+            //     SoldierAnt.calculateDamage(5, guard.attack, guard.defense))),
+            Text(typeOnTypeText(
+                SoldierType.guardian, SoldierType.guardian, guard, guard)),
+            Text(typeOnTypeText(
+                SoldierType.guardian, SoldierType.shooter, guard, shooter)),
+            Text(typeOnTypeText(
+                SoldierType.guardian, SoldierType.carrier, guard, carrier)),
+            Text(typeOnTypeText(
+                SoldierType.shooter, SoldierType.guardian, shooter, guard)),
+            Text(typeOnTypeText(
+                SoldierType.shooter, SoldierType.shooter, shooter, shooter)),
+            Text(typeOnTypeText(
+                SoldierType.shooter, SoldierType.carrier, shooter, carrier)),
+            Text(typeOnTypeText(
+                SoldierType.carrier, SoldierType.guardian, carrier, guard)),
+            Text(typeOnTypeText(
+                SoldierType.carrier, SoldierType.shooter, carrier, shooter)),
+            Text(typeOnTypeText(
+                SoldierType.carrier, SoldierType.carrier, carrier, carrier)),
+            const SizedBox(height: 60),
+            Text(l10n.damageFromSquadLabel),
+            Text(numberFormat.format(attackPower)),
+          ],
+        ),
       ],
     );
   }

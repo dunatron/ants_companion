@@ -11,9 +11,6 @@ class Themes {
 
   void applyColorScheme(ColorSeed colorScheme) =>
       _provider.applyColorScheme(colorScheme);
-
-  void addCustomUserColorScheme(ColorSeed colorScheme) =>
-      _provider.addCustomUserColorScheme(colorScheme);
 }
 
 abstract class ThemesProvider {
@@ -22,6 +19,4 @@ abstract class ThemesProvider {
   ColorSeed get currentSeed;
 
   void applyColorScheme(ColorSeed colorScheme);
-
-  void addCustomUserColorScheme(ColorSeed colorScheme);
 }

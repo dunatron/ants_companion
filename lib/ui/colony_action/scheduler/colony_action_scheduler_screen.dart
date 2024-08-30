@@ -1,23 +1,18 @@
 import 'dart:async';
-
-import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
-import 'package:ants_companion/domain/colony_actions/models/colony_action.dart';
-import 'package:ants_companion/domain/notifications/local_notifications.dart';
-import 'package:ants_companion/domain/notifications/models/notification_payload.dart';
-import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
-import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
-import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
-import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
 import 'package:collection/collection.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
-
+import 'package:intl/intl.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 import 'package:haptic_feedback/haptic_feedback.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:intl/intl.dart';
+import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
+import 'package:ants_companion/domain/colony_actions/models/colony_action.dart';
+import 'package:ants_companion/ui/colony_action/scheduler/ca_info_extension.dart';
+import 'package:ants_companion/ui/colony_action/scheduler/ca_name_extension.dart';
+import 'package:ants_companion/ui/layouts/constrained_sliver_width.dart';
+import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
 
 class ColonyActionSchedulerScreen extends StatefulWidget {
   const ColonyActionSchedulerScreen({super.key});
@@ -102,7 +97,7 @@ class _ColonyActionSchedulerScreenState
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final locale = Localizations.localeOf(context);
+    // final locale = Localizations.localeOf(context);
     final numberFormat = NumberFormat('#,###', 'ar');
     final localDateFormatter = DateFormat('h:mm a');
 
@@ -181,7 +176,7 @@ class _ColonyActionSchedulerScreenState
                     context.go('/ca-scheduler/monitoring');
                   },
                   label: Text('Monitoring $checkedCount'),
-                  icon: Icon(Icons.notifications_active),
+                  icon: const Icon(Icons.notifications_active),
                 )
                 // Text('Monitoring $checkedCount'),
                 // TextButton.icon(

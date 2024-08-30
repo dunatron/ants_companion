@@ -82,13 +82,6 @@ class AdsService {
   final int maxRetryAttempts = 3;
   Duration retryDelay = const Duration(seconds: 20);
 
-  // If retryDelay is less than 5 minutes, bump it by 10 seconds
-  _increaseRetryDelay() {
-    if (retryDelay < const Duration(minutes: 5)) {
-      retryDelay += const Duration(seconds: 10);
-    }
-  }
-
   Future<void> initialize() async {
     logger.d('Initializing Ad service');
     if (!platformSupportsAds) {
@@ -158,22 +151,12 @@ class AdsService {
         onAdFailedToLoad: (Ad ad, LoadAdError error) {
           logger.d('Failed to load Banner Ad: ${ad.adUnitId}\n error: $error');
           ad.dispose();
-          // if (attempt < maxRetryAttempts) {
-          //   Future.delayed(retryDelay, () {
-          //     // _increaseRetryDelay();
-          //     loadBannerAdWithRetry(adUnitId, size, attempt: attempt + 1);
-          //   });
-          // } else {
-          //   logger.e('Max retry attempts reached for ad unit: $adUnitId');
-          // }
         },
       ),
     );
 
     bannerAd.load();
   }
-
-  // disposeAllAds() => _bannerSubject.value.forEach((_, ad) => ad.dispose());
 
   disposeAllAds() {
     _bannerSubject.value.forEach((_, ad) => ad?.dispose());

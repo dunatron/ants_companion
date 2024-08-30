@@ -3,6 +3,7 @@
   "routeNotFound": "Route not found",
   "home": "Home",
   "cancel": "Cancel",
+  "button": "Button",
   "appTitle": "Ants Companion",
   "welcomeInfoTitle": "Greetings",
   "welcomeInfoDescription": "Welcome to the Ants Companion. This app aims to be your one stop place for the ants underground kingdom",
@@ -27,7 +28,29 @@
   "colonyActionSchedulerDescription": "Plan important colony actions you don't want to miss. You'll receive notifications for the actions you choose to monitor.",
   "themePicker": "Theme Picker",
   "deviceInfo": "Device Info",
+  "details": "Details",
+  "editBtnLabel": "Edit",
+  "applyThemeBtnLabel": "Apply Theme",
   "colonyAction": "Colony Action",
+  "utcHour": "{hour} UTC",
+  "@utcHour": {
+    "description": "The hour in UTC with UTC as the label",
+    "placeholders": {
+      "hour": {
+        "type": "int"
+      }
+    }
+  },
+  "shortTime": "{date}",
+  "@shortTime": {
+    "description": "Short DateTime  e.g 12:05 PM",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "jm"
+      }
+    }
+  },
   "caTypeAnthillDevelopment": "Anthill development",
   "caTypeColonyEvolution": "Colony evolution",
   "caTypeMassDevelopment": "Mass development",

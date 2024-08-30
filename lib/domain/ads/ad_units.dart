@@ -23,7 +23,7 @@ class AdUnits {
 
   static final String homeAdUnitId =
       prod ? 'ca-app-pub-8577724747514488/4573507812' : _demoFixedSizeBanner;
-  static final String _antDetailsAdUnitId =
+  static const String _antDetailsAdUnitId =
       'ca-app-pub-8577724747514488/8321181130';
 
   static const String _colonyActionDetailsAdUnitId =

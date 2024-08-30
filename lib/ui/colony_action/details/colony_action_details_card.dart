@@ -1,3 +1,4 @@
+import 'package:ants_companion/common/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -31,7 +32,7 @@ class ColonyActionDetailsCard extends StatelessWidget {
 
     final theme = Theme.of(context);
     return Card(
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(Spacing.n),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +42,7 @@ class ColonyActionDetailsCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 8, left: 16),
+                padding: const EdgeInsets.only(top: 8, left: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -50,7 +51,7 @@ class ColonyActionDetailsCard extends StatelessWidget {
                       style: theme.textTheme.bodyLarge,
                     ),
                     Text(
-                      'warzone: ${warzoneName}',
+                      'warzone: $warzoneName',
                       style: theme.textTheme.labelSmall,
                     ),
                   ],
@@ -75,7 +76,7 @@ class ColonyActionDetailsCard extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 16),
+            padding: const EdgeInsets.all(Spacing.l),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

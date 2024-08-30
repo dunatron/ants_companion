@@ -1,7 +1,10 @@
-import 'package:ants_companion/domain/ads/ad_units.dart';
-import 'package:ants_companion/domain/ads/ads_service.dart';
-import 'package:ants_companion/domain/ants/models/ant.dart';
+import 'package:ants_companion/common/spacing.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import 'package:ants_companion/domain/ads/ad_units.dart';
+import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
@@ -9,16 +12,10 @@ import 'package:ants_companion/ui/ant_skills/ant_skills_viewer.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_reason.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_tags_list.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/view_model/ant_tier_details_view_model.dart';
-
 import 'package:ants_companion/ui/ants/ant_profile_image.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_species_extension.dart';
 import 'package:ants_companion/ui/section.dart';
 import 'package:ants_companion/ui/tier_star_rating/tier_star_ratings.dart';
-
-import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
-
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AntTierDetails extends StatefulWidget {
   const AntTierDetails({super.key, required this.ant, required this.tierTag});
@@ -117,33 +114,21 @@ class _AntTierDetailsState extends State<AntTierDetails> {
           AntTierDetailsReason(viewModel: viewModel),
           AdWidgetBuilder(
             child: Section(
-              // padding: EdgeInsets.symmetric(vertical: 16, horizontal: 0),
-              padding: EdgeInsets.only(top: 0, bottom: 16, left: 0, right: 0),
+              padding: const EdgeInsets.only(
+                  top: 0, bottom: Spacing.l, left: 0, right: 0),
               child: AdCard(
                 adId: AdUnits.antDetailsAdUnitId,
                 selfLoad: AdCardSelfLoad(size: AdSize.banner),
               ),
             ),
           ),
-          // Section(
-          //   child: Divider(color: Theme.of(context).colorScheme.primary),
-          // ),
           AntTierDetailsTagsList(viewModel: viewModel, tierTags: tags),
-          // Section(
-          //   child: Divider(color: Theme.of(context).colorScheme.primary),
-          // ),
-
-          // if (widget.ant.skills.isNotEmpty) ...[
-          //   ...widget.ant.skills.map((it) => Text(skillDescriptionLevel10(it))),
-          // ],
           Padding(
-            padding: EdgeInsetsDirectional.symmetric(horizontal: 16),
+            padding:
+                const EdgeInsetsDirectional.symmetric(horizontal: Spacing.l),
             child: AntSkillsViewer(antId: widget.ant.id),
           ),
-          SizedBox(
-            height: 24,
-          ),
-
+          const SizedBox(height: Spacing.l),
           Section(
             child: Text(
               widget.ant.species.scientificName(l10n),

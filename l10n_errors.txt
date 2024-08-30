@@ -1,1 +1,145 @@
-{}
+{
+  "ar": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "bg": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "de": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "es": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "fil": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "hu": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "it": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "ja": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "mk": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "nl": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "pl": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "ru": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "tr": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "uk": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "vi": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ],
+
+  "zh": [
+    "button",
+    "details",
+    "editBtnLabel",
+    "applyThemeBtnLabel",
+    "utcHour",
+    "shortTime"
+  ]
+}
