@@ -1,145 +1,65 @@
 {
   "ar": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "bg": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "de": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "es": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "fil": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "hu": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "it": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "ja": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "mk": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "nl": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "pl": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "ru": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "tr": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "uk": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "vi": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ],
 
   "zh": [
-    "button",
-    "details",
-    "editBtnLabel",
-    "applyThemeBtnLabel",
-    "utcHour",
-    "shortTime"
+    "warzoneLabel"
   ]
 }

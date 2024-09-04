@@ -13,18 +13,18 @@ import 'package:rxdart/rxdart.dart';
 // test device. Check the lRgs for your device's ID value.
 const String heathAndroidPhoneId = '16D265166C7DAF515FA40F177BD4D2C3';
 
-const String heathIOSPhoneId = '4151243ac11bbda74d48d0dfa0ec3fa9';
+const String heathIOSPhoneId = '9ecd06c7de6e973cc4b63d248c1bc27f';
 const String heathIOSPhoneReleaseId = 'a1744d10ccfe668b389a67b23971217b';
 
 const String heathIPadId = '294b3bfcad8d794c558e08d5eabd1337';
-const String heathIPadId2 = 'd8a5df37edce96ec9b116c8b6218934b';
+const String heathIPadReleaseId = 'c670581de72f4d6db75660bf6c1f2f23';
 
 const List<String> testDeviceIds = [
   heathAndroidPhoneId,
   heathIOSPhoneId,
   heathIOSPhoneReleaseId,
   heathIPadId,
-  heathIPadId2,
+  heathIPadReleaseId,
 ];
 
 const _enableAds = true;

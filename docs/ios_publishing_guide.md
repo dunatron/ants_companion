@@ -40,6 +40,40 @@ This guide walks you through the process of publishing your app to the iOS App S
 - **Archive Your App**: In Xcode, set the build scheme to "Any iOS Device (arm64)" and select “Product” > “Archive.”
 - **Upload to App Store Connect**: Once archived, use Xcode to upload the build to App Store Connect.
 
+in flutter we can create a release for our local build which is good to preview that everything runs and is signed properly.
+
+```bash
+flutter build ios --release
+```
+
+To distribute the app we need to go through a different process and create a .ipa
+
+In xCode, an app(.app) bundle is used to create an archive(.xarchive), which is then used to create an IPA(.ipa).
+
+In flutter we do the same thing with a simplified command for the process. which prepares the app for the app store
+
+```bash
+flutter build ipa
+```
+
+We can use the `--export-method` flag to change this
+
+```bash
+flutter build ipa --export-method
+```
+
+This would allow us to export the app to say users in our organization
+
+```bash
+flutter build ipa --export-method enterprise
+```
+
+We can also use `obfuscate` flag to make it harder to reverse engineer
+
+```bash
+flutter build ipa --obfuscate  --split-debug-info
+```
+
 ## 8. Submit Your App for Review
 
 - **Select the Uploaded Build**: In App Store Connect, select the build you just uploaded.

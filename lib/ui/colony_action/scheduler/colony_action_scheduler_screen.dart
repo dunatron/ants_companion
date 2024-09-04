@@ -175,7 +175,7 @@ class _ColonyActionSchedulerScreenState
                   onPressed: () {
                     context.go('/ca-scheduler/monitoring');
                   },
-                  label: Text('Monitoring $checkedCount'),
+                  label: Text('${l10n.monitoring} $checkedCount'),
                   icon: const Icon(Icons.notifications_active),
                 )
                 // Text('Monitoring $checkedCount'),

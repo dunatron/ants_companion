@@ -63,32 +63,28 @@ class _AntsCarouselState extends State<AntsCarousel>
 
   void _initializePageController() {
     _carouselController = CarouselController(initialItem: 0);
-    _carouselController.addListener(() {
-      // final d = (_carouselController.offset / availableItemWidth).ceil();
-      // currentItemIndex = d;
-      Scrollable.ensureVisible(
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-        antsCarouselKey.currentContext!,
-      );
-    });
+    _carouselController.addListener(ensureCarouselVisibleListener);
   }
 
   void _resetController() {
+    _carouselController.removeListener(ensureCarouselVisibleListener);
     _carouselController.dispose();
 
     _carouselController = CarouselController(initialItem: 0);
-    _carouselController.addListener(() {
-      Scrollable.ensureVisible(
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-        antsCarouselKey.currentContext!,
-      );
-    });
+    _carouselController.addListener(ensureCarouselVisibleListener);
+  }
+
+  void ensureCarouselVisibleListener() {
+    Scrollable.ensureVisible(
+      duration: const Duration(milliseconds: 100),
+      curve: Curves.linear,
+      antsCarouselKey.currentContext!,
+    );
   }
 
   @override
   void dispose() {
+    _carouselController.removeListener(ensureCarouselVisibleListener);
     _carouselController.dispose();
     super.dispose();
   }

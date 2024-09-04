@@ -19,6 +19,9 @@ class AntsAppBar extends StatelessWidget implements PreferredSizeWidget {
     final theme = Theme.of(context);
     final canPop = Navigator.of(context).canPop() && !forceAsHome;
     return AppBar(
+      // backgroundColor: theme.scaffoldBackgroundColor,
+      // surfaceTintColor: theme.scaffoldBackgroundColor,
+      // surfaceTintColor: theme.colorScheme.primary,
       leading: canPop
           ? IconButton(
               onPressed: () => context.pop(),

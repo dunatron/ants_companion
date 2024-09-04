@@ -1,3 +1,4 @@
+import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_sliver_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -10,7 +11,7 @@ import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/ui/ads/ads_carousel.dart';
 import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
 import 'package:ants_companion/ui/ants/ants_carousel/ants_carousel.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
+
 import 'package:ants_companion/ui/home/theme_picker_feature_info.dart';
 import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/home/ants_tier_feature_info.dart';
@@ -24,13 +25,36 @@ import 'package:ants_companion/ui/notification_tapped_provider.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  // _launchAntDetails(final Ant ant, BuildContext context) =>
+  //     buildBottomSheetModal(
+  //       context,
+  //       AntTierDetails(
+  //         ant: ant,
+  //         tierTag: ant.pvpTierTags.first,
+  //       ),
+  //     );
+
+  // _launchAntDetails(final Ant ant, BuildContext context) =>
+  //     draggableScrollableSheetBuilder(
+  //       context,
+  //       (scrollController) {
+  //         return AntTierDetailsSliverView(
+  //           scrollController: scrollController,
+  //           ant: ant,
+  //           tierTag: ant.pvpTierTags.first,
+  //         );
+  //       },
+  //     );
   _launchAntDetails(final Ant ant, BuildContext context) =>
-      buildBottomSheetModal(
+      draggableScrollableSheetBuilder(
         context,
-        AntTierDetails(
-          ant: ant,
-          tierTag: ant.pvpTierTags.first,
-        ),
+        childBuilder: (scrollController) {
+          return AntTierDetailsSliverView(
+            scrollController: scrollController,
+            ant: ant,
+            tierTag: ant.pvpTierTags.first,
+          );
+        },
       );
 
   @override

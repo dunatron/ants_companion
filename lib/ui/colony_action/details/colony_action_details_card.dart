@@ -1,6 +1,7 @@
 import 'package:ants_companion/common/spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ColonyActionDetailsCard extends StatelessWidget {
   const ColonyActionDetailsCard({
@@ -22,6 +23,7 @@ class ColonyActionDetailsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final timeLabelUTC = '${dateUTC.hour} UTC';
     final localDateFormatter = DateFormat('h:mm a');
 
@@ -51,7 +53,7 @@ class ColonyActionDetailsCard extends StatelessWidget {
                       style: theme.textTheme.bodyLarge,
                     ),
                     Text(
-                      'warzone: $warzoneName',
+                      '${l10n.warzoneLabel} $warzoneName',
                       style: theme.textTheme.labelSmall,
                     ),
                   ],

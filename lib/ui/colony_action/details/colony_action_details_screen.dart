@@ -29,7 +29,7 @@ class ColonyActionDetailsScreen extends StatelessWidget {
     final tasks = CATask.colonyActionTaskList(caKey, l10n);
 
     return SliverPageLayout(
-      title: 'Details',
+      title: l10n.details,
       slivers: [
         SliverToBoxAdapter(
           child: ColonyActionNotificationDetails(caKey: caKey),

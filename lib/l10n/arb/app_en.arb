@@ -208,6 +208,7 @@
   },
   "utcTime": "UTC",
   "localeSelectorError": "Error loading locales",
+  "warzoneLabel": "Warzone:",
   "warzoneAnthillDevelopment": "Anthill development",
   "warzoneGatherResources": "Gather resources",
   "warzoneEvolution": "Evolution",
@@ -242,6 +243,7 @@
     }
   },
   "launchGame": "Launching Game",
+  "monitoring": "Monitoring",
   "scientificClassificationsTitle": "Classifications",
   "scientificDomain": "Domain",
   "scientificDomainDescription": "The highest taxonomic rank used to classify living organisms. All organisms are classified into one of the three domains: Bacteria, Archaea, or Eukaryota. For most of our organisms, this will be Eukaryota, which includes all complex life forms.",

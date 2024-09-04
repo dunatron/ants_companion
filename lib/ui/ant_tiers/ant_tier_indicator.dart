@@ -26,6 +26,7 @@ class AntTierIndicator extends StatelessWidget {
       height: diameter,
       // padding: const EdgeInsets.all(1),
       margin: const EdgeInsets.only(bottom: 16),
+      constraints: const BoxConstraints(maxHeight: 120, maxWidth: 120),
       decoration: BoxDecoration(
         // color: tierRating.color,
         border: Border.all(

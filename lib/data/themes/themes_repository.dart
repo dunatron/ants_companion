@@ -24,7 +24,7 @@ class ThemesRepository implements ThemesProvider {
     if (cachedColorSeed == null) {
       subject.add(
         const ColorSeed(
-          color: Colors.brown,
+          color: Colors.blue,
           dynamicSchemeVariant: DynamicSchemeVariant.tonalSpot,
           brightness: Brightness.dark,
         ),
