@@ -45,5 +45,6 @@ enum ScientificGenus {
   telamonia,
   tetramorium,
   tetraponera,
-  thaumatomyrmex
+  thaumatomyrmex,
+  tricondyla,
 }

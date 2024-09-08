@@ -1,10 +1,29 @@
+import 'dart:io';
+import 'dart:typed_data';
+import 'package:ants_companion/domain/app_feedback/app_feedback.dart';
+import 'package:get_it/get_it.dart';
+import 'package:path_provider/path_provider.dart';
+
+import 'package:feedback/feedback.dart';
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'package:flutter_email_sender/flutter_email_sender.dart';
+
 class AppDrawer extends StatelessWidget {
-  const AppDrawer({super.key});
+  AppDrawer({super.key});
+
+  final AppFeedback appFeedback = GetIt.I();
+
+  Future<String> writeImageToStorage(Uint8List feedbackScreenshot) async {
+    final Directory output = await getTemporaryDirectory();
+    final String screenshotFilePath = '${output.path}/feedback.png';
+    final File screenshotFile = File(screenshotFilePath);
+    await screenshotFile.writeAsBytes(feedbackScreenshot);
+    return screenshotFilePath;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -73,6 +92,19 @@ class AppDrawer extends StatelessWidget {
           //     context.go('/ca-scheduler/pending');
           //   },
           // ),
+          ListTile(
+            leading: const Icon(Icons.bug_report_outlined),
+            title: Text('Feedback Mode'),
+            onTap: () {
+              // Navigator.pop(context);
+
+              BetterFeedback.of(context).show(
+                (feedback) async {
+                  await appFeedback.submitFeedback(feedback);
+                },
+              );
+            },
+          ),
           ListTile(
             leading: const Icon(Icons.developer_mode),
             title: Text(l10n.deviceInfo),

@@ -33,7 +33,7 @@ const emeraldJewelAnt = Ant(
 
 const emeraldJewelAntPveTags = [
   AntPveTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     rowPosition: RowPosition.middle,
     antType: AntType.shooter,
   )

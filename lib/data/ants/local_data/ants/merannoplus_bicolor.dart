@@ -31,7 +31,13 @@ const merannoplusBicolor = Ant(
   ],
 );
 
-const merannoplusBicolorPveTags = [];
+const merannoplusBicolorPveTags = [
+  AntPveTierTag(
+    rating: TierRating.d,
+    antType: AntType.guardian,
+    rowPosition: RowPosition.middle,
+  ),
+];
 
 const merannoplusBicolorPvpTags = [
   AntPvpTierTag(

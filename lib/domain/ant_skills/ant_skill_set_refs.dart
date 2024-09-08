@@ -39,6 +39,11 @@ class AntSkillSetRefs {
   static const _tertiaryAttack_60_120 =
       TertiaryAttack(percentage10: 60, percentage20: 120);
 
+  static const _tertiaryDefense_72_144 =
+      TertiaryDefense(percentage10: 72, percentage20: 144);
+  static const _tertiaryAttack_72_144 =
+      TertiaryAttack(percentage10: 72, percentage20: 144);
+
   static const acidGeneralSkillSet = AntSkillSet(
     skill2: AcidGeneralWeaknessRaidSkill(),
     skill3: _tertiaryDefense_35_70,
@@ -852,6 +857,20 @@ class AntSkillSetRefs {
       statPercent20: 35,
     ),
     skill8: StrumigenysEggersiKeenIntuitionSkill(),
+  );
+
+  static const tricondylaApteraSkillSet = AntSkillSet(
+    skill2: TricondylaApteraLongLegsSkill(),
+    skill3: _tertiaryDefense_72_144,
+    skill4: _tertiaryAttack_72_144,
+    skill5: TricondylaApteraBattlefieldAidSkill(),
+    skill7: AntSkillSeven(
+      antType: AntType.carrier,
+      statType: StatType.health,
+      statPercent10: 32,
+      statPercent20: 54,
+    ),
+    skill8: TricondylaApteraPhantomFormSkill(),
   );
 
   static const weaverAntSkillSet = AntSkillSet(

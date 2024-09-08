@@ -37,7 +37,7 @@ const lathySniffer = Ant(
 
 const lathySnifferPveTags = [
   AntPveTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.shooter,
     rowPosition: RowPosition.back,
   ),

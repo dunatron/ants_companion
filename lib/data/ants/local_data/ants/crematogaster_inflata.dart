@@ -31,7 +31,13 @@ const crematogasterInflata = Ant(
   ],
 );
 
-const crematogasterInflataPveTags = [];
+const crematogasterInflataPveTags = [
+  AntPveTierTag(
+    rating: TierRating.b,
+    antType: AntType.shooter,
+    rowPosition: RowPosition.front,
+  ),
+];
 
 const crematogasterInflataPvpTags = [
   AntPvpTierTag(

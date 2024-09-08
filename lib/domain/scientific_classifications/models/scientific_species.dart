@@ -60,4 +60,5 @@ enum ScientificSpecies {
   tetraponeraRufonigra, // Tetraponera
   tetramoriumPulcherrimum, // Tetramorium pulcherrimum
   thaumatomyrmexAtrox, // Thaumatomyrmex Atrox
+  tricondylaAptera,
 }

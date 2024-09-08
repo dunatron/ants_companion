@@ -50,5 +50,6 @@ extension ScientificGenusExtension on ScientificGenus {
         ScientificGenus.cataglyphis => 'cataglyphis',
         ScientificGenus.crematogaster => 'crematogaster',
         ScientificGenus.meranoplus => 'meranoplus',
+        ScientificGenus.tricondyla => 'tricondyla',
       };
 }

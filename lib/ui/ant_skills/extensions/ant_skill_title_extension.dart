@@ -312,6 +312,12 @@ extension AntSkillTitleExtension on AntSkill {
           l10n.strumigenysEggersiDeceptiveFormSkillTitle,
         StrumigenysEggersiKeenIntuitionSkill() =>
           l10n.strumigenysEggersiKeenIntuitionSkillTitle,
+        TricondylaApteraLongLegsSkill() =>
+          l10n.tricondylaApteraLongLegsSkillTitle,
+        TricondylaApteraBattlefieldAidSkill() =>
+          l10n.tricondylaApteraBattlefieldAidSkillTitle,
+        TricondylaApteraPhantomFormSkill() =>
+          l10n.tricondylaApteraPhantomFormSkillTitle,
         WeaverAntAcidAssaultSkill() => l10n.weaverAntAcidAssaultSkillTitle,
         WeaverAntFieryThrashSkill() => l10n.weaverAntFieryThrashSkillTitle,
         WeaverAntTacticalCounterAttackSkill() =>

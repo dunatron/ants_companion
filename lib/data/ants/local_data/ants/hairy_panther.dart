@@ -33,7 +33,7 @@ const hairyPanther = Ant(
 
 const hairyPantherPveTags = [
   AntPveTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.guardian,
     rowPosition: RowPosition.back,
   ),

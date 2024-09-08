@@ -34,7 +34,7 @@ const strumigenysEggersi = Ant(
 const strumigenysEggersiPveTags = [
   AntPveTierTag(
     rating: TierRating.d,
-    antType: AntType.shooter,
+    antType: AntType.carrier,
     rowPosition: RowPosition.front,
   ),
 ];

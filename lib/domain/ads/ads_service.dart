@@ -35,10 +35,10 @@ const heathAndroidDeviceId = 'TP1A.220624.014';
 const ninaAndroidDeviceId = 'SP1A.210812.016';
 
 const disableAdsWhiteList = [
-  heathIOSDeviceId,
-  heathIPadDeviceId,
-  heathAndroidDeviceId,
-  ninaAndroidDeviceId,
+  // heathIOSDeviceId,
+  // heathIPadDeviceId,
+  // heathAndroidDeviceId,
+  // ninaAndroidDeviceId,
 ];
 
 class AdsService {

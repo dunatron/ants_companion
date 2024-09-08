@@ -33,7 +33,7 @@ const saharanSilverAnt = Ant(
 
 const saharanSilverAntPveTags = [
   AntPveTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     rowPosition: RowPosition.back,
     antType: AntType.shooter,
   )

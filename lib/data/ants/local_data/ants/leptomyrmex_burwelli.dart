@@ -37,7 +37,7 @@ const leptomyrmexBurwelli = Ant(
 
 const leptomyrmexBurwelliPveTags = [
   AntPveTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.middle,
   ),

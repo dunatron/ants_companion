@@ -79,6 +79,7 @@ part 'ants/carpenter_ant.dart';
 part 'ants/cyphomyrmex_rimosus.dart';
 part 'ants/saharan_silver_ant.dart';
 part 'ants/crematogaster_inflata.dart';
+part 'ants/tricondyla_aptera.dart';
 
 const notTheWorstB = 'This does work but there are better options';
 const betterOptionsAvailableC = 'There are better options available';
@@ -162,6 +163,7 @@ const List<Ant> localAntsList = [
   shikareeMaster,
   slimArched,
   strumigenysEggersi,
+  tricondylaAptera,
   weaverAnt,
   whiteVelvet,
   wiseBerserker,

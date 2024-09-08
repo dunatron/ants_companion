@@ -33,17 +33,17 @@ const goldArmor = Ant(
 
 const goldArmorPveTags = [
   AntPveTierTag(
-    rating: TierRating.a,
+    rating: TierRating.s,
     rowPosition: RowPosition.front,
     antType: AntType.guardian,
   ),
   AntPveTierTag(
-    rating: TierRating.a,
+    rating: TierRating.s,
     rowPosition: RowPosition.front,
     antType: AntType.shooter,
   ),
   AntPveTierTag(
-    rating: TierRating.a,
+    rating: TierRating.s,
     rowPosition: RowPosition.front,
     antType: AntType.carrier,
   )

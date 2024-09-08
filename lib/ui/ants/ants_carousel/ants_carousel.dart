@@ -146,25 +146,27 @@ class _AntsCarouselState extends State<AntsCarousel>
             ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(
-              Spacing.l, Spacing.l, Spacing.l, Spacing.vl),
-          child: DraggableScrollConfiguration(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ...sortedLetters.map(
-                    (letter) => Padding(
-                      padding: const EdgeInsets.only(right: 8),
-                      child: ElevatedButton(
-                          onPressed: () => goToIndex(widget.ants
-                              .indexOfFirstLetterFoundOnName(letter)),
-                          child: Text(letter)),
+        DraggableScrollConfiguration(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                const SizedBox(width: Spacing.n),
+                ...sortedLetters.map(
+                  (letter) => Padding(
+                    padding: const EdgeInsets.only(
+                      right: Spacing.s,
+                      left: Spacing.s,
                     ),
-                  )
-                ],
-              ),
+                    child: ElevatedButton(
+                      onPressed: () => goToIndex(
+                          widget.ants.indexOfFirstLetterFoundOnName(letter)),
+                      child: Text(letter),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: Spacing.n),
+              ],
             ),
           ),
         ),

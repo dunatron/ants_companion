@@ -50,11 +50,6 @@ const brownRoguePvpTags = [
     rowPosition: RowPosition.back,
   ),
   AntPvpTierTag(
-    rating: TierRating.b,
-    antType: AntType.universal,
-    rowPosition: RowPosition.back,
-  ),
-  AntPvpTierTag(
     rating: TierRating.a,
     antType: AntType.gss,
     rowPosition: RowPosition.middle,

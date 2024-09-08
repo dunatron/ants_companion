@@ -31,7 +31,13 @@ const merannoplusCastaneus = Ant(
   ],
 );
 
-const merannoplusCastaneusPveTags = [];
+const merannoplusCastaneusPveTags = [
+  AntPveTierTag(
+    rating: TierRating.d,
+    antType: AntType.guardian,
+    rowPosition: RowPosition.middle,
+  ),
+];
 
 const merannoplusCastaneusPvpTags = [
   AntPvpTierTag(

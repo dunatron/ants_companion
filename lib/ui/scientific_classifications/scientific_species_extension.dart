@@ -70,6 +70,7 @@ extension ScientificSpeciesExtension on ScientificSpecies {
         ScientificSpecies.tetramoriumPulcherrimum =>
           l10n.tetramoriumPulcherrimum,
         ScientificSpecies.thaumatomyrmexAtrox => l10n.thaumatomyrmexAtrox,
+        ScientificSpecies.tricondylaAptera => l10n.tricondylaApteraCommon,
       };
 
   String commonName(AppLocalizations l10n) => switch (this) {
@@ -156,6 +157,7 @@ extension ScientificSpeciesExtension on ScientificSpecies {
         ScientificSpecies.tetramoriumPulcherrimum =>
           l10n.tetramoriumPulcherrimumCommon,
         ScientificSpecies.thaumatomyrmexAtrox => l10n.thaumatomyrmexAtroxCommon,
+        ScientificSpecies.tricondylaAptera => l10n.tricondylaApteraCommon,
       };
 
   String description(AppLocalizations l10n) => switch (this) {
@@ -263,5 +265,6 @@ extension ScientificSpeciesExtension on ScientificSpecies {
           l10n.tetramoriumPulcherrimumDescription,
         ScientificSpecies.thaumatomyrmexAtrox =>
           l10n.thaumatomyrmexAtroxDescription,
+        ScientificSpecies.tricondylaAptera => l10n.tricondylaApteraDescription,
       };
 }

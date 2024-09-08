@@ -78,5 +78,6 @@ extension on AntId {
         AntId.weaverAnt => AntSkillSetRefs.weaverAntSkillSet,
         AntId.whiteVelvet => AntSkillSetRefs.whiteVelvetSkillSet,
         AntId.wiseBerserker => AntSkillSetRefs.wiseBerserkerSkillSet,
+        AntId.tricondylaAptera => AntSkillSetRefs.tricondylaApteraSkillSet,
       };
 }

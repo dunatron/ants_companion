@@ -1,4 +1,5 @@
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_sliver_view.dart';
+import 'package:feedback/feedback.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -73,14 +74,16 @@ class HomeScreen extends StatelessWidget {
           _buildBanner(context),
           _buildSpace(),
           _buildWelcome(),
-          _buildSpace(),
+          // _buildSpace(),
           // _buildSpecialAntsTitle(l10n, context),
           // _buildSpace(),
           _buildCarousel(context, antsList),
+          _buildSpace(spacing: Spacing.vl),
+
           // _buildSingleAdCard(context),
-          _buildAdsCarousel(),
+          // _buildAdsCarousel(),
           // _buildAppFeatureTitle(context, l10n),
-          // _buildSpace(),
+          _buildSpace(),
           _buildFeaturesMasonryGrid(),
           _buildSpace(),
           // _buildAdsCarousel(),
@@ -91,7 +94,7 @@ class HomeScreen extends StatelessWidget {
 
   SliverPadding _buildFeaturesMasonryGrid() {
     return const SliverPadding(
-      padding: EdgeInsets.symmetric(horizontal: Spacing.l),
+      padding: EdgeInsets.symmetric(horizontal: Spacing.n),
       sliver: FeatureMasonryGrid(
         items: [
           AntsTierFeatureInfo(),
@@ -106,7 +109,7 @@ class HomeScreen extends StatelessWidget {
 
   SliverPadding _buildBanner(BuildContext context) {
     return SliverPadding(
-      padding: const EdgeInsets.symmetric(horizontal: Spacing.l),
+      padding: const EdgeInsets.symmetric(horizontal: Spacing.n),
       sliver: SliverToBoxAdapter(
         child: Card(
           child: ClipRRect(
@@ -130,7 +133,7 @@ class HomeScreen extends StatelessWidget {
 
   SliverPadding _buildWelcome() {
     return const SliverPadding(
-      padding: EdgeInsets.symmetric(horizontal: Spacing.l),
+      padding: EdgeInsets.symmetric(horizontal: Spacing.n),
       sliver: SliverToBoxAdapter(child: WelcomeInfo()),
     );
   }
@@ -150,20 +153,17 @@ class HomeScreen extends StatelessWidget {
   Widget _buildAdsCarousel() {
     return AdWidgetBuilder(
       isSliver: true,
-      child: SliverPadding(
-        padding: const EdgeInsets.only(bottom: Spacing.vl),
-        sliver: SliverToBoxAdapter(
-          child: AdsCarousel(
-            id: 'home-ads-carousel',
-            adIds: AdsService.carouselOneIds,
-            ads: AdsService(),
-          ),
+      child: SliverToBoxAdapter(
+        child: AdsCarousel(
+          id: 'home-ads-carousel',
+          adIds: AdsService.carouselOneIds,
+          ads: AdsService(),
         ),
       ),
     );
   }
 
-  Widget _buildSpace({double spacing = Spacing.vl}) => SliverToBoxAdapter(
+  Widget _buildSpace({double spacing = Spacing.n}) => SliverToBoxAdapter(
         child: SizedBox(height: spacing),
       );
 }

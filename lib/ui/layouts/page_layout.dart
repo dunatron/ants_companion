@@ -46,7 +46,7 @@ class PageLayout extends StatelessWidget {
         : column;
     return Scaffold(
       appBar: AntsAppBar(title: title),
-      drawer: const SafeArea(child: AppDrawer()),
+      drawer: SafeArea(child: AppDrawer()),
       body: Center(
         child: SingleChildScrollView(
           padding: padding,

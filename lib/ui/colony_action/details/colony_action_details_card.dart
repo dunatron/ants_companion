@@ -1,4 +1,5 @@
 import 'package:ants_companion/common/spacing.dart';
+import 'package:ants_companion/ui/colony_action/edit_colony_action_time/edit_colony_action_time.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -86,6 +87,8 @@ class ColonyActionDetailsCard extends StatelessWidget {
                   timeLabelUTC,
                   style: theme.textTheme.bodyMedium,
                 ),
+                EditColonyActionTime(),
+                MinutePickerExample(),
                 Wrap(
                   children: [
                     Text(

@@ -1533,6 +1533,31 @@ class StrumigenysEggersiKeenIntuitionSkill extends AntSkill {
   });
 }
 
+// TricondylaAptera
+class TricondylaApteraLongLegsSkill extends AntSkill {
+  const TricondylaApteraLongLegsSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.itsSquad,
+    super.effectiveRange = 5,
+  });
+}
+
+class TricondylaApteraBattlefieldAidSkill extends AntSkill {
+  const TricondylaApteraBattlefieldAidSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.twoRandomFriendlyWithinRange,
+    super.effectiveRange = 2,
+  });
+}
+
+class TricondylaApteraPhantomFormSkill extends AntSkill {
+  const TricondylaApteraPhantomFormSkill({
+    super.type = AntSkillType.combatSkill,
+    super.targetType = AntSkillTargetType.allSquadsInTroop,
+    super.effectiveRange = 2,
+  });
+}
+
 // WeaverAnt
 class WeaverAntAcidAssaultSkill extends AntSkill {
   const WeaverAntAcidAssaultSkill({

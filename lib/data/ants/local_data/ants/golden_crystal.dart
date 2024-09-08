@@ -37,7 +37,7 @@ const goldenCrystal = Ant(
 
 const goldenCrystalPveTags = [
   AntPveTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.carrier,
     rowPosition: RowPosition.back,
   ),
