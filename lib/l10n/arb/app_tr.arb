@@ -26,6 +26,8 @@
   "antTiersTitle": "Rütbe Sıralamaları",
   "colonyActionSchedulerTitle": "Koloni Aksiyon Zamanlayıcısı",
   "colonyActionSchedulerDescription": "Kaçırmak istemediğiniz önemli koloni eylemlerini planlayın. İzlemek için seçtiğiniz eylemlerle ilgili bildirimler alacaksınız.",
+  "editColonyActionTimeDescription": "Koloni eylemi bildiriminin tetikleneceği dakikayı güncelleyin",
+  "updateTime": "Zamanı Güncelle",
   "themePicker": "Tema Seçici",
   "deviceInfo": "Cihaz Bilgisi",
   "details": "Ayrıntılar",

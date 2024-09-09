@@ -93,6 +93,13 @@ class ColonyActionNotificationDetails extends StatelessWidget {
           colonyActionName: caName,
           dateUTC: colonyAction.date,
           notificationEnabled: colonyAction.notificationEnabled,
+          onTimeChanged: (duration) {
+            _colonyActions.changeColonyActionMinute(
+              colonyAction,
+              duration.inMinutes,
+              l10n,
+            );
+          },
           onNotificationIconTap: () {
             _colonyActions.updateColonyAction(
               colonyAction.copyWith(

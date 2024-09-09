@@ -26,6 +26,8 @@
   "antTiersTitle": "Tier-Ranglisten",
   "colonyActionSchedulerTitle": "Kolonie-Aktions-Zeitplaner",
   "colonyActionSchedulerDescription": "Plane wichtige Kolonieaktionen, die du nicht verpassen willst. Du erhältst Benachrichtigungen für die Aktionen, die du überwachen lässt.",
+  "editColonyActionTimeDescription": "Aktualisiere die Minute, in der die Benachrichtigung für Kolonieaktionen ausgelöst werden soll",
+  "updateTime": "Zeit aktualisieren",
   "themePicker": "Theme Picker",
   "deviceInfo": "Geräteinfo",
   "details": "Details",

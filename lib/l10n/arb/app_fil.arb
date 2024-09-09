@@ -26,6 +26,8 @@
   "antTiersTitle": "Mga Ranggo ng Ant Tier",
   "colonyActionSchedulerTitle": "Colony Action Scheduler",
   "colonyActionSchedulerDescription": "Planuhin ang mga importanteng gawain sa colony na ayaw mong makaligtaan. Makakatanggap ka ng mga notification para sa mga gawain na pipiliin mong subaybayan.",
+  "editColonyActionTimeDescription": "I-update ang minuto kung kailan ia-trigger ang abiso ng aksyon ng kolonya",
+  "updateTime": "I-update ang Oras",
   "themePicker": "Pumili ng Tema",
   "deviceInfo": "Impormasyon ng Device",
   "details": "Mga detalye",

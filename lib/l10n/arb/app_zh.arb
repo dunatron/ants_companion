@@ -26,6 +26,8 @@
   "antTiersTitle": "蚂蚁等级",
   "colonyActionSchedulerTitle": "蚁群行动日程",
   "colonyActionSchedulerDescription": "计划您不想错过的重要殖民地行动。您将收到有关您选择监视的活动的通知。",
+  "editColonyActionTimeDescription": "设置触发殖民地行动通知的分钟",
+  "updateTime": "更新时间",
   "themePicker": "主题选择器",
   "deviceInfo": "设备信息",
   "details": "详情",

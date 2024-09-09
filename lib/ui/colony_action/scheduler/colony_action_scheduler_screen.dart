@@ -99,7 +99,9 @@ class _ColonyActionSchedulerScreenState
     final l10n = AppLocalizations.of(context);
     // final locale = Localizations.localeOf(context);
     final numberFormat = NumberFormat('#,###', 'ar');
-    final localDateFormatter = DateFormat('h:mm a');
+    final localDateFormatter = DateFormat(
+      'h:mm a',
+    );
 
     var checkedCount = 0;
 
@@ -112,48 +114,6 @@ class _ColonyActionSchedulerScreenState
     return SliverPageLayout(
       title: l10n.colonyActionSchedulerTitle,
       slivers: [
-        // ConstrainedSliverWidth(
-        //   maxWidth: 280,
-        //   child: SliverToBoxAdapter(
-        //     child: ElevatedButton(
-        //       onPressed: () async {
-        //         await LocalNotifications.requestPermissions();
-        //         LocalNotifications.showSimpleNotification(
-        //           title: l10n.notificationTestTitle,
-        //           body: l10n.notificationTestBody,
-        //           // payload: '/ca-scheduler/details/1-12',
-        //           payload: ColonyActionNotificationPayload(
-        //             caKey: '1-12',
-        //             scheduledAt: DateTime.now(),
-        //             scheduledFor: DateTime.now(),
-        //           ).toJsonString(),
-        //         );
-        //       },
-        //       child: Text(l10n.notificationTestButtonLabel),
-        //     ),
-        //   ),
-        // ),
-        // ConstrainedSliverWidth(
-        //   maxWidth: 280,
-        //   child: SliverToBoxAdapter(
-        //     child: ElevatedButton(
-        //       onPressed: () async {
-        //         await LocalNotifications.requestPermissions();
-        //         LocalNotifications.scheduleNotification(
-        //           title: 'scheduleNotification',
-        //           body: 'scheduleNotification',
-        //           // payload: '/ca-scheduler/details/1-12',
-        //           payload: ColonyActionNotificationPayload(
-        //             caKey: '1-12',
-        //             scheduledAt: DateTime.now(),
-        //             scheduledFor: DateTime.now(),
-        //           ).toJsonString(),
-        //         );
-        //       },
-        //       child: Text('Schedule test'),
-        //     ),
-        //   ),
-        // ),
         ConstrainedSliverWidth(
           maxWidth: 400,
           child: SliverToBoxAdapter(
@@ -178,14 +138,6 @@ class _ColonyActionSchedulerScreenState
                   label: Text('${l10n.monitoring} $checkedCount'),
                   icon: const Icon(Icons.notifications_active),
                 )
-                // Text('Monitoring $checkedCount'),
-                // TextButton.icon(
-                //   onPressed: () {
-                //     context.go('/ca-scheduler/monitoring');
-                //   },
-                //   label: Text('Edit'),
-                //   icon: Icon(Icons.edit),
-                // )
               ],
             ),
           ),
@@ -236,10 +188,8 @@ class _ColonyActionSchedulerScreenState
                                 ?.copyWith(fontWeight: FontWeight.bold),
                             children: <TextSpan>[
                               TextSpan(
-                                // text:
-                                //     '${item.date.toUtc().hour} UTC - ${localDateFormatter.format(item.date)}',
                                 text:
-                                    '${item.date.toUtc().hour} UTC - ${localDateFormatter.format(item.date.toLocal())}',
+                                    '${l10n.utcHour(item.date.toUtc().hour)} ${localDateFormatter.format(item.date.toLocal())}',
                                 style: const TextStyle(
                                     fontWeight: FontWeight.w400),
                               ),

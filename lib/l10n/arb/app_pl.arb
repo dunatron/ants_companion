@@ -26,6 +26,8 @@
   "antTiersTitle": "Ranking tier",
   "colonyActionSchedulerTitle": "Harmonogram działań kolonii",
   "colonyActionSchedulerDescription": "Zaplanuj ważne działania kolonii, których nie chcesz przegapić. Będziesz otrzymywać powiadomienia o działaniach, które wybierzesz do monitorowania.",
+  "editColonyActionTimeDescription": "Zaktualizuj minutę, w której zostanie wyzwolone powiadomienie o działaniu kolonii",
+  "updateTime": "Zaktualizuj czas",
   "themePicker": "Wybór motywu",
   "deviceInfo": "Informacje o urządzeniu",
   "details": "Szczegóły",

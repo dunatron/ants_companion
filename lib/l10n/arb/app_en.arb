@@ -26,6 +26,8 @@
   "antTiersTitle": "Tier Rankings",
   "colonyActionSchedulerTitle": "Colony Action Scheduler",
   "colonyActionSchedulerDescription": "Plan important colony actions you don't want to miss. You'll receive notifications for the actions you choose to monitor.",
+  "editColonyActionTimeDescription": "Update the minute at which the colony action notification will be triggered",
+  "updateTime": "Update Time",
   "themePicker": "Theme Picker",
   "deviceInfo": "Device Info",
   "details": "Details",

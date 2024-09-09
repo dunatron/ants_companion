@@ -78,6 +78,13 @@ class MonitoringColonyActionsScreen extends StatelessWidget {
                                   l10n,
                                 );
                               },
+                              onTimeChanged: (duration) {
+                                colonyActions.changeColonyActionMinute(
+                                  it,
+                                  duration.inMinutes,
+                                  l10n,
+                                );
+                              },
                               onNotificationIconTap: () {
                                 colonyActions.updateColonyAction(
                                   it.copyWith(

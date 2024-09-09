@@ -40,6 +40,7 @@ class ColonyActionsLocalDatasource {
         key: item.key,
         notificationEnabled: item.notificationEnabled,
         favourite: item.favourite,
+        date: item.date,
       ),
     );
     logger.i('Cached $item');

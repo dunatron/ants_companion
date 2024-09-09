@@ -26,6 +26,8 @@
   "antTiersTitle": "Tier-rangschikkingen",
   "colonyActionSchedulerTitle": "Colony actieplanning",
   "colonyActionSchedulerDescription": "Plan belangrijke kolonieacties die je niet wilt missen. Je ontvangt meldingen voor de acties die je wilt volgen.",
+  "editColonyActionTimeDescription": "Wijzig de minuut waarop de waarschuwing van de kolonieactie wordt geactiveerd",
+  "updateTime": "Tijd wijzigen",
   "themePicker": "Thema Kiezer",
   "deviceInfo": "Apparaat Informatie",
   "details": "Details",

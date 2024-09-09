@@ -26,6 +26,8 @@
   "antTiersTitle": "Tầng Kiến",
   "colonyActionSchedulerTitle": "Bộ lập lịch hành động của đàn",
   "colonyActionSchedulerDescription": "Lên kế hoạch cho các hành động quan trọng mà bạn không muốn bỏ lỡ trong đàn kiến. Bạn sẽ nhận được thông báo hành động mà bạn chọn để theo dõi.",
+  "editColonyActionTimeDescription": "Cập nhật thời điểm thông báo hoạt động của đàn được kích hoạt",
+  "updateTime": "Cập nhật thời gian",
   "themePicker": "Bộ chọn chủ đề",
   "deviceInfo": "Thông tin thiết bị",
   "details": "Chi tiết",

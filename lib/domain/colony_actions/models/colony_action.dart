@@ -32,11 +32,12 @@ class ColonyAction extends Equatable {
   ColonyAction copyWith({
     bool? notificationEnabled,
     bool? favourite,
+    DateTime? date,
   }) {
     return ColonyAction(
       key: key,
       order: order,
-      date: date,
+      date: date ?? this.date,
       day: day,
       hour: hour,
       notificationEnabled: notificationEnabled ?? this.notificationEnabled,

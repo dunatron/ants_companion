@@ -1,3 +1,4 @@
+import 'package:ants_companion/ui/colony_action/edit_colony_action_time/edit_colony_action_time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
@@ -12,12 +13,14 @@ class MonitoringColonyActionCard extends StatelessWidget {
     required this.ca,
     required this.onNotificationIconTap,
     required this.onFavouriteIconTap,
+    required this.onTimeChanged,
   });
 
   final ColonyAction ca;
 
   final Function() onNotificationIconTap;
   final Function() onFavouriteIconTap;
+  final Function(Duration duration) onTimeChanged;
 
   goToColonyActionDetailsScreen(
     final BuildContext context,
@@ -81,12 +84,25 @@ class MonitoringColonyActionCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextButton(
-                  onPressed: () =>
-                      goToColonyActionDetailsScreen(context, ca.key),
-                  child: Text(l10n.details),
+                Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () =>
+                          goToColonyActionDetailsScreen(context, ca.key),
+                      child: Text(l10n.details),
+                    ),
+                    EditColonyActionTime(
+                      initialDuration: Duration(
+                        minutes: ca.date.minute,
+                        seconds: ca.date.second,
+                      ),
+                      onTimeChanged: onTimeChanged,
+                    ),
+                  ],
                 ),
                 Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
                     Text(l10n.shortTime(ca.date.toLocal())),
                     const SizedBox(width: Spacing.m),

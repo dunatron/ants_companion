@@ -26,6 +26,8 @@
   "antTiersTitle": "تصنيف الفئات",
   "colonyActionSchedulerTitle": "جدول أعمال عمل المستعمرة",
   "colonyActionSchedulerDescription": "خطط لإجراءات المستعمرة الهامة التي لا تريد تفويتها. ستتلقى إشعارات بالإجراءات التي تختار مراقبتها.",
+  "editColonyActionTimeDescription": "تحديث الدقيقة التي يتّم عندها تشغيل إشعار إجراء المُستعمرة",
+  "updateTime": "تحديث الوقت",
   "themePicker": "منتقى السمة",
   "deviceInfo": "معلومات الجهاز",
   "details": "تفاصيل",

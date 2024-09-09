@@ -26,6 +26,8 @@
   "antTiersTitle": "Рівні рідкісності",
   "colonyActionSchedulerTitle": "Планувальник дій колонії",
   "colonyActionSchedulerDescription": "Плануйте важливі дії колонії, які ви не хочете пропустити. Ви отримуватимете сповіщення для тих дій, за якими ви вирішите спостерігати.",
+  "editColonyActionTimeDescription": "Оновити хвилину спрацювання сповіщення про дію колонії",
+  "updateTime": "Оновити час",
   "themePicker": "Тема",
   "deviceInfo": "Інформація про пристрій",
   "details": "Детальніше",

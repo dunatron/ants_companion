@@ -34,6 +34,38 @@ class ColonyActions {
       _provider.updateColonyAction(item);
     }
   }
+
+  Future<void> changeColonyActionMinute(
+    ColonyAction item,
+    final int minute,
+    AppLocalizations l10n,
+  ) async {
+    print('changeColonyActionMinute');
+    final newTime = item.date.copyWith(minute: minute);
+    print('New Time: $newTime');
+
+    final newItem = item.copyWith(date: newTime);
+    _provider.updateColonyAction(newItem);
+    await _rescheduleColonyAction(newItem, l10n);
+  }
+
+  Future<void> _rescheduleColonyAction(
+    final ColonyAction colonyAction,
+    AppLocalizations l10n,
+  ) async {
+    if (colonyAction.notificationEnabled) {
+      await LocalNotifications.cancelNotificationChannel(
+        colonyAction.order,
+      );
+      await LocalNotifications.scheduleColonyActionNotification(
+        id: colonyAction.order,
+        title: l10n.colonyAction,
+        body: colonyAction.key.colonyActionTypeFromKey().displayName(l10n),
+        caKey: colonyAction.key,
+        date: colonyAction.date,
+      );
+    }
+  }
 }
 
 abstract class ColonyActionsProvider {

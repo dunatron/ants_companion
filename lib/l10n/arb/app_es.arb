@@ -26,6 +26,8 @@
   "antTiersTitle": "Clasificaciones de niveles",
   "colonyActionSchedulerTitle": "Programador de acciones de la colonia",
   "colonyActionSchedulerDescription": "Planifica acciones importantes de la colonia que no quieras perderte. Recibirás notificaciones de las acciones que elijas supervisar",
+  "editColonyActionTimeDescription": "Actualiza el minuto en el que se activará la notificación de la acción de la colonia",
+  "updateTime": "Actualizar la hora",
   "themePicker": "Selector de tema",
   "deviceInfo": "Información del dispositivo",
   "details": "Detalles",

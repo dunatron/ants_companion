@@ -39,6 +39,7 @@ class ColonyActionsDatasource {
           (it) => it.copyWith(
             notificationEnabled: mapped[it.key]?.notificationEnabled,
             favourite: mapped[it.key]?.favourite,
+            date: mapped[it.key]?.date,
           ),
         )
         .toList();

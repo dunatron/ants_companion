@@ -26,6 +26,8 @@
   "antTiersTitle": "Classifica dei tier",
   "colonyActionSchedulerTitle": "Pianificatore delle azioni delle colonie",
   "colonyActionSchedulerDescription": "Pianifica importanti azioni della colonia che non vuoi perdere. Riceverai notifiche per le azioni che scegli di monitorare.",
+  "editColonyActionTimeDescription": "Aggiorna il minuto in cui verrà innescata la notifica dell'azione della colonia",
+  "updateTime": "Aggiorna ora",
   "themePicker": "Tema",
   "deviceInfo": "Informazioni sul dispositivo",
   "details": "Dettagli",

@@ -26,6 +26,8 @@
   "antTiersTitle": "ティアランキング",
   "colonyActionSchedulerTitle": "コロニーアクションスケジューラー",
   "colonyActionSchedulerDescription": "見逃したくない重要なコロニーアクションを計画します。監視対象として選択したアクションに関する通知を受け取ります。",
+  "editColonyActionTimeDescription": "コロニーのアクション通知がトリガーされる分を更新する",
+  "updateTime": "時間を更新する",
   "themePicker": "テーマピッカー",
   "deviceInfo": "デバイス情報",
   "details": "詳細",

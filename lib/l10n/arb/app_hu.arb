@@ -26,6 +26,8 @@
   "antTiersTitle": "Rangsorolási szintek",
   "colonyActionSchedulerTitle": "Kolónia Akcióütemező",
   "colonyActionSchedulerDescription": "Tervezd meg azokat a fontos kolóniaakciókat, amiket nem szeretnél elszalasztani. Értesítést fogsz kapni azokról az akciókról, amelyeket figyelemmel kísérsz.",
+  "editColonyActionTimeDescription": "Állítsa be a percek számát, amikorra a telephelyekre vonatkozó értesítést el kell küldeni.",
+  "updateTime": "idő frissítése",
   "themePicker": "Témaválasztó",
   "deviceInfo": "Eszközinformációk",
   "details": "Részletek",
