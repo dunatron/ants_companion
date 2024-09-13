@@ -32,8 +32,18 @@ const giantTooth = Ant(
 
 const giantToothPveTags = [
   AntPveTierTag(
-    rating: TierRating.b,
-    antType: AntType.universal,
+    rating: TierRating.c,
+    antType: AntType.guardian,
+    rowPosition: RowPosition.front,
+  ),
+  AntPveTierTag(
+    rating: TierRating.c,
+    antType: AntType.shooter,
+    rowPosition: RowPosition.front,
+  ),
+  AntPveTierTag(
+    rating: TierRating.c,
+    antType: AntType.carrier,
     rowPosition: RowPosition.front,
   ),
 ];

@@ -1,3 +1,4 @@
+import 'package:ants_companion/common/spacing.dart';
 import 'package:flutter/material.dart';
 
 class BrightnessPicker extends StatelessWidget {
@@ -19,7 +20,7 @@ class BrightnessPicker extends StatelessWidget {
         children: [
           ...Brightness.values.map(
             (it) => Padding(
-              padding: EdgeInsets.all(4),
+              padding: const EdgeInsets.all(Spacing.s),
               child: ElevatedButton.icon(
                 label: Text(it.name),
                 icon: it == Brightness.dark

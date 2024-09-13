@@ -20,10 +20,11 @@ class FeatureMasonryGrid extends StatelessWidget {
       childCount: items.length,
       mainAxisSpacing: 8,
       crossAxisSpacing: 8,
-      itemBuilder: (context, index) {
-        final item = items[index];
-        return item;
-      },
+      // itemBuilder: (context, index) {
+      //   final item = items[index];
+      //   return item;
+      // },
+      itemBuilder: (context, index) => items[index],
     );
   }
 }

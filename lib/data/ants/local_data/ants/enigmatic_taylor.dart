@@ -34,7 +34,7 @@ const enigmaticTaylor = Ant(
 const enigmaticTaylorPveTags = [
   AntPveTierTag(
     rating: TierRating.d,
-    antType: AntType.shooter,
+    antType: AntType.carrier,
     rowPosition: RowPosition.front,
   ),
 ];

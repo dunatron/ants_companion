@@ -35,15 +35,13 @@ class AntsTierFeatureInfo extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ...TierRating.values.reversed.map(
-                (tierRating) => Container(
-                  child: Text(
-                    tierRating.displayText,
-                    style: Theme.of(context).textTheme.headlineSmall,
-                    // style: Theme.of(context)
-                    //     .textTheme
-                    //     .headlineSmall
-                    //     ?.copyWith(color: tierRating.color),
-                  ),
+                (tierRating) => Text(
+                  tierRating.displayText,
+                  style: Theme.of(context).textTheme.headlineSmall,
+                  // style: Theme.of(context)
+                  //     .textTheme
+                  //     .headlineSmall
+                  //     ?.copyWith(color: tierRating.color),
                 ),
               )
             ],

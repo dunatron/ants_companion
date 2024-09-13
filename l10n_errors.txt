@@ -1,1 +1,81 @@
-{}
+{
+  "ar": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "bg": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "de": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "es": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "fil": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "hu": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "it": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "ja": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "mk": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "nl": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "pl": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "ru": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "tr": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "uk": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "vi": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ],
+
+  "zh": [
+    "editColonyActionTimeDescription",
+    "updateTime"
+  ]
+}

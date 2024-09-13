@@ -35,7 +35,13 @@ const blackKnight = Ant(
   ],
 );
 
-const blackKnightPveTags = [];
+const blackKnightPveTags = [
+  AntPveTierTag(
+    rating: TierRating.d,
+    antType: AntType.guardian,
+    rowPosition: RowPosition.front,
+  ),
+];
 const blackKnightPvpTags = [
   AntPvpTierTag(
     rating: TierRating.sPlus,

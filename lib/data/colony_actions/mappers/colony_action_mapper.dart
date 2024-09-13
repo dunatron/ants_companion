@@ -8,6 +8,7 @@ extension ColonyActionToStoreModel on ColonyAction {
       key: key,
       notificationEnabled: notificationEnabled,
       favourite: favourite,
+      date: date,
     );
   }
 }

@@ -1,19 +1,16 @@
 import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:get_it/get_it.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:ants_companion/domain/themes/models/color_seed.dart';
 import 'package:ants_companion/domain/themes/themes.dart';
-import 'package:ants_companion/ui/home/scientific_classifications_feature_info.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
-import 'package:ants_companion/ui/layouts/sliver_page_layout.dart';
 import 'package:ants_companion/ui/theme/brightness_picker.dart';
 import 'package:ants_companion/ui/theme/color_picker.dart';
 import 'package:ants_companion/ui/theme/scheme_variant_picker.dart';
 import 'package:ants_companion/ui/theme/theme_examples.dart';
-import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
-
-import 'package:get_it/get_it.dart';
-import 'package:go_router/go_router.dart';
 
 class ThemePickerScreen extends StatefulWidget {
   const ThemePickerScreen({super.key});
@@ -31,7 +28,6 @@ class _ThemePickerScreenState extends State<ThemePickerScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initSeed();
     sub = themes.currentColorScheme().listen((e) {
@@ -72,6 +68,7 @@ class _ThemePickerScreenState extends State<ThemePickerScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Theme(
       data: ThemeData(
         colorScheme: ColorScheme.fromSeed(
@@ -87,10 +84,9 @@ class _ThemePickerScreenState extends State<ThemePickerScreen> {
             ? FloatingActionButton.extended(
                 onPressed: () {
                   GetIt.I<Themes>().applyColorScheme(modelState);
-
                   context.go('/');
                 },
-                label: Text('Apply Theme'),
+                label: Text(l10n.applyThemeBtnLabel),
               )
             : null,
         widgets: [

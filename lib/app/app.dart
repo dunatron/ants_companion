@@ -3,6 +3,7 @@ import 'package:ants_companion/core/snackbar_service.dart';
 
 import 'package:ants_companion/domain/themes/themes.dart';
 import 'package:ants_companion/ui/draggable_scroll_configuration.dart';
+import 'package:feedback/feedback.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:flutter/material.dart';
@@ -34,30 +35,44 @@ class App extends StatelessWidget {
         if (colorSeed == null) {
           return const SizedBox();
         }
-        return MaterialApp.router(
-          scrollBehavior: DraggableScrollBehavior(),
-          key: const ValueKey('antsApp'),
-          debugShowCheckedModeBanner: false,
-          scaffoldMessengerKey: SnackbarService().scaffoldMessengerKey,
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: colorSeed.color,
-              brightness: colorSeed.brightness,
-              dynamicSchemeVariant: colorSeed.dynamicSchemeVariant,
-            ),
+        final themeData = ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: colorSeed.color,
+            brightness: colorSeed.brightness,
+            dynamicSchemeVariant: colorSeed.dynamicSchemeVariant,
           ),
-          routerConfig: routerConfig,
-          locale: currentLocale,
+        );
+        return BetterFeedback(
+          mode: FeedbackMode.navigate,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          builder: (context, child) {
-            return UpgradeAlert(
-              upgrader: upgrader,
-              shouldPopScope: () => true,
-              navigatorKey: routerConfig.routerDelegate.navigatorKey,
-              child: child ?? const SizedBox(),
-            );
-          },
+          localeOverride: currentLocale,
+          theme: FeedbackThemeData(
+            activeFeedbackModeColor: themeData.colorScheme.primary,
+            background: themeData.colorScheme.surfaceContainerLowest,
+            feedbackSheetColor: themeData.colorScheme.surfaceContainer,
+            dragHandleColor: themeData.colorScheme.primary,
+            bottomSheetDescriptionStyle: themeData.textTheme.labelSmall!,
+            bottomSheetTextInputStyle: themeData.textTheme.bodyMedium!,
+          ),
+          child: MaterialApp.router(
+            scrollBehavior: DraggableScrollBehavior(),
+            key: const ValueKey('antsApp'),
+            debugShowCheckedModeBanner: false,
+            scaffoldMessengerKey: SnackbarService().scaffoldMessengerKey,
+            theme: themeData,
+            routerConfig: routerConfig,
+            locale: currentLocale,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
+            builder: (context, child) {
+              return UpgradeAlert(
+                upgrader: upgrader,
+                shouldPopScope: () => true,
+                navigatorKey: routerConfig.routerDelegate.navigatorKey,
+                child: child ?? const SizedBox(),
+              );
+            },
+          ),
         );
       },
     );

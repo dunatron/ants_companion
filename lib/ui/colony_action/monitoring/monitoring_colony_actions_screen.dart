@@ -16,7 +16,7 @@ class MonitoringColonyActionsScreen extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     final theme = Theme.of(context);
     return SliverPageLayout(
-      title: 'Monitoring',
+      title: l10n.monitoring,
       slivers: [
         StreamBuilder(
           stream: colonyActions.weeklyList(),
@@ -75,6 +75,13 @@ class MonitoringColonyActionsScreen extends StatelessWidget {
                                   it.copyWith(
                                     favourite: !it.favourite,
                                   ),
+                                  l10n,
+                                );
+                              },
+                              onTimeChanged: (duration) {
+                                colonyActions.changeColonyActionMinute(
+                                  it,
+                                  duration.inMinutes,
                                   l10n,
                                 );
                               },

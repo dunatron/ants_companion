@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
@@ -5,9 +7,6 @@ import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_indicator.dart';
 import 'package:ants_companion/ui/tier_star_rating/tier_star_ratings.dart';
-import 'package:flutter/material.dart';
-
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PveTierSection extends StatelessWidget {
   const PveTierSection({
@@ -28,8 +27,6 @@ class PveTierSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context);
-
     final theme = Theme.of(context);
 
     List<Map<AntTierTag, Ant>> validAnts = [];

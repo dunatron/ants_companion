@@ -1,10 +1,12 @@
 {
+  "cSpell.ignorePaths": ["**/lib/l10n/**"],
   "cSpell.words": [
     "adlerzi",
     "alfaroi",
     "Alydid",
     "amblyoponini",
     "Ampulex",
+    "Aptera",
     "ampulicidae",
     "animalia",
     "Aphantochilus",
@@ -69,6 +71,7 @@
     "Gisti",
     "gloriosa",
     "Gnamptogenys",
+    "grayscale",
     "harpactorinae",
     "harpactorini",
     "Harpegnathos",
@@ -147,6 +150,7 @@
     "Thaumatomyrmex",
     "thomisidae",
     "trapezoidea",
+    "tricondyla",
     "upgrader",
     "venator",
     "villosa"

@@ -1,5 +1,5 @@
 import 'package:ants_companion/domain/ads/ad_units.dart';
-import 'package:ants_companion/domain/ads/ads_service.dart';
+
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/ui/ads/ad_card.dart';
 import 'package:ants_companion/ui/ads/ad_widget_builder.dart';
@@ -25,13 +25,11 @@ class ColonyActionDetailsScreen extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     final locale = Localizations.localeOf(context);
 
-    final caWarzoneDay = caKey.colonyActionTypeFromKey().displayName(l10n);
-    final caName = caKey.colonyActionTypeFromKey().displayName(l10n);
     final numberFormat = NumberFormat('#,###', locale.toLanguageTag());
     final tasks = CATask.colonyActionTaskList(caKey, l10n);
 
     return SliverPageLayout(
-      title: 'Details',
+      title: l10n.details,
       slivers: [
         SliverToBoxAdapter(
           child: ColonyActionNotificationDetails(caKey: caKey),
@@ -78,7 +76,6 @@ class ColonyActionNotificationDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
 
-    final localDateFormatter = DateFormat('h:mm a');
     final caName = caKey.colonyActionTypeFromKey().displayName(l10n);
 
     return StreamBuilder(
@@ -96,6 +93,13 @@ class ColonyActionNotificationDetails extends StatelessWidget {
           colonyActionName: caName,
           dateUTC: colonyAction.date,
           notificationEnabled: colonyAction.notificationEnabled,
+          onTimeChanged: (duration) {
+            _colonyActions.changeColonyActionMinute(
+              colonyAction,
+              duration.inMinutes,
+              l10n,
+            );
+          },
           onNotificationIconTap: () {
             _colonyActions.updateColonyAction(
               colonyAction.copyWith(

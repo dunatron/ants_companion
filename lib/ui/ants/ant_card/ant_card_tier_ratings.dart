@@ -1,11 +1,10 @@
-import 'dart:math';
+import 'package:ants_companion/common/spacing.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/ui/tier_star_rating/tier_star_ratings.dart';
-import 'package:flutter/material.dart';
-
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AntCardTierRatings extends StatelessWidget {
   const AntCardTierRatings({super.key, required this.ant});
@@ -17,8 +16,8 @@ class AntCardTierRatings extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
 
     return Container(
-      margin: EdgeInsets.all(8),
-      padding: EdgeInsets.all(6),
+      margin: const EdgeInsets.all(Spacing.n),
+      padding: const EdgeInsets.all(Spacing.n),
       decoration: BoxDecoration(
         color:
             Theme.of(context).colorScheme.surfaceContainerLow.withOpacity(0.7),
@@ -53,22 +52,19 @@ class TierRatingSection extends StatelessWidget {
   final TierRating tierRating;
 
   @override
-  Widget build(BuildContext context) {
-    // List<Widget> starWidgets = [];
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            TierStarRating(starCount: tierRating.starCount),
-          ],
-        ),
-        Text(
-          title,
-          style: Theme.of(context).textTheme.labelSmall,
-        ),
-      ],
-    );
-  }
+  Widget build(BuildContext context) => Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              TierStarRating(starCount: tierRating.starCount),
+            ],
+          ),
+          Text(
+            title,
+            style: Theme.of(context).textTheme.labelSmall,
+          ),
+        ],
+      );
 }

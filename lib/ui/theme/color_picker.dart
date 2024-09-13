@@ -1,5 +1,11 @@
+import 'package:ants_companion/common/spacing.dart';
 import 'package:flutter/material.dart';
 
+// DO not do premature optimize
+// leave it raw for as long as possible.
+// optimize for memory, not us
+// Do not forget us, make code Beautiful
+// It means abstract late, just make sure ya do :)
 class ColorPicker extends StatelessWidget {
   const ColorPicker({
     super.key,
@@ -11,8 +17,14 @@ class ColorPicker extends StatelessWidget {
 
   final Function(Color color) onTap;
 
+/*
+Laving some comments for a breadcrumb.
+Bahhh
+*/
   @override
   Widget build(BuildContext context) {
+    const circleBorderRadius = BorderRadius.all(Radius.circular(100));
+
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
@@ -26,18 +38,15 @@ class ColorPicker extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: InkWell(
-                radius: 40,
-                // splashColor: it.withOpacity(0.3), // Splash color
+                radius: 40, // optimize
                 splashColor: it,
-                borderRadius: BorderRadius.all(Radius.circular(100)),
-                onTap: () {
-                  onTap(it);
-                },
-
+                borderRadius: circleBorderRadius,
+                onTap: () => onTap(it),
                 child: Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(Spacing.n),
                   child: CustomPaint(
-                    size: Size(42, 42),
+                    size: const Size(42, 42), // optimize i.e why its
+                    // calculating a number known for so many entries
                     painter: CirclePainter(color: it),
                   ),
                 ),

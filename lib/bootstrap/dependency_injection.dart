@@ -4,6 +4,7 @@ import 'package:ants_companion/data/locales/locales_repository.dart';
 import 'package:ants_companion/data/themes/themes_repository.dart';
 import 'package:ants_companion/domain/ant_skills/ant_skills.dart';
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
+import 'package:ants_companion/domain/app_feedback/app_feedback.dart';
 import 'package:ants_companion/domain/locales/locales.dart';
 import 'package:ants_companion/domain/themes/themes.dart';
 import 'package:get_it/get_it.dart';
@@ -20,4 +21,6 @@ Future<void> setupDI() async {
   );
 
   GetIt.I.registerLazySingleton(() => AntSkills());
+
+  GetIt.I.registerLazySingleton(() => AppFeedback());
 }

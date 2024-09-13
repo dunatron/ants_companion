@@ -10,6 +10,7 @@ class ColonyAction extends Equatable {
     required this.key,
     required this.notificationEnabled,
     required this.favourite,
+    required this.date,
   });
 
   @HiveField(0)
@@ -21,6 +22,9 @@ class ColonyAction extends Equatable {
   @HiveField(2)
   final bool? favourite;
 
+  @HiveField(3)
+  final DateTime? date;
+
   @override
-  List<Object?> get props => [key, notificationEnabled, favourite];
+  List<Object?> get props => [key, notificationEnabled, favourite, date];
 }

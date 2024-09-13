@@ -32,7 +32,7 @@ class SliverPageLayout extends StatelessWidget {
         actions: actions,
         forceAsHome: forceAsHome,
       ),
-      drawer: const SafeArea(child: AppDrawer()),
+      drawer: SafeArea(child: AppDrawer()),
       body: CustomScrollView(
         controller: controller,
         slivers: [...slivers],

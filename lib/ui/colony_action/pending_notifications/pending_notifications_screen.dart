@@ -1,12 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+
+import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/core/log/loggers.dart';
 import 'package:ants_companion/domain/colony_actions/colony_actions.dart';
 import 'package:ants_companion/domain/notifications/local_notifications.dart';
 import 'package:ants_companion/domain/notifications/models/notification_payload.dart';
-import 'package:ants_companion/ui/layouts/page_layout.dart';
-import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
-import 'package:go_router/go_router.dart';
-import 'package:intl/intl.dart';
 
 class ColonyActionPendingNotificationsScreen extends StatelessWidget {
   ColonyActionPendingNotificationsScreen({super.key});
@@ -31,7 +30,7 @@ class ColonyActionPendingNotificationsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ColonyActions colonyActions = GetIt.I();
-    final localDateFormatter = DateFormat('EEEE h:mm a');
+
     return Scaffold(
       appBar: AppBar(),
       body: FutureBuilder(
@@ -61,7 +60,7 @@ class ColonyActionPendingNotificationsScreen extends StatelessWidget {
                   builder: (context, snapshot) {
                     final colonyAction = snapshot.data;
                     return Container(
-                      padding: EdgeInsets.all(16),
+                      padding: const EdgeInsets.all(Spacing.l),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -73,15 +72,7 @@ class ColonyActionPendingNotificationsScreen extends StatelessWidget {
                           Text('Key: ${colonyAction?.key}'),
                           Text('Date : ${colonyAction?.date}'),
                           Text('UTC: ${colonyAction?.date.toUtc()}'),
-                          Text(
-                              'Local: ${localDateFormatter.format(colonyAction?.date.toLocal() ?? DateTime.now())}'),
                           Text('Enabled: ${colonyAction?.notificationEnabled}'),
-                          ElevatedButton(
-                              onPressed: () {
-                                context.go(
-                                    '/ca-scheduler/details/${payload.caKey}');
-                              },
-                              child: Text('Edit'))
                         ],
                       ),
                     );

@@ -24,7 +24,7 @@ class ThemesRepository implements ThemesProvider {
     if (cachedColorSeed == null) {
       subject.add(
         const ColorSeed(
-          color: Colors.brown,
+          color: Colors.blue,
           dynamicSchemeVariant: DynamicSchemeVariant.tonalSpot,
           brightness: Brightness.dark,
         ),
@@ -39,11 +39,6 @@ class ThemesRepository implements ThemesProvider {
 
   @override
   Stream<ColorSeed> currentThemeData() => subject.stream.asBroadcastStream();
-
-  @override
-  void addCustomUserColorScheme(ColorSeed colorScheme) {
-    // TODO: implement addCustomUserColorScheme
-  }
 
   @override
   void applyColorScheme(ColorSeed colorSeed) {

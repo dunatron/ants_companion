@@ -6,5 +6,6 @@ enum ScientificFamily {
   mutillidae,
   salticidae,
   thomisidae,
-  reduviidae
+  reduviidae,
+  cicindelidae,
 }

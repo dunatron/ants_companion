@@ -39,6 +39,8 @@ class _AntTiersDisplayState extends State<AntTiersDisplay> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        // hack to make the scroll bar extend max width
+        const SizedBox(width: double.infinity),
         AntTiersGameModeSelector(
             pvpSelected: _isPvp, onChange: handlePvpChange),
         AntTiersTypeSelector(

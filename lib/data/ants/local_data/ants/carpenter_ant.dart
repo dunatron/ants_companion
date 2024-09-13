@@ -31,7 +31,13 @@ const carpenterAnt = Ant(
   ],
 );
 
-const carpenterAntPveTags = [];
+const carpenterAntPveTags = [
+  AntPveTierTag(
+    rating: TierRating.c,
+    antType: AntType.carrier,
+    rowPosition: RowPosition.front,
+  ),
+];
 
 const carpenterAntPvpTags = [
   AntPvpTierTag(

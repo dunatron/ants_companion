@@ -37,9 +37,9 @@ const attaSexdens = Ant(
 
 const attaSexdensPveTags = [
   AntPveTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     antType: AntType.guardian,
-    rowPosition: RowPosition.middle,
+    rowPosition: RowPosition.front,
   ),
 ];
 const attaSexdensPvpTags = [

@@ -33,7 +33,7 @@ const cyphomyrmexRimosus = Ant(
 
 const cyphomyrmexRimosusPveTags = [
   AntPveTierTag(
-    rating: TierRating.s,
+    rating: TierRating.sPlus,
     rowPosition: RowPosition.back,
     antType: AntType.carrier,
   )

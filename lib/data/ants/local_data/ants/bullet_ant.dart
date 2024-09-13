@@ -37,8 +37,18 @@ const bulletAnt = Ant(
 
 const bulletAntPveTags = [
   AntPveTierTag(
-    rating: TierRating.b,
+    rating: TierRating.c,
     antType: AntType.guardian,
+    rowPosition: RowPosition.front,
+  ),
+  AntPveTierTag(
+    rating: TierRating.c,
+    antType: AntType.shooter,
+    rowPosition: RowPosition.front,
+  ),
+  AntPveTierTag(
+    rating: TierRating.c,
+    antType: AntType.carrier,
     rowPosition: RowPosition.front,
   ),
 ];

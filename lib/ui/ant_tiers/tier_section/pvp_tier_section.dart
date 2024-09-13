@@ -3,23 +3,22 @@ import 'package:ants_companion/common/models/tier_rating.dart';
 import 'package:ants_companion/domain/ants/models/ant.dart';
 import 'package:ants_companion/domain/ants/models/ant_tier_tag.dart';
 import 'package:ants_companion/domain/ants/models/ant_type.dart';
-import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details.dart';
+
 import 'package:ants_companion/ui/ant_tiers/ant_tier_indicator.dart';
-import 'package:ants_companion/ui/bottom_sheet_modal/bottom_sheet_modal.dart';
 import 'package:ants_companion/ui/tier_star_rating/tier_star_ratings.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PvpTierSection extends StatelessWidget {
-  const PvpTierSection({
-    super.key,
-    required this.ants,
-    required this.antType,
-    required this.tierRating,
-    required this.isPvp,
-    required this.availableWidth,
-  });
+  const PvpTierSection(
+      {super.key,
+      required this.ants,
+      required this.antType,
+      required this.tierRating,
+      required this.isPvp,
+      required this.availableWidth,
+      required this.onTagTap});
 
   final TierRating tierRating;
   final AntType antType;
@@ -30,17 +29,7 @@ class PvpTierSection extends StatelessWidget {
 
   final double availableWidth;
 
-  _launchAntDetails(
-    final Ant ant,
-    AntTierTag tierTag,
-    BuildContext context,
-  ) =>
-      buildBottomSheetModal(
-          context,
-          AntTierDetails(
-            ant: ant,
-            tierTag: tierTag,
-          ));
+  final Function(AntTierTag tag, Ant ant) onTagTap;
 
   @override
   Widget build(BuildContext context) {
@@ -100,10 +89,9 @@ class PvpTierSection extends StatelessWidget {
                       (antTagMap) => AntTierIndicator(
                         availableWidth: availableWidth / 3,
                         ant: antTagMap.values.toList()[0],
-                        onTap: () => _launchAntDetails(
-                          antTagMap.values.toList()[0],
+                        onTap: () => onTagTap(
                           antTagMap.keys.toList()[0],
-                          context,
+                          antTagMap.values.toList()[0],
                         ),
                         tierRating: tierRating,
                       ),
@@ -120,10 +108,9 @@ class PvpTierSection extends StatelessWidget {
                     ...middleRow.map((antTagMap) => AntTierIndicator(
                           availableWidth: availableWidth / 3,
                           ant: antTagMap.values.toList()[0],
-                          onTap: () => _launchAntDetails(
-                            antTagMap.values.toList()[0],
+                          onTap: () => onTagTap(
                             antTagMap.keys.toList()[0],
-                            context,
+                            antTagMap.values.toList()[0],
                           ),
                           tierRating: tierRating,
                         ))
@@ -139,10 +126,9 @@ class PvpTierSection extends StatelessWidget {
                     ...backRow.map((antTagMap) => AntTierIndicator(
                           availableWidth: availableWidth / 3,
                           ant: antTagMap.values.toList()[0],
-                          onTap: () => _launchAntDetails(
-                            antTagMap.values.toList()[0],
+                          onTap: () => onTagTap(
                             antTagMap.keys.toList()[0],
-                            context,
+                            antTagMap.values.toList()[0],
                           ),
                           tierRating: tierRating,
                         ))

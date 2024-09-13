@@ -393,6 +393,12 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.strumigenysEggersiDeceptiveFormSkillDescription10,
         StrumigenysEggersiKeenIntuitionSkill() =>
           l10n.strumigenysEggersiKeenIntuitionSkillDescription10,
+        TricondylaApteraLongLegsSkill() =>
+          l10n.tricondylaApteraLongLegsSkillDescription10,
+        TricondylaApteraBattlefieldAidSkill() =>
+          l10n.tricondylaApteraBattlefieldAidSkillDescription10,
+        TricondylaApteraPhantomFormSkill() =>
+          l10n.tricondylaApteraPhantomFormSkillDescription10,
         WeaverAntAcidAssaultSkill() =>
           l10n.weaverAntAcidAssaultSkillDescription10,
         WeaverAntFieryThrashSkill() =>
@@ -783,6 +789,12 @@ extension AntSkillDescriptionExtension on AntSkill {
           l10n.strumigenysEggersiDeceptiveFormSkillDescription20,
         StrumigenysEggersiKeenIntuitionSkill() =>
           l10n.strumigenysEggersiKeenIntuitionSkillDescription20,
+        TricondylaApteraLongLegsSkill() =>
+          l10n.tricondylaApteraLongLegsSkillDescription20,
+        TricondylaApteraBattlefieldAidSkill() =>
+          l10n.tricondylaApteraBattlefieldAidSkillDescription20,
+        TricondylaApteraPhantomFormSkill() =>
+          l10n.tricondylaApteraPhantomFormSkillDescription20,
         WeaverAntAcidAssaultSkill() =>
           l10n.weaverAntAcidAssaultSkillDescription20,
         WeaverAntFieryThrashSkill() =>

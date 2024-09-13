@@ -57,6 +57,7 @@ enum AntId {
   shikareeMaster,
   slimArched,
   strumigenysEggersi,
+  tricondylaAptera,
   weaverAnt,
   whiteVelvet,
   wiseBerserker;
@@ -122,6 +123,7 @@ enum AntId {
         AntId.shikareeMaster => 'shikaree_master',
         AntId.slimArched => 'slim_arched',
         AntId.strumigenysEggersi => 'strumigenys_eggersi',
+        AntId.tricondylaAptera => 'tricondyla_aptera',
         AntId.weaverAnt => 'weaver_ant',
         AntId.whiteVelvet => 'white_velvet',
         AntId.wiseBerserker => 'wise_berserker',

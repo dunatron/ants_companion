@@ -1,10 +1,16 @@
+import 'package:ants_companion/domain/app_feedback/app_feedback.dart';
+import 'package:get_it/get_it.dart';
+
+import 'package:feedback/feedback.dart';
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppDrawer extends StatelessWidget {
-  const AppDrawer({super.key});
+  AppDrawer({super.key});
+
+  final AppFeedback appFeedback = GetIt.I();
 
   @override
   Widget build(BuildContext context) {
@@ -73,6 +79,18 @@ class AppDrawer extends StatelessWidget {
           //     context.go('/ca-scheduler/pending');
           //   },
           // ),
+          ListTile(
+            leading: const Icon(Icons.bug_report_outlined),
+            title: Text('Feedback Mode'),
+            onTap: () {
+              // Navigator.pop(context);
+              BetterFeedback.of(context).show(
+                (feedback) async {
+                  await appFeedback.submitFeedback(feedback);
+                },
+              );
+            },
+          ),
           ListTile(
             leading: const Icon(Icons.developer_mode),
             title: Text(l10n.deviceInfo),

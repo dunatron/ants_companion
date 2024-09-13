@@ -37,6 +37,8 @@ class ColonyActionsRepository implements ColonyActionsProvider {
 
   @override
   Future<void> updateColonyAction(final ColonyAction item) async {
+    print('REpo Update');
+    print(item);
     await _datasource.updateColonyAction(item);
     final currentList = _weeklyListSubject.value;
 

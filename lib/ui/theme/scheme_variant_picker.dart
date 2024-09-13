@@ -1,3 +1,4 @@
+import 'package:ants_companion/common/spacing.dart';
 import 'package:flutter/material.dart';
 
 class SchemeVariantPicker extends StatelessWidget {
@@ -17,7 +18,7 @@ class SchemeVariantPicker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(Spacing.l),
       child: DropdownButton<DynamicSchemeVariant>(
         value: selectedSchemeVariant,
         items: List<DropdownMenuItem<DynamicSchemeVariant>>.from(

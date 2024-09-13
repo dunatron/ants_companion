@@ -3,6 +3,50 @@ import 'package:ants_companion/ui/modal_single_page_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+Future<T?> draggableScrollableSheetBuilder<T>(
+  final BuildContext context, {
+  required final Widget Function(ScrollController scrollController)
+      childBuilder,
+}) =>
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      enableDrag: true,
+      useSafeArea: true,
+      showDragHandle: false,
+      builder: (BuildContext _) =>
+          CustomDraggableScrollableSheet(childBuilder: childBuilder),
+    );
+
+class CustomDraggableScrollableSheet extends StatelessWidget {
+  const CustomDraggableScrollableSheet({
+    super.key,
+    required this.childBuilder,
+  });
+
+  final Widget Function(ScrollController) childBuilder;
+
+  static bool get scrollsNormally =>
+      defaultTargetPlatform == TargetPlatform.android ||
+      defaultTargetPlatform == TargetPlatform.iOS;
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: DraggableScrollableSheet(
+        maxChildSize: 1,
+        initialChildSize: scrollsNormally ? 0.8 : 1,
+        expand: false,
+        builder: (
+          BuildContext context,
+          ScrollController scrollController,
+        ) =>
+            childBuilder(scrollController),
+      ),
+    );
+  }
+}
+
 Future<T?> buildBottomSheetModal<T>(
   final BuildContext context,
   final Widget widget,
