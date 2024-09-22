@@ -50,6 +50,22 @@ android {
         versionName = flutter.versionName
     }
 
+    flavorDimensions "env"
+    productFlavors {
+        development {
+            dimension "env"
+            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "[DEV] Ants Companion"
+            // signingConfig signingConfigs.debug // handled by release type
+        }
+        production {
+            dimension "env"
+            // No suffix for production
+           resValue "string", "app_name", "Ants Companion"
+            // signingConfig signingConfigs.release // handled by release type
+        }
+    }
+
     buildTypes {
         release {
             // Specifies the signing configuration for release builds. Signing configurations are used to sign APKs or app bundles.
