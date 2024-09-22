@@ -3,11 +3,11 @@
 ## Running a flavor
 
 ```bash
-flutter run --flavor dev
+flutter run --flavor development
 ```
 
 ## Release android flavor
 
 ```bash
-flutter build appbundle --flavor dev
+flutter build appbundle --flavor development
 ```
