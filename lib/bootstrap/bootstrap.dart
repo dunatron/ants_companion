@@ -36,8 +36,11 @@ Future<void> bootstrap() async {
       return true;
     };
 
-    final adsService = AdsService();
-    await adsService.initialize();
+    // final adsService = AdsService();
+    // await adsService.initialize();
+
+    // final adsService = AdsService();
+    // adsService.initialize();
 
     await LocalNotifications.init();
 

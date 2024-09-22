@@ -32,7 +32,8 @@ class AdsCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ToDo: maybe handle this in a less blasty approach
-    ads.disposeAllAds();
+    // ads.disposeAllAds();
+    AdsService.disposeAllAds();
 
     // adds a delay to not immediately load the ads, for performance
     Future.delayed(const Duration(seconds: 3), () {

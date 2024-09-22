@@ -1,3 +1,4 @@
+import 'package:ants_companion/domain/user_consent/user_consent.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ants_companion/common/models/tier_rating.dart';
@@ -20,6 +21,8 @@ class AntTiersDisplay extends StatefulWidget {
 class _AntTiersDisplayState extends State<AntTiersDisplay> {
   AntType _antType = AntType.guardian;
 
+  final userConsent = UserConsent();
+
   bool _isPvp = false;
 
   handlePvpChange(bool isPvp) {
@@ -37,6 +40,7 @@ class _AntTiersDisplayState extends State<AntTiersDisplay> {
 
   @override
   Widget build(BuildContext context) {
+    // userConsent.initialize();
     return Column(
       children: [
         // hack to make the scroll bar extend max width

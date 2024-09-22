@@ -62,14 +62,14 @@ class AppDrawer extends StatelessWidget {
           //     // Navigator.pop(context);
           //   },
           // ),
-          ListTile(
-            leading: const Icon(Icons.palette_outlined),
-            title: Text(l10n.themePicker),
-            onTap: () {
-              // Navigator.pop(context);
-              context.go('/theme-picker');
-            },
-          ),
+          // ListTile(
+          //   leading: const Icon(Icons.palette_outlined),
+          //   title: Text(l10n.themePicker),
+          //   onTap: () {
+          //     // Navigator.pop(context);
+          //     context.go('/theme-picker');
+          //   },
+          // ),
 
           // ListTile(
           //   leading: const Icon(Icons.developer_mode),
@@ -91,12 +91,20 @@ class AppDrawer extends StatelessWidget {
               );
             },
           ),
+          // ListTile(
+          //   leading: const Icon(Icons.developer_mode),
+          //   title: Text(l10n.deviceInfo),
+          //   onTap: () {
+          //     // Navigator.pop(context);
+          //     context.go('/device-info');
+          //   },
+          // ),
           ListTile(
             leading: const Icon(Icons.developer_mode),
-            title: Text(l10n.deviceInfo),
+            title: Text('Settings'),
             onTap: () {
               // Navigator.pop(context);
-              context.go('/device-info');
+              context.go('/settings');
             },
           ),
         ],

@@ -1,3 +1,4 @@
+import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tier_details/ant_tier_details_header.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -63,8 +64,6 @@ class _AntTierDetailsState extends State<AntTierDetailsSliverView> {
 
     final theme = Theme.of(context);
 
-    // return SLiver
-
     return Padding(
       padding: const EdgeInsets.only(top: 16),
       child: CustomScrollView(
@@ -75,7 +74,6 @@ class _AntTierDetailsState extends State<AntTierDetailsSliverView> {
             title: widget.ant.species.commonName(l10n),
             assetPath: profilePictureUrl,
           ),
-
           StreamBuilder(
             stream: viewModel.data(),
             builder: (context, snapshot) {
