@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:ants_companion/app/app_locale_provider.dart';
-import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:ants_companion/domain/notifications/local_notifications.dart';
 import 'package:flutter/material.dart';
 
@@ -22,8 +21,6 @@ Future<void> bootstrap() async {
 
     WidgetsFlutterBinding.ensureInitialized();
 
-    // unawaited(MobileAds.instance.initialize());
-
     FlutterError.onError = (errorDetails) {
       logger.e(errorDetails.exception);
       // FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
@@ -36,8 +33,7 @@ Future<void> bootstrap() async {
       return true;
     };
 
-    final adsService = AdsService();
-    await adsService.initialize();
+    // AdsService.preCheck();
 
     await LocalNotifications.init();
 

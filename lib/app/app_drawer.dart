@@ -33,7 +33,6 @@ class AppDrawer extends StatelessWidget {
             leading: const Icon(Icons.stacked_bar_chart_outlined),
             title: Text(l10n.antTiersTitle),
             onTap: () {
-              // Navigator.pop(context);
               context.go('/ant-tiers');
             },
           ),
@@ -42,7 +41,6 @@ class AppDrawer extends StatelessWidget {
             title: Text(l10n.colonyActionSchedulerTitle),
             onTap: () {
               context.go('/ca-scheduler');
-              // Navigator.pop(context);
             },
           ),
           ListTile(
@@ -54,36 +52,10 @@ class AppDrawer extends StatelessWidget {
             },
           ),
           Divider(color: Theme.of(context).colorScheme.primary, thickness: 2),
-          // ListTile(
-          //   leading: const Icon(Icons.message),
-          //   title: Text(l10n.soldierStatsTitle),
-          //   onTap: () {
-          //     context.go('/soldier-ants-comparison');
-          //     // Navigator.pop(context);
-          //   },
-          // ),
-          ListTile(
-            leading: const Icon(Icons.palette_outlined),
-            title: Text(l10n.themePicker),
-            onTap: () {
-              // Navigator.pop(context);
-              context.go('/theme-picker');
-            },
-          ),
-
-          // ListTile(
-          //   leading: const Icon(Icons.developer_mode),
-          //   title: Text('Pending Notifications'),
-          //   onTap: () {
-          //     // Navigator.pop(context);
-          //     context.go('/ca-scheduler/pending');
-          //   },
-          // ),
           ListTile(
             leading: const Icon(Icons.bug_report_outlined),
-            title: Text('Feedback Mode'),
+            title: Text(l10n.feedbackMode),
             onTap: () {
-              // Navigator.pop(context);
               BetterFeedback.of(context).show(
                 (feedback) async {
                   await appFeedback.submitFeedback(feedback);
@@ -93,10 +65,9 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.developer_mode),
-            title: Text(l10n.deviceInfo),
+            title: Text(l10n.settings),
             onTap: () {
-              // Navigator.pop(context);
-              context.go('/device-info');
+              context.go('/settings');
             },
           ),
         ],

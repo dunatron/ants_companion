@@ -7,6 +7,7 @@ import 'package:ants_companion/ui/colony_action/pending_notifications/pending_no
 import 'package:ants_companion/ui/route_not_found/route_not_found_screen.dart';
 import 'package:ants_companion/ui/ant_tiers/ant_tiers_screen.dart';
 import 'package:ants_companion/ui/scientific_classifications/scientific_classifications_screen.dart';
+import 'package:ants_companion/ui/settings/settings_screen.dart';
 import 'package:ants_companion/ui/soldier_ants/soldier_ants_comparison_screen.dart';
 import 'package:ants_companion/ui/theme/theme_picker_screen.dart';
 import 'package:flutter/material.dart';
@@ -30,16 +31,7 @@ final routes = <RouteBase>[
       //   builder: (BuildContext context, GoRouterState state) =>
       //       const ColonyActionPendingNotificationsScreen(),
       // ),
-      GoRoute(
-        path: 'theme-picker',
-        builder: (BuildContext context, GoRouterState state) =>
-            const ThemePickerScreen(),
-      ),
-      GoRoute(
-        path: 'device-info',
-        builder: (BuildContext context, GoRouterState state) =>
-            const DeviceInfoScreen(),
-      ),
+
       GoRoute(
         path: 'ant-tiers',
         builder: (BuildContext context, GoRouterState state) =>
@@ -91,6 +83,23 @@ final routes = <RouteBase>[
         path: 'soldier-ants-comparison',
         builder: (BuildContext context, GoRouterState state) =>
             const SoldierAntsComparisonScreen(),
+      ),
+      GoRoute(
+        path: 'settings',
+        builder: (BuildContext context, GoRouterState state) =>
+            const SettingsScreen(),
+        routes: [
+          GoRoute(
+            path: 'theme',
+            builder: (BuildContext context, GoRouterState state) =>
+                const ThemePickerScreen(),
+          ),
+          GoRoute(
+            path: 'device-info',
+            builder: (BuildContext context, GoRouterState state) =>
+                const DeviceInfoScreen(),
+          ),
+        ],
       ),
     ],
   ),

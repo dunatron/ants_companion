@@ -13,11 +13,13 @@ class AdWidgetBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AdsService.preCheck();
+
     final loadingBox = isSliver
         ? const SliverToBoxAdapter(child: SizedBox())
         : const SizedBox();
-    return FutureBuilder(
-      future: AdsService.enabled(),
+    return StreamBuilder(
+      stream: AdsService.enabled(),
       builder: (context, snapshot) {
         final data = snapshot.data;
 

@@ -11,7 +11,7 @@ class ThemePickerFeatureInfo extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
 
     return FeatureCard(
-      onTap: () => context.go('/theme-picker'),
+      onTap: () => context.go('/settings/theme'),
       child: Column(
         children: [
           Text(

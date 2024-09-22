@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:ants_companion/core/log/loggers.dart';
 import 'package:ants_companion/domain/ads/ad_units.dart';
 import 'package:ants_companion/domain/device_info/device_info.dart';
+import 'package:ants_companion/domain/user_consent/user_consent.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -35,10 +36,10 @@ const heathAndroidDeviceId = 'TP1A.220624.014';
 const ninaAndroidDeviceId = 'SP1A.210812.016';
 
 const disableAdsWhiteList = [
-  heathIOSDeviceId,
-  heathIPadDeviceId,
-  heathAndroidDeviceId,
-  ninaAndroidDeviceId,
+  // heathIOSDeviceId,
+  // heathIPadDeviceId,
+  // heathAndroidDeviceId,
+  // ninaAndroidDeviceId,
 ];
 
 class AdsService {
@@ -50,9 +51,24 @@ class AdsService {
 
   AdsService._internal();
 
-  final logger = appLogger(AdsService);
+  static final _enabledSubject = BehaviorSubject<bool>.seeded(false);
 
-  final BehaviorSubject<Map<String, BannerAd?>> _bannerSubject =
+  static Stream<bool> enabled() => _enabledSubject.stream;
+
+  // static manuallyToggle() => _enabledSubject.add(!_enabledSubject.value);
+
+  static manuallyToggle() {
+    final nextval = !_enabledSubject.value;
+    if (nextval == false) {
+      disposeAllAds();
+    }
+
+    _enabledSubject.add(nextval);
+  }
+
+  static final logger = appLogger(AdsService);
+
+  static final BehaviorSubject<Map<String, BannerAd?>> _bannerSubject =
       BehaviorSubject.seeded({});
 
   Stream<BannerAd?> adsStream(String addId) =>
@@ -62,7 +78,7 @@ class AdsService {
       defaultTargetPlatform == TargetPlatform.android ||
       defaultTargetPlatform == TargetPlatform.iOS;
 
-  static Future<bool> enabled() async {
+  static Future<bool> checkIsEnabled() async {
     final deviceId = await DeviceInfo.getDeviceId();
 
     if (platformSupportsAds == false) return false;
@@ -82,29 +98,50 @@ class AdsService {
   final int maxRetryAttempts = 3;
   Duration retryDelay = const Duration(seconds: 20);
 
+  static Future<void> preCheck() async {
+    logger.d('Initialize user consent for ads');
+    UserConsent.initialize();
+  }
+
   Future<void> initialize() async {
     logger.d('Initializing Ad service');
+    if (_initialized) {
+      logger.d('Ads have already been initialized');
+      return;
+    }
+
     if (!platformSupportsAds) {
       logger.d('Platform does not support adds');
       return;
     }
 
-    if (!await enabled()) {
+    if (!await checkIsEnabled()) {
       logger.d('Ads will not initialize as they are not enabled');
     }
 
-    if (_initialized) {
-      logger.d('Ads have already been initialized');
+    final deviceId = await DeviceInfo.getDeviceId();
+
+    if (disableAdsWhiteList.contains(deviceId)) {
+      logger.d('Ad will not load as it is whitelisted');
+      _enabledSubject.add(false);
+      return;
     }
 
-    await MobileAds.instance.initialize();
-    logger.d('Ads service has been initialized');
-    // Ad our device as a test device for ads
-    MobileAds.instance.updateRequestConfiguration(
-      RequestConfiguration(testDeviceIds: testDeviceIds),
-    );
-    logger.d('Ads request config has been configured');
-    _initialized = true;
+    var canRequestAds = await ConsentInformation.instance.canRequestAds();
+
+    if (canRequestAds) {
+      await MobileAds.instance.initialize();
+      logger.d('Ads service has been initialized');
+      // Ad our device as a test device for ads
+      MobileAds.instance.updateRequestConfiguration(
+        RequestConfiguration(testDeviceIds: testDeviceIds),
+      );
+      logger.d('Ads request config has been configured');
+      _initialized = true;
+      _enabledSubject.add(true);
+    } else {
+      logger.d('Ads will not initialize as they require consent');
+    }
   }
 
   static updateRequestConfiguration() =>
@@ -121,12 +158,21 @@ class AdsService {
     AdSize size, {
     int attempt = 0,
   }) async {
-    if (!await enabled()) return;
+    logger.d('Load banner ad with retry');
 
-    final deviceId = await DeviceInfo.getDeviceId();
+    if (!await enabled().first) {
+      logger.d('ads are not enabled exiting load banner ad');
+      return;
+    }
 
-    if (disableAdsWhiteList.contains(deviceId)) {
-      logger.d('Ad will not load as it is whitelisted');
+    final canRequestAds = await ConsentInformation.instance.canRequestAds();
+    if (canRequestAds == false) {
+      logger.d('cannot request ads setting enabled subject to false');
+      _enabledSubject.add(false);
+      logger.d('disposing any ads');
+      disposeAllAds();
+      // logger.d('Initialize user consent for ads');
+      // UserConsent.initialize();
       return;
     }
 
@@ -138,6 +184,7 @@ class AdsService {
 
     final bannerAd = BannerAd(
       adUnitId: adUnitId,
+      // request: const AdRequest(nonPersonalizedAds: true),
       request: const AdRequest(),
       size: size,
       listener: BannerAdListener(
@@ -158,20 +205,26 @@ class AdsService {
     bannerAd.load();
   }
 
-  disposeAllAds() {
+  static disposeAllAds() {
+    logger.d('disposeAllAds');
     _bannerSubject.value.forEach((_, ad) => ad?.dispose());
+    logger.d('set banner subject to empty');
     _bannerSubject.add({});
   }
 
   refreshAllAds() {
+    logger.d('refreshing all ads');
     Map<String, BannerAd> ads = {};
+
     _bannerSubject.value.forEach((_, ad) {
       if (ad != null) {
         ads[ad.adUnitId] = ad;
         ad.dispose();
       }
     });
+
     _bannerSubject.add({});
+
     ads.forEach((_, ad) {
       loadBannerAd(ad.adUnitId, ad.size);
     });
