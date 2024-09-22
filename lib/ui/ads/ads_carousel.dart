@@ -55,9 +55,7 @@ class AdsCarousel extends StatelessWidget {
             (int index) {
               return Container(
                 color: Theme.of(context).colorScheme.surfaceContainerHigh,
-                child: Center(
-                  child: AdCard(adId: adIds[index]),
-                ),
+                child: Center(child: AdCard(adId: adIds[index])),
               );
             },
           ),

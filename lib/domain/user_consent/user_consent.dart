@@ -3,15 +3,17 @@ import 'dart:async';
 import 'package:ants_companion/domain/ads/ads_service.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+final consentDebugSettings = ConsentDebugSettings(
+  debugGeography: DebugGeography.debugGeographyEea,
+  testIdentifiers: ["16D265166C7DAF515FA40F177BD4D2C3"],
+);
+
 class UserConsent {
   static Future<FormError?> initialize() async {
     final completer = Completer<FormError?>();
     final params = ConsentRequestParameters(
-      consentDebugSettings: ConsentDebugSettings(
-        debugGeography: DebugGeography.debugGeographyEea,
-        testIdentifiers: ["16D265166C7DAF515FA40F177BD4D2C3"],
-      ),
-    );
+        // consentDebugSettings: consentDebugSettings,
+        );
 
     ConsentInformation.instance.requestConsentInfoUpdate(params, () async {
       // check if there is a form available to display

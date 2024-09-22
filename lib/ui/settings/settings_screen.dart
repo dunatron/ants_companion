@@ -1,3 +1,4 @@
+import 'package:ants_companion/common/spacing.dart';
 import 'package:ants_companion/ui/layouts/page_layout.dart';
 import 'package:ants_companion/ui/settings/privacy_settings.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class SettingsScreen extends StatelessWidget {
 
     final navItems = [
       NavItem(
-        title: l10n.themePicker,
+        title: l10n.theme,
         route: '/settings/theme',
         icon: Icons.palette_outlined,
       ),
@@ -33,7 +34,7 @@ class SettingsScreen extends StatelessWidget {
     ];
 
     return PageLayout(
-      title: 'Settings',
+      title: l10n.settings,
       crossAxisAlignment: CrossAxisAlignment.start,
       widgets: [
         ...navItems.map(
@@ -43,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
             onTap: () => context.go(navItem.route),
           ),
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: Spacing.l),
         const PrivacySettings(),
       ],
     );

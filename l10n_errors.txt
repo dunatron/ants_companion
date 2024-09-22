@@ -1,1 +1,129 @@
-{}
+{
+  "ar": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "bg": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "de": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "es": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "fil": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "hu": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "it": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "ja": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "mk": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "nl": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "pl": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "ru": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "tr": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "uk": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "vi": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ],
+
+  "zh": [
+    "settings",
+    "privacy",
+    "changePrivacyPreferences",
+    "theme",
+    "feedbackMode"
+  ]
+}

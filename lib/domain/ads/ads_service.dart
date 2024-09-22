@@ -36,14 +36,13 @@ const heathAndroidDeviceId = 'TP1A.220624.014';
 const ninaAndroidDeviceId = 'SP1A.210812.016';
 
 const disableAdsWhiteList = [
-  heathIOSDeviceId,
-  heathIPadDeviceId,
-  heathAndroidDeviceId,
-  ninaAndroidDeviceId,
+  // heathIOSDeviceId,
+  // heathIPadDeviceId,
+  // heathAndroidDeviceId,
+  // ninaAndroidDeviceId,
 ];
 
 class AdsService {
-  // final consent = UserConsent();
   static List<String> carouselOneIds = AdUnits.carouselOneIds;
 
   // Singleton pattern
@@ -52,7 +51,7 @@ class AdsService {
 
   AdsService._internal();
 
-  static final _enabledSubject = BehaviorSubject<bool>.seeded(true);
+  static final _enabledSubject = BehaviorSubject<bool>.seeded(false);
 
   static Stream<bool> enabled() => _enabledSubject.stream;
 
@@ -67,7 +66,7 @@ class AdsService {
     _enabledSubject.add(nextval);
   }
 
-  final logger = appLogger(AdsService);
+  static final logger = appLogger(AdsService);
 
   static final BehaviorSubject<Map<String, BannerAd?>> _bannerSubject =
       BehaviorSubject.seeded({});
@@ -99,10 +98,16 @@ class AdsService {
   final int maxRetryAttempts = 3;
   Duration retryDelay = const Duration(seconds: 20);
 
+  static Future<void> preCheck() async {
+    logger.d('Initialize user consent for ads');
+    UserConsent.initialize();
+  }
+
   Future<void> initialize() async {
     logger.d('Initializing Ad service');
     if (_initialized) {
       logger.d('Ads have already been initialized');
+      return;
     }
 
     if (!platformSupportsAds) {
@@ -153,15 +158,23 @@ class AdsService {
     AdSize size, {
     int attempt = 0,
   }) async {
-    final canRequestAds = await ConsentInformation.instance.canRequestAds();
+    logger.d('Load banner ad with retry');
 
-    if (canRequestAds == false) {
-      _enabledSubject.add(false);
-      disposeAllAds();
-      UserConsent.initialize();
+    if (!await enabled().first) {
+      logger.d('ads are not enabled exiting load banner ad');
       return;
     }
-    if (!await enabled().first) return;
+
+    final canRequestAds = await ConsentInformation.instance.canRequestAds();
+    if (canRequestAds == false) {
+      logger.d('cannot request ads setting enabled subject to false');
+      _enabledSubject.add(false);
+      logger.d('disposing any ads');
+      disposeAllAds();
+      // logger.d('Initialize user consent for ads');
+      // UserConsent.initialize();
+      return;
+    }
 
     // check if ad is already loaded
     if (_bannerSubject.value.containsKey(adUnitId)) {
@@ -171,8 +184,8 @@ class AdsService {
 
     final bannerAd = BannerAd(
       adUnitId: adUnitId,
-      request: const AdRequest(nonPersonalizedAds: true),
-      // request: const AdRequest(),
+      // request: const AdRequest(nonPersonalizedAds: true),
+      request: const AdRequest(),
       size: size,
       listener: BannerAdListener(
         onAdLoaded: (ad) {
@@ -193,19 +206,25 @@ class AdsService {
   }
 
   static disposeAllAds() {
+    logger.d('disposeAllAds');
     _bannerSubject.value.forEach((_, ad) => ad?.dispose());
+    logger.d('set banner subject to empty');
     _bannerSubject.add({});
   }
 
   refreshAllAds() {
+    logger.d('refreshing all ads');
     Map<String, BannerAd> ads = {};
+
     _bannerSubject.value.forEach((_, ad) {
       if (ad != null) {
         ads[ad.adUnitId] = ad;
         ad.dispose();
       }
     });
+
     _bannerSubject.add({});
+
     ads.forEach((_, ad) {
       loadBannerAd(ad.adUnitId, ad.size);
     });
