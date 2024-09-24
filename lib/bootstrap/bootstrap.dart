@@ -1,12 +1,11 @@
 import 'dart:async';
-
-import 'package:ants_companion/app/app_locale_provider.dart';
-import 'package:ants_companion/domain/notifications/local_notifications.dart';
 import 'package:flutter/material.dart';
 
 import 'package:ants_companion/app/app.dart';
-import 'package:ants_companion/core/log/loggers.dart';
+import 'package:ants_companion/app/app_locale_provider.dart';
 import 'package:ants_companion/bootstrap/dependency_injection.dart';
+import 'package:ants_companion/core/log/loggers.dart';
+import 'package:ants_companion/domain/notifications/local_notifications.dart';
 
 Future<void> bootstrap() async {
   final logger = appLogger(App);
