@@ -8,12 +8,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class PrivacySettings extends StatelessWidget {
   const PrivacySettings({super.key});
 
+  static final development =
+      GetIt.I<Config>().environment == Environment.development;
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-
-    final isDevelopment =
-        GetIt.I<Config>().environment == Environment.development;
 
     return FutureBuilder(
       future: ConsentInformation.instance.isConsentFormAvailable(),
@@ -28,7 +28,7 @@ class PrivacySettings extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 16, left: 16, bottom: 0),
                 child: Text(l10n.privacy),
               ),
-              if (isDevelopment)
+              if (development)
                 ListTile(
                   leading: const Icon(Icons.private_connectivity),
                   title: const Text('Reset Privacy Consent'),
