@@ -12,8 +12,8 @@ class UserConsent {
   static Future<FormError?> initialize() async {
     final completer = Completer<FormError?>();
     final params = ConsentRequestParameters(
-        // consentDebugSettings: consentDebugSettings,
-        );
+      consentDebugSettings: consentDebugSettings,
+    );
 
     ConsentInformation.instance.requestConsentInfoUpdate(params, () async {
       // check if there is a form available to display

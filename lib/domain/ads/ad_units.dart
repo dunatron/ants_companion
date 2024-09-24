@@ -1,5 +1,8 @@
+import 'package:ants_companion/config/config.dart';
+import 'package:get_it/get_it.dart';
+
 class AdUnits {
-  static bool prod = false;
+  static bool prod = GetIt.I<Config>().environment == Environment.production;
 
   // carousel#1item#2
   static const String _carousel1Item1 =

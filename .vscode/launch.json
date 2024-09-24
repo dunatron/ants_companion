@@ -2,18 +2,32 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Flutter development",
+      "name": "Development",
       "type": "dart",
       "request": "launch",
-      "program": "lib/main.dart",
+      "program": "lib/main_development.dart",
       "toolArgs": ["--flavor", "development"]
     },
     {
-      "name": "Flutter development release",
+      "name": "Development release",
       "type": "dart",
       "request": "launch",
       "program": "lib/main_development.dart",
       "toolArgs": ["--release", "--flavor", "development"]
+    },
+    {
+      "name": "Production",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main_production.dart",
+      "toolArgs": ["--flavor", "production"]
+    },
+    {
+      "name": "Production release",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main_production.dart",
+      "toolArgs": ["--release", "--flavor", "production"]
     }
   ]
 }
